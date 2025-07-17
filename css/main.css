@@ -1,20 +1,19 @@
-/* Màu chủ đạo Lofi Pharma */
+/* Color */
 .bg-primary { background-color: #003D99 !important; }
 .text-primary { color: #003D99 !important; }
 
 /* Logo navbar */
 .navbar-brand img { height: 50px; }
-
-/* Carousel chiều cao tối thiểu */
+/* Carousel min height */
 .carousel-item { min-height: 320px; }
 
-/* Responsive cho form newsletter */
+/* Responsive newsletter form */
 @media (max-width: 767.98px) {
   .newsletter-form input { width: 100% !important; margin-bottom: 0.5rem; }
   .newsletter-form { flex-direction: column !important; align-items: stretch !important; }
 }
 
-/* Topbar link hover effect */
+/* Topbar link hover */
 .topbar-login {
   transition: color 0.2s;
 }
@@ -39,7 +38,7 @@
   text-decoration: none !important;
 }
 
-/* --- Navbar Custom Styles --- */
+/* Navbar custom styles */
 .custom-navbar {
   min-height: 64px;
   box-shadow: 0 1px 0 #e5e7eb;
@@ -234,7 +233,7 @@
   .btn-arrow .bi-chevron-left, .btn-arrow .bi-chevron-right { font-size: 0.8rem; }
 }
 
-/* --- Hero Carousel Custom --- */
+/* Hero Carousel Custom */
 .hero-carousel-bg {
   background: #f6fafd !important;
 }
@@ -331,7 +330,7 @@
   .hero-carousel-btn { font-size: 1rem; padding: 10px 18px; }
 }
 
-/* Hero Carousel Slide Background */
+/* Hero Carousel Slide Backgrounds */
 .hero-carousel-slide-bg {
   background-size: cover;
   background-position: center right;
@@ -420,7 +419,6 @@
   }
 }
 
-/* Đảm bảo các cột luôn cao bằng nhau */
 @media (min-width: 768px) {
   .service-highlights .row {
     align-items: stretch;
@@ -437,4 +435,174 @@
 
 .service-highlights {
   background: #f6f6f6;
+}
+
+/* Promo Banners */
+.promo-banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.promo-banner img {
+  border-radius: 1rem;
+  width: 100%;
+  display: block;
+}
+.promo-overlay {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  color: #003366;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.promo-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 0.25rem;
+  line-height: 1.1;
+}
+.promo-subtitle {
+  font-size: 1.2rem;
+  color: #234;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+.promo-overlay .btn {
+  z-index: 2;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.promo-banner a {
+  text-decoration: none;
+}
+@media (max-width: 767.98px) {
+  .promo-title {
+    font-size: 1.3rem;
+  }
+  .promo-subtitle {
+    font-size: 1rem;
+  }
+  .promo-overlay {
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+  }
+}
+
+/* Promo Banner Overlay Custom Position */
+.promo-overlay-1 {
+  top: 2.5rem;
+  left: 2.5rem;
+  right: 2.5rem;
+  bottom: unset;
+  align-items: flex-start;
+}
+.promo-overlay-1 .promo-title {
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: #0a3d91;
+  margin-bottom: 0.5rem;
+}
+.promo-overlay-1 .promo-subtitle {
+  font-size: 1.5rem;
+  color: #234;
+  margin-bottom: 2.2rem;
+}
+.promo-overlay-1 .btn {
+  background: #0a3d91;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.7rem 2.2rem;
+  border-radius: 2rem;
+  font-weight: bold;
+}
+
+.promo-overlay-2 {
+  top: 2.5rem;
+  left: 2.5rem;
+  right: 2.5rem;
+  bottom: unset;
+  align-items: flex-start;
+}
+.promo-overlay-2 .promo-title {
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.promo-overlay-2 .promo-subtitle {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 2.2rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.promo-overlay-2 .btn {
+  background: #fff;
+  color: #003366;
+  font-size: 1.2rem;
+  padding: 0.7rem 2.2rem;
+  border-radius: 2rem;
+  font-weight: bold;
+}
+
+.promo-overlay-3 {
+  top: 2.5rem;
+  left: 2.5rem;
+  right: 2.5rem;
+  bottom: unset;
+  align-items: flex-start;
+}
+.promo-overlay-3 .promo-title {
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: #0a3d91;
+  margin-bottom: 0.5rem;
+}
+.promo-overlay-3 .promo-subtitle {
+  font-size: 1.5rem;
+  color: #1976d2;
+  margin-bottom: 2.2rem;
+}
+.promo-overlay-3 .btn {
+  background: #0a3d91;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.7rem 2.2rem;
+  border-radius: 2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 767.98px) {
+  .promo-overlay-1, .promo-overlay-2, .promo-overlay-3 {
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+  }
+  .promo-overlay-1 .promo-title,
+  .promo-overlay-2 .promo-title,
+  .promo-overlay-3 .promo-title {
+    font-size: 1.3rem;
+  }
+  .promo-overlay-1 .promo-subtitle,
+  .promo-overlay-2 .promo-subtitle,
+  .promo-overlay-3 .promo-subtitle {
+    font-size: 1rem;
+  }
+  .promo-overlay-1 .btn,
+  .promo-overlay-2 .btn,
+  .promo-overlay-3 .btn {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+  }
 }
