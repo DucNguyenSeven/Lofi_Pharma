@@ -1,4 +1,15 @@
-section {
-  padding: 48px 0;
-  min-height: 120px;
-} 
+/* Màu chủ đạo Lofi Pharma */
+.bg-primary { background-color: #003D99 !important; }
+.text-primary { color: #003D99 !important; }
+
+/* Logo navbar */
+.navbar-brand img { height: 40px; }
+
+/* Carousel chiều cao tối thiểu */
+.carousel-item { min-height: 320px; }
+
+/* Responsive cho form newsletter */
+@media (max-width: 767.98px) {
+  .newsletter-form input { width: 100% !important; margin-bottom: 0.5rem; }
+  .newsletter-form { flex-direction: column !important; align-items: stretch !important; }
+}
