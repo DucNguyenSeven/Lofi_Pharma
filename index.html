@@ -11,63 +11,92 @@
 <body>
   <!-- Topbar -->
   <div class="bg-primary text-white py-1 px-3 d-flex justify-content-between align-items-center">
-    <span>📞 1900 6750 | ✉ support@sapo.vn</span>
-    <div><a href="#" class="text-white">Đăng nhập</a> | <a href="#" class="text-white">Đăng ký</a></div>
+    <span>
+      <a href="tel:19006750" class="text-white topbar-link"><i class="bi bi-telephone-fill me-1"></i>1900 6750</a> |
+      <a href="mailto:support@sapo.vn" class="text-white topbar-link"><i class="bi bi-envelope-fill me-1"></i>support@sapo.vn</a>
+    </span>
+    <div>
+      <a href="#" class="text-white topbar-link">Đăng nhập</a> |
+      <a href="#" class="text-white topbar-link">Đăng ký</a>
+    </div>
   </div>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-white border-bottom">
-    <div class="container">
+  <nav class="navbar navbar-expand-lg bg-white border-bottom custom-navbar">
+    <div class="container d-flex align-items-center justify-content-between">
+      <!-- Logo -->
       <a class="navbar-brand d-flex align-items-center" href="#">
         <img src="assets/logo.png" alt="Lofi Pharma Logo" class="me-2">
-        <span class="text-primary fw-bold">Lofi Pharma</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <!-- Menu -->
       <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="#">Trang chủ</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Sản phẩm</a></li>
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
+          <li class="nav-item"><a class="nav-link active nav-home" href="#">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Giới thiệu</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="sanphamDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sản phẩm</a>
+            <ul class="dropdown-menu" aria-labelledby="sanphamDropdown">
+              <li><a class="dropdown-item" href="#">Thực phẩm chức năng</a></li>
+              <li><a class="dropdown-item" href="#">Dược phẩm</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link" href="#">Góc sức khỏe</a></li>
         </ul>
-        <form class="d-flex me-3" role="search">
-          <input class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
-          <button class="btn btn-outline-primary" type="submit">Tìm</button>
+        <div class="d-flex align-items-center ms-3 me-3 nav-arrows">
+          <button class="btn btn-arrow me-1" type="button" title="Trước"><i class="bi bi-chevron-left"></i></button>
+          <button class="btn btn-arrow" type="button" title="Sau"><i class="bi bi-chevron-right"></i></button>
+        </div>
+        <!-- Search -->
+        <form class="d-flex align-items-center nav-search me-3" role="search">
+          <input class="form-control search-input" type="search" placeholder="Thực phẩm chức năng..." aria-label="Search">
+          <button class="btn btn-search" type="submit"><i class="bi bi-search"></i></button>
         </form>
-        <a href="#" class="text-primary me-3" title="Tài khoản"><i class="bi bi-person"></i></a>
-        <a href="#" class="text-primary" title="Giỏ hàng"><i class="bi bi-cart"></i></a>
+        <!-- Icons -->
+        <div class="d-flex align-items-center nav-icons">
+          <a href="#" class="icon-btn me-2" title="Vị trí">
+            <div class="icon-square"><i class="bi bi-geo-alt"></i></div>
+          </a>
+          <a href="#" class="icon-btn me-2 position-relative" title="Yêu thích">
+            <div class="icon-square"><i class="bi bi-heart"></i>
+              <span class="badge badge-custom position-absolute top-0 start-100 translate-middle">0</span>
+            </div>
+          </a>
+          <a href="#" class="icon-btn position-relative" title="Giỏ hàng">
+            <div class="icon-square"><i class="bi bi-cart"></i>
+              <span class="badge badge-custom position-absolute top-0 start-100 translate-middle">0</span>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </nav>
 
   <!-- Hero Carousel -->
-  <section>
-    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <section class="bg-light">
+    <div id="heroCarousel" class="carousel slide hero-carousel-bg" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active d-flex align-items-center" style="background:#f8f9fa; min-height:350px;">
-          <div class="container py-5">
-            <div class="row align-items-center">
-              <div class="col-md-6 text-center text-md-start">
-                <h2 class="text-primary fw-bold mb-3">Chăm sóc cuộc sống tốt hơn bằng thuốc</h2>
-                <a href="#" class="btn btn-primary btn-lg mt-3">MUA NGAY</a>
+        <div class="carousel-item active hero-carousel-slide-bg hero-carousel-slide-bg-1">
+          <div class="container-fluid py-5">
+            <div class="row align-items-center min-vh-40 hero-carousel-row">
+              <div class="col-md-6 px-4 px-md-5 d-flex flex-column justify-content-center align-items-start text-start">
+                <h2 class="hero-carousel-title display-4 fs-1 fw-bold lh-sm text-start mb-3 hero-title-custom">Chăm sóc<br>cuộc sống tốt hơn<br>bằng thuốc</h2>
+                <a href="#" class="hero-carousel-btn btn fw-bold px-5 py-3 mt-2 hero-btn-custom">MUA NGAY</a>
               </div>
-              <div class="col-md-6 text-center d-none d-md-block">
-                <img src="assets/slider_1.png" alt="Banner" class="img-fluid rounded shadow">
-              </div>
+              <div class="d-none d-md-block col-md-6"></div>
             </div>
           </div>
         </div>
-        <div class="carousel-item d-flex align-items-center" style="background:#f8f9fa; min-height:350px;">
-          <div class="container py-5">
-            <div class="row align-items-center">
-              <div class="col-md-6 text-center text-md-start">
-                <h2 class="text-primary fw-bold mb-3">Thiết bị y tế hiện đại, an toàn</h2>
-                <a href="#" class="btn btn-primary btn-lg mt-3">Khám phá</a>
+        <div class="carousel-item hero-carousel-slide-bg hero-carousel-slide-bg-2">
+          <div class="container-fluid py-5">
+            <div class="row align-items-center min-vh-40 hero-carousel-row">
+              <div class="col-md-6 px-4 px-md-5 d-flex flex-column justify-content-center align-items-start text-start">
+                <h2 class="hero-carousel-title display-4 fs-1 fw-bold lh-sm text-start mb-3 hero-title-custom">Chăm sóc<br>sức khỏe không nhất thiết<br>phải tốn kém</h2>
+                <a href="#" class="hero-carousel-btn btn fw-bold px-5 py-3 mt-2 hero-btn-custom">MUA NGAY</a>
               </div>
-              <div class="col-md-6 text-center d-none d-md-block">
-                <img src="assets/slider_2.png" alt="Banner 2" class="img-fluid rounded shadow">
-              </div>
+              <div class="d-none d-md-block col-md-6"></div>
             </div>
           </div>
         </div>
@@ -80,6 +109,12 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
+      <div class="carousel-indicators-wrapper">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -87,10 +122,10 @@
   <section>
     <div class="container py-4">
       <div class="row text-center">
-        <div class="col-6 col-md-3 mb-3 mb-md-0">🚚 Miễn phí vận chuyển</div>
-        <div class="col-6 col-md-3 mb-3 mb-md-0">📦 Theo dõi đơn hàng</div>
-        <div class="col-6 col-md-3">🎧 Hỗ trợ 24/7</div>
-        <div class="col-6 col-md-3">⏰ Giao đúng giờ</div>
+        <div class="col-6 col-md-3 mb-3 mb-md-0"><i class="bi bi-truck me-1"></i>Miễn phí vận chuyển</div>
+        <div class="col-6 col-md-3 mb-3 mb-md-0"><i class="bi bi-box-seam me-1"></i>Theo dõi đơn hàng</div>
+        <div class="col-6 col-md-3"><i class="bi bi-headset me-1"></i>Hỗ trợ 24/7</div>
+        <div class="col-6 col-md-3"><i class="bi bi-clock me-1"></i>Giao đúng giờ</div>
       </div>
     </div>
   </section>
@@ -224,21 +259,21 @@
     <div class="container py-4">
       <h2 class="mb-3">Góc sức khỏe</h2>
       <div class="d-flex overflow-auto mb-4">
-        <div class="card me-3" style="min-width:250px">
+        <div class="card me-3 blog-card-min-width">
           <img src="assets/slider_1.png" class="card-img-top" alt="Blog 1">
           <div class="card-body">
             <h6 class="card-title">Bài viết 1</h6>
             <p class="card-text">Nội dung ngắn...</p>
           </div>
         </div>
-        <div class="card me-3" style="min-width:250px">
+        <div class="card me-3 blog-card-min-width">
           <img src="assets/slider_2.png" class="card-img-top" alt="Blog 2">
           <div class="card-body">
             <h6 class="card-title">Bài viết 2</h6>
             <p class="card-text">Nội dung ngắn...</p>
           </div>
         </div>
-        <div class="card me-3" style="min-width:250px">
+        <div class="card me-3 blog-card-min-width">
           <img src="assets/logo.png" class="card-img-top" alt="Blog 3">
           <div class="card-body">
             <h6 class="card-title">Bài viết 3</h6>
@@ -300,7 +335,7 @@
         <div class="col-md-3 mb-3">
           <strong>Liên hệ</strong>
           <ul class="list-unstyled">
-            <li>Địa chỉ: 123 Đường ABC, Quận 1, TP.HCM</li>
+            <li><i class="bi bi-geo-alt-fill me-1"></i>Địa chỉ: 123 Đường ABC, Quận 1, TP.HCM</li>
             <li>Hotline: 1900 6750</li>
             <li>Email: support@sapo.vn</li>
           </ul>
