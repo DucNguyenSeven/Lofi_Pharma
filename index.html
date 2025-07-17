@@ -571,58 +571,95 @@
   </section>
 
   <!-- Health Blog + Video Section -->
-  <section>
-    <div class="container py-4">
-      <h2 class="mb-3">Góc sức khỏe</h2>
-      <div class="d-flex overflow-auto mb-4">
-        <div class="card me-3 blog-card-min-width">
-          <img src="assets/slider_1.png" class="card-img-top" alt="Blog 1">
-          <div class="card-body">
-            <h6 class="card-title">Bài viết 1</h6>
-            <p class="card-text">Nội dung ngắn...</p>
+  <section class="health-section py-4">
+    <div class="container">
+      <!-- Blog -->
+      <h2 class="mb-3 fw-bold" style="font-size:2.5rem;">Góc sức khỏe</h2>
+      <div class="d-flex overflow-auto mb-5 gap-4">
+        <div class="card border-0 shadow-sm blog-card-min-width" style="min-width:280px; max-width:300px;">
+          <img src="assets/slider_1.png" class="card-img-top rounded-3" alt="Blog 1">
+          <div class="card-body px-2 pb-3 pt-3">
+            <h6 class="card-title fw-bold" style="font-size:1.15rem;">Bài viết 1</h6>
+            <p class="card-text text-secondary mb-0" style="font-size:1rem;">Nội dung ngắn...</p>
           </div>
         </div>
-        <div class="card me-3 blog-card-min-width">
-          <img src="assets/slider_2.png" class="card-img-top" alt="Blog 2">
-          <div class="card-body">
-            <h6 class="card-title">Bài viết 2</h6>
-            <p class="card-text">Nội dung ngắn...</p>
+        <div class="card border-0 shadow-sm blog-card-min-width" style="min-width:280px; max-width:300px;">
+          <img src="assets/slider_2.png" class="card-img-top rounded-3" alt="Blog 2">
+          <div class="card-body px-2 pb-3 pt-3">
+            <h6 class="card-title fw-bold" style="font-size:1.15rem;">Bài viết 2</h6>
+            <p class="card-text text-secondary mb-0" style="font-size:1rem;">Nội dung ngắn...</p>
           </div>
         </div>
-        <div class="card me-3 blog-card-min-width">
-          <img src="assets/logo.png" class="card-img-top" alt="Blog 3">
-          <div class="card-body">
-            <h6 class="card-title">Bài viết 3</h6>
-            <p class="card-text">Nội dung ngắn...</p>
+        <div class="card border-0 shadow-sm blog-card-min-width" style="min-width:280px; max-width:300px;">
+          <img src="assets/logo.png" class="card-img-top rounded-3" alt="Blog 3">
+          <div class="card-body px-2 pb-3 pt-3">
+            <h6 class="card-title fw-bold" style="font-size:1.15rem;">Bài viết 3</h6>
+            <p class="card-text text-secondary mb-0" style="font-size:1rem;">Nội dung ngắn...</p>
           </div>
         </div>
       </div>
-      <h2 class="mt-5 mb-3">Video</h2>
-      <div class="row row-cols-2 row-cols-md-4 g-3">
+      <!-- Video (Layout chuẩn mẫu) -->
+      <h2 class="fw-bold mb-5 video-title-custom">Video</h2>
+      <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center mb-4">
         <div class="col">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/1" title="Video 1" allowfullscreen></iframe>
+          <div class="video-card-custom shadow-sm rounded-3 overflow-hidden bg-white h-100 d-flex flex-column">
+            <div class="ratio ratio-16x9 video-thumb-custom position-relative">
+              <img src="assets/che-do-tap-luyen-cho-nguoi-benh-gut-1-c46c6a288f-ezgif-com-webp-to-jpg-converter.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Video 1">
+              <button class="btn btn-white border-0 shadow-none video-play-btn-custom position-absolute top-50 start-50 translate-middle">
+                <i class="bi bi-play-circle" style="font-size:3rem; color:#003D99;"></i>
+              </button>
+            </div>
+            <div class="p-3 flex-grow-1 d-flex align-items-end">
+              <div class="fw-bold fs-4 mb-0 video-card-title-custom">Các bài tập cho bệnh lý cơ xương khớp</div>
+            </div>
           </div>
         </div>
         <div class="col">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/2" title="Video 2" allowfullscreen></iframe>
+          <div class="video-card-custom shadow-sm rounded-3 overflow-hidden bg-white h-100 d-flex flex-column">
+            <div class="ratio ratio-16x9 video-thumb-custom position-relative">
+              <img src="assets/cac-bai-tap-giup-ban-giam-dau-than-kinh-toa-nhanh-chong-2-44deecfc8e-ezgif-com-webp-to-jpg-converter.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Video 2">
+              <button class="btn btn-white border-0 shadow-none video-play-btn-custom position-absolute top-50 start-50 translate-middle">
+                <i class="bi bi-play-circle" style="font-size:3rem; color:#003D99;"></i>
+              </button>
+            </div>
+            <div class="p-3 flex-grow-1 d-flex align-items-end">
+              <div class="fw-bold fs-4 mb-0 video-card-title-custom">Các bài tập cho bệnh Gout</div>
+            </div>
           </div>
         </div>
         <div class="col">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/3" title="Video 3" allowfullscreen></iframe>
+          <div class="video-card-custom shadow-sm rounded-3 overflow-hidden bg-white h-100 d-flex flex-column">
+            <div class="ratio ratio-16x9 video-thumb-custom position-relative">
+              <img src="assets/can-bo-sung-gi-khi-bi-mat-nuoc-va-chat-dien-giai.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Video 3">
+              <button class="btn btn-white border-0 shadow-none video-play-btn-custom position-absolute top-50 start-50 translate-middle">
+                <i class="bi bi-play-circle" style="font-size:3rem; color:#003D99;"></i>
+              </button>
+            </div>
+            <div class="p-3 flex-grow-1 d-flex align-items-end">
+              <div class="fw-bold fs-4 mb-0 video-card-title-custom">Các bài tập cho sức khỏe tim mạch</div>
+            </div>
           </div>
         </div>
         <div class="col">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/4" title="Video 4" allowfullscreen></iframe>
+          <div class="video-card-custom shadow-sm rounded-3 overflow-hidden bg-white h-100 d-flex flex-column">
+            <div class="ratio ratio-16x9 video-thumb-custom position-relative">
+              <img src="assets/cach-cham-soc-va-nhung-bai-tap-the-duc-tot-cho-xuong-khop-2-0466ce72ce-ezgif-com-webp-to-jpg-converter.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Video 4">
+              <button class="btn btn-white border-0 shadow-none video-play-btn-custom position-absolute top-50 start-50 translate-middle">
+                <i class="bi bi-play-circle" style="font-size:3rem; color:#003D99;"></i>
+              </button>
+            </div>
+            <div class="p-3 flex-grow-1 d-flex align-items-end">
+              <div class="fw-bold fs-4 mb-0 video-card-title-custom">Các bài tập cho bệnh lý thận kinh</div>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="text-center mt-3">
+        <a href="#" class="btn btn-outline-primary fw-bold px-5 py-2 video-btn-all-custom">Xem tất cả</a>
       </div>
     </div>
   </section>
-
+  
   <!-- Newsletter Signup -->
   <section class="newsletter-section-new py-5">
     <div class="newsletter-wrapper mx-auto">
