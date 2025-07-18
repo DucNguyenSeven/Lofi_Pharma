@@ -695,9 +695,11 @@
   line-height: 1.2;
   max-height: 2.4em;
   overflow: hidden;
+  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
 }
 .product-card .text-danger {
   font-size: 1.2rem;
@@ -963,6 +965,72 @@
   color: #003D99;
 }
 
+/* Newsletter Section Styles - Layout Chuẩn */
+.newsletter-section-new {
+  background-color: #f1f9fc;
+  padding: 38px 0;
+}
+.newsletter-title-new {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+  color: #003D99;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.newsletter-description-new {
+  font-size: 1.12rem;
+  color: #222;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+.newsletter-form-new {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: none;
+  gap: 0;
+}
+.newsletter-input-new {
+  border-radius: 32px 0 0 32px;
+  height: 50px;
+  font-size: 1.06rem;
+  background: #fff;
+  border: none;
+  padding-left: 22px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,61,153,0.06);
+}
+.newsletter-input-new:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0,61,153,0.13);
+}
+.newsletter-btn-new {
+  border-radius: 0 32px 32px 0;
+  background-color: #003D99;
+  color: #fff;
+  font-size: 1.06rem;
+  font-weight: 600;
+  height: 50px;
+  min-width: 130px;
+  border: none;
+  margin-left: -12px;
+  transition: background 0.2s;
+}
+.newsletter-btn-new:hover {
+  background-color: #002d7a;
+}
+@media (max-width: 575.98px) {
+  .newsletter-title-new { font-size: 1.15rem; }
+  .newsletter-description-new { font-size: 0.92rem; }
+  .newsletter-form-new { flex-direction: column; gap: 8px; }
+  .newsletter-input-new, .newsletter-btn-new { border-radius: 32px; height: 40px; font-size: 0.92rem; }
+  .newsletter-btn-new { margin-left: 0; width: 100%; }
+}
+
 /* Footer Bar */
 .footer-bar {
   background-color: #003D99 !important;
@@ -1059,69 +1127,29 @@
   }
 }
 
-
-/* Newsletter Section Styles - Layout Chuẩn */
-.newsletter-section-new {
-  background-color: #f1f9fc;
-  padding: 38px 0;
-}
-.newsletter-title-new {
-  font-size: 2.5rem;
-  text-align: center;
-  font-weight: 700;
-  color: #003D99;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-.newsletter-description-new {
-  font-size: 1.12rem;
-  color: #222;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-}
-.newsletter-form-new {
-  max-width: 640px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  background: none;
-  gap: 0;
-}
-.newsletter-input-new {
-  border-radius: 32px 0 0 32px;
-  height: 50px;
-  font-size: 1.06rem;
-  background: #fff;
-  border: none;
-  padding-left: 22px;
-  flex: 1;
-  box-shadow: 0 2px 8px rgba(0,61,153,0.06);
-}
-.newsletter-input-new:focus {
-  border: none;
-  outline: none;
-  box-shadow: 0 2px 8px rgba(0,61,153,0.13);
-}
-.newsletter-btn-new {
-  border-radius: 0 32px 32px 0;
-  background-color: #003D99;
-  color: #fff;
-  font-size: 1.06rem;
+/* Category Tabs */
+.category-tab {
+  padding: 10px 24px;
+  border-radius: 12px;
+  border: 1px solid #003A8C;
+  background-color: white;
+  color: #003A8C;
   font-weight: 600;
-  height: 50px;
-  min-width: 130px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.category-tab:hover {
+  background-color: #E6F0FF;
+  color: #003A8C;
+  border-color: #003A8C;
+  box-shadow: 0 0 0 3px rgba(0, 58, 140, 0.3);
+}
+
+.category-tab.active {
+  background-color: #003A8C;
+  color: white;
   border: none;
-  margin-left: -12px;
-  transition: background 0.2s;
-}
-.newsletter-btn-new:hover {
-  background-color: #002d7a;
-}
-@media (max-width: 575.98px) {
-  .newsletter-title-new { font-size: 1.15rem; }
-  .newsletter-description-new { font-size: 0.92rem; }
-  .newsletter-form-new { flex-direction: column; gap: 8px; }
-  .newsletter-input-new, .newsletter-btn-new { border-radius: 32px; height: 40px; font-size: 0.92rem; }
-  .newsletter-btn-new { margin-left: 0; width: 100%; }
+  font-weight: bold;
+  box-shadow: none;
 }

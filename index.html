@@ -229,37 +229,26 @@
   <section>
     <div class="container py-4">
       <h2 class="text-center fw-bold mb-4" style="font-size:2.5rem;">Sản phẩm mới</h2>
-      <!-- Tabs -->
-      <ul class="nav nav-tabs justify-content-center mb-4" id="productTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active fw-bold px-4 py-2" id="tp-tab" data-bs-toggle="tab" data-bs-target="#tp" type="button" role="tab" aria-controls="tp" aria-selected="true">Thực phẩm chức năng</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link fw-bold px-4 py-2" id="dmp-tab" data-bs-toggle="tab" data-bs-target="#dmp" type="button" role="tab" aria-controls="dmp" aria-selected="false">Dược mỹ phẩm</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link fw-bold px-4 py-2" id="cs-cn-tab" data-bs-toggle="tab" data-bs-target="#cs-cn" type="button" role="tab" aria-controls="cs-cn" aria-selected="false">Chăm sóc cá nhân</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link fw-bold px-4 py-2" id="yt-tab" data-bs-toggle="tab" data-bs-target="#yt" type="button" role="tab" aria-controls="yt" aria-selected="false">Thiết bị y tế</button>
-        </li>
-      </ul>
+      <!-- Category Tabs -->
+      <div class="d-flex flex-wrap justify-content-center gap-3 my-4">
+        <button class="category-tab active" data-category="tp">Thực phẩm chức năng</button>
+        <button class="category-tab" data-category="dmp">Dược mỹ phẩm</button>
+        <button class="category-tab" data-category="cs-cn">Chăm sóc cá nhân</button>
+        <button class="category-tab" data-category="yt">Thiết bị y tế</button>
+      </div>
       <div class="tab-content">
-        <!-- Tab 1 -->
-        <div class="tab-pane fade show active" id="tp" role="tabpanel" aria-labelledby="tp-tab">
-          <div class="position-relative">
-            <!-- Swiper -->
-            <div class="swiper product-swiper">
-              <div class="swiper-wrapper">
-                <!-- Product Card 1 -->
-                <div class="swiper-slide">
+        <!-- Tab 1: Thực phẩm chức năng -->
+        <div class="tab-pane fade show active" id="tp" role="tabpanel">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+            <!-- Product Card Example -->
+            <div class="col">
                   <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
                     <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
                     </div>
                     <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-35%</span>
-                    <img src="assets/slider_1.png" class="w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Viên uống bổ sung đậu hoa Anh Thảo Kenkan">
+                <img src="assets/slider_1.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Viên uống bổ sung đậu hoa Anh Thảo Kenkan">
                     <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Viên uống bổ sung đậu hoa Anh Thảo Kenkan</div>
                     <div class="d-flex align-items-end gap-2 mb-2">
                       <span class="text-danger fw-bold" style="font-size:1.2rem;">515.000đ</span>
@@ -267,15 +256,16 @@
                     <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2 shadow" style="width:40px;height:40px;"><i class="bi bi-cart-plus fs-5"></i></button>
                   </div>
                 </div>
+            <!-- Repeat .col for each product in this tab -->
                 <!-- Product Card 2 -->
-                <div class="swiper-slide">
+            <div class="col">
                   <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
                     <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
                     </div>
                     <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-15%</span>
-                    <img src="assets/slider_2.png" class="w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Viên uống Kenkan Kaki Ekisu Tohchukasou">
+                <img src="assets/slider_2.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Viên uống Kenkan Kaki Ekisu Tohchukasou">
                     <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Viên uống Kenkan Kaki Ekisu Tohchukasou tăng cường chức năng gan</div>
                     <div class="d-flex align-items-end gap-2 mb-2">
                       <span class="text-danger fw-bold" style="font-size:1.2rem;">515.000đ</span>
@@ -284,14 +274,14 @@
                   </div>
                 </div>
                 <!-- Product Card 3 -->
-                <div class="swiper-slide">
+            <div class="col">
                   <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
                     <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
                     </div>
                     <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-20%</span>
-                    <img src="assets/logo.png" class="w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Viên uống Dr. Caci Ocavill">
+                <img src="assets/logo.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Viên uống Dr. Caci Ocavill">
                     <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Viên uống Dr. Caci Ocavill bổ sung canxi giảm nguy cơ loãng xương</div>
                     <div class="d-flex align-items-end gap-2 mb-2">
                       <span class="text-danger fw-bold" style="font-size:1.2rem;">456.000đ</span>
@@ -301,14 +291,14 @@
                   </div>
                 </div>
                 <!-- Product Card 4 -->
-                <div class="swiper-slide">
+            <div class="col">
                   <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
                     <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
                     </div>
                     <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-30%</span>
-                    <img src="assets/slider_1.png" class="w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Viên uống Pharma Word Calci K-2">
+                <img src="assets/slider_1.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Viên uống Pharma Word Calci K-2">
                     <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Viên uống Pharma Word Calci K-2 bổ sung canxi, giảm nguy cơ loãng xương</div>
                     <div class="d-flex align-items-end gap-2 mb-2">
                       <span class="text-danger fw-bold" style="font-size:1.2rem;">330.000đ</span>
@@ -318,13 +308,13 @@
                   </div>
                 </div>
                 <!-- Product Card 5 -->
-                <div class="swiper-slide">
+            <div class="col">
                   <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
                     <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
                     </div>
-                    <img src="assets/slider_2.png" class="w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Siro ZinC + Lysin Hatro">
+                <img src="assets/slider_2.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Siro ZinC + Lysin Hatro">
                     <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Siro ZinC + Lysin Hatro bổ sung kẽm, tăng sức đề kháng</div>
                     <div class="d-flex align-items-end gap-2 mb-2">
                       <span class="text-danger fw-bold" style="font-size:1.2rem;">150.000đ</span>
@@ -333,14 +323,14 @@
                   </div>
                 </div>
                 <!-- Product Card 6 -->
-                <div class="swiper-slide">
+            <div class="col">
                   <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
                     <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
                     </div>
                     <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-25%</span>
-                    <img src="assets/logo.png" class="w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Viên uống tăng cường miễn dịch">
+                <img src="assets/logo.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Viên uống tăng cường miễn dịch">
                     <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Viên uống tăng cường miễn dịch cho cả gia đình</div>
                     <div class="d-flex align-items-end gap-2 mb-2">
                       <span class="text-danger fw-bold" style="font-size:1.2rem;">225.000đ</span>
@@ -348,29 +338,21 @@
                     </div>
                     <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2 shadow" style="width:40px;height:40px;"><i class="bi bi-cart-plus fs-5"></i></button>
                   </div>
-                </div>
-              </div>
-              <!-- Pagination -->
-              <div class="swiper-pagination mt-3"></div>
-              <!-- Navigation -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
             </div>
           </div>
         </div>
-        <!-- Tab 2 -->
-        <div class="tab-pane fade" id="dmp" role="tabpanel" aria-labelledby="dmp-tab">
-          <div class="position-relative">
-            <div class="swiper product-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
+        <!-- Tab 2: Dược mỹ phẩm -->
+        <div class="tab-pane fade" id="dmp" role="tabpanel">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+            <!-- Product Card Example -->
+            <div class="col">
                   <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
                     <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
                     </div>
                     <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-15%</span>
-                    <img src="assets/slider_2.png" class="w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Kem dưỡng da chống lão hóa">
+                <img src="assets/slider_2.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Kem dưỡng da chống lão hóa">
                     <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Kem dưỡng da chống lão hóa Vitamin C</div>
                     <div class="d-flex align-items-end gap-2 mb-2">
                       <span class="text-danger fw-bold" style="font-size:1.2rem;">340.000đ</span>
@@ -379,14 +361,16 @@
                     <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2 shadow" style="width:40px;height:40px;"><i class="bi bi-cart-plus fs-5"></i></button>
                   </div>
                 </div>
-                <div class="swiper-slide">
+            <!-- Repeat .col for each product in this tab -->
+            <!-- Product Card 2 -->
+            <div class="col">
                   <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
                     <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
                     </div>
                     <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-20%</span>
-                    <img src="assets/logo.png" class="w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Serum phục hồi da">
+                <img src="assets/logo.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Serum phục hồi da">
                     <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Serum phục hồi da tổn thương hiệu quả</div>
                     <div class="d-flex align-items-end gap-2 mb-2">
                       <span class="text-danger fw-bold" style="font-size:1.2rem;">280.000đ</span>
@@ -395,13 +379,14 @@
                     <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2 shadow" style="width:40px;height:40px;"><i class="bi bi-cart-plus fs-5"></i></button>
                   </div>
                 </div>
-                <div class="swiper-slide">
+            <!-- Product Card 3 -->
+            <div class="col">
                   <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
                     <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
                     </div>
-                    <img src="assets/slider_1.png" class="w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Kem chống nắng SPF 50">
+                <img src="assets/slider_1.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Kem chống nắng SPF 50">
                     <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Kem chống nắng SPF 50 bảo vệ toàn diện</div>
                     <div class="d-flex align-items-end gap-2 mb-2">
                       <span class="text-danger fw-bold" style="font-size:1.2rem;">195.000đ</span>
@@ -409,14 +394,15 @@
                     <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2 shadow" style="width:40px;height:40px;"><i class="bi bi-cart-plus fs-5"></i></button>
                   </div>
                 </div>
-                <div class="swiper-slide">
+            <!-- Product Card 4 -->
+            <div class="col">
                   <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
                     <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
                     </div>
                     <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-25%</span>
-                    <img src="assets/slider_2.png" class="w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Nước tẩy trang">
+                <img src="assets/slider_2.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Nước tẩy trang">
                     <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Nước tẩy trang dịu nhẹ cho mọi loại da</div>
                     <div class="d-flex align-items-end gap-2 mb-2">
                       <span class="text-danger fw-bold" style="font-size:1.2rem;">150.000đ</span>
@@ -425,14 +411,15 @@
                     <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2 shadow" style="width:40px;height:40px;"><i class="bi bi-cart-plus fs-5"></i></button>
                   </div>
                 </div>
-                <div class="swiper-slide">
+            <!-- Product Card 5 -->
+            <div class="col">
                   <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
                     <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
                     </div>
                     <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-30%</span>
-                    <img src="assets/logo.png" class="w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Mặt nạ dưỡng ẩm">
+                <img src="assets/logo.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Mặt nạ dưỡng ẩm">
                     <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Mặt nạ dưỡng ẩm chuyên sâu 24h</div>
                     <div class="d-flex align-items-end gap-2 mb-2">
                       <span class="text-danger fw-bold" style="font-size:1.2rem;">210.000đ</span>
@@ -440,27 +427,21 @@
                     </div>
                     <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2 shadow" style="width:40px;height:40px;"><i class="bi bi-cart-plus fs-5"></i></button>
                   </div>
-                </div>
-              </div>
-              <div class="swiper-pagination mt-3"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
             </div>
           </div>
         </div>
-        <!-- Tab 3 -->
-        <div class="tab-pane fade" id="tpcn" role="tabpanel" aria-labelledby="tpcn-tab">
-          <div class="position-relative">
-            <div class="swiper product-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
+        <!-- Tab 3: Chăm sóc cá nhân -->
+        <div class="tab-pane fade" id="cs-cn" role="tabpanel">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+            <!-- Product Card Example -->
+            <div class="col">
                   <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
                     <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
                     </div>
                     <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-10%</span>
-                    <img src="assets/logo.png" class="w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Vitamin tổng hợp">
+                <img src="assets/logo.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Vitamin tổng hợp">
                     <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Vitamin tổng hợp cho sức khỏe toàn diện</div>
                     <div class="d-flex align-items-end gap-2 mb-2">
                       <span class="text-danger fw-bold" style="font-size:1.2rem;">450.000đ</span>
@@ -469,14 +450,16 @@
                     <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2 shadow" style="width:40px;height:40px;"><i class="bi bi-cart-plus fs-5"></i></button>
                   </div>
                 </div>
-                <div class="swiper-slide">
+            <!-- Repeat .col for each product in this tab -->
+            <!-- Product Card 2 -->
+            <div class="col">
                   <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
                     <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
                     </div>
                     <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-15%</span>
-                    <img src="assets/slider_1.png" class="w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Omega 3">
+                <img src="assets/slider_1.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Omega 3">
                     <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Omega 3 cao cấp hỗ trợ tim mạch</div>
                     <div class="d-flex align-items-end gap-2 mb-2">
                       <span class="text-danger fw-bold" style="font-size:1.2rem;">340.000đ</span>
@@ -485,13 +468,14 @@
                     <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2 shadow" style="width:40px;height:40px;"><i class="bi bi-cart-plus fs-5"></i></button>
                   </div>
                 </div>
-                <div class="swiper-slide">
+            <!-- Product Card 3 -->
+            <div class="col">
                   <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
                     <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
                     </div>
-                    <img src="assets/slider_2.png" class="w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Collagen">
+                <img src="assets/slider_2.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Collagen">
                     <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Collagen peptide chống lão hóa da</div>
                     <div class="d-flex align-items-end gap-2 mb-2">
                       <span class="text-danger fw-bold" style="font-size:1.2rem;">520.000đ</span>
@@ -499,14 +483,15 @@
                     <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2 shadow" style="width:40px;height:40px;"><i class="bi bi-cart-plus fs-5"></i></button>
                   </div>
                 </div>
-                <div class="swiper-slide">
+            <!-- Product Card 4 -->
+            <div class="col">
                   <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
                     <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
                     </div>
                     <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-20%</span>
-                    <img src="assets/logo.png" class="w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Probiotics">
+                <img src="assets/logo.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Probiotics">
                     <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Probiotics hỗ trợ tiêu hóa khỏe mạnh</div>
                     <div class="d-flex align-items-end gap-2 mb-2">
                       <span class="text-danger fw-bold" style="font-size:1.2rem;">320.000đ</span>
@@ -515,14 +500,15 @@
                     <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2 shadow" style="width:40px;height:40px;"><i class="bi bi-cart-plus fs-5"></i></button>
                   </div>
                 </div>
-                <div class="swiper-slide">
+            <!-- Product Card 5 -->
+            <div class="col">
                   <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
                     <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
                       <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
                     </div>
                     <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-25%</span>
-                    <img src="assets/slider_1.png" class="w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Glucosamine">
+                <img src="assets/slider_1.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="Glucosamine">
                     <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Glucosamine hỗ trợ xương khớp linh hoạt</div>
                     <div class="d-flex align-items-end gap-2 mb-2">
                       <span class="text-danger fw-bold" style="font-size:1.2rem;">375.000đ</span>
@@ -530,27 +516,21 @@
                     </div>
                     <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2 shadow" style="width:40px;height:40px;"><i class="bi bi-cart-plus fs-5"></i></button>
                   </div>
-                </div>
-              </div>
-              <div class="swiper-pagination mt-3"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
             </div>
           </div>
         </div>
-        <!-- Tab 4 -->
-        <div class="tab-pane fade" id="yt" role="tabpanel" aria-labelledby="yt-tab">
-          <div class="swiper product-swiper">
-            <div class="swiper-wrapper">
-              <!-- ... sản phẩm khác ... -->
-              <div class="swiper-slide">
+        <!-- Tab 4: Thiết bị y tế -->
+        <div class="tab-pane fade" id="yt" role="tabpanel">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+            <!-- Product Card Example -->
+            <div class="col">
                 <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
                   <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
                     <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
                     <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
                   </div>
                   <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-12%</span>
-                  <img src="assets/slider_1.png" class="w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="YT1">
+                <img src="assets/slider_1.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="YT1">
                   <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Thiết bị y tế 1</div>
                   <div class="d-flex align-items-end gap-2 mb-2">
                     <span class="text-danger fw-bold" style="font-size:1.2rem;">800.000đ</span>
@@ -559,11 +539,75 @@
                   <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2 shadow" style="width:40px;height:40px;"><i class="bi bi-cart-plus fs-5"></i></button>
                 </div>
               </div>
-              <!-- ... -->
+            <!-- Repeat .col for each product in this tab -->
+            <!-- Product Card 2 -->
+            <div class="col">
+              <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
+                <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
+                  <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+                  <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                </div>
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-12%</span>
+                <img src="assets/slider_2.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="YT2">
+                <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Thiết bị y tế 2</div>
+                <div class="d-flex align-items-end gap-2 mb-2">
+                  <span class="text-danger fw-bold" style="font-size:1.2rem;">750.000đ</span>
+                  <span class="text-muted text-decoration-line-through" style="font-size:1rem;">850.000đ</span>
+                </div>
+                <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2 shadow" style="width:40px;height:40px;"><i class="bi bi-cart-plus fs-5"></i></button>
+              </div>
             </div>
-            <div class="swiper-pagination mt-3"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <!-- Product Card 3 -->
+            <div class="col">
+              <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
+                <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
+                  <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+                  <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                </div>
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-12%</span>
+                <img src="assets/logo.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="YT3">
+                <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Thiết bị y tế 3</div>
+                <div class="d-flex align-items-end gap-2 mb-2">
+                  <span class="text-danger fw-bold" style="font-size:1.2rem;">700.000đ</span>
+                  <span class="text-muted text-decoration-line-through" style="font-size:1rem;">800.000đ</span>
+                </div>
+                <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2 shadow" style="width:40px;height:40px;"><i class="bi bi-cart-plus fs-5"></i></button>
+              </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="col">
+              <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
+                <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
+                  <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+                  <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                </div>
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-12%</span>
+                <img src="assets/slider_1.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="YT4">
+                <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Thiết bị y tế 4</div>
+                <div class="d-flex align-items-end gap-2 mb-2">
+                  <span class="text-danger fw-bold" style="font-size:1.2rem;">650.000đ</span>
+                  <span class="text-muted text-decoration-line-through" style="font-size:1rem;">750.000đ</span>
+                </div>
+                <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2 shadow" style="width:40px;height:40px;"><i class="bi bi-cart-plus fs-5"></i></button>
+              </div>
+            </div>
+            <!-- Product Card 5 -->
+            <div class="col">
+              <div class="product-card position-relative h-100 bg-white rounded shadow-sm p-3">
+                <div class="position-absolute top-0 end-0 d-flex gap-2 p-2 z-2">
+                  <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+                  <button class="btn btn-light btn-sm rounded-circle shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                </div>
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2 fs-6 px-2 py-1 rounded">-12%</span>
+                <img src="assets/slider_2.png" class="img-fluid w-100 mb-2 rounded" style="height:180px;object-fit:contain;" alt="YT5">
+                <div class="fw-bold mb-1" style="font-size:1rem;line-height:1.2;max-height:2.4em;overflow:hidden;">Thiết bị y tế 5</div>
+                <div class="d-flex align-items-end gap-2 mb-2">
+                  <span class="text-danger fw-bold" style="font-size:1.2rem;">600.000đ</span>
+                  <span class="text-muted text-decoration-line-through" style="font-size:1rem;">700.000đ</span>
+                </div>
+                <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2 shadow" style="width:40px;height:40px;"><i class="bi bi-cart-plus fs-5"></i></button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -756,52 +800,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Bootstrap Icons CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-  <!-- SwiperJS Initialization -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Initialize all product swipers
-      const productSwipers = document.querySelectorAll('.product-swiper');
-      
-      productSwipers.forEach(function(swiperElement) {
-        new Swiper(swiperElement, {
-          slidesPerView: 1,
-          spaceBetween: 20,
-          navigation: {
-            nextEl: swiperElement.querySelector('.swiper-button-next'),
-            prevEl: swiperElement.querySelector('.swiper-button-prev'),
-          },
-          pagination: {
-            el: swiperElement.querySelector('.swiper-pagination'),
-            clickable: true,
-          },
-          breakpoints: {
-            576: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            992: {
-              slidesPerView: 4,
-              spaceBetween: 20,
-            },
-            1200: {
-              slidesPerView: 5,
-              spaceBetween: 20,
-            }
-          },
-          loop: false,
-          autoplay: false,
-          grabCursor: true,
-          centeredSlides: false,
-          watchOverflow: true,
-        });
-      });
-    });
-  </script>
+  <!-- Custom JavaScript for Category Tabs -->
+  <script src="js/category-tabs.js"></script>
 
 </body>
 </html>
