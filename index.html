@@ -1046,28 +1046,62 @@
   <!-- Health Blog + Video Section -->
   <section class="health-section py-4">
     <div class="container">
-      <!-- Blog -->
-      <h2 class="mb-3 fw-bold section-title-large">Góc sức khỏe</h2>
-      <div class="d-flex overflow-auto mb-5 gap-4">
-        <div class="card border-0 shadow-sm blog-card-min-width blog-card-size">
-          <img src="assets/slider_1.png" class="card-img-top rounded-3" alt="Blog 1">
-          <div class="card-body px-2 pb-3 pt-3">
-            <h6 class="card-title fw-bold blog-title-size">Bài viết 1</h6>
-            <p class="card-text text-secondary mb-0 product-price-old">Nội dung ngắn...</p>
-          </div>
+      <!-- Blog Section -->
+      <div class="blog-section position-relative">
+        <h2 class="mb-4 fw-bold section-title-large">Góc sức khỏe</h2>
+        
+        <!-- Navigation Arrows -->
+        <div class="blog-nav-arrows">
+          <button class="blog-nav-arrow blog-nav-prev" type="button">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <button class="blog-nav-arrow blog-nav-next" type="button">
+            <i class="bi bi-chevron-right"></i>
+          </button>
         </div>
-        <div class="card border-0 shadow-sm blog-card-min-width blog-card-size">
-          <img src="assets/slider_2.png" class="card-img-top rounded-3" alt="Blog 2">
-          <div class="card-body px-2 pb-3 pt-3">
-            <h6 class="card-title fw-bold blog-title-size">Bài viết 2</h6>
-            <p class="card-text text-secondary mb-0 product-price-old">Nội dung ngắn...</p>
+        
+        <!-- Blog Cards Container -->
+        <div class="row g-4 mb-5">
+          <!-- Blog Card 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="blog-card">
+              <div class="blog-image-container position-relative">
+                <img src="assets/luu-ban-nhap-tu-dong.png" class="blog-image" alt="Lợi ích của tập yoga">
+                <div class="blog-date">07/09/2023</div>
+              </div> 
+              <div class="blog-content">
+                <h3 class="blog-title">Có nên uống mật ong hàng ngày không ?</h3>
+                <p class="blog-excerpt">Mật ong có tác dụng phụ nhất định. Hãy cùng tìm hiểu về những lợi ích và tác dụng phụ của mật ong.</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="card border-0 shadow-sm blog-card-min-width blog-card-size">
-          <img src="assets/logo.png" class="card-img-top rounded-3" alt="Blog 3">
-          <div class="card-body px-2 pb-3 pt-3">
-            <h6 class="card-title fw-bold blog-title-size">Bài viết 3</h6>
-            <p class="card-text text-secondary mb-0 product-price-old">Nội dung ngắn...</p>
+          
+          <!-- Blog Card 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="blog-card">
+              <div class="blog-image-container position-relative">
+                <img src="assets/que-tranh-thai-la-gi-cay-que-tranh-thai-bao-nhieu-tien.png" class="blog-image" alt="Que tránh thai">
+                <div class="blog-date">07/09/2023</div>
+              </div>
+              <div class="blog-content">
+                <h3 class="blog-title">Que tránh thai là gì? Cây que tránh thai bao nhiều tiền?</h3>
+                <p class="blog-excerpt">Cây que tránh thai bao nhiều tiền là câu hỏi được rất nhiều chị em phụ nữ quan tâm. Hãy cùng tìm hiểu về 1 biện pháp...</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Blog Card 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="blog-card">
+              <div class="blog-image-container position-relative">
+                <img src="assets/can-bo-sung-gi-khi-bi-mat-nuoc-va-chat-dien-giai-blog.png" class="blog-image" alt="Cần bổ sung gì khi bị mất nước">
+                <div class="blog-date">07/09/2023</div>
+              </div>
+              <div class="blog-content">
+                <h3 class="blog-title">Cần bổ sung gì khi bị mất nước và chất điện giải?</h3>
+                <p class="blog-excerpt">Cơ thể bị mất nước và chất điện giải có thể nâng gây ra những vấn đề về sức khỏe rất đáng lo ngại. Vì...</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1151,8 +1185,10 @@
         Tham gia cùng hơn 60.000 người đăng ký và nhận phiếu giảm giá mới vào thứ bảy hàng tuần
       </p>
       <form class="newsletter-form-new" role="form">
-        <input type="email" class="newsletter-input-new" placeholder="Nhập email của bạn" required>
-        <button class="newsletter-btn-new" type="submit">Đăng ký</button>
+        <div class="newsletter-input-group w-100">
+          <input type="email" class="newsletter-input-new form-control" placeholder="Nhập email của bạn" required aria-label="Email">
+          <button class="newsletter-btn-new btn btn-primary" type="submit">Đăng ký</button>
+        </div>
       </form>
     </div>
   </section>
