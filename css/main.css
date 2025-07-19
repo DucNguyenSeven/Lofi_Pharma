@@ -1199,7 +1199,7 @@
 /* Shock Sale Carousel */
 .shock-sale-carousel {
   min-height: 340px;
-  overflow-x: auto;
+  overflow: hidden; /* Changed from overflow-x: auto to prevent horizontal scroll */
   scrollbar-width: none;
 }
 .shock-sale-carousel::-webkit-scrollbar {
@@ -1207,25 +1207,57 @@
 }
 
 /* Fix Glide.js overflow issues for shock sale section */
+#shock-sale-carousel {
+  margin-left: 20px !important;
+}
+
 #shock-sale-carousel .glide__track {
-  overflow: visible !important;
-  padding-left: 20px; /* Increased safe distance from left box */
+  padding-left: 15px !important;
 }
 
 #shock-sale-carousel .glide__slides {
-  overflow: visible !important;
-  padding-left: 15px; /* Increased padding for slides container */
+  padding-left: 10px !important;
 }
 
 #shock-sale-carousel .glide__slide {
   overflow: visible !important;
   position: relative;
   z-index: 1;
+  padding: 0 8px; /* Add padding for better spacing between slides */
 }
 
 /* Add extra margin to first slide to prevent overflow into left box */
 #shock-sale-carousel .glide__slide:first-child {
   margin-left: 8px;
+}
+
+/* Additional responsive fixes for larger screens */
+@media (min-width: 1200px) {
+  #shock-sale-carousel {
+    margin-left: 60px !important;
+  }
+  
+  #shock-sale-carousel .glide__track {
+    padding-left: 35px !important;
+  }
+  
+  #shock-sale-carousel .glide__slides {
+    padding-left: 25px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  #shock-sale-carousel {
+    margin-left: 70px !important;
+  }
+  
+  #shock-sale-carousel .glide__track {
+    padding-left: 40px !important;
+  }
+  
+  #shock-sale-carousel .glide__slides {
+    padding-left: 30px !important;
+  }
 }
 
 /* Ensure hover icons are visible above other elements */
@@ -1235,6 +1267,49 @@
 
 #shock-sale-carousel .discount-badge {
   z-index: 5 !important;
+}
+
+/* Dot-based pagination styling */
+#shock-sale-carousel .glide__bullets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  gap: 8px;
+}
+
+#shock-sale-carousel .glide__bullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+#shock-sale-carousel .glide__bullet:hover {
+  background: #003D99;
+  transform: scale(1.1);
+}
+
+#shock-sale-carousel .glide__bullet--active {
+  background: #003D99;
+  transform: scale(1.2);
+}
+
+/* Responsive dot pagination */
+@media (max-width: 768px) {
+  #shock-sale-carousel .glide__bullets {
+    margin-top: 16px;
+    gap: 6px;
+  }
+  
+  #shock-sale-carousel .glide__bullet {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 .shock-product-card {
@@ -1388,12 +1463,16 @@
   .shock-hover-btn { width: 28px; height: 28px; font-size: 0.95rem; }
   
   /* Adjust padding for tablet */
+  #shock-sale-carousel {
+    margin-left: 40px !important;
+  }
+  
   #shock-sale-carousel .glide__track {
-    padding-left: 16px;
+    padding-left: 25px !important;
   }
   
   #shock-sale-carousel .glide__slides {
-    padding-left: 12px;
+    padding-left: 15px !important;
   }
 }
 @media (max-width: 575.98px) {
@@ -1410,12 +1489,16 @@
   }
   
   /* Reduce padding on mobile for better space usage */
+  #shock-sale-carousel {
+    margin-left: 20px !important;
+  }
+  
   #shock-sale-carousel .glide__track {
-    padding-left: 12px;
+    padding-left: 15px !important;
   }
   
   #shock-sale-carousel .glide__slides {
-    padding-left: 8px;
+    padding-left: 10px !important;
   }
 }
 

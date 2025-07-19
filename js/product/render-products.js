@@ -113,20 +113,21 @@ export function renderSaleProductsWithGlide(products, containerId) {
     </li>
   `).join('');
 
-  // Initialize Glide.js carousel
+  // Initialize Glide.js carousel with dot-based pagination
   if (typeof Glide !== 'undefined') {
     new Glide('#shock-sale-carousel', {
       type: 'carousel',
       perView: 4,
-      gap: 20,
+      gap: 24,
+      focusAt: '0',
       breakpoints: {
         1200: {
           perView: 3
         },
-        768: {
+        992: {
           perView: 2
         },
-        576: {
+        768: {
           perView: 1
         }
       }
