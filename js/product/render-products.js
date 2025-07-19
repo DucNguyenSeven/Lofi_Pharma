@@ -38,6 +38,10 @@ export function renderProducts(category) {
   list.innerHTML = products.map(product => `
     <div class="col">
       <div class="card border-0 shadow-sm suggest-product-card position-relative h-100">
+        ${product.discount && product.oldPrice ? `
+          <span class="badge discount-badge position-absolute top-0 start-0 m-2 px-2 py-1">${product.discount}</span>
+        ` : ''}
+        
         <div class="suggest-product-image-container position-relative overflow-hidden">
           <div class="hover-icons position-absolute top-0 end-0 m-2 d-flex flex-column gap-2">
             <button class="btn btn-white rounded-circle p-2 shadow-sm" onclick="viewProduct(${product.id})" title="Xem nhanh">
@@ -55,7 +59,12 @@ export function renderProducts(category) {
           
           <div class="suggest-product-prices mt-auto mb-2">
             <div class="d-flex align-items-center gap-2">
-              <span class="suggest-price-current">${product.currentPrice}</span>
+              ${product.discount && product.oldPrice ? `
+                <span class="suggest-price-current">${product.currentPrice}</span>
+                <span class="suggest-price-old">${product.oldPrice}</span>
+              ` : `
+                <span class="suggest-price-current">${product.currentPrice}</span>
+              `}
             </div>
           </div>
         </div>

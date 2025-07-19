@@ -8,14 +8,14 @@ export const productData = {
       image: "assets/slider_1.png",
       currentPrice: "515.000đ",
       oldPrice: "",
-      discount: "-35%"
+      discount: ""
     },
     {
       name: "Viên uống Kenkan Kaki Ekisu Tohchukasou tăng cường chức năng gan",
       image: "assets/slider_2.png",
       currentPrice: "515.000đ",
       oldPrice: "",
-      discount: "-15%"
+      discount: ""
     },
     {
       name: "Viên uống Dr. Caci Ocavill bổ sung canxi giảm nguy cơ loãng xương",
@@ -157,4 +157,4 @@ export const productData = {
       discount: "-12%"
     }
   ]
-}; 
+};
