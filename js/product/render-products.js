@@ -42,8 +42,7 @@ window.addToWishlist = function(productId) {
 };
 
 
-// Common function to render products for various purposes written in English
-// dataSource: object, containerId: string
+// Common function to render products for various purposes
 export function renderProducts(category, dataSource, containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;

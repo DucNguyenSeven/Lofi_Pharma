@@ -1,849 +1,1155 @@
 <!DOCTYPE html>
 <html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lofi Pharma</title>
+    <!-- Bootstrap 5 CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- SwiperJS CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lofi Pharma</title>
-  <!-- Bootstrap 5 CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
-  <!-- SwiperJS CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-</head>
-
-<body>
-  <!-- Topbar -->
-  <div class="bg-primary text-white py-1 px-3 d-flex justify-content-between align-items-center">
-    <span>
-      <a href="tel:19006750" class="text-white topbar-link"><i class="bi bi-telephone-fill me-1"></i>1900 6750</a> |
-      <a href="mailto:support@sapo.vn" class="text-white topbar-link"><i
-          class="bi bi-envelope-fill me-1"></i>support@sapo.vn</a>
-    </span>
-    <div>
-      <a href="#" class="text-white topbar-link">Đăng nhập</a> |
-      <a href="#" class="text-white topbar-link">Đăng ký</a>
-    </div>
-  </div>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-white border-bottom custom-navbar">
-    <div class="container d-flex align-items-center justify-content-between">
-      <!-- Logo -->
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="assets/logo.png" alt="Lofi Pharma Logo" class="me-2">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Menu -->
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
-          <li class="nav-item"><a class="nav-link active nav-home" href="#">Trang chủ</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Giới thiệu</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="sanphamDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">Sản phẩm</a>
-            <ul class="dropdown-menu" aria-labelledby="sanphamDropdown">
-              <li><a class="dropdown-item" href="#">Thực phẩm chức năng</a></li>
-              <li><a class="dropdown-item" href="#">Dược phẩm</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#">Góc sức khỏe</a></li>
-        </ul>
-        <div class="d-flex align-items-center ms-3 me-3 nav-arrows">
-          <button class="btn btn-arrow me-1" type="button" title="Trước"><i class="bi bi-chevron-left"></i></button>
-          <button class="btn btn-arrow" type="button" title="Sau"><i class="bi bi-chevron-right"></i></button>
-        </div>
-        <!-- Search -->
-        <form class="d-flex align-items-center nav-search me-3" role="search">
-          <input class="form-control search-input" type="search" placeholder="Thực phẩm chức năng..."
-            aria-label="Search">
-          <button class="btn btn-search" type="submit"><i class="bi bi-search"></i></button>
-        </form>
-        <!-- Icons -->
-        <div class="d-flex align-items-center nav-icons">
-          <a href="#" class="icon-btn me-2" title="Vị trí">
-            <div class="icon-square"><i class="bi bi-geo-alt"></i></div>
-          </a>
-          <a href="#" class="icon-btn me-2 position-relative" title="Yêu thích">
-            <div class="icon-square"><i class="bi bi-heart"></i>
-              <span class="badge badge-custom position-absolute top-0 start-100 translate-middle">0</span>
-            </div>
-          </a>
-          <a href="#" class="icon-btn position-relative" title="Giỏ hàng">
-            <div class="icon-square"><i class="bi bi-cart"></i>
-              <span class="badge badge-custom position-absolute top-0 start-100 translate-middle">0</span>
-            </div>
-          </a>
-        </div>
+  <body>
+    <!-- Topbar -->
+    <div
+      class="bg-primary text-white py-1 px-3 d-flex justify-content-between align-items-center"
+    >
+      <span>
+        <a href="tel:19006750" class="text-white topbar-link"
+          ><i class="bi bi-telephone-fill me-1"></i>1900 6750</a
+        >
+        |
+        <a href="mailto:support@sapo.vn" class="text-white topbar-link"
+          ><i class="bi bi-envelope-fill me-1"></i>support@sapo.vn</a
+        >
+      </span>
+      <div>
+        <a href="#" class="text-white topbar-link">Đăng nhập</a> |
+        <a href="#" class="text-white topbar-link">Đăng ký</a>
       </div>
     </div>
-  </nav>
 
-  <!-- Hero Carousel -->
-  <section class="bg-light">
-    <div id="heroCarousel" class="carousel slide hero-carousel-bg" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active hero-carousel-slide-bg hero-carousel-slide-bg-1">
-          <div class="container-fluid py-5">
-            <div class="row align-items-center min-vh-40 hero-carousel-row">
-              <div class="col-md-6 px-4 px-md-5 d-flex flex-column justify-content-center align-items-start text-start">
-                <h2 class="hero-carousel-title display-4 fs-1 fw-bold lh-sm text-start mb-3 hero-title-custom">Chăm
-                  sóc<br>cuộc sống tốt hơn<br>bằng thuốc</h2>
-                <a href="#" class="hero-carousel-btn btn fw-bold px-5 py-3 mt-2 hero-btn-custom">MUA NGAY</a>
-              </div>
-              <div class="d-none d-md-block col-md-6"></div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item hero-carousel-slide-bg hero-carousel-slide-bg-2">
-          <div class="container-fluid py-5">
-            <div class="row align-items-center min-vh-40 hero-carousel-row">
-              <div class="col-md-6 px-4 px-md-5 d-flex flex-column justify-content-center align-items-start text-start">
-                <h2 class="hero-carousel-title display-4 fs-1 fw-bold lh-sm text-start mb-3 hero-title-custom">Chăm
-                  sóc<br>sức khỏe không nhất thiết<br>phải tốn kém</h2>
-                <a href="#" class="hero-carousel-btn btn fw-bold px-5 py-3 mt-2 hero-btn-custom">MUA NGAY</a>
-              </div>
-              <div class="d-none d-md-block col-md-6"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-      <div class="carousel-indicators-wrapper">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-            aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service Highlights -->
-  <section class="service-highlights py-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-3 mb-4 mb-md-0">
-          <div class="service-item d-flex">
-            <div class="service-icon bg-light d-flex justify-content-center align-items-center me-3">
-              <i class="bi bi-truck"></i>
-            </div>
-            <div>
-              <div class="service-title">Miễn phí vận chuyển</div>
-              <div class="service-desc">Miễn phí vận chuyển toàn quốc</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-3 mb-4 mb-md-0">
-          <div class="service-item d-flex">
-            <div class="service-icon bg-light d-flex justify-content-center align-items-center me-3">
-              <i class="bi bi-box"></i>
-            </div>
-            <div>
-              <div class="service-title">Dễ dàng theo dõi<br>đơn hàng</div>
-              <div class="service-desc">Dễ dàng theo dõi đơn hàng</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-3 mb-4 mb-md-0">
-          <div class="service-item d-flex">
-            <div class="service-icon bg-light d-flex justify-content-center align-items-center me-3">
-              <i class="bi bi-headset"></i>
-            </div>
-            <div>
-              <div class="service-title">Hỗ trợ khách hàng<br>24/7</div>
-              <div class="service-desc">Hỗ trợ khách hàng các ngày trong tuần</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-3">
-          <div class="service-item d-flex">
-            <div class="service-icon bg-light d-flex justify-content-center align-items-center me-3">
-              <i class="bi bi-clock"></i>
-            </div>
-            <div>
-              <div class="service-title">Chuyển hàng<br>đúng giờ</div>
-              <div class="service-desc">Chuyển hàng đúng giờ</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Promo Banners -->
-  <section>
-    <div class="container py-4">
-      <div class="row g-3">
-        <div class="col-md-4 col-12">
-          <div class="promo-banner position-relative">
-            <a href="#">
-              <picture>
-                <source media="(max-width: 567px)" srcset="assets/image_three_1_banner_mobile.png">
-                <img class="img-fluid w-100 rounded" src="assets/image_three_1_banner.png" alt="Ưu đãi đặc biệt">
-              </picture>
-            </a>
-            <div class="promo-overlay promo-overlay-1 position-absolute">
-              <h3 class="promo-title">Ưu đãi đặc biệt</h3>
-              <p class="promo-subtitle">Siro ho</p>
-              <a href="#" class="btn btn-primary fw-bold">MUA NGAY</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-12">
-          <div class="promo-banner position-relative">
-            <a href="#">
-              <picture>
-                <source media="(max-width: 567px)" srcset="assets/image_three_2_banner_mobile.png">
-                <img class="img-fluid w-100 rounded" src="assets/image_three_2_banner.png" alt="Viên nén Vitamin">
-              </picture>
-            </a>
-            <div class="promo-overlay promo-overlay-2 position-absolute">
-              <h3 class="promo-title">Viên nén Vitamin</h3>
-              <p class="promo-subtitle">Ưu đãi 20%</p>
-              <a href="#" class="btn btn-primary fw-bold">MUA NGAY</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-12">
-          <div class="promo-banner position-relative">
-            <a href="#">
-              <picture>
-                <source media="(max-width: 567px)" srcset="assets/image_three_3_banner_mobile.png">
-                <img class="img-fluid w-100 rounded" src="assets/image_three_3_banner.png" alt="Giảm giá trên 30%">
-              </picture>
-            </a>
-            <div class="promo-overlay promo-overlay-3 position-absolute">
-              <h3 class="promo-title">Giảm giá trên 30%</h3>
-              <p class="promo-subtitle">Viên dầu cá</p>
-              <a href="#" class="btn btn-primary fw-bold">MUA NGAY</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Product Sections -->
-  <section>
-    <div class="container py-4">
-      <h2 class="text-center fw-bold mb-4 section-title-large">Sản phẩm mới</h2>
-      <!-- Category Tabs -->
-      <div class="d-flex flex-wrap justify-content-center gap-3 my-4">
-        <button class="category-tab active" data-category="tp">Thực phẩm chức năng</button>
-        <button class="category-tab" data-category="dmp">Dược mỹ phẩm</button>
-        <button class="category-tab" data-category="cs-cn">Chăm sóc cá nhân</button>
-        <button class="category-tab" data-category="yt">Thiết bị y tế</button>
-      </div>
-      <div class="tab-content">
-        <div id="new-products" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sale Banner + Medical Experts Section -->
-  <section class="sale-experts-wrapper py-5 section-bg-white">
-    <div class="container">
-      <div class="row align-items-center min-height-400">
-        <!-- Text Content Left -->
-        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-          <div class="experts-content pe-lg-5">
-            <h2 class="experts-title mb-4">
-              Chuyên Gia Y Tế Giàu Kinh<br> Nghiệm
-            </h2>
-            <p class="experts-body mb-4">
-              Được thành lập vào năm 2015, Lofi Pharma là một trong những chuỗi bán lẻ dược phẩm đầu tiên tại Việt Nam.
-              Đến nay, Lofi Pharma sở hữu mạng lưới hơn 100 nhà thuốc đạt chuẩn GPP trên toàn quốc cùng đội ngũ hơn 500
-              dược sĩ đáng tin cậy, cung cấp các sản phẩm thuốc và sản phẩm chăm sóc sức khỏe hàng đầu với giá thành
-              cạnh tranh nhất.
-            </p>
-            <a href="#" class="btn experts-cta-btn mb-4">MUA NGAY</a>
-          </div>
-        </div>
-        <!-- Image Right -->
-        <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center h-100">
-          <img src="assets/about_image.png" alt="Đội ngũ chuyên gia y tế" class="experts-image img-fluid"
-            class="max-width-100-height-auto">
-        </div>
-      </div>
-      <!-- Stats Row -->
-      <div class="row stats-row mt-4 pt-2 justify-content-center">
-        <div class="col-6 col-lg-3 mb-4 mb-lg-0">
-          <div class="stat-block">
-            <div class="stat-icon mb-2"><i class="bi bi-emoji-smile"></i></div>
-            <div class="stat-number">200K+</div>
-            <div class="stat-label">Khách Hàng Vui Vẻ</div>
-          </div>
-        </div>
-        <div class="col-6 col-lg-3 mb-4 mb-lg-0">
-          <div class="stat-block">
-            <div class="stat-icon mb-2"><i class="bi bi-truck"></i></div>
-            <div class="stat-number">50K+</div>
-            <div class="stat-label">Đơn Hàng Đã Giao</div>
-          </div>
-        </div>
-        <div class="col-6 col-lg-3 mb-4 mb-lg-0">
-          <div class="stat-block">
-            <div class="stat-icon mb-2"><i class="bi bi-shop"></i></div>
-            <div class="stat-number">20+</div>
-            <div class="stat-label">Cửa Hàng</div>
-          </div>
-        </div>
-        <div class="col-6 col-lg-3">
-          <div class="stat-block">
-            <div class="stat-icon mb-2"><i class="bi bi-capsule"></i></div>
-            <div class="stat-number">5K+</div>
-            <div class="stat-label">Các Loại Thuốc</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sale Banner + Medical Experts Section -->
-  <section class="shock-sale-section py-5 section-bg-light">
-    <div class="container">
-      <div class="row align-items-stretch g-4">
-        <!-- Left: Countdown Box -->
-        <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
-          <div class="shock-sale-box d-flex flex-column justify-content-between h-100 p-4 shock-sale-bg">
-            <div>
-              <h2 class="shock-sale-title mb-4">Giảm giá<br> sốc</h2>
-              <div class="row row-cols-2 row-cols-md-4 g-2 g-md-3 mb-3 justify-content-center">
-                <div class="col">
-                  <div class="bg-white text-center rounded p-2 p-md-3 h-100 d-flex flex-column align-items-center justify-content-center">
-                    <div class="fw-bold timer-number">211</div>
-                    <div class="shock-timer-label timer-label">Ngày</div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="bg-white text-center rounded p-2 p-md-3 h-100 d-flex flex-column align-items-center justify-content-center">
-                    <div class="fw-bold timer-number">02</div>
-                    <div class="shock-timer-label timer-label">Giờ</div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="bg-white text-center rounded p-2 p-md-3 h-100 d-flex flex-column align-items-center justify-content-center">
-                    <div class="fw-bold timer-number">18</div>
-                    <div class="shock-timer-label timer-label">Phút</div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="bg-white text-center rounded p-2 p-md-3 h-100 d-flex flex-column align-items-center justify-content-center">
-                    <div class="fw-bold timer-number">43</div>
-                    <div class="shock-timer-label timer-label">Giây</div>
-                  </div>
-                </div>
-              </div>
-              <div class="shock-sale-desc mt-4">Áp dụng trước khi kết thúc<br>chương trình khuyến mãi</div>
-            </div>
-          </div>
-        </div>
-        <!-- Right: Product Grid (Bootstrap) -->
-        <div class="col-lg-9 col-md-8">
-          <div class="row">
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div class="shock-product-card product-card bg-white rounded-4 shadow-sm p-3 position-relative h-100 w-100">
-                <span class="shock-discount-badge badge bg-danger position-absolute top-0 start-0 mt-2 ms-2">-15%</span>
-                <div class="position-relative mb-2">
-                  <img src="assets/logo.png" class="img-fluid rounded-3 d-block mx-auto product-max-height-80" alt="Product">
-                  <div class="shock-product-hover-icons hover-icons position-absolute top-0 end-0 d-flex flex-column gap-2 p-2 hover-icons-hidden">
-                    <button class="btn btn-light btn-sm rounded-circle shadow-sm mb-1"><i class="bi bi-eye"></i></button>
-                    <button class="btn btn-light btn-sm rounded-circle shadow-sm"><i class="bi bi-heart"></i></button>
-                  </div>
-                </div>
-                <div class="mb-2">
-                  <span class="fw-bold">204 sản phẩm đã bán</span>
-                  <div class="progress mt-1 progress-height-7">
-                    <div class="progress-bar bg-primary progress-width-60"></div>
-                  </div>
-                </div>
-                <div class="fw-bold text-dark text-truncate mb-1 text-max-width-100">Nước hoa hồng Transino Whitening…</div>
-                <div class="d-flex align-items-end gap-2 mb-2">
-                  <span class="text-danger fw-bold">756.000đ</span>
-                  <span class="text-muted text-decoration-line-through">890.000đ</span>
-                </div>
-                <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2"><i class="bi bi-cart-plus"></i></button>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div class="shock-product-card product-card bg-white rounded-4 shadow-sm p-3 position-relative h-100 w-100">
-                <span class="shock-discount-badge badge bg-danger position-absolute top-0 start-0 mt-2 ms-2">-35%</span>
-                <div class="position-relative mb-2">
-                  <img src="assets/logo.png" class="img-fluid rounded-3 d-block mx-auto product-max-height-80" alt="Product">
-                  <div class="shock-product-hover-icons hover-icons position-absolute top-0 end-0 d-flex flex-column gap-2 p-2 hover-icons-hidden">
-                    <button class="btn btn-light btn-sm rounded-circle shadow-sm mb-1"><i class="bi bi-eye"></i></button>
-                    <button class="btn btn-light btn-sm rounded-circle shadow-sm"><i class="bi bi-heart"></i></button>
-                  </div>
-                </div>
-                <div class="mb-2">
-                  <span class="fw-bold">225 sản phẩm đã bán</span>
-                  <div class="progress mt-1 progress-height-7">
-                    <div class="progress-bar bg-primary progress-width-80"></div>
-                  </div>
-                </div>
-                <div class="fw-bold text-dark text-truncate mb-1 text-max-width-100">Viên uống Ironmen Ocavill hỗ trợ tăng…</div>
-                <div class="d-flex align-items-end gap-2 mb-2">
-                  <span class="text-danger fw-bold">400.000đ</span>
-                  <span class="text-muted text-decoration-line-through">615.000đ</span>
-                </div>
-                <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2"><i class="bi bi-cart-plus"></i></button>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div class="shock-product-card product-card bg-white rounded-4 shadow-sm p-3 position-relative h-100 w-100">
-                <span class="shock-discount-badge badge bg-danger position-absolute top-0 start-0 mt-2 ms-2">-20%</span>
-                <div class="position-relative mb-2">
-                  <img src="assets/logo.png" class="img-fluid rounded-3 d-block mx-auto product-max-height-80" alt="Product">
-                  <div class="shock-product-hover-icons hover-icons position-absolute top-0 end-0 d-flex flex-column gap-2 p-2 hover-icons-hidden">
-                    <button class="btn btn-light btn-sm rounded-circle shadow-sm mb-1"><i class="bi bi-eye"></i></button>
-                    <button class="btn btn-light btn-sm rounded-circle shadow-sm"><i class="bi bi-heart"></i></button>
-                  </div>
-                </div>
-                <div class="mb-2">
-                  <span class="fw-bold">213 sản phẩm đã bán</span>
-                  <div class="progress mt-1 progress-height-7">
-                    <div class="progress-bar bg-primary progress-width-70"></div>
-                  </div>
-                </div>
-                <div class="fw-bold text-dark text-truncate mb-1 text-max-width-100">Viên uống Dr. Caci Ocavill bổ sung can…</div>
-                <div class="d-flex align-items-end gap-2 mb-2">
-                  <span class="text-danger fw-bold">456.000đ</span>
-                  <span class="text-muted text-decoration-line-through">570.000đ</span>
-                </div>
-                <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2"><i class="bi bi-cart-plus"></i></button>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div class="shock-product-card product-card bg-white rounded-4 shadow-sm p-3 position-relative h-100 w-100">
-                <span class="shock-discount-badge badge bg-danger position-absolute top-0 start-0 mt-2 ms-2">-30%</span>
-                <div class="position-relative mb-2">
-                  <img src="assets/logo.png" class="img-fluid rounded-3 d-block mx-auto product-max-height-80" alt="Product">
-                  <div class="shock-product-hover-icons hover-icons position-absolute top-0 end-0 d-flex flex-column gap-2 p-2 hover-icons-hidden">
-                    <button class="btn btn-light btn-sm rounded-circle shadow-sm mb-1"><i class="bi bi-eye"></i></button>
-                    <button class="btn btn-light btn-sm rounded-circle shadow-sm"><i class="bi bi-heart"></i></button>
-                  </div>
-                </div>
-                <div class="mb-2">
-                  <span class="fw-bold">228 sản phẩm đã bán</span>
-                  <div class="progress mt-1 progress-height-7">
-                    <div class="progress-bar bg-primary progress-width-90"></div>
-                  </div>
-                </div>
-                <div class="fw-bold text-dark text-truncate mb-1 text-max-width-100">Viên uống Pharma Word Calci K-2 bổ…</div>
-                <div class="d-flex align-items-end gap-2 mb-2">
-                  <span class="text-danger fw-bold">330.000đ</span>
-                  <span class="text-muted text-decoration-line-through">470.000đ</span>
-                </div>
-                <button class="btn btn-primary rounded-circle position-absolute bottom-0 end-0 m-2"><i class="bi bi-cart-plus"></i></button>
-              </div>
-            </div>
-          </div>
-          <!-- Pagination Dots -->
-          <div class="shock-sale-pagination d-flex justify-content-center align-items-center mt-4 gap-2">
-            <span class="shock-dot active"></span>
-            <span class="shock-dot"></span>
-            <span class="shock-dot"></span>
-            <span class="shock-dot"></span>
-            <span class="shock-dot"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="section-faq py-5">
-    <div class="container">
-      <div class="row align-items-start">
-        <!-- Left Column - Doctor Image -->
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <div class="faq-image-wrapper">
-            <img src="assets/faqs_image.png" alt="Bác sĩ đo huyết áp" class="faq-doctor-image">
-          </div>
-        </div>
-        
-        <!-- Right Column - FAQ Accordion -->
-        <div class="col-lg-6">
-          <div class="faq-content">
-            <h2 class="faq-title mb-4">Câu hỏi thường gặp</h2>
-            
-            <!-- FAQ Accordion -->
-            <div class="faq-accordion-wrapper">
-              <!-- FAQ Item 1 -->
-              <div class="faq-item" data-faq="1">
-                <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-1">
-                  <span class="faq-question-text">Tôi có thể mua thuốc không kê đơn trực tuyến không?</span>
-                  <div class="faq-icon-wrapper">
-                    <div class="faq-checkmark-icon">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div class="faq-answer" id="faq-answer-1" aria-labelledby="faq-question-1">
-                  <div class="faq-answer-content">
-                    <p>Có, bạn hoàn toàn có thể mua thuốc không kê đơn trực tuyến tại Oh Pharma. Chúng tôi cung cấp đầy đủ các loại thuốc OTC (Over-the-Counter) được phép bán tự do theo quy định của Bộ Y tế. Tất cả sản phẩm đều được kiểm định chất lượng và có nguồn gốc xuất xứ rõ ràng.</p>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- FAQ Item 2 -->
-              <div class="faq-item" data-faq="2">
-                <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-2">
-                  <span class="faq-question-text">Làm thế nào để tôi biết thuốc còn hạn sử dụng?</span>
-                  <div class="faq-icon-wrapper">
-                    <div class="faq-checkmark-icon">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div class="faq-answer" id="faq-answer-2" aria-labelledby="faq-question-2">
-                  <div class="faq-answer-content">
-                    <p>Mỗi sản phẩm trên website đều hiển thị rõ ràng thông tin hạn sử dụng. Chúng tôi cam kết chỉ bán những sản phẩm còn ít nhất 12 tháng trước khi hết hạn. Ngoài ra, trên bao bì sản phẩm sẽ có ghi rõ ngày sản xuất và hạn sử dụng theo định dạng DD/MM/YYYY.</p>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- FAQ Item 3 -->
-              <div class="faq-item" data-faq="3">
-                <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-3">
-                  <span class="faq-question-text">Tôi có thể trả lại thuốc nếu không sử dụng được không?</span>
-                  <div class="faq-icon-wrapper">
-                    <div class="faq-checkmark-icon">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div class="faq-answer" id="faq-answer-3" aria-labelledby="faq-question-3">
-                  <div class="faq-answer-content">
-                    <p>Theo quy định về an toàn dược phẩm, chúng tôi không thể nhận lại thuốc đã bán trừ trường hợp sản phẩm bị lỗi từ nhà sản xuất. Tuy nhiên, nếu bạn có thắc mắc về cách sử dụng thuốc, hãy liên hệ với dược sĩ tư vấn của chúng tôi qua hotline 1900-xxxx để được hỗ trợ miễn phí.</p>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- FAQ Item 4 -->
-              <div class="faq-item" data-faq="4">
-                <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-4">
-                  <span class="faq-question-text">Thời gian giao hàng là bao lâu?</span>
-                  <div class="faq-icon-wrapper">
-                    <div class="faq-checkmark-icon">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div class="faq-answer" id="faq-answer-4" aria-labelledby="faq-question-4">
-                  <div class="faq-answer-content">
-                    <p>Thời gian giao hàng phụ thuộc vào khu vực của bạn: Nội thành Hà Nội và TP.HCM: 2-4 giờ (giao hàng nhanh), các tỉnh thành khác: 1-3 ngày làm việc. Chúng tôi có dịch vụ giao hàng khẩn cấp 24/7 cho các trường hợp cần thiết với phí phụ thu hợp lý.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Suggest Section -->
-  <section class="suggest-section py-5">
-    <div class="container">
-      <!-- Section Title -->
-      <h2 class="suggest-title mb-4">Gợi ý hôm nay</h2>
-      
-      <!-- Category Tabs -->
-      <div class="suggest-tabs mb-4">
-        <button class="suggest-tab active" data-category="thuoc-bo">
-          Thuốc bổ
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom custom-navbar">
+      <div class="container d-flex align-items-center justify-content-between">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="assets/logo.png" alt="Lofi Pharma Logo" class="me-2" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <button class="suggest-tab" data-category="vitamin">
-          Vitamin
-        </button>
-        <button class="suggest-tab" data-category="cham-soc">
-          Chăm sóc sức khỏe
-        </button>
-      </div>
-      
-      <!-- Products Grid -->
-      <div class="suggest-products" id="suggest-products">
-        <!-- Products will be loaded here -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Health Blog + Video Section -->
-  <section class="health-section py-4">
-    <div class="container">
-      <!-- Blog Section -->
-      <div class="blog-section position-relative">
-        <h2 class="mb-4 fw-bold section-title-large">Góc sức khỏe</h2>
-        
-        <!-- Navigation Arrows -->
-        <div class="blog-nav-arrows">
-          <button class="blog-nav-arrow blog-nav-prev" type="button">
-            <i class="bi bi-chevron-left"></i>
-          </button>
-          <button class="blog-nav-arrow blog-nav-next" type="button">
-            <i class="bi bi-chevron-right"></i>
-          </button>
-        </div>
-        
-        <!-- Blog Cards Container -->
-        <div class="row g-4 mb-5">
-          <!-- Blog Card 1 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="blog-card">
-              <div class="blog-image-container position-relative">
-                <img src="assets/luu-ban-nhap-tu-dong.png" class="blog-image" alt="Lợi ích của tập yoga">
-                <div class="blog-date">07/09/2023</div>
-              </div> 
-              <div class="blog-content">
-                <h3 class="blog-title">Có nên uống mật ong hàng ngày không ?</h3>
-                <p class="blog-excerpt">Mật ong có tác dụng phụ nhất định. Hãy cùng tìm hiểu về những lợi ích và tác dụng phụ của mật ong.</p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Blog Card 2 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="blog-card">
-              <div class="blog-image-container position-relative">
-                <img src="assets/que-tranh-thai-la-gi-cay-que-tranh-thai-bao-nhieu-tien.png" class="blog-image" alt="Que tránh thai">
-                <div class="blog-date">07/09/2023</div>
-              </div>
-              <div class="blog-content">
-                <h3 class="blog-title">Que tránh thai là gì? Cây que tránh thai bao nhiều tiền?</h3>
-                <p class="blog-excerpt">Cây que tránh thai bao nhiều tiền là câu hỏi được rất nhiều chị em phụ nữ quan tâm. Hãy cùng tìm hiểu về 1 biện pháp...</p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Blog Card 3 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="blog-card">
-              <div class="blog-image-container position-relative">
-                <img src="assets/can-bo-sung-gi-khi-bi-mat-nuoc-va-chat-dien-giai-blog.png" class="blog-image" alt="Cần bổ sung gì khi bị mất nước">
-                <div class="blog-date">07/09/2023</div>
-              </div>
-              <div class="blog-content">
-                <h3 class="blog-title">Cần bổ sung gì khi bị mất nước và chất điện giải?</h3>
-                <p class="blog-excerpt">Cơ thể bị mất nước và chất điện giải có thể nâng gây ra những vấn đề về sức khỏe rất đáng lo ngại. Vì...</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Video (Layout chuẩn mẫu) -->
-      <h2 class="fw-bold mb-5 video-title-custom">Video</h2>
-      <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center mb-4">
-        <div class="col">
-          <div class="video-card-custom shadow-sm rounded-3 overflow-hidden bg-white h-100 d-flex flex-column">
-            <div class="ratio ratio-16x9 video-thumb-custom position-relative">
-              <img src="assets/che-do-tap-luyen-cho-nguoi-benh-gut-1-c46c6a288f-ezgif-com-webp-to-jpg-converter.png"
-                class="img-fluid w-100 h-100 object-fit-cover" alt="Video 1">
-              <button
-                class="btn btn-white border-0 shadow-none video-play-btn-custom position-absolute top-50 start-50 translate-middle">
-                <i class="bi bi-play-circle play-icon-style"></i>
-              </button>
-            </div>
-            <div class="p-3 flex-grow-1 d-flex align-items-end">
-              <div class="fw-bold fs-4 mb-0 video-card-title-custom">Các bài tập cho bệnh lý cơ xương khớp</div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="video-card-custom shadow-sm rounded-3 overflow-hidden bg-white h-100 d-flex flex-column">
-            <div class="ratio ratio-16x9 video-thumb-custom position-relative">
-              <img
-                src="assets/cac-bai-tap-giup-ban-giam-dau-than-kinh-toa-nhanh-chong-2-44deecfc8e-ezgif-com-webp-to-jpg-converter.png"
-                class="img-fluid w-100 h-100 object-fit-cover" alt="Video 2">
-              <button
-                class="btn btn-white border-0 shadow-none video-play-btn-custom position-absolute top-50 start-50 translate-middle">
-                <i class="bi bi-play-circle play-icon-style"></i>
-              </button>
-            </div>
-            <div class="p-3 flex-grow-1 d-flex align-items-end">
-              <div class="fw-bold fs-4 mb-0 video-card-title-custom">Các bài tập cho bệnh Gout</div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="video-card-custom shadow-sm rounded-3 overflow-hidden bg-white h-100 d-flex flex-column">
-            <div class="ratio ratio-16x9 video-thumb-custom position-relative">
-              <img src="assets/can-bo-sung-gi-khi-bi-mat-nuoc-va-chat-dien-giai.png"
-                class="img-fluid w-100 h-100 object-fit-cover" alt="Video 3">
-              <button
-                class="btn btn-white border-0 shadow-none video-play-btn-custom position-absolute top-50 start-50 translate-middle">
-                <i class="bi bi-play-circle play-icon-style"></i>
-              </button>
-            </div>
-            <div class="p-3 flex-grow-1 d-flex align-items-end">
-              <div class="fw-bold fs-4 mb-0 video-card-title-custom">Các bài tập cho sức khỏe tim mạch</div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="video-card-custom shadow-sm rounded-3 overflow-hidden bg-white h-100 d-flex flex-column">
-            <div class="ratio ratio-16x9 video-thumb-custom position-relative">
-              <img
-                src="assets/cach-cham-soc-va-nhung-bai-tap-the-duc-tot-cho-xuong-khop-2-0466ce72ce-ezgif-com-webp-to-jpg-converter.png"
-                class="img-fluid w-100 h-100 object-fit-cover" alt="Video 4">
-              <button
-                class="btn btn-white border-0 shadow-none video-play-btn-custom position-absolute top-50 start-50 translate-middle">
-                <i class="bi bi-play-circle play-icon-style"></i>
-              </button>
-            </div>
-            <div class="p-3 flex-grow-1 d-flex align-items-end">
-              <div class="fw-bold fs-4 mb-0 video-card-title-custom">Các bài tập cho bệnh lý thận kinh</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="text-center mt-3">
-        <a href="#" class="btn btn-outline-primary fw-bold px-5 py-2 video-btn-all-custom">Xem tất cả</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Newsletter Signup -->
-  <section class="newsletter-section-new py-5">
-    <div class="newsletter-wrapper mx-auto">
-      <h2 class="newsletter-title-new">Đăng ký nhận bản tin</h2>
-      <p class="newsletter-description-new">
-        Tham gia cùng hơn 60.000 người đăng ký và nhận phiếu giảm giá mới vào thứ bảy hàng tuần
-      </p>
-      <form class="newsletter-form-new" role="form">
-        <div class="newsletter-input-group w-100">
-          <input type="email" class="newsletter-input-new form-control" placeholder="Nhập email của bạn" required aria-label="Email">
-          <button class="newsletter-btn-new btn btn-primary" type="submit">Đăng ký</button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer-new bg-white border-top pt-5 pb-0 mt-4">
-    <div class="container">
-      <div class="row">
-        <!-- Column 1: Logo + Giới thiệu -->
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="footer-brand mb-3">
-            <img src="assets/logo.png" alt="Lofi Pharma Logo" class="footer-logo me-2">
-          </div>
-          <p class="footer-description mb-3">Cửa hàng thực phẩm chức năng Lofi Pharma là địa chỉ tin cậy để bạn tìm kiếm
-            những sản phẩm chất lượng nhất.</p>
-          <p class="footer-legal mb-3">Mã số thuế: 01234567891 do Sở Kế hoạch và Đầu tư Tp Hà Nội cấp ngày 13/02/2024
-          </p>
-          <div class="footer-contact-info">
-            <div class="footer-contact-item mb-2">
-              <i class="bi bi-geo-alt-fill me-2"></i>
-              <span>Tòa nhà Ladeco, 266 Đội Cấn, P. Liễu Giai, Q. Ba Đình, TP Hà Nội</span>
-            </div>
-            <div class="footer-contact-item mb-2">
-              <i class="bi bi-telephone-fill me-2"></i>
-              <span>1900 6750</span>
-            </div>
-            <div class="footer-contact-item mb-2">
-              <i class="bi bi-envelope-fill me-2"></i>
-              <span>support@sapo.vn</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Column 2: VỀ CHÚNG TÔI -->
-        <div class="col-lg-3 col-md-6 mb-4">
-          <h5 class="footer-title mb-3">VỀ CHÚNG TÔI</h5>
-          <ul class="footer-links list-unstyled">
-            <li><a href="#" class="footer-link">Trang chủ</a></li>
-            <li><a href="#" class="footer-link">Giới thiệu</a></li>
-            <li><a href="#" class="footer-link">Sản phẩm</a></li>
-            <li><a href="#" class="footer-link">Góc sức khỏe</a></li>
-            <li><a href="#" class="footer-link">Video</a></li>
-            <li><a href="#" class="footer-link">Liên hệ</a></li>
-            <li><a href="#" class="footer-link">Đặt lịch tư vấn</a></li>
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active nav-home" href="#">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Giới thiệu</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="sanphamDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Sản phẩm</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="sanphamDropdown">
+                <li>
+                  <a class="dropdown-item" href="#">Thực phẩm chức năng</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Dược phẩm</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Góc sức khỏe</a>
+            </li>
           </ul>
-        </div>
-
-        <!-- Column 3: CHÍNH SÁCH -->
-        <div class="col-lg-3 col-md-6 mb-4">
-          <h5 class="footer-title mb-3">CHÍNH SÁCH</h5>
-          <ul class="footer-links list-unstyled">
-            <li><a href="#" class="footer-link">Chính sách giao hàng</a></li>
-            <li><a href="#" class="footer-link">Chính sách đổi trả</a></li>
-            <li><a href="#" class="footer-link">Chính sách bán hàng</a></li>
-            <li><a href="#" class="footer-link">Chính sách thành viên</a></li>
-            <li><a href="#" class="footer-link">Bảo mật thông tin cá nhân</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 4: THÔNG TIN LIÊN HỆ -->
-        <div class="col-lg-3 col-md-6 mb-4">
-          <h5 class="footer-title mb-3">THÔNG TIN LIÊN HỆ</h5>
-          <div class="footer-hotline mb-3">
-            <div class="footer-hotline-item mb-2">
-              <span class="footer-hotline-label">Mua hàng:</span>
-              <span class="footer-hotline-number">19006750</span>
-            </div>
-            <div class="footer-hotline-item">
-              <span class="footer-hotline-label">Khiếu nại:</span>
-              <span class="footer-hotline-number">19006750</span>
-            </div>
+          <div class="d-flex align-items-center ms-3 me-3 nav-arrows">
+            <button class="btn btn-arrow me-1" type="button" title="Trước">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="btn btn-arrow" type="button" title="Sau">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+          <!-- Search -->
+          <form class="d-flex align-items-center nav-search me-3" role="search">
+            <input
+              class="form-control search-input"
+              type="search"
+              placeholder="Thực phẩm chức năng..."
+              aria-label="Search"
+            />
+            <button class="btn btn-search" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+          <!-- Icons -->
+          <div class="d-flex align-items-center nav-icons">
+            <a href="#" class="icon-btn me-2" title="Vị trí">
+              <div class="icon-square"><i class="bi bi-geo-alt"></i></div>
+            </a>
+            <a
+              href="#"
+              class="icon-btn me-2 position-relative"
+              title="Yêu thích"
+            >
+              <div class="icon-square">
+                <i class="bi bi-heart"></i>
+                <span
+                  class="badge badge-custom position-absolute top-0 start-100 translate-middle"
+                  >0</span
+                >
+              </div>
+            </a>
+            <a href="#" class="icon-btn position-relative" title="Giỏ hàng">
+              <div class="icon-square">
+                <i class="bi bi-cart"></i>
+                <span
+                  class="badge badge-custom position-absolute top-0 start-100 translate-middle"
+                  >0</span
+                >
+              </div>
+            </a>
           </div>
         </div>
       </div>
-    </div>
+    </nav>
 
-    <!-- Footer Bar -->
-    <div class="footer-bar bg-primary text-white text-center py-3">
+    <!-- Hero Carousel -->
+    <section class="bg-light">
+      <div
+        id="heroCarousel"
+        class="carousel slide hero-carousel-bg"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div
+            class="carousel-item active hero-carousel-slide-bg hero-carousel-slide-bg-1"
+          >
+            <div class="container-fluid py-5">
+              <div class="row align-items-center min-vh-40 hero-carousel-row">
+                <div
+                  class="col-md-6 px-4 px-md-5 d-flex flex-column justify-content-center align-items-start text-start"
+                >
+                  <h2
+                    class="hero-carousel-title display-4 fs-1 fw-bold lh-sm text-start mb-3 hero-title-custom"
+                  >
+                    Chăm sóc<br />cuộc sống tốt hơn<br />bằng thuốc
+                  </h2>
+                  <a
+                    href="#"
+                    class="hero-carousel-btn btn fw-bold px-5 py-3 mt-2 hero-btn-custom"
+                    >MUA NGAY</a
+                  >
+                </div>
+                <div class="d-none d-md-block col-md-6"></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="carousel-item hero-carousel-slide-bg hero-carousel-slide-bg-2"
+          >
+            <div class="container-fluid py-5">
+              <div class="row align-items-center min-vh-40 hero-carousel-row">
+                <div
+                  class="col-md-6 px-4 px-md-5 d-flex flex-column justify-content-center align-items-start text-start"
+                >
+                  <h2
+                    class="hero-carousel-title display-4 fs-1 fw-bold lh-sm text-start mb-3 hero-title-custom"
+                  >
+                    Chăm sóc<br />sức khỏe không nhất thiết<br />phải tốn kém
+                  </h2>
+                  <a
+                    href="#"
+                    class="hero-carousel-btn btn fw-bold px-5 py-3 mt-2 hero-btn-custom"
+                    >MUA NGAY</a
+                  >
+                </div>
+                <div class="d-none d-md-block col-md-6"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <div class="carousel-indicators-wrapper">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Highlights -->
+    <section class="service-highlights py-4">
       <div class="container">
-        <span>© Bản quyền thuộc về <strong>Lofi Team</strong> | Cung cấp bởi <strong>Sapo</strong></span>
+        <div class="row">
+          <div class="col-12 col-md-3 mb-4 mb-md-0">
+            <div class="service-item d-flex">
+              <div
+                class="service-icon bg-light d-flex justify-content-center align-items-center me-3"
+              >
+                <i class="bi bi-truck"></i>
+              </div>
+              <div>
+                <div class="service-title">Miễn phí vận chuyển</div>
+                <div class="service-desc">Miễn phí vận chuyển toàn quốc</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3 mb-4 mb-md-0">
+            <div class="service-item d-flex">
+              <div
+                class="service-icon bg-light d-flex justify-content-center align-items-center me-3"
+              >
+                <i class="bi bi-box"></i>
+              </div>
+              <div>
+                <div class="service-title">Dễ dàng theo dõi<br />đơn hàng</div>
+                <div class="service-desc">Dễ dàng theo dõi đơn hàng</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3 mb-4 mb-md-0">
+            <div class="service-item d-flex">
+              <div
+                class="service-icon bg-light d-flex justify-content-center align-items-center me-3"
+              >
+                <i class="bi bi-headset"></i>
+              </div>
+              <div>
+                <div class="service-title">Hỗ trợ khách hàng<br />24/7</div>
+                <div class="service-desc">
+                  Hỗ trợ khách hàng các ngày trong tuần
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3">
+            <div class="service-item d-flex">
+              <div
+                class="service-icon bg-light d-flex justify-content-center align-items-center me-3"
+              >
+                <i class="bi bi-clock"></i>
+              </div>
+              <div>
+                <div class="service-title">Chuyển hàng<br />đúng giờ</div>
+                <div class="service-desc">Chuyển hàng đúng giờ</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <!-- Promo Banners -->
+    <section>
+      <div class="container py-4">
+        <div class="row g-3">
+          <div class="col-md-4 col-12">
+            <div class="promo-banner position-relative">
+              <a href="#">
+                <picture>
+                  <source
+                    media="(max-width: 567px)"
+                    srcset="assets/image_three_1_banner_mobile.png"
+                  />
+                  <img
+                    class="img-fluid w-100 rounded"
+                    src="assets/image_three_1_banner.png"
+                    alt="Ưu đãi đặc biệt"
+                  />
+                </picture>
+              </a>
+              <div class="promo-overlay promo-overlay-1 position-absolute">
+                <h3 class="promo-title">Ưu đãi đặc biệt</h3>
+                <p class="promo-subtitle">Siro ho</p>
+                <a href="#" class="btn btn-primary fw-bold">MUA NGAY</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12">
+            <div class="promo-banner position-relative">
+              <a href="#">
+                <picture>
+                  <source
+                    media="(max-width: 567px)"
+                    srcset="assets/image_three_2_banner_mobile.png"
+                  />
+                  <img
+                    class="img-fluid w-100 rounded"
+                    src="assets/image_three_2_banner.png"
+                    alt="Viên nén Vitamin"
+                  />
+                </picture>
+              </a>
+              <div class="promo-overlay promo-overlay-2 position-absolute">
+                <h3 class="promo-title">Viên nén Vitamin</h3>
+                <p class="promo-subtitle">Ưu đãi 20%</p>
+                <a href="#" class="btn btn-primary fw-bold">MUA NGAY</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12">
+            <div class="promo-banner position-relative">
+              <a href="#">
+                <picture>
+                  <source
+                    media="(max-width: 567px)"
+                    srcset="assets/image_three_3_banner_mobile.png"
+                  />
+                  <img
+                    class="img-fluid w-100 rounded"
+                    src="assets/image_three_3_banner.png"
+                    alt="Giảm giá trên 30%"
+                  />
+                </picture>
+              </a>
+              <div class="promo-overlay promo-overlay-3 position-absolute">
+                <h3 class="promo-title">Giảm giá trên 30%</h3>
+                <p class="promo-subtitle">Viên dầu cá</p>
+                <a href="#" class="btn btn-primary fw-bold">MUA NGAY</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Sections -->
+    <section>
+      <div class="container py-4">
+        <h2 class="text-center fw-bold mb-4 section-title-large">
+          Sản phẩm mới
+        </h2>
+        <!-- Category Tabs -->
+        <div class="d-flex flex-wrap justify-content-center gap-3 my-4">
+          <button class="category-tab active" data-category="tp">
+            Thực phẩm chức năng
+          </button>
+          <button class="category-tab" data-category="dmp">Dược mỹ phẩm</button>
+          <button class="category-tab" data-category="cs-cn">
+            Chăm sóc cá nhân
+          </button>
+          <button class="category-tab" data-category="yt">Thiết bị y tế</button>
+        </div>
+        <div class="tab-content">
+          <div
+            id="new-products"
+            class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sale Banner + Medical Experts Section -->
+    <section class="sale-experts-wrapper py-5 section-bg-white">
+      <div class="container">
+        <div class="row align-items-center min-height-400">
+          <!-- Text Content Left -->
+          <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+            <div class="experts-content pe-lg-5">
+              <h2 class="experts-title mb-4">
+                Chuyên Gia Y Tế Giàu Kinh<br />
+                Nghiệm
+              </h2>
+              <p class="experts-body mb-4">
+                Được thành lập vào năm 2015, Lofi Pharma là một trong những
+                chuỗi bán lẻ dược phẩm đầu tiên tại Việt Nam. Đến nay, Lofi
+                Pharma sở hữu mạng lưới hơn 100 nhà thuốc đạt chuẩn GPP trên
+                toàn quốc cùng đội ngũ hơn 500 dược sĩ đáng tin cậy, cung cấp
+                các sản phẩm thuốc và sản phẩm chăm sóc sức khỏe hàng đầu với
+                giá thành cạnh tranh nhất.
+              </p>
+              <a href="#" class="btn experts-cta-btn mb-4">MUA NGAY</a>
+            </div>
+          </div>
+          <!-- Image Right -->
+          <div
+            class="col-12 col-lg-6 d-flex justify-content-center align-items-center h-100"
+          >
+            <img
+              src="assets/about_image.png"
+              alt="Đội ngũ chuyên gia y tế"
+              class="experts-image img-fluid"
+              class="max-width-100-height-auto"
+            />
+          </div>
+        </div>
+        <!-- Stats Row -->
+        <div class="row stats-row mt-4 pt-2 justify-content-center">
+          <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="stat-block">
+              <div class="stat-icon mb-2">
+                <i class="bi bi-emoji-smile"></i>
+              </div>
+              <div class="stat-number">200K+</div>
+              <div class="stat-label">Khách Hàng Vui Vẻ</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="stat-block">
+              <div class="stat-icon mb-2"><i class="bi bi-truck"></i></div>
+              <div class="stat-number">50K+</div>
+              <div class="stat-label">Đơn Hàng Đã Giao</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="stat-block">
+              <div class="stat-icon mb-2"><i class="bi bi-shop"></i></div>
+              <div class="stat-number">20+</div>
+              <div class="stat-label">Cửa Hàng</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-block">
+              <div class="stat-icon mb-2"><i class="bi bi-capsule"></i></div>
+              <div class="stat-number">5K+</div>
+              <div class="stat-label">Các Loại Thuốc</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sale Banner + Medical Experts Section -->
+    <section class="shock-sale-section py-5 section-bg-light">
+      <div class="container">
+        <div class="row align-items-stretch g-4">
+          <!-- Left: Countdown Box -->
+          <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+            <div
+              class="shock-sale-box d-flex flex-column justify-content-between h-100 p-4 shock-sale-bg"
+            >
+              <div>
+                <h2 class="shock-sale-title mb-4">
+                  Giảm giá<br />
+                  sốc
+                </h2>
+                <div
+                  class="row row-cols-2 row-cols-md-4 g-2 g-md-3 mb-3 justify-content-center"
+                >
+                  <div class="col">
+                    <div
+                      class="bg-white text-center rounded p-2 p-md-3 h-100 d-flex flex-column align-items-center justify-content-center"
+                    >
+                      <div class="fw-bold timer-number">211</div>
+                      <div class="shock-timer-label timer-label">Ngày</div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div
+                      class="bg-white text-center rounded p-2 p-md-3 h-100 d-flex flex-column align-items-center justify-content-center"
+                    >
+                      <div class="fw-bold timer-number">02</div>
+                      <div class="shock-timer-label timer-label">Giờ</div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div
+                      class="bg-white text-center rounded p-2 p-md-3 h-100 d-flex flex-column align-items-center justify-content-center"
+                    >
+                      <div class="fw-bold timer-number">18</div>
+                      <div class="shock-timer-label timer-label">Phút</div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div
+                      class="bg-white text-center rounded p-2 p-md-3 h-100 d-flex flex-column align-items-center justify-content-center"
+                    >
+                      <div class="fw-bold timer-number">43</div>
+                      <div class="shock-timer-label timer-label">Giây</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shock-sale-desc mt-4">
+                  Áp dụng trước khi kết thúc<br />chương trình khuyến mãi
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Right: Sale Product Carousel -->
+          <div class="col-lg-9 col-md-8">
+            <div class="glide" id="shock-sale-carousel">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides" id="shock-sale-slides">
+                  <!-- Mỗi sản phẩm sẽ được render thành 1 <li class="glide__slide"> -->
+                </ul>
+              </div>
+
+              <!-- Dots Pagination -->
+              <div class="glide__bullets" data-glide-el="controls[nav]">
+                <!-- Tự động render dot bằng JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-faq py-5">
+      <div class="container">
+        <div class="row align-items-start">
+          <!-- Left Column - Doctor Image -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="faq-image-wrapper">
+              <img
+                src="assets/faqs_image.png"
+                alt="Bác sĩ đo huyết áp"
+                class="faq-doctor-image"
+              />
+            </div>
+          </div>
+
+          <!-- Right Column - FAQ Accordion -->
+          <div class="col-lg-6">
+            <div class="faq-content">
+              <h2 class="faq-title mb-4">Câu hỏi thường gặp</h2>
+
+              <!-- FAQ Accordion -->
+              <div class="faq-accordion-wrapper">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item" data-faq="1">
+                  <div
+                    class="faq-question"
+                    role="button"
+                    tabindex="0"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-1"
+                  >
+                    <span class="faq-question-text"
+                      >Tôi có thể mua thuốc không kê đơn trực tuyến không?</span
+                    >
+                    <div class="faq-icon-wrapper">
+                      <div class="faq-checkmark-icon">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                        >
+                          <path
+                            d="M13.5 4.5L6 12L2.5 8.5"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="faq-answer"
+                    id="faq-answer-1"
+                    aria-labelledby="faq-question-1"
+                  >
+                    <div class="faq-answer-content">
+                      <p>
+                        Có, bạn hoàn toàn có thể mua thuốc không kê đơn trực
+                        tuyến tại Oh Pharma. Chúng tôi cung cấp đầy đủ các loại
+                        thuốc OTC (Over-the-Counter) được phép bán tự do theo
+                        quy định của Bộ Y tế. Tất cả sản phẩm đều được kiểm định
+                        chất lượng và có nguồn gốc xuất xứ rõ ràng.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item" data-faq="2">
+                  <div
+                    class="faq-question"
+                    role="button"
+                    tabindex="0"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-2"
+                  >
+                    <span class="faq-question-text"
+                      >Làm thế nào để tôi biết thuốc còn hạn sử dụng?</span
+                    >
+                    <div class="faq-icon-wrapper">
+                      <div class="faq-checkmark-icon">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                        >
+                          <path
+                            d="M13.5 4.5L6 12L2.5 8.5"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="faq-answer"
+                    id="faq-answer-2"
+                    aria-labelledby="faq-question-2"
+                  >
+                    <div class="faq-answer-content">
+                      <p>
+                        Mỗi sản phẩm trên website đều hiển thị rõ ràng thông tin
+                        hạn sử dụng. Chúng tôi cam kết chỉ bán những sản phẩm
+                        còn ít nhất 12 tháng trước khi hết hạn. Ngoài ra, trên
+                        bao bì sản phẩm sẽ có ghi rõ ngày sản xuất và hạn sử
+                        dụng theo định dạng DD/MM/YYYY.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item" data-faq="3">
+                  <div
+                    class="faq-question"
+                    role="button"
+                    tabindex="0"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-3"
+                  >
+                    <span class="faq-question-text"
+                      >Tôi có thể trả lại thuốc nếu không sử dụng được
+                      không?</span
+                    >
+                    <div class="faq-icon-wrapper">
+                      <div class="faq-checkmark-icon">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                        >
+                          <path
+                            d="M13.5 4.5L6 12L2.5 8.5"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="faq-answer"
+                    id="faq-answer-3"
+                    aria-labelledby="faq-question-3"
+                  >
+                    <div class="faq-answer-content">
+                      <p>
+                        Theo quy định về an toàn dược phẩm, chúng tôi không thể
+                        nhận lại thuốc đã bán trừ trường hợp sản phẩm bị lỗi từ
+                        nhà sản xuất. Tuy nhiên, nếu bạn có thắc mắc về cách sử
+                        dụng thuốc, hãy liên hệ với dược sĩ tư vấn của chúng tôi
+                        qua hotline 1900-xxxx để được hỗ trợ miễn phí.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item" data-faq="4">
+                  <div
+                    class="faq-question"
+                    role="button"
+                    tabindex="0"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-4"
+                  >
+                    <span class="faq-question-text"
+                      >Thời gian giao hàng là bao lâu?</span
+                    >
+                    <div class="faq-icon-wrapper">
+                      <div class="faq-checkmark-icon">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                        >
+                          <path
+                            d="M13.5 4.5L6 12L2.5 8.5"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="faq-answer"
+                    id="faq-answer-4"
+                    aria-labelledby="faq-question-4"
+                  >
+                    <div class="faq-answer-content">
+                      <p>
+                        Thời gian giao hàng phụ thuộc vào khu vực của bạn: Nội
+                        thành Hà Nội và TP.HCM: 2-4 giờ (giao hàng nhanh), các
+                        tỉnh thành khác: 1-3 ngày làm việc. Chúng tôi có dịch vụ
+                        giao hàng khẩn cấp 24/7 cho các trường hợp cần thiết với
+                        phí phụ thu hợp lý.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Suggest Section -->
+    <section class="suggest-section py-5">
+      <div class="container">
+        <!-- Section Title -->
+        <h2 class="suggest-title mb-4">Gợi ý hôm nay</h2>
+
+        <!-- Category Tabs -->
+        <div class="suggest-tabs mb-4">
+          <button class="suggest-tab active" data-category="thuoc-bo">
+            Thuốc bổ
+          </button>
+          <button class="suggest-tab" data-category="vitamin">Vitamin</button>
+          <button class="suggest-tab" data-category="cham-soc">
+            Chăm sóc sức khỏe
+          </button>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="suggest-products" id="suggest-products">
+          <!-- Products will be loaded here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Health Blog + Video Section -->
+    <section class="health-section py-4">
+      <div class="container">
+        <!-- Blog Section -->
+        <div class="blog-section position-relative">
+          <h2 class="mb-4 fw-bold section-title-large">Góc sức khỏe</h2>
+
+          <!-- Navigation Arrows -->
+          <div class="blog-nav-arrows">
+            <button class="blog-nav-arrow blog-nav-prev" type="button">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="blog-nav-arrow blog-nav-next" type="button">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+
+          <!-- Blog Cards Container -->
+          <div class="row g-4 mb-5">
+            <!-- Blog Card 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="blog-card">
+                <div class="blog-image-container position-relative">
+                  <img
+                    src="assets/luu-ban-nhap-tu-dong.png"
+                    class="blog-image"
+                    alt="Lợi ích của tập yoga"
+                  />
+                  <div class="blog-date">07/09/2023</div>
+                </div>
+                <div class="blog-content">
+                  <h3 class="blog-title">
+                    Có nên uống mật ong hàng ngày không ?
+                  </h3>
+                  <p class="blog-excerpt">
+                    Mật ong có tác dụng phụ nhất định. Hãy cùng tìm hiểu về
+                    những lợi ích và tác dụng phụ của mật ong.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blog Card 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="blog-card">
+                <div class="blog-image-container position-relative">
+                  <img
+                    src="assets/que-tranh-thai-la-gi-cay-que-tranh-thai-bao-nhieu-tien.png"
+                    class="blog-image"
+                    alt="Que tránh thai"
+                  />
+                  <div class="blog-date">07/09/2023</div>
+                </div>
+                <div class="blog-content">
+                  <h3 class="blog-title">
+                    Que tránh thai là gì? Cây que tránh thai bao nhiều tiền?
+                  </h3>
+                  <p class="blog-excerpt">
+                    Cây que tránh thai bao nhiều tiền là câu hỏi được rất nhiều
+                    chị em phụ nữ quan tâm. Hãy cùng tìm hiểu về 1 biện pháp...
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blog Card 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="blog-card">
+                <div class="blog-image-container position-relative">
+                  <img
+                    src="assets/can-bo-sung-gi-khi-bi-mat-nuoc-va-chat-dien-giai-blog.png"
+                    class="blog-image"
+                    alt="Cần bổ sung gì khi bị mất nước"
+                  />
+                  <div class="blog-date">07/09/2023</div>
+                </div>
+                <div class="blog-content">
+                  <h3 class="blog-title">
+                    Cần bổ sung gì khi bị mất nước và chất điện giải?
+                  </h3>
+                  <p class="blog-excerpt">
+                    Cơ thể bị mất nước và chất điện giải có thể nâng gây ra
+                    những vấn đề về sức khỏe rất đáng lo ngại. Vì...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Video (Layout chuẩn mẫu) -->
+        <h2 class="fw-bold mb-5 video-title-custom">Video</h2>
+        <div
+          class="row row-cols-1 row-cols-md-4 g-4 justify-content-center mb-4"
+        >
+          <div class="col">
+            <div
+              class="video-card-custom shadow-sm rounded-3 overflow-hidden bg-white h-100 d-flex flex-column"
+            >
+              <div
+                class="ratio ratio-16x9 video-thumb-custom position-relative"
+              >
+                <img
+                  src="assets/che-do-tap-luyen-cho-nguoi-benh-gut-1-c46c6a288f-ezgif-com-webp-to-jpg-converter.png"
+                  class="img-fluid w-100 h-100 object-fit-cover"
+                  alt="Video 1"
+                />
+                <button
+                  class="btn btn-white border-0 shadow-none video-play-btn-custom position-absolute top-50 start-50 translate-middle"
+                >
+                  <i class="bi bi-play-circle play-icon-style"></i>
+                </button>
+              </div>
+              <div class="p-3 flex-grow-1 d-flex align-items-end">
+                <div class="fw-bold fs-4 mb-0 video-card-title-custom">
+                  Các bài tập cho bệnh lý cơ xương khớp
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="video-card-custom shadow-sm rounded-3 overflow-hidden bg-white h-100 d-flex flex-column"
+            >
+              <div
+                class="ratio ratio-16x9 video-thumb-custom position-relative"
+              >
+                <img
+                  src="assets/cac-bai-tap-giup-ban-giam-dau-than-kinh-toa-nhanh-chong-2-44deecfc8e-ezgif-com-webp-to-jpg-converter.png"
+                  class="img-fluid w-100 h-100 object-fit-cover"
+                  alt="Video 2"
+                />
+                <button
+                  class="btn btn-white border-0 shadow-none video-play-btn-custom position-absolute top-50 start-50 translate-middle"
+                >
+                  <i class="bi bi-play-circle play-icon-style"></i>
+                </button>
+              </div>
+              <div class="p-3 flex-grow-1 d-flex align-items-end">
+                <div class="fw-bold fs-4 mb-0 video-card-title-custom">
+                  Các bài tập cho bệnh Gout
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="video-card-custom shadow-sm rounded-3 overflow-hidden bg-white h-100 d-flex flex-column"
+            >
+              <div
+                class="ratio ratio-16x9 video-thumb-custom position-relative"
+              >
+                <img
+                  src="assets/can-bo-sung-gi-khi-bi-mat-nuoc-va-chat-dien-giai.png"
+                  class="img-fluid w-100 h-100 object-fit-cover"
+                  alt="Video 3"
+                />
+                <button
+                  class="btn btn-white border-0 shadow-none video-play-btn-custom position-absolute top-50 start-50 translate-middle"
+                >
+                  <i class="bi bi-play-circle play-icon-style"></i>
+                </button>
+              </div>
+              <div class="p-3 flex-grow-1 d-flex align-items-end">
+                <div class="fw-bold fs-4 mb-0 video-card-title-custom">
+                  Các bài tập cho sức khỏe tim mạch
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="video-card-custom shadow-sm rounded-3 overflow-hidden bg-white h-100 d-flex flex-column"
+            >
+              <div
+                class="ratio ratio-16x9 video-thumb-custom position-relative"
+              >
+                <img
+                  src="assets/cach-cham-soc-va-nhung-bai-tap-the-duc-tot-cho-xuong-khop-2-0466ce72ce-ezgif-com-webp-to-jpg-converter.png"
+                  class="img-fluid w-100 h-100 object-fit-cover"
+                  alt="Video 4"
+                />
+                <button
+                  class="btn btn-white border-0 shadow-none video-play-btn-custom position-absolute top-50 start-50 translate-middle"
+                >
+                  <i class="bi bi-play-circle play-icon-style"></i>
+                </button>
+              </div>
+              <div class="p-3 flex-grow-1 d-flex align-items-end">
+                <div class="fw-bold fs-4 mb-0 video-card-title-custom">
+                  Các bài tập cho bệnh lý thận kinh
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <a
+            href="#"
+            class="btn btn-outline-primary fw-bold px-5 py-2 video-btn-all-custom"
+            >Xem tất cả</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-section-new py-5">
+      <div class="newsletter-wrapper mx-auto">
+        <h2 class="newsletter-title-new">Đăng ký nhận bản tin</h2>
+        <p class="newsletter-description-new">
+          Tham gia cùng hơn 60.000 người đăng ký và nhận phiếu giảm giá mới vào
+          thứ bảy hàng tuần
+        </p>
+        <form class="newsletter-form-new" role="form">
+          <div class="newsletter-input-group w-100">
+            <input
+              type="email"
+              class="newsletter-input-new form-control"
+              placeholder="Nhập email của bạn"
+              required
+              aria-label="Email"
+            />
+            <button class="newsletter-btn-new btn btn-primary" type="submit">
+              Đăng ký
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-new bg-white border-top pt-5 pb-0 mt-4">
+      <div class="container">
+        <div class="row">
+          <!-- Column 1: Logo + Giới thiệu -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="footer-brand mb-3">
+              <img
+                src="assets/logo.png"
+                alt="Lofi Pharma Logo"
+                class="footer-logo me-2"
+              />
+            </div>
+            <p class="footer-description mb-3">
+              Cửa hàng thực phẩm chức năng Lofi Pharma là địa chỉ tin cậy để bạn
+              tìm kiếm những sản phẩm chất lượng nhất.
+            </p>
+            <p class="footer-legal mb-3">
+              Mã số thuế: 01234567891 do Sở Kế hoạch và Đầu tư Tp Hà Nội cấp
+              ngày 13/02/2024
+            </p>
+            <div class="footer-contact-info">
+              <div class="footer-contact-item mb-2">
+                <i class="bi bi-geo-alt-fill me-2"></i>
+                <span
+                  >Tòa nhà Ladeco, 266 Đội Cấn, P. Liễu Giai, Q. Ba Đình, TP Hà
+                  Nội</span
+                >
+              </div>
+              <div class="footer-contact-item mb-2">
+                <i class="bi bi-telephone-fill me-2"></i>
+                <span>1900 6750</span>
+              </div>
+              <div class="footer-contact-item mb-2">
+                <i class="bi bi-envelope-fill me-2"></i>
+                <span>support@sapo.vn</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: VỀ CHÚNG TÔI -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-title mb-3">VỀ CHÚNG TÔI</h5>
+            <ul class="footer-links list-unstyled">
+              <li><a href="#" class="footer-link">Trang chủ</a></li>
+              <li><a href="#" class="footer-link">Giới thiệu</a></li>
+              <li><a href="#" class="footer-link">Sản phẩm</a></li>
+              <li><a href="#" class="footer-link">Góc sức khỏe</a></li>
+              <li><a href="#" class="footer-link">Video</a></li>
+              <li><a href="#" class="footer-link">Liên hệ</a></li>
+              <li><a href="#" class="footer-link">Đặt lịch tư vấn</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: CHÍNH SÁCH -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-title mb-3">CHÍNH SÁCH</h5>
+            <ul class="footer-links list-unstyled">
+              <li><a href="#" class="footer-link">Chính sách giao hàng</a></li>
+              <li><a href="#" class="footer-link">Chính sách đổi trả</a></li>
+              <li><a href="#" class="footer-link">Chính sách bán hàng</a></li>
+              <li><a href="#" class="footer-link">Chính sách thành viên</a></li>
+              <li>
+                <a href="#" class="footer-link">Bảo mật thông tin cá nhân</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: THÔNG TIN LIÊN HỆ -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-title mb-3">THÔNG TIN LIÊN HỆ</h5>
+            <div class="footer-hotline mb-3">
+              <div class="footer-hotline-item mb-2">
+                <span class="footer-hotline-label">Mua hàng:</span>
+                <span class="footer-hotline-number">19006750</span>
+              </div>
+              <div class="footer-hotline-item">
+                <span class="footer-hotline-label">Khiếu nại:</span>
+                <span class="footer-hotline-number">19006750</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bar -->
+      <div class="footer-bar bg-primary text-white text-center py-3">
+        <div class="container">
+          <span
+            >© Bản quyền thuộc về <strong>Lofi Team</strong> | Cung cấp bởi
+            <strong>Sapo</strong></span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Action Icons -->
+    <!-- Icon Chuông - bên trái -->
+    <div class="fixed-icon-left">
+      <button id="notify-icon" class="icon-btn" title="Thông báo">
+        <i class="bi bi-bell-fill"></i>
+      </button>
     </div>
-  </footer>
+    <!-- Các icon bên phải -->
+    <div class="fixed-icons-right">
+      <button
+        id="scroll-top"
+        class="icon-btn scroll-top-btn"
+        title="Lên đầu trang"
+      >
+        <i class="bi bi-arrow-up"></i>
+      </button>
+      <button id="contact-icon" class="icon-btn" title="Liên hệ">
+        <i class="bi bi-chat-dots-fill"></i>
+      </button>
+    </div>
+    <!-- Bootstrap JS Bundle (with Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- Custom JavaScript for Category Tabs -->
+    <script src="js/category-tabs.js"></script>
 
-  <!-- Floating Action Icons -->
-  <!-- Icon Chuông - bên trái -->
-  <div class="fixed-icon-left">
-    <button id="notify-icon" class="icon-btn" title="Thông báo"><i class="bi bi-bell-fill"></i></button>
-  </div>
-  <!-- Các icon bên phải -->
-  <div class="fixed-icons-right">
-    <button id="scroll-top" class="icon-btn scroll-top-btn" title="Lên đầu trang"><i class="bi bi-arrow-up"></i></button>
-    <button id="contact-icon" class="icon-btn" title="Liên hệ"><i class="bi bi-chat-dots-fill"></i></button>
-  </div>
-  <!-- Bootstrap JS Bundle (with Popper) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Bootstrap Icons CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <!-- Custom JavaScript for Category Tabs -->
-  <script src="js/category-tabs.js"></script>
-  
-  <!-- FAQ Accordion JavaScript -->
-  <script src="js/faq-accordion.js"></script>
-  
-  <!-- Suggest Products JavaScript -->
-  <script src="js/suggest-products.js"></script>
+    <!-- FAQ Accordion JavaScript -->
+    <script src="js/faq-accordion.js"></script>
 
-  <script type="module" src="js/product/main-product-init.js"></script>
-  <!-- Floating Icons JavaScript -->
-  <script src="js/floating-icons.js"></script>
-</body>
+    <!-- Suggest Products JavaScript -->
+    <script src="js/suggest-products.js"></script>
 
+    <script type="module" src="js/product/new-product-init.js"></script>
+    <script type="module" src="js/product/suggest-product-init.js"></script>
+    <script type="module" src="js/product/sale-product-init.js"></script>
+    
+    <!-- Floating Icons JavaScript -->
+    <script src="js/floating-icons.js"></script>
+  </body>
 </html>

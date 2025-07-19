@@ -1334,21 +1334,20 @@
   color: #fff;
 }
 
-/* Pagination Dots */
-.shock-sale-pagination {
-  margin-top: 1.5rem;
-  gap: 0.5rem;
-}
 .shock-dot {
-  width: 13px;
-  height: 13px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  background: #e0e6ef;
+  background: #fff;
+  border: 2px solid #003e9c;
   display: inline-block;
-  transition: background 0.2s;
+  cursor: pointer;
+  margin: 0 4px;
+  transition: background 0.2s, border 0.2s;
 }
 .shock-dot.active {
-  background: #003A8C;
+  background: #003e9c;
+  border: 2px solid #003e9c;
 }
 @media (max-width: 991.98px) {
   .shock-product-card { min-height: 260px; max-width: 180px; width: 180px; padding: 0.7rem !important; }
