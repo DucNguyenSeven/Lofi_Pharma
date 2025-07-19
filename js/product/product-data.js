@@ -358,3 +358,6 @@ export const productData = {
     "cham-soc": []
   }
 };
+
+// Export saleProducts separately for easier access
+export const saleProducts = productData.saleProducts;

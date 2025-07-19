@@ -1206,6 +1206,37 @@
   display: none;
 }
 
+/* Fix Glide.js overflow issues for shock sale section */
+#shock-sale-carousel .glide__track {
+  overflow: visible !important;
+  padding-left: 20px; /* Increased safe distance from left box */
+}
+
+#shock-sale-carousel .glide__slides {
+  overflow: visible !important;
+  padding-left: 15px; /* Increased padding for slides container */
+}
+
+#shock-sale-carousel .glide__slide {
+  overflow: visible !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Add extra margin to first slide to prevent overflow into left box */
+#shock-sale-carousel .glide__slide:first-child {
+  margin-left: 8px;
+}
+
+/* Ensure hover icons are visible above other elements */
+#shock-sale-carousel .hover-icons {
+  z-index: 10 !important;
+}
+
+#shock-sale-carousel .discount-badge {
+  z-index: 5 !important;
+}
+
 .shock-product-card {
   border-radius: 1.5rem;
   box-shadow: 0 2px 12px rgba(0,61,153,0.08);
@@ -1355,12 +1386,37 @@
   .shock-product-title { font-size: 0.95rem; }
   .shock-cart-btn { width: 34px; height: 34px; font-size: 1.1rem; }
   .shock-hover-btn { width: 28px; height: 28px; font-size: 0.95rem; }
+  
+  /* Adjust padding for tablet */
+  #shock-sale-carousel .glide__track {
+    padding-left: 16px;
+  }
+  
+  #shock-sale-carousel .glide__slides {
+    padding-left: 12px;
+  }
 }
 @media (max-width: 575.98px) {
   .shock-product-card { min-height: 180px; max-width: 120px; width: 120px; padding: 0.5rem !important; }
   .shock-product-img { height: 60px; }
   .shock-product-title { font-size: 0.9rem; }
   .shock-dot { width: 9px; height: 9px; }
+  
+  /* Ensure overflow visible on mobile with adjusted padding */
+  #shock-sale-carousel .glide__track,
+  #shock-sale-carousel .glide__slides,
+  #shock-sale-carousel .glide__slide {
+    overflow: visible !important;
+  }
+  
+  /* Reduce padding on mobile for better space usage */
+  #shock-sale-carousel .glide__track {
+    padding-left: 12px;
+  }
+  
+  #shock-sale-carousel .glide__slides {
+    padding-left: 8px;
+  }
 }
 
 /* --- Shock Sale Section Responsive Fixes --- */
