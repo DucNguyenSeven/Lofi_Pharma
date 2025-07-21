@@ -1199,66 +1199,14 @@
 /* Shock Sale Carousel */
 .shock-sale-carousel {
   min-height: 340px;
-  overflow: hidden; /* Changed from overflow-x: auto to prevent horizontal scroll */
+  overflow-x: hidden !important;   /* keep horizontal scroll hidden */
+  overflow-y: visible !important;  /* show hover lift outside container */
   scrollbar-width: none;
 }
 .shock-sale-carousel::-webkit-scrollbar {
   display: none;
 }
 
-/* Fix Glide.js overflow issues for shock sale section */
-#shock-sale-carousel {
-  margin-left: 20px !important;
-}
-
-#shock-sale-carousel .glide__track {
-  padding-left: 15px !important;
-}
-
-#shock-sale-carousel .glide__slides {
-  padding-left: 10px !important;
-}
-
-#shock-sale-carousel .glide__slide {
-  overflow: visible !important;
-  position: relative;
-  z-index: 1;
-  padding: 0 8px; /* Add padding for better spacing between slides */
-}
-
-/* Add extra margin to first slide to prevent overflow into left box */
-#shock-sale-carousel .glide__slide:first-child {
-  margin-left: 8px;
-}
-
-/* Additional responsive fixes for larger screens */
-@media (min-width: 1200px) {
-  #shock-sale-carousel {
-    margin-left: 60px !important;
-  }
-  
-  #shock-sale-carousel .glide__track {
-    padding-left: 35px !important;
-  }
-  
-  #shock-sale-carousel .glide__slides {
-    padding-left: 25px !important;
-  }
-}
-
-@media (min-width: 1400px) {
-  #shock-sale-carousel {
-    margin-left: 70px !important;
-  }
-  
-  #shock-sale-carousel .glide__track {
-    padding-left: 40px !important;
-  }
-  
-  #shock-sale-carousel .glide__slides {
-    padding-left: 30px !important;
-  }
-}
 
 /* Ensure hover icons are visible above other elements */
 #shock-sale-carousel .hover-icons {
@@ -1270,13 +1218,9 @@
 }
 
 /* Dot-based pagination styling */
-#shock-sale-carousel .glide__bullets {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 24px;
-  gap: 8px;
-}
+/* (Override for #shock-sale-carousel .glide__bullets left unchanged for section-specific style) */
+
+
 
 #shock-sale-carousel .glide__bullet {
   width: 12px;
@@ -1455,51 +1399,54 @@
   background: #003e9c;
   border: 2px solid #003e9c;
 }
-@media (max-width: 991.98px) {
-  .shock-product-card { min-height: 260px; max-width: 180px; width: 180px; padding: 0.7rem !important; }
-  .shock-product-img { height: 90px; }
-  .shock-product-title { font-size: 0.95rem; }
-  .shock-cart-btn { width: 34px; height: 34px; font-size: 1.1rem; }
-  .shock-hover-btn { width: 28px; height: 28px; font-size: 0.95rem; }
-  
-  /* Adjust padding for tablet */
-  #shock-sale-carousel {
-    margin-left: 40px !important;
-  }
-  
-  #shock-sale-carousel .glide__track {
-    padding-left: 25px !important;
-  }
-  
-  #shock-sale-carousel .glide__slides {
-    padding-left: 15px !important;
-  }
+
+/* --- Shock Sale Carousel layout fix: show full 4 cards per slide --- */
+#shock-sale-carousel {
+  margin-left: 0 !important;   /* reset previous margins */
+  padding-left: 0 !important;  /* no extra left padding */
 }
-@media (max-width: 575.98px) {
-  .shock-product-card { min-height: 180px; max-width: 120px; width: 120px; padding: 0.5rem !important; }
-  .shock-product-img { height: 60px; }
-  .shock-product-title { font-size: 0.9rem; }
-  .shock-dot { width: 9px; height: 9px; }
-  
-  /* Ensure overflow visible on mobile with adjusted padding */
-  #shock-sale-carousel .glide__track,
-  #shock-sale-carousel .glide__slides,
-  #shock-sale-carousel .glide__slide {
-    overflow: visible !important;
-  }
-  
-  /* Reduce padding on mobile for better space usage */
-  #shock-sale-carousel {
-    margin-left: 20px !important;
-  }
-  
-  #shock-sale-carousel .glide__track {
-    padding-left: 15px !important;
-  }
-  
-  #shock-sale-carousel .glide__slides {
-    padding-left: 10px !important;
-  }
+#shock-sale-carousel .glide__track,
+#shock-sale-carousel .glide__slides {
+  padding-left: 0 !important;  /* align track flush with container */
+}
+/* gutter between cards */
+#shock-sale-carousel .glide__slide {
+  padding: 0 12px;
+}
+
+/* Remove unwanted gutter on first slide and ensure hover card isn't clipped */
+#shock-sale-carousel .shock-sale-slide-row {
+  margin-left: 0 !important;    /* cancel BS row negative margin */
+  margin-right: 0 !important;
+}
+
+#shock-sale-carousel .shock-sale-slide-row > .col {
+  padding-left: 12px !important;  /* equal gutter both sides */
+  padding-right: 12px !important;
+}
+
+/* Increase z‑index so hover card renders above blue box */
+#shock-sale-carousel .glide__slide {
+  position: relative;
+  z-index: 2;
+}
+
+/* Allow card hover translateY to show outside slide without being clipped */
+
+/* Allow hover lift (Y‑axis) but prevent horizontal overlap into countdown box */
+#shock-sale-carousel .glide__track,
+#shock-sale-carousel .glide__slides {
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+}
+#shock-sale-carousel .glide__slide {
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+}
+
+/* Add small left margin so first card doesn't touch blue box */
+#shock-sale-carousel .glide__slide:first-child {
+  margin-left: 12px;
 }
 
 /* --- Shock Sale Section Responsive Fixes --- */
@@ -1551,6 +1498,19 @@
     font-size: 0.9rem;
     padding: 0.2rem 0.2rem;
   }
+}
+/* --- Fix dot pagination vertical position for Shock Sale --- */
+#shock-sale-carousel {
+  position: relative;                /* establish containing block */
+  padding-bottom: 48px;              /* reserve space for bullets */
+}
+
+#shock-sale-bullets.glide__bullets {
+  position: absolute;
+  left: 50%;
+  bottom: 8px;                       /* adjust as needed */
+  transform: translateX(-50%);
+  gap: 8px;
 }
 /* Product grid responsive fix */
 @media (min-width: 1200px) {
@@ -1914,7 +1874,9 @@
 .suggest-products {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1.25rem;
+  column-gap: 2rem;   /* wider horizontal gap */
+  row-gap: 1.75rem;   /* slightly taller vertical gap */
+  padding: 0 0.5rem;  /* optional side padding for aesthetic */
 }
 
 /* Product Card Base Styles */

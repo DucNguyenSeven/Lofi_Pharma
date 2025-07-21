@@ -1,4 +1,3 @@
-// Category Tabs Functionality
 document.querySelectorAll('.category-tab').forEach(btn => {
   btn.addEventListener('click', function () {
     document.querySelectorAll('.category-tab').forEach(b => b.classList.remove('active'));
@@ -15,6 +14,5 @@ document.querySelectorAll('.category-tab').forEach(btn => {
     if (targetPane) {
       targetPane.classList.add('show', 'active');
     }
-    // Optional: Filter logic can go here
   });
 }); 

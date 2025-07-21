@@ -1,4 +1,3 @@
-// render-products.js
 import { productData } from './product-data.js';
 
 function findProduct(productId) {
@@ -55,41 +54,7 @@ export function renderProducts(category, dataSource, containerId) {
   }
 
   container.innerHTML = products.map(product => `
-    <div class="card border-0 shadow-sm suggest-product-card position-relative h-100">
-      ${product.discount ? `<span class="badge discount-badge position-absolute top-0 start-0 m-2 px-2 py-1">${product.discount}</span>` : ''}
-      <div class="suggest-product-image-container position-relative overflow-hidden">
-        <div class="hover-icons position-absolute top-0 end-0 m-2 d-flex flex-column gap-2">
-          <button class="btn btn-white rounded-circle p-2 shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
-          <button class="btn btn-white rounded-circle p-2 shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
-        </div>
-        <img src="${product.image}" alt="${product.name}" class="suggest-product-image img-fluid">
-      </div>
-      <div class="suggest-product-info p-3 d-flex flex-column flex-grow-1">
-        <h6 class="suggest-product-title mb-2">${product.name}</h6>
-        <div class="suggest-product-prices mt-auto mb-2">
-          <div class="d-flex align-items-center gap-2">
-            <span class="suggest-price-current">${product.currentPrice}</span>
-            ${product.oldPrice ? `<span class="suggest-price-old">${product.oldPrice}</span>` : ''}
-          </div>
-        </div>
-      </div>
-      <button class="btn btn-primary rounded-circle suggest-cart-button position-absolute" title="Thêm vào giỏ"><i class="bi bi-cart-plus"></i></button>
-    </div>
-  `).join('');
-}
-
-// Function to render sale products with Glide.js carousel
-export function renderSaleProductsWithGlide(products, containerId) {
-  const container = document.getElementById(containerId);
-  if (!container) return;
-
-  if (products.length === 0) {
-    container.innerHTML = `<li class="glide__slide"><div class="suggest-empty-message">Sản phẩm đang được cập nhật.</div></li>`;
-    return;
-  }
-
-  container.innerHTML = products.map(product => `
-    <li class="glide__slide">
+    <div class="col">
       <div class="card border-0 shadow-sm suggest-product-card position-relative h-100">
         ${product.discount ? `<span class="badge discount-badge position-absolute top-0 start-0 m-2 px-2 py-1">${product.discount}</span>` : ''}
         <div class="suggest-product-image-container position-relative overflow-hidden">
@@ -110,27 +75,116 @@ export function renderSaleProductsWithGlide(products, containerId) {
         </div>
         <button class="btn btn-primary rounded-circle suggest-cart-button position-absolute" title="Thêm vào giỏ"><i class="bi bi-cart-plus"></i></button>
       </div>
+    </div>
+  `).join('');
+}
+
+export function renderSaleProductsWithGlide(products, containerId, bulletsContainerId = 'shock-sale-bullets') {
+  const slidesUl = document.getElementById(containerId);
+  if (!slidesUl) return;
+
+  const bulletsEl = document.getElementById(bulletsContainerId) 
+    || document.querySelector('#shock-sale-carousel .glide__bullets');
+
+  if (!products || products.length === 0) {
+    slidesUl.innerHTML = `
+      <li class="glide__slide">
+        <div class="suggest-empty-message text-center p-5">Sản phẩm đang được cập nhật.</div>
+      </li>`;
+    if (bulletsEl) bulletsEl.innerHTML = '';
+    return;
+  }
+
+  const chunkSize = 4;
+  const chunks = [];
+  for (let i = 0; i < products.length; i += chunkSize) {
+    chunks.push(products.slice(i, i + chunkSize));
+  }
+
+  slidesUl.innerHTML = chunks.map((group, slideIdx) => `
+    <li class="glide__slide" data-slide-idx="${slideIdx}">
+      <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4 g-4 shock-sale-slide-row">
+        ${group.map((p, i) => saleCardTpl(p, slideIdx, i)).join('')}
+      </div>
     </li>
   `).join('');
 
-  // Initialize Glide.js carousel with dot-based pagination
+  if (bulletsEl) {
+    bulletsEl.innerHTML = chunks.map((_, i) => `
+      <button class="glide__bullet" data-glide-dir="=${i}" aria-label="Trang ${i+1}"></button>
+    `).join('');
+  }
+
   if (typeof Glide !== 'undefined') {
     new Glide('#shock-sale-carousel', {
       type: 'carousel',
-      perView: 4,
-      gap: 24,
-      focusAt: '0',
-      breakpoints: {
-        1200: {
-          perView: 3
-        },
-        992: {
-          perView: 2
-        },
-        768: {
-          perView: 1
-        }
-      }
+      perView: 1,
+      gap: 0,
+      focusAt: 0,
+      animationDuration: 600,
+      animationTimingFunc: 'cubic-bezier(0.165,0.84,0.44,1)',
+      rewind: true
     }).mount();
   }
+
+  attachSaleCardEvents(slidesUl, products);
+}
+
+function saleCardTpl(product, slideIdx, itemIdx) {
+  const pid = product.id ?? `sale-${slideIdx}-${itemIdx}`;
+  return `
+    <div class="col">
+      <div class="card border-0 shadow-sm suggest-product-card position-relative h-100">
+        ${product.discount ? `<span class="badge discount-badge position-absolute top-0 start-0 m-2 px-2 py-1">${product.discount}</span>` : ''}
+        <div class="suggest-product-image-container position-relative overflow-hidden">
+          <div class="hover-icons position-absolute top-0 end-0 m-2 d-flex flex-column gap-2">
+            <button class="btn btn-white rounded-circle p-2 shadow-sm quick-view-btn" data-product-id="${pid}" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+            <button class="btn btn-white rounded-circle p-2 shadow-sm wishlist-btn" data-product-id="${pid}" title="Yêu thích"><i class="bi bi-heart"></i></button>
+          </div>
+          <img src="${product.image}" alt="${product.name}" class="suggest-product-image img-fluid">
+        </div>
+        <div class="suggest-product-info p-3 d-flex flex-column flex-grow-1">
+          <h6 class="suggest-product-title mb-2">${product.name}</h6>
+          <div class="suggest-product-prices mt-auto mb-2">
+            <div class="d-flex align-items-center gap-2">
+              <span class="suggest-price-current">${product.currentPrice}</span>
+              ${product.oldPrice ? `<span class="suggest-price-old">${product.oldPrice}</span>` : ''}
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary rounded-circle suggest-cart-button position-absolute add-to-cart-btn" data-product-id="${pid}" title="Thêm vào giỏ"><i class="bi bi-cart-plus"></i></button>
+      </div>
+    </div>
+  `;
+}
+
+function attachSaleCardEvents(rootEl, products) {
+  const getProduct = (id) => products.find(p => p.id === id);
+
+  rootEl.querySelectorAll('.quick-view-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const pid = btn.dataset.productId;
+      const p = getProduct(pid);
+      if (p) alert(`Xem nhanh: "${p.name}"`);
+    });
+  });
+
+  rootEl.querySelectorAll('.wishlist-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const pid = btn.dataset.productId;
+      const p = getProduct(pid);
+      if (p) alert(`Yêu thích: "${p.name}"`);
+    });
+  });
+
+  rootEl.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const pid = btn.dataset.productId;
+      const p = getProduct(pid);
+      if (p) alert(`Đã thêm vào giỏ: "${p.name}"`);
+    });
+  });
 }
