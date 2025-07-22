@@ -577,28 +577,40 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
+  text-align: right;
 }
 .promo-title {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: bold;
   color: #003366;
   margin-bottom: 0.25rem;
   line-height: 1.1;
+  text-align: right;
 }
 .promo-subtitle {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #234;
   margin-bottom: 0.75rem;
   line-height: 1.2;
+  text-align: right;
 }
 .promo-overlay .btn {
   z-index: 2;
-  font-size: 1rem;
-  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  padding: 0.45rem 1.4rem;
   border-radius: 2rem;
   font-weight: bold;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Unified hover color – no border outline */
+.promo-overlay .btn:hover {
+  background: #2ed8df !important;   /* teal */
+  color: #ffffff !important;
+  border: none !important;          /* remove blue border */
+  box-shadow: none !important;      /* ensure no shadow */
+  transition: background 0.25s ease, color 0.25s ease;
 }
 .promo-banner a {
   text-decoration: none;
@@ -621,47 +633,49 @@
 /* Promo Banner Overlay Custom Position */
 .promo-overlay-1 {
   top: 2.5rem;
-  left: 2.5rem;
-  right: 2.5rem;
   bottom: unset;
-  align-items: flex-start;
+  left: auto;
+  right: 2.5rem;
+  align-items: flex-end;
+  text-align: right;
 }
 .promo-overlay-1 .promo-title {
-  font-size: 2.7rem;
+  font-size: 2rem;
   font-weight: 800;
   color: #0a3d91;
   margin-bottom: 0.5rem;
 }
 .promo-overlay-1 .promo-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #234;
   margin-bottom: 2.2rem;
 }
 .promo-overlay-1 .btn {
   background: #0a3d91;
   color: #fff;
-  font-size: 1.2rem;
-  padding: 0.7rem 2.2rem;
+  font-size: 1rem;
+  padding: 0.55rem 1.8rem;
   border-radius: 2rem;
   font-weight: bold;
 }
 
 .promo-overlay-2 {
   top: 2.5rem;
-  left: 2.5rem;
-  right: 2.5rem;
   bottom: unset;
-  align-items: flex-start;
+  left: auto;
+  right: 2.5rem;
+  align-items: flex-end;
+  text-align: right;
 }
 .promo-overlay-2 .promo-title {
-  font-size: 2.7rem;
+  font-size: 2rem;
   font-weight: 800;
   color: #fff;
   margin-bottom: 0.5rem;
   text-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 .promo-overlay-2 .promo-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #fff;
   margin-bottom: 2.2rem;
   text-shadow: 0 2px 8px rgba(0,0,0,0.12);
@@ -669,35 +683,36 @@
 .promo-overlay-2 .btn {
   background: #fff;
   color: #003366;
-  font-size: 1.2rem;
-  padding: 0.7rem 2.2rem;
+  font-size: 1rem;
+  padding: 0.55rem 1.8rem;
   border-radius: 2rem;
   font-weight: bold;
 }
 
 .promo-overlay-3 {
   top: 2.5rem;
-  left: 2.5rem;
-  right: 2.5rem;
   bottom: unset;
-  align-items: flex-start;
+  left: auto;
+  right: 2.5rem;
+  align-items: flex-end;
+  text-align: right;
 }
 .promo-overlay-3 .promo-title {
-  font-size: 2.7rem;
+  font-size: 2rem;
   font-weight: 800;
   color: #0a3d91;
   margin-bottom: 0.5rem;
 }
 .promo-overlay-3 .promo-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #1976d2;
   margin-bottom: 2.2rem;
 }
 .promo-overlay-3 .btn {
   background: #0a3d91;
   color: #fff;
-  font-size: 1.2rem;
-  padding: 0.7rem 2.2rem;
+  font-size: 1rem;
+  padding: 0.55rem 1.8rem;
   border-radius: 2rem;
   font-weight: bold;
 }
