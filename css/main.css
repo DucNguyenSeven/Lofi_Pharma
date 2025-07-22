@@ -248,6 +248,12 @@
   padding: 0;
 }
 
+/* Change badge colour when icon-square is hovered */
+.nav-icons .icon-btn:hover .badge-custom {
+  background: #ffffff;
+  color: #003D99;
+}
+
 .nav-icons {
   margin-left: 20px;
 }
