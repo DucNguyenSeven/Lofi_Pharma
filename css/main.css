@@ -132,6 +132,7 @@
   width: 150px;
   font-weight: 400;
   flex: 1;
+  margin-left: -10px;
   padding-right: 38px;
 }
 .search-input:focus, .search-input:active, .search-input:visited {
