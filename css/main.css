@@ -357,6 +357,20 @@
 .carousel-control-next:hover .carousel-control-next-icon::before {
   color: #ffffff;
 }
+
+/* Consistent chevron icons for Hero carousel */
+.carousel-control-prev i,
+.carousel-control-next i {
+  font-size: 1.3rem;
+  color: #222;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.carousel-control-prev:hover i,
+.carousel-control-next:hover i {
+  color: #ffffff;
+}
 .carousel-indicators [data-bs-target] {
   width: 16px;
   height: 16px;
@@ -379,7 +393,7 @@
 .hero-carousel-slide-bg {
   background-size: cover;
   background-position: center right;
-  min-height: 545px;
+  min-height: 580px;
 }
 
 /* Hero Carousel Slide Background 1 */
