@@ -248,7 +248,6 @@
   padding: 0;
 }
 
-/* Change badge colour when icon-square is hovered */
 .nav-icons .icon-btn:hover .badge-custom {
   background: #ffffff;
   color: #003D99;
@@ -308,7 +307,6 @@
   max-width: 100%;
   height: auto;
 }
-/* --- Hero carousel navigation buttons --- */
 .carousel-control-prev,
 .carousel-control-next {
   width: 56px;
@@ -358,13 +356,11 @@
   font-weight: bold;
   transition: color 0.2s;
 }
-/* Keep arrow color dark for contrast on blue hover */
 .carousel-control-prev:hover .carousel-control-prev-icon::before,
 .carousel-control-next:hover .carousel-control-next-icon::before {
   color: #ffffff;
 }
 
-/* Consistent chevron icons for Hero carousel */
 .carousel-control-prev i,
 .carousel-control-next i {
   font-size: 1.3rem;
@@ -395,24 +391,20 @@
   .hero-carousel-btn { font-size: 1rem; padding: 10px 18px; }
 }
 
-/* Hero Carousel Slide Backgrounds */
 .hero-carousel-slide-bg {
   background-size: cover;
   background-position: center right;
   min-height: 580px;
 }
 
-/* Hero Carousel Slide Background 1 */
 .hero-carousel-slide-bg-1 {
   background-image: url('../assets/slider_1.png');
 }
 
-/* Hero Carousel Slide Background 2 */
 .hero-carousel-slide-bg-2 {
   background-image: url('../assets/slider_2.png');
 }
 
-/* Hero Carousel Row Min Height */
 .hero-carousel-row {
   min-height: 340px;
 }
@@ -422,7 +414,6 @@
   color: #0a3d91;
 }
 
-/* Prevent desktop line‑wrap for hero titles */
 @media (min-width: 992px) {
   .hero-carousel-title {
     white-space: nowrap;
@@ -604,12 +595,11 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-/* Unified hover color – no border outline */
 .promo-overlay .btn:hover {
-  background: #2ed8df !important;   /* teal */
+  background: #2ed8df !important;   
   color: #ffffff !important;
-  border: none !important;          /* remove blue border */
-  box-shadow: none !important;      /* ensure no shadow */
+  border: none !important;          
+  box-shadow: none !important;      
   transition: background 0.25s ease, color 0.25s ease;
 }
 .promo-banner a {
@@ -1319,11 +1309,10 @@
   .shock-sale-desc { font-size: 0.9rem; }
 }
 
-/* Shock Sale Carousel */
 .shock-sale-carousel {
   min-height: 340px;
-  overflow-x: hidden !important;   /* keep horizontal scroll hidden */
-  overflow-y: visible !important;  /* show hover lift outside container */
+  overflow-x: hidden !important;   
+  overflow-y: visible !important;  
   scrollbar-width: none;
 }
 .shock-sale-carousel::-webkit-scrollbar {
@@ -1331,7 +1320,6 @@
 }
 
 
-/* Ensure hover icons are visible above other elements */
 #shock-sale-carousel .hover-icons {
   z-index: 10 !important;
 }
@@ -1340,8 +1328,6 @@
   z-index: 5 !important;
 }
 
-/* Dot-based pagination styling */
-/* (Override for #shock-sale-carousel .glide__bullets left unchanged for section-specific style) */
 
 
 
@@ -1523,40 +1509,38 @@
   border: 2px solid #003e9c;
 }
 
-/* --- Shock Sale Carousel layout fix: show full 4 cards per slide --- */
+
 #shock-sale-carousel {
-  margin-left: 0 !important;   /* reset previous margins */
-  padding-left: 0 !important;  /* no extra left padding */
+  margin-left: 0 !important;   
+  padding-left: 0 !important;  
 }
 #shock-sale-carousel .glide__track,
 #shock-sale-carousel .glide__slides {
-  padding-left: 0 !important;  /* align track flush with container */
+  padding-left: 0 !important;  
 }
-/* gutter between cards */
+
 #shock-sale-carousel .glide__slide {
   padding: 0 12px;
 }
 
-/* Remove unwanted gutter on first slide and ensure hover card isn't clipped */
+
 #shock-sale-carousel .shock-sale-slide-row {
-  margin-left: 0 !important;    /* cancel BS row negative margin */
+  margin-left: 0 !important;    
   margin-right: 0 !important;
 }
 
 #shock-sale-carousel .shock-sale-slide-row > .col {
-  padding-left: 12px !important;  /* equal gutter both sides */
+  padding-left: 12px !important;  
   padding-right: 12px !important;
 }
 
-/* Increase z‑index so hover card renders above blue box */
+
 #shock-sale-carousel .glide__slide {
   position: relative;
   z-index: 2;
 }
 
-/* Allow card hover translateY to show outside slide without being clipped */
 
-/* Allow hover lift (Y‑axis) but prevent horizontal overlap into countdown box */
 #shock-sale-carousel .glide__track,
 #shock-sale-carousel .glide__slides {
   overflow-x: hidden !important;
@@ -1567,12 +1551,12 @@
   overflow-y: visible !important;
 }
 
-/* Add small left margin so first card doesn't touch blue box */
+
 #shock-sale-carousel .glide__slide:first-child {
   margin-left: 12px;
 }
 
-/* --- Shock Sale Section Responsive Fixes --- */
+
 .shock-sale-box {
   display: flex;
   flex-direction: column;
@@ -1622,16 +1606,16 @@
     padding: 0.2rem 0.2rem;
   }
 }
-/* --- Fix dot pagination vertical position for Shock Sale --- */
+
 #shock-sale-carousel {
-  position: relative;                /* establish containing block */
-  padding-bottom: 48px;              /* reserve space for bullets */
+  position: relative;                
+  padding-bottom: 48px;              
 }
 
 #shock-sale-bullets.glide__bullets {
   position: absolute;
   left: 50%;
-  bottom: 8px;                       /* adjust as needed */
+  bottom: 8px;                       
   transform: translateX(-50%);
   gap: 8px;
 }
@@ -1652,7 +1636,6 @@
   overflow: hidden;
 }
 
-/* FAQ Image Styling */
 .faq-image-wrapper {
   display: flex;
   align-items: flex-start;
@@ -1674,7 +1657,6 @@
   object-fit: cover;
 }
 
-/* FAQ Content Styling */
 .faq-content {
   position: relative;
   height: fit-content;
@@ -1695,7 +1677,6 @@
   gap: 0;
 }
 
-/* FAQ Item Styling */
 .faq-item {
   background: #ffffff;
   border-radius: 8px;
@@ -1710,13 +1691,11 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Ensure no border changes on active state */
 .faq-item.active {
   border: 1px solid transparent;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* FAQ Question Styling */
 .faq-question {
   display: flex;
   align-items: center;
@@ -1753,7 +1732,6 @@
   color: #00CFC5;
 }
 
-/* FAQ Icon Styling - Fixed checkmark, no rotation */
 .faq-icon-wrapper {
   display: flex;
   align-items: center;
@@ -1775,10 +1753,8 @@
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  /* No transform or rotation - icon stays static */
 }
 
-/* FAQ Answer Styling */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -1997,9 +1973,9 @@
 .suggest-products {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  column-gap: 2rem;   /* wider horizontal gap */
-  row-gap: 1.75rem;   /* slightly taller vertical gap */
-  padding: 0 0.5rem;  /* optional side padding for aesthetic */
+  column-gap: 2rem;   
+  row-gap: 1.75rem;   
+  padding: 0 0.5rem;  
 }
 
 /* Product Card Base Styles */
@@ -2103,7 +2079,7 @@
   display: flex;
   flex-direction: column;
   padding: 16px !important;
-  padding-bottom: 60px !important; /* Space for cart button */
+  padding-bottom: 60px !important; 
 }
 
 /* Product Title */
@@ -2139,7 +2115,7 @@
   text-decoration: line-through !important;
 }
 
-/* Cart Button */
+
 .suggest-cart-button {
   width: 40px !important;
   height: 40px !important;
@@ -2953,7 +2929,6 @@
    FLOATING ACTION ICONS
 =========================== */
 
-/* Bell ring – reduced amplitude */
 @keyframes ring {
   0%   { transform: rotate(0deg); }
   2%   { transform: rotate(12deg); }
@@ -2976,18 +2951,15 @@
   transform-origin: 50% 0%;
 }
 
-/* Apply ring animation to entire (icon + label) group for contact-btn */
 .contact-btn.ring-animation .contact-inner {
   animation: ring 5s ease-in-out infinite;
   transform-origin: 50% 15%;
 }
 
-/* Prevent double animation on icon inside contact-btn */
 .contact-btn.ring-animation i {
   animation: none;
 }
 
-/* Chat icon shake – reduced amplitude */
 @keyframes shake {
   0%,100% { transform: translateX(0); }
   10%,30%,50%,70%,90% { transform: translateX(-2px); }
@@ -3007,7 +2979,7 @@
 .fixed-icon-left .icon-btn {
   width: 48px;
   height: 48px;
-  background: #003D99;          /* blue fill */
+  background: #003D99;          
   border: none;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
@@ -3031,7 +3003,7 @@
 .fixed-icons-right .icon-btn {
   width: 48px;
   height: 48px;
-  background: #003D99;          /* blue fill */
+  background: #003D99;          
   border: none;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
@@ -3039,12 +3011,12 @@
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  color: #fff;                  /* white icon */
+  color: #fff;                  
   opacity: 1;
   transition: background 0.2s, transform 0.3s;
 }
 
-/* --- Contact icon button --- */
+
 .contact-btn {
   width: 90px;
   height: 90px;
@@ -3055,11 +3027,11 @@
   border: 3px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 6px 18px rgba(0,0,0,0.16);
-  overflow: hidden;                       /* clip any overflow */
+  overflow: hidden;                       
   transition: background 0.2s, transform 0.25s;
 }
 
-/* inner layout (icon + text) – slight tilt */
+
 .contact-inner {
   display: flex;
   flex-direction: column;
@@ -3156,7 +3128,7 @@
 =========================== */
 .notify-panel{
   position:fixed;
-  left:80px;               /* 48px icon + gap */
+  left:80px;              
   bottom:5rem;
   width:320px;
   max-width:90%;
@@ -3197,50 +3169,122 @@
     width:calc(100% - 1rem);
   }
 }
+
 /* ===========================
        CONTACT PANEL
 =========================== */
 .contact-panel{
-  position:fixed;
-  right:80px;
-  bottom:5rem;
-  width:340px;
-  max-width:90%;
-  background:#fff;
-  color:#0a2540;
-  border-radius:16px;
-  padding:1.25rem 0;
-  box-shadow:0 8px 24px rgba(0,0,0,.15);
-  z-index:9998;
-  transform:translateY(20px);
-  opacity:0;visibility:hidden;
-  transition:opacity .25s ease,transform .25s ease;
+  position: fixed;
+  right: 80px;
+  bottom: 5rem;
+  width: 300px;              
+  max-width: 92%;
+  background: #ffffff;
+  color: #0a2540;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.12);
+  z-index: 9998;
+  transform: translateY(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s ease, transform .25s ease;
 }
-.contact-panel.show{opacity:1;visibility:visible;transform:translateY(0);}
-.contact-close-btn{
-  position:absolute;top:12px;right:12px;
-  background:transparent;border:none;
-  color:#6b7280;font-size:1.3rem;
+.contact-panel.show{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
-.contact-item{
-  padding:.9rem 1.25rem;
-  display:flex;align-items:center;gap:.75rem;
-  transition:background .18s;
-}
-.contact-item + .contact-item{border-top:1px solid #e1e6ee;}
-.contact-item:hover{background:#f5f8ff;}
-.contact-item a{font-weight:600;color:#0a2540;text-decoration:none;}
-
 .contact-icon-bg{
-  width:48px;height:48px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  color:#fff;font-size:1.4rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.25rem;  /* size for Bootstrap icon glyphs */
+  flex-shrink: 0;
 }
-.call-bg{background:#e31b23;}
-.zalo-bg{background:#0068ff;}
-.location-bg{background:#2ed8df;}
+.contact-icon-bg svg{
+  display: block;
+}
+.call-bg{     background:#e31b23; }
+.zalo-bg{     background:#0068ff; }
+.location-bg{ background:#2ed8df; }
+.contact-icon-bg .iconify{
+  display:block;
+  width:20px;
+  height:20px;
+}
+/* Close (✖) */
+.contact-close-btn{
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0;
+  border: none !important;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+}
 
-@media (max-width:575.98px){
-  .contact-panel{right:.5rem;bottom:2.5rem;width:calc(100% - 1rem);}
-  .contact-icon-bg{width:40px;height:40px;font-size:1.2rem;}
+/* List items */
+.contact-item{
+  padding: 0.8rem 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: background .18s;
 }
+.contact-item + .contact-item{
+  border-top: 1px solid #ebeff5;
+}
+.contact-item:hover{
+  background: #f5f8ff;           
+}
+
+.contact-item:first-child:hover{
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+.contact-item:last-child:hover{
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+.contact-item a{
+  font-weight: 600;
+  color: #0a2540;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+/* Mobile */
+@media (max-width: 575.98px){
+  .contact-panel{
+    right: .5rem;
+    bottom: 2.5rem;
+    width: calc(100% - 1rem);
+  }
+  .contact-icon-bg{
+    width: 34px;
+    height: 34px;
+    font-size: 1.1rem;
+  }
+  .zalo-icon-img{
+    width: 20px;
+    height: 20px;
+  }
+  .contact-item{
+    padding: 0.75rem 1rem;
+  }
+  .contact-item a{
+    font-size: 0.9rem;
+  }
+}
+
+.contact-btn.open .contact-label{ display: none; }
+.contact-btn.open i{ font-size: 1.6rem; }
+
+.contact-toggle-arrow{ display: none !important; }
