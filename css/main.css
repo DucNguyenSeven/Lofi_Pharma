@@ -2952,6 +2952,52 @@
 /* ===========================
    FLOATING ACTION ICONS
 =========================== */
+
+/* Bell ring – reduced amplitude */
+@keyframes ring {
+  0%   { transform: rotate(0deg); }
+  2%   { transform: rotate(12deg); }
+  4%   { transform: rotate(-12deg); }
+  6%   { transform: rotate(10deg); }
+  8%   { transform: rotate(-10deg); }
+  10%  { transform: rotate(8deg); }
+  12%  { transform: rotate(-8deg); }
+  14%  { transform: rotate(6deg); }
+  16%  { transform: rotate(-6deg); }
+  18%  { transform: rotate(4deg); }
+  20%  { transform: rotate(-4deg); }
+  22%  { transform: rotate(2deg); }
+  24%  { transform: rotate(-2deg); }
+  26%,100% { transform: rotate(0deg); }
+}
+
+.icon-btn.ring-animation i {
+  animation: ring 5s ease-in-out infinite;
+  transform-origin: 50% 0%;
+}
+
+/* Apply ring animation to entire (icon + label) group for contact-btn */
+.contact-btn.ring-animation .contact-inner {
+  animation: ring 5s ease-in-out infinite;
+  transform-origin: 50% 15%;
+}
+
+/* Prevent double animation on icon inside contact-btn */
+.contact-btn.ring-animation i {
+  animation: none;
+}
+
+/* Chat icon shake – reduced amplitude */
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  10%,30%,50%,70%,90% { transform: translateX(-2px); }
+  20%,40%,60%,80% { transform: translateX(2px); }
+}
+
+.icon-btn.shake-animation i {
+  animation: shake 5s ease-in-out infinite;
+  transform-origin: 50% 0%;
+}
 .fixed-icon-left {
   position: fixed;
   left: 1.25rem;
@@ -2961,16 +3007,16 @@
 .fixed-icon-left .icon-btn {
   width: 48px;
   height: 48px;
-  background: #fff;
+  background: #003D99;          /* blue fill */
   border: none;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s;
+  transition: background 0.2s, transform 0.3s;
   font-size: 1.5rem;
-  color: #003D99;
+  color: #fff;                  /* white icon */
 }
 
 .fixed-icons-right {
@@ -2985,7 +3031,7 @@
 .fixed-icons-right .icon-btn {
   width: 48px;
   height: 48px;
-  background: #fff;
+  background: #003D99;          /* blue fill */
   border: none;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
@@ -2993,10 +3039,62 @@
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  color: #003D99;
+  color: #fff;                  /* white icon */
   opacity: 1;
-  transition: all 0.3s;
+  transition: background 0.2s, transform 0.3s;
 }
+
+/* --- Contact icon button --- */
+.contact-btn {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #003D99;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.16);
+  overflow: hidden;                       /* clip any overflow */
+  transition: background 0.2s, transform 0.25s;
+}
+
+/* inner layout (icon + text) – slight tilt */
+.contact-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+       /* slight tilt like sample */
+}
+
+.contact-btn i {
+  font-size: 1.4rem;              /* kích thước icon */
+  line-height: 1;
+}
+
+.contact-label {
+  font-size: 0.5rem;             /* vừa trong vòng tròn */
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Hover interaction: subtle darker blue + slight scale */
+.fixed-icon-left .icon-btn:hover,
+.fixed-icons-right .icon-btn:hover {
+  background: #002d6a;
+  transform: scale(1.05);
+}
+
+/* Label for the contact icon */
+#contact-icon {
+  position: relative;
+}
+
 
 .fixed-icons-right .scroll-top-btn {
   background: #003D99 !important;
