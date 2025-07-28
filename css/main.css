@@ -3150,3 +3150,97 @@
     font-size: 1rem;
   }
 }
+
+/* ===========================
+     NOTIFICATION PANEL
+=========================== */
+.notify-panel{
+  position:fixed;
+  left:80px;               /* 48px icon + gap */
+  bottom:5rem;
+  width:320px;
+  max-width:90%;
+  background:#003D99;
+  color:#fff;
+  border-radius:12px;
+  padding:1.5rem;
+  box-shadow:0 8px 24px rgba(0,0,0,0.15);
+  z-index:9998;
+  transform:translateY(20px);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .25s ease,transform .25s ease;
+}
+.notify-panel.show{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+.notify-close-btn{
+  position:absolute;
+  top:12px;
+  right:12px;
+  background:transparent;
+  border:none;
+  color:#fff;
+  font-size:1.25rem;
+  line-height:1;
+}
+.notify-title{font-size:1.25rem;}
+.notify-list i{font-size:1.25rem;flex-shrink:0;}
+.notify-note{font-size:.875rem;}
+
+@media (max-width:575.98px){
+  .notify-panel{
+    left:0.5rem;
+    bottom:2.5rem;
+    width:calc(100% - 1rem);
+  }
+}
+/* ===========================
+       CONTACT PANEL
+=========================== */
+.contact-panel{
+  position:fixed;
+  right:80px;
+  bottom:5rem;
+  width:340px;
+  max-width:90%;
+  background:#fff;
+  color:#0a2540;
+  border-radius:16px;
+  padding:1.25rem 0;
+  box-shadow:0 8px 24px rgba(0,0,0,.15);
+  z-index:9998;
+  transform:translateY(20px);
+  opacity:0;visibility:hidden;
+  transition:opacity .25s ease,transform .25s ease;
+}
+.contact-panel.show{opacity:1;visibility:visible;transform:translateY(0);}
+.contact-close-btn{
+  position:absolute;top:12px;right:12px;
+  background:transparent;border:none;
+  color:#6b7280;font-size:1.3rem;
+}
+.contact-item{
+  padding:.9rem 1.25rem;
+  display:flex;align-items:center;gap:.75rem;
+  transition:background .18s;
+}
+.contact-item + .contact-item{border-top:1px solid #e1e6ee;}
+.contact-item:hover{background:#f5f8ff;}
+.contact-item a{font-weight:600;color:#0a2540;text-decoration:none;}
+
+.contact-icon-bg{
+  width:48px;height:48px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:1.4rem;
+}
+.call-bg{background:#e31b23;}
+.zalo-bg{background:#0068ff;}
+.location-bg{background:#2ed8df;}
+
+@media (max-width:575.98px){
+  .contact-panel{right:.5rem;bottom:2.5rem;width:calc(100% - 1rem);}
+  .contact-icon-bg{width:40px;height:40px;font-size:1.2rem;}
+}
