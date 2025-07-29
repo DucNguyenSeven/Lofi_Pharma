@@ -3172,10 +3172,11 @@
 /* ===========================
        CONTACT PANEL
 =========================== */
+/* Sit snugly above the contact‑icon and overlap the scroll‑top button */
 .contact-panel{
   position: fixed;
   right: 80px;
-  bottom: 5rem;
+  bottom: calc(5rem + 48px - 6px);
   width: 300px;              
   max-width: 92%;
   background: #ffffff;
@@ -3240,18 +3241,7 @@
 .contact-item + .contact-item{
   border-top: 1px solid #ebeff5;
 }
-.contact-item:hover{
-  background: #f5f8ff;           
-}
 
-.contact-item:first-child:hover{
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
-}
-.contact-item:last-child:hover{
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 18px;
-}
 .contact-item a{
   font-weight: 600;
   color: #0a2540;
