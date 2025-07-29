@@ -1,3 +1,5 @@
+/* =========================== TOPBAR SECTION =========================== */
+
 /* Color */
 .bg-primary { background-color: #003D99 !important; }
 .text-primary { color: #003D99 !important; }
@@ -6,10 +8,6 @@
 .navbar-brand img { height: 50px; }
 /* Carousel min height */
 .carousel-item { min-height: 320px; }
-
-/* ===========================
-      TOPBAR SECTION
-=========================== */
 
 /* Topbar link hover */
 .topbar-login {
@@ -36,9 +34,7 @@
   text-decoration: none !important;
 }
 
-/* ===========================
-      NAVBAR/HEADER SECTION
-=========================== */
+/* =========================== NAVBAR/HEADER SECTION =========================== */
 
 /* Navbar custom styles */
 .custom-navbar {
@@ -270,9 +266,7 @@
   .btn-arrow .bi-chevron-left, .btn-arrow .bi-chevron-right { font-size: 0.8rem; }
 }
 
-/* ===========================
-      HERO CAROUSEL SECTION
-=========================== */
+/* =========================== HERO CAROUSEL SECTION =========================== */
 
 .hero-carousel-bg {
   background: #f6fafd !important;
@@ -449,9 +443,7 @@
   }
 }
 
-/* ===========================
-      SERVICE HIGHLIGHTS SECTION
-=========================== */
+/* =========================== SERVICE HIGHLIGHTS SECTION =========================== */
 
 .service-item {
   display: flex !important;
@@ -545,9 +537,7 @@
   background: #f6f6f6;
 }
 
-/* ===========================
-      PROMO BANNERS SECTION
-=========================== */
+/* =========================== PROMO BANNERS SECTION =========================== */
 
 .promo-banner {
   position: relative;
@@ -732,9 +722,32 @@
   }
 }
 
-/* ===========================
-      PRODUCT SECTIONS (Category Tabs + New Products)
-=========================== */
+/* =========================== PRODUCT SECTIONS (Category Tabs + New Products) =========================== */
+
+/* Category Tabs */
+.category-tab {
+  padding: 10px 24px;
+  border-radius: 5px;
+  border: 1px solid #003A8C;
+  background-color: white;
+  color: #003A8C;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.category-tab:hover {
+  background-color: #003A8C;
+  color: white;
+  border-color: #003A8C;
+}
+
+.category-tab.active {
+  background-color: #003A8C;
+  color: white;
+  border: 1px solid #003A8C;
+}
 
 .section-title-large {
   font-size: 2.5rem;
@@ -1098,9 +1111,7 @@
   margin: 0 auto;
 }
 
-/* ===========================
-      MEDICAL EXPERTS SECTION
-=========================== */
+/* =========================== MEDICAL EXPERTS SECTION =========================== */
 
 .sale-experts-wrapper {
   background: #fff;
@@ -1237,9 +1248,7 @@
   }
 }
 
-/* ===========================
-      FLASH SALE COUNTDOWN SECTION
-=========================== */
+/* =========================== FLASH SALE COUNTDOWN SECTION =========================== */
 
 .shock-sale-section {
   background: #f8f9fa;
@@ -1640,9 +1649,7 @@
   }
 }
 
-/* ===========================
-      FAQ SECTION
-=========================== */
+/* =========================== FAQ SECTION =========================== */
 
 .section-faq {
   background-color: #f8f9fa;
@@ -1913,9 +1920,7 @@
   }
 }
 
-/* ===========================
-      SUGGEST SECTION
-=========================== */
+/* =========================== SUGGEST SECTION =========================== */
 
 .suggest-section {
   background-color: #f8f9fa;
@@ -2247,9 +2252,7 @@
   }
 }
 
-/* ===========================
-      HEALTH BLOG SECTION
-=========================== */  
+/* =========================== HEALTH SECTION (Blog + Video) =========================== */
 
 /* Blog Section Container */
 .blog-section {
@@ -2533,9 +2536,7 @@
   .video-card-custom { min-width: 200px; }
 }
 
-/* ===========================
-   NEWSLETTER SECTION (Signup)
-=========================== */
+/* =========================== NEWSLETTER SECTION =========================== */
 .newsletter-section-new {
   background: #f8f9fa;
   padding: 4rem 0 0 0;
@@ -2772,35 +2773,9 @@
   }
 }
 
-/* Category Tabs */
-.category-tab {
-  padding: 10px 24px;
-  border-radius: 5px;
-  border: 1px solid #003A8C;
-  background-color: white;
-  color: #003A8C;
-  font-weight: 600;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
 
-.category-tab:hover {
-  background-color: #003A8C;
-  color: white;
-  border-color: #003A8C;
-}
 
-.category-tab.active {
-  background-color: #003A8C;
-  color: white;
-  border: 1px solid #003A8C;
-}
-
-/* New Footer Styles */
-/* ===========================
-   13. FOOTER SECTION
-=========================== */
+/* =========================== FOOTER SECTION =========================== */
 
 .footer-new {
   background: #fff;
@@ -2938,9 +2913,7 @@
   }
 }
 
-/* ===========================
-   FLOATING ACTION ICONS
-=========================== */
+/* =========================== UTILITIES & MEDIA QUERIES =========================== */
 
 @keyframes ring {
   0%   { transform: rotate(0deg); }
@@ -3134,9 +3107,7 @@
   }
 }
 
-/* ===========================
-     NOTIFICATION PANEL
-=========================== */
+/* =========================== NOTIFICATION PANEL =========================== */
 
 .notify-panel{
   position:fixed;
@@ -3182,9 +3153,7 @@
   }
 }
 
-/* ===========================
-       CONTACT PANEL
-=========================== */
+/* =========================== CONTACT PANEL =========================== */
 /* Sit snugly above the contact‑icon and overlap the scroll‑top button */
 .contact-panel{
   position: fixed;
