@@ -4,37 +4,6 @@
 .bg-primary { background-color: #003D99 !important; }
 .text-primary { color: #003D99 !important; }
 
-/* Logo navbar */
-.navbar-brand img { height: 50px; }
-
-/* Carousel min height */
-.carousel-item { min-height: 320px; }
-
-/* Topbar */
-.topbar-login {
-  transition: color 0.2s;
-}
-.topbar-login:hover {
-  color: #bfc9d1 !important;
-}
-
-.topbar-register {
-  transition: color 0.2s;
-  font-weight: 600;
-}
-.topbar-register:hover {
-  color: #fff !important;
-}
-
-.topbar-link {
-  text-decoration: none !important;
-  transition: color 0.2s;
-}
-.topbar-link:hover {
-  color: #bfc9d1 !important;
-  text-decoration: none !important;
-}
-
 /* =========================== NAVBAR/HEADER SECTION =========================== */
 
 /* Navbar custom styles */
