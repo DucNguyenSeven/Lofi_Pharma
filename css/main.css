@@ -3906,3 +3906,130 @@
     border-radius: 12px;
   }
 }
+
+/* ========== ABOUT PAGE: Bottom Banner Section (Redesign, No Overlay, Smaller Text) ========== */
+.about-banner-bg {
+  position: relative;
+  background: url('../assets/about-banner.png') center center/cover no-repeat;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.about-banner-overlay {
+  display: none; /* Không làm mờ nền */
+}
+.about-banner-section .container {
+  position: relative;
+  z-index: 2;
+}
+.about-banner-content {
+  color: #fff;
+  z-index: 2;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-banner-title {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+.about-banner-subtitle {
+  color: #fff;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.about-banner-desc {
+  color: #e0e6ef;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+.about-banner-cta-btn {
+  background: linear-gradient(135deg, #fff 0%, #2ed8df 100%);
+  color: #003D99;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 61, 153, 0.10);
+}
+.about-banner-section.about-banner-bg {
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
+}
+@media (max-width: 991.98px) {
+  .about-banner-title {
+    font-size: 1.7rem;
+  }
+  .about-banner-subtitle {
+    font-size: 1.15rem;
+  }
+  .about-banner-content {
+    max-width: 95vw;
+  }
+  .about-banner-section.about-banner-bg {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .about-banner-title {
+    font-size: 1.1rem;
+  }
+  .about-banner-subtitle {
+    font-size: 0.95rem;
+  }
+  .about-banner-desc {
+    font-size: 0.9rem;
+  }
+  .about-banner-content {
+    padding: 0 0.3rem;
+    max-width: 99vw;
+  }
+  .about-banner-section.about-banner-bg {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .about-banner-cta-btn {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.9rem;
+  }
+}
+
+/* ========== ABOUT PAGE: Bottom Banner Section (Text Centering Update) ========== */
+.about-banner-content {
+  color: #fff;
+  z-index: 2;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+@media (max-width: 991.98px) {
+  .about-banner-content {
+    max-width: 90vw;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .about-banner-content {
+    max-width: 99vw;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
