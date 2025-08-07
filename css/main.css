@@ -6,10 +6,11 @@
 
 /* Logo navbar */
 .navbar-brand img { height: 50px; }
+
 /* Carousel min height */
 .carousel-item { min-height: 320px; }
 
-/* Topbar link hover */
+/* Topbar */
 .topbar-login {
   transition: color 0.2s;
 }
@@ -1177,10 +1178,20 @@
   padding: 0 10px;
 }
 .stat-icon {
-  font-size: 2.2rem;
-  color: #003A8C;
   margin-bottom: 0.5rem;
-  display: block;
+  display: flex;
+  justify-content: center;
+}
+
+.stat-icon-img {
+  max-width: 50px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.stat-block:hover .stat-icon-img {
+  transform: scale(1.1);
 }
 .stat-number {
   font-size: 1.6rem;
@@ -1203,8 +1214,8 @@
   .experts-body {
     font-size: 1rem;
   }
-  .stat-icon {
-    font-size: 2rem;
+  .stat-icon-img {
+    max-width: 45px;
   }
   .stat-number {
     font-size: 1.2rem;
@@ -1237,8 +1248,8 @@
     padding: 0 2px;
     margin-bottom: 1.5rem;
   }
-  .stat-icon {
-    font-size: 1.5rem;
+  .stat-icon-img {
+    max-width: 40px;
   }
   .stat-number {
     font-size: 1rem;
@@ -3259,3 +3270,639 @@
 .contact-btn.open i{ font-size: 1.6rem; }
 
 .contact-toggle-arrow{ display: none !important; }
+
+/* ========== ABOUT PAGE: Breadcrumb Section ========== */
+.breadcrumb-section {
+  background-color: #f8f9fa;
+}
+
+.breadcrumb-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003D99;
+  margin-bottom: 0.5rem;
+}
+
+.breadcrumb {
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-item {
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+.breadcrumb-item.active {
+  color: #003D99;
+  font-weight: 600;
+}
+
+.breadcrumb-link {
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb-link:hover {
+  color: #003D99;
+  text-decoration: none;
+}
+
+/* ========== ABOUT PAGE: Company Introduction ========== */
+.about-company-section {
+  background-color: #ffffff;
+}
+
+.about-company-content {
+  max-width: 500px;
+  margin: 0;
+  padding: 0;
+}
+
+.about-company-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #003D99;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.about-company-body {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.about-company-cta-btn {
+  background: linear-gradient(135deg, #003D99 0%, #2ed8df 100%);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  border: none;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.about-company-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 61, 153, 0.3);
+  color: white;
+  text-decoration: none;
+}
+
+.about-company-image {
+  border-radius: 15px;
+  box-shadow: none;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ========== ABOUT PAGE: Statistics Section ========== */
+/* Removed - no longer needed */
+
+/* ========== ABOUT PAGE: Partners Section ========== */
+.about-partners-section {
+  background-color: #ffffff;
+}
+
+.about-partner-logo-img {
+  max-width: 120px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.about-partner-logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* Removed title and card styles - now using simple logo display */
+
+/* ========== ABOUT PAGE: Core Values Section ========== */
+.about-core-values-section {
+  background-color: #ffffff;
+}
+
+.about-core-values-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003D99;
+  margin-bottom: 3rem;
+}
+
+.about-core-value-card {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  border: 1px solid #f0f0f0;
+}
+
+.about-core-value-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-core-value-icon {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-core-value-icon-img {
+  max-width: 80px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.about-core-value-card:hover .about-core-value-icon-img {
+  transform: scale(1.1);
+}
+
+.about-core-value-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #003D99;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.about-core-value-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+}
+
+/* ========== ABOUT PAGE: Bottom Banner Section ========== */
+.about-banner-section {
+  background-color: #ffffff;
+}
+
+.about-banner-content {
+  padding-right: 2rem;
+}
+
+.about-banner-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003D99;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.about-banner-desc {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.about-banner-cta-btn {
+  background: linear-gradient(135deg, #003D99 0%, #2ed8df 100%);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  border: none;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.about-banner-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 61, 153, 0.3);
+  color: white;
+  text-decoration: none;
+}
+
+.about-banner-image-wrapper {
+  text-align: center;
+}
+
+.about-banner-image {
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-banner-image:hover {
+  transform: scale(1.02);
+}
+
+/* ========== ABOUT PAGE: Contact Form Section ========== */
+.about-contact-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.about-contact-content {
+  padding-right: 2rem;
+}
+
+.about-contact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003D99;
+  margin-bottom: 1.5rem;
+}
+
+.about-contact-desc {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.about-contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about-contact-input,
+.about-contact-textarea {
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-contact-input:focus,
+.about-contact-textarea:focus {
+  border-color: #003D99;
+  box-shadow: 0 0 0 0.2rem rgba(0, 61, 153, 0.25);
+  outline: none;
+}
+
+.about-contact-submit-btn {
+  background: linear-gradient(135deg, #003D99 0%, #2ed8df 100%);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  border: none;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.about-contact-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 61, 153, 0.3);
+  color: white;
+}
+
+.about-contact-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.about-contact-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-contact-image:hover {
+  transform: scale(1.02);
+}
+
+/* ========== ABOUT PAGE: Responsive Design ========== */
+@media (max-width: 991.98px) {
+  .breadcrumb-title {
+    font-size: 2rem;
+  }
+  
+  .about-company-title,
+  .about-banner-title,
+  .about-contact-title {
+    font-size: 2rem;
+  }
+  
+  .about-company-body,
+  .about-banner-desc,
+  .about-contact-desc {
+    font-size: 1rem;
+  }
+  
+  .about-stat-number {
+    font-size: 2rem;
+  }
+  
+  .about-stat-icon-img {
+    max-width: 50px;
+  }
+  
+  .about-core-values-title,
+  .about-partners-title {
+    font-size: 2rem;
+  }
+  
+  .about-core-value-icon-img {
+    max-width: 60px;
+  }
+  
+  .about-contact-image {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .breadcrumb-title {
+    font-size: 1.75rem;
+  }
+  
+  .about-company-title,
+  .about-banner-title,
+  .about-contact-title {
+    font-size: 1.75rem;
+  }
+  
+  .about-company-content,
+  .about-banner-content,
+  .about-contact-content {
+    padding-right: 0;
+    text-align: center;
+  }
+  
+  .about-stat-block {
+    padding: 1.5rem 1rem;
+  }
+  
+  .about-stat-number {
+    font-size: 1.75rem;
+  }
+  
+  .about-stat-icon-img {
+    max-width: 45px;
+  }
+  
+  .about-partners-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .about-core-value-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .about-contact-form {
+    padding: 1.5rem;
+  }
+  
+  .about-contact-image {
+    width: 120px;
+    height: 120px;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .breadcrumb-title {
+    font-size: 1.5rem;
+  }
+  
+  .about-company-title,
+  .about-banner-title,
+  .about-contact-title {
+    font-size: 1.5rem;
+  }
+  
+  .about-company-body,
+  .about-banner-desc,
+  .about-contact-desc {
+    font-size: 0.95rem;
+  }
+  
+  .about-stat-block {
+    padding: 1rem 0.5rem;
+  }
+  
+  .about-stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .about-stat-icon-img {
+    max-width: 40px;
+  }
+  
+  .about-partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .about-partner-logo {
+    font-size: 1.25rem;
+    padding: 0.75rem;
+  }
+  
+  .about-core-value-card {
+    padding: 1rem 0.75rem;
+  }
+  
+  .about-core-value-icon-img {
+    max-width: 50px;
+  }
+  
+  .about-core-value-title {
+    font-size: 1.1rem;
+  }
+  
+  .about-core-value-desc {
+    font-size: 0.9rem;
+  }
+  
+  .about-contact-form {
+    padding: 1rem;
+  }
+  
+  .about-contact-image {
+    max-height: 150px;
+  }
+}
+
+/* ========== ABOUT PAGE: Core Values Section (Redesign) ========== */
+.about-core-value-icon-circle {
+  width: 100px;
+  height: 100px;
+  background: #003D99;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: background 0.25s;
+}
+.about-core-value-icon-circle img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  transition: filter 0.25s;
+}
+.about-core-value-title-alt {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.about-core-value-desc-alt {
+  font-size: 0.9rem;
+  color: #333;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.about-core-value-card {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+@media (max-width: 767.98px) {
+  .about-core-value-icon-circle {
+    width: 70px;
+    height: 70px;
+  }
+  .about-core-value-icon-circle img {
+    width: 36px;
+    height: 36px;
+  }
+  .about-core-value-title-alt {
+    font-size: 1rem;
+  }
+  .about-core-value-desc-alt {
+    font-size: 0.85rem;
+  }
+}
+.about-core-value-icon-circle:hover {
+  background: #2ed8df;
+}
+.about-core-value-icon-circle:hover img {
+  filter: brightness(0) invert(1);
+}
+
+/* ========== ABOUT PAGE: Company Introduction (Redesign) ========== */
+.about-company-content {
+  max-width: 500px;
+  margin: 0;
+  padding: 0;
+}
+.about-company-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #003D99;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.about-company-body {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  line-height: 1.6;
+}
+.about-company-cta-btn {
+  background: linear-gradient(135deg, #003D99 0%, #2ed8df 100%);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.7rem 2.2rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: none;
+}
+.about-company-cta-btn:hover {
+  background: #2ed8df;
+  color: #003D99;
+}
+.about-company-stats-row {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+.about-company-stat-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+.about-company-stat-number {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #003D99;
+  margin-bottom: 0.25rem;
+}
+.about-company-stat-label {
+  font-size: 0.95rem;
+  color: #444;
+  text-align: center;
+}
+.about-company-image-custom {
+  border-radius: 18px;
+  box-shadow: none;
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 991.98px) {
+  .about-company-title {
+    font-size: 1.5rem;
+  }
+  .about-company-content {
+    padding: 0 1rem;
+  }
+  .about-company-stat-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .about-company-stat-number {
+    font-size: 1.1rem;
+  }
+  .about-company-stat-label {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .about-company-content {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+  .about-company-title {
+    font-size: 1.2rem;
+  }
+  .about-company-stat-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .about-company-stat-number {
+    font-size: 1rem;
+  }
+  .about-company-stat-label {
+    font-size: 0.8rem;
+  }
+  .about-company-image-custom {
+    border-radius: 12px;
+  }
+}

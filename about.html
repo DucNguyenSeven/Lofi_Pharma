@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giới thiệu - Lofi Pharma</title>
+    <!-- Bootstrap 5 CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- SwiperJS CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- Glide.js CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.theme.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Topbar -->
+    <div
+      class="bg-primary text-white py-1 px-3 d-flex justify-content-between align-items-center"
+    >
+      <span>
+        <a href="tel:19006750" class="text-white topbar-link"
+          ><i class="bi bi-telephone-fill me-1"></i>1900 6750</a
+        >
+        |
+        <a href="mailto:support@sapo.vn" class="text-white topbar-link"
+          ><i class="bi bi-envelope-fill me-1"></i>support@sapo.vn</a
+        >
+      </span>
+      <div>
+        <a href="#" class="text-white topbar-link">Đăng nhập</a> |
+        <a href="#" class="text-white topbar-link">Đăng ký</a>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom custom-navbar">
+      <div class="container d-flex align-items-center justify-content-between">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="assets/logo.png" alt="Lofi Pharma Logo" class="me-2" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul
+            id="navScroll"
+            class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center"
+          >
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html">Giới thiệu</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="sanphamDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Sản phẩm</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="sanphamDropdown">
+                <li>
+                  <a class="dropdown-item" href="#">Thực phẩm chức năng</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Dược phẩm</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Góc sức khỏe</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Video</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Liên hệ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Đặt lịch tư vấn</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center ms-3 me-3 nav-arrows">
+            <button class="btn btn-arrow me-1" type="button" title="Trước">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="btn btn-arrow" type="button" title="Sau">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+          <!-- Search -->
+          <form class="d-flex align-items-center nav-search me-3" role="search">
+            <input
+              class="form-control search-input"
+              type="search"
+              placeholder="Thực phẩm chức năng..."
+              aria-label="Search"
+            />
+            <button class="btn btn-search" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+          <!-- Icons -->
+          <div class="d-flex align-items-center nav-icons">
+            <a href="#" class="icon-btn me-2" title="Vị trí">
+              <div class="icon-square"><i class="bi bi-geo-alt"></i></div>
+            </a>
+            <a
+              href="#"
+              class="icon-btn me-2 position-relative"
+              title="Yêu thích"
+            >
+              <div class="icon-square">
+                <i class="bi bi-heart"></i>
+                <span class="badge badge-custom">0</span>
+              </div>
+            </a>
+            <a href="#" class="icon-btn position-relative" title="Giỏ hàng">
+              <div class="icon-square">
+                <i class="bi bi-cart"></i>
+                <span class="badge badge-custom">0</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========== ABOUT PAGE: Breadcrumb Section ========== -->
+    <section class="breadcrumb-section py-4 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="breadcrumb-title mb-2">Giới thiệu</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item">
+                  <a href="index.html" class="breadcrumb-link">Trang chủ</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Giới thiệu
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT PAGE: Company Introduction ========== -->
+    <section class="about-company-section py-5 bg-white">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <!-- Text Content Left -->
+          <div class="col-lg-6 mb-4 mb-lg-0 d-flex flex-column align-items-start">
+            <div class="about-company-content">
+              <h2 class="about-company-title mb-4">Chuyên Gia Y Tế Giàu Kinh Nghiệm</h2>
+              <p class="about-company-body mb-4">
+                Được thành lập vào năm 2015, Lofi Pharma là một trong những chuỗi bán lẻ dược phẩm đầu tiên tại Việt Nam. Đến nay, Lofi Pharma sở hữu mạng lưới hơn 100 nhà thuốc đạt chuẩn GPP trên toàn quốc cùng đội ngũ hơn 500 dược sĩ đáng tin cậy, cung cấp các sản phẩm thuốc và sản phẩm chăm sóc sức khỏe hàng đầu với giá thành cạnh tranh nhất.
+              </p>
+              <a href="#" class="btn about-company-cta-btn mb-4">MUA NGAY</a>
+              <div class="row w-100 gx-0 gy-4 justify-content-center about-company-stats-row">
+                <div class="col-6 col-md-3 d-flex flex-column align-items-center">
+                  <img src="assets/image_about_1_images.png" alt="Khách hàng" class="about-company-stat-icon mb-2" />
+                  <div class="about-company-stat-number">200K+</div>
+                  <div class="about-company-stat-label">Khách hàng</div>
+                </div>
+                <div class="col-6 col-md-3 d-flex flex-column align-items-center">
+                  <img src="assets/image_about_2_images.png" alt="Đơn hàng" class="about-company-stat-icon mb-2" />
+                  <div class="about-company-stat-number">50K+</div>
+                  <div class="about-company-stat-label">Đơn hàng</div>
+                </div>
+                <div class="col-6 col-md-3 d-flex flex-column align-items-center">
+                  <img src="assets/image_about_3_images.png" alt="Cửa hàng" class="about-company-stat-icon mb-2" />
+                  <div class="about-company-stat-number">20+</div>
+                  <div class="about-company-stat-label">Cửa hàng</div>
+                </div>
+                <div class="col-6 col-md-3 d-flex flex-column align-items-center">
+                  <img src="assets/image_about_4_images.png" alt="Các loại thuốc" class="about-company-stat-icon mb-2" />
+                  <div class="about-company-stat-number">5K+</div>
+                  <div class="about-company-stat-label">Các loại thuốc</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Image Right -->
+          <div class="col-lg-6 d-flex justify-content-center align-items-center">
+            <img
+              src="assets/about_image.png"
+              alt="Đội ngũ chuyên gia y tế"
+              class="about-company-image-custom img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT PAGE: Partners Section ========== -->
+    <section class="about-partners-section py-5 bg-white">
+      <div class="container">
+        <div class="row justify-content-center align-items-center g-4">
+          <div class="col-6 col-md-3 text-center">
+            <img src="assets/image_brand_1.png" alt="Đối tác 1" class="about-partner-logo-img" />
+          </div>
+          <div class="col-6 col-md-3 text-center">
+            <img src="assets/image_brand_2.png" alt="Đối tác 2" class="about-partner-logo-img" />
+          </div>
+          <div class="col-6 col-md-3 text-center">
+            <img src="assets/image_brand_3.png" alt="Đối tác 3" class="about-partner-logo-img" />
+          </div>
+          <div class="col-6 col-md-3 text-center">
+            <img src="assets/image_brand_4.png" alt="Đối tác 4" class="about-partner-logo-img" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT PAGE: Core Values Section ========== -->
+    <section class="about-core-values-section py-5 bg-light">
+      <div class="container">
+        <div class="row justify-content-center align-items-start text-center g-5">
+          <div class="col-12">
+            <h3 class="about-core-values-title text-center mb-5">Giá trị cốt lõi</h3>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="about-core-value-icon-circle mx-auto mb-4">
+              <img src="assets/values_icon_1.png" alt="Chất lượng và an toàn" class="about-core-value-icon-img" />
+            </div>
+            <h4 class="about-core-value-title-alt">Chất lượng và an toàn</h4>
+            <p class="about-core-value-desc-alt">
+              Đảm bảo cung cấp các sản phẩm thuốc đạt tiêu chuẩn chất lượng, an toàn và hiệu quả, tuân thủ các quy định y tế và pháp luật.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="about-core-value-icon-circle mx-auto mb-4">
+              <img src="assets/values_icon_2.png" alt="Chăm sóc khách hàng" class="about-core-value-icon-img" />
+            </div>
+            <h4 class="about-core-value-title-alt">Chăm sóc khách hàng</h4>
+            <p class="about-core-value-desc-alt">
+              Tư vấn tận tình, hỗ trợ khách hàng với sự chuyên nghiệp và trách nhiệm, giúp họ hiểu rõ cách sử dụng thuốc và giải đáp mọi thắc mắc về sức khỏe.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="about-core-value-icon-circle mx-auto mb-4">
+              <img src="assets/values_icon_3.png" alt="Trách nhiệm xã hội" class="about-core-value-icon-img" />
+            </div>
+            <h4 class="about-core-value-title-alt">Trách nhiệm xã hội</h4>
+            <p class="about-core-value-desc-alt">
+              Đóng góp vào việc nâng cao sức khỏe cộng đồng, cam kết với các hoạt động mang lại lợi ích cho xã hội và chăm sóc sức khỏe cộng đồng.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="about-core-value-icon-circle mx-auto mb-4">
+              <img src="assets/values_icon_4.png" alt="Đổi mới và phát triển" class="about-core-value-icon-img" />
+            </div>
+            <h4 class="about-core-value-title-alt">Đổi mới và phát triển</h4>
+            <p class="about-core-value-desc-alt">
+              Không ngừng cải tiến dịch vụ và kiến thức chuyên môn, áp dụng các công nghệ và phương pháp mới nhằm nâng cao trải nghiệm khách hàng và hiệu quả điều trị.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT PAGE: Bottom Banner Section ========== -->
+    <section class="about-banner-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="about-banner-content">
+              <h2 class="about-banner-title mb-4">
+                Đội ngũ chăm sóc sức khỏe tốt nhất
+              </h2>
+              <p class="about-banner-desc mb-4">
+                Với đội ngũ bác sĩ, dược sĩ giàu kinh nghiệm và tận tâm, chúng tôi cam kết mang đến dịch vụ chăm sóc sức khỏe chất lượng cao nhất cho bạn và gia đình.
+              </p>
+              <a href="#" class="btn about-banner-cta-btn">MUA NGAY</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-banner-image-wrapper">
+              <img
+                src="assets/about-banner.png"
+                alt="Đội ngũ chăm sóc sức khỏe"
+                class="about-banner-image img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT PAGE: Contact Form Section ========== -->
+    <section class="about-contact-section py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="about-contact-content">
+              <h3 class="about-contact-title mb-4">Liên hệ với chúng tôi</h3>
+              <p class="about-contact-desc mb-4">
+                Hãy để lại thông tin để chúng tôi có thể tư vấn và hỗ trợ bạn tốt nhất
+              </p>
+              <form class="about-contact-form">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="fullName" class="form-label">Họ và tên *</label>
+                      <input
+                        type="text"
+                        class="form-control about-contact-input"
+                        id="fullName"
+                        placeholder="Nhập họ và tên"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="email" class="form-label">Email *</label>
+                      <input
+                        type="email"
+                        class="form-control about-contact-input"
+                        id="email"
+                        placeholder="Nhập email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="phone" class="form-label">Điện thoại</label>
+                      <input
+                        type="tel"
+                        class="form-control about-contact-input"
+                        id="phone"
+                        placeholder="Nhập số điện thoại"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="message" class="form-label">Nội dung</label>
+                      <textarea
+                        class="form-control about-contact-textarea"
+                        id="message"
+                        rows="4"
+                        placeholder="Nhập nội dung tin nhắn"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn about-contact-submit-btn">
+                      Gửi thông tin
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-contact-image-wrapper text-center">
+              <img
+                src="assets/about-contact-img.png"
+                alt="Liên hệ với chúng tôi"
+                class="about-contact-image img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-section-new py-5">
+      <div class="newsletter-wrapper mx-auto">
+        <h2 class="newsletter-title-new">Đăng ký nhận bản tin</h2>
+        <p class="newsletter-description-new">
+          Tham gia cùng hơn 60.000 người đăng ký và nhận phiếu giảm giá mới vào
+          thứ bảy hàng tuần
+        </p>
+        <form class="newsletter-form-new" role="form">
+          <div class="newsletter-input-group w-100">
+            <input
+              type="email"
+              class="newsletter-input-new form-control"
+              placeholder="Nhập email của bạn"
+              required
+              aria-label="Email"
+            />
+            <button class="newsletter-btn-new btn btn-primary" type="submit">
+              Đăng ký
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-new bg-white border-top pt-5 pb-0 mt-4">
+      <div class="container">
+        <div class="row">
+          <!-- Column 1: Logo + Giới thiệu -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="footer-brand mb-3">
+              <img
+                src="assets/logo.png"
+                alt="Lofi Pharma Logo"
+                class="footer-logo me-2"
+              />
+            </div>
+            <p class="footer-description mb-3">
+              Cửa hàng thực phẩm chức năng Lofi Pharma là địa chỉ tin cậy để bạn
+              tìm kiếm những sản phẩm chất lượng nhất.
+            </p>
+            <p class="footer-legal mb-3">
+              Mã số thuế: 01234567891 do Sở Kế hoạch và Đầu tư Tp Hà Nội cấp
+              ngày 13/02/2024
+            </p>
+            <div class="footer-contact-info">
+              <div class="footer-contact-item mb-2">
+                <i class="bi bi-geo-alt-fill me-2"></i>
+                <span
+                  >Tòa nhà Ladeco, 266 Đội Cấn, P. Liễu Giai, Q. Ba Đình, TP Hà
+                  Nội</span
+                >
+              </div>
+              <div class="footer-contact-item mb-2">
+                <i class="bi bi-telephone-fill me-2"></i>
+                <span>1900 6750</span>
+              </div>
+              <div class="footer-contact-item mb-2">
+                <i class="bi bi-envelope-fill me-2"></i>
+                <span>support@sapo.vn</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: VỀ CHÚNG TÔI -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-title mb-3">VỀ CHÚNG TÔI</h5>
+            <ul class="footer-links list-unstyled">
+              <li><a href="index.html" class="footer-link">Trang chủ</a></li>
+              <li><a href="about.html" class="footer-link">Giới thiệu</a></li>
+              <li><a href="#" class="footer-link">Sản phẩm</a></li>
+              <li><a href="#" class="footer-link">Góc sức khỏe</a></li>
+              <li><a href="#" class="footer-link">Video</a></li>
+              <li><a href="#" class="footer-link">Liên hệ</a></li>
+              <li><a href="#" class="footer-link">Đặt lịch tư vấn</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: CHÍNH SÁCH -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-title mb-3">CHÍNH SÁCH</h5>
+            <ul class="footer-links list-unstyled">
+              <li><a href="#" class="footer-link">Chính sách giao hàng</a></li>
+              <li><a href="#" class="footer-link">Chính sách đổi trả</a></li>
+              <li><a href="#" class="footer-link">Chính sách bán hàng</a></li>
+              <li><a href="#" class="footer-link">Chính sách thành viên</a></li>
+              <li>
+                <a href="#" class="footer-link">Bảo mật thông tin cá nhân</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: THÔNG TIN LIÊN HỆ -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-title mb-3">THÔNG TIN LIÊN HỆ</h5>
+            <div class="footer-hotline mb-3">
+              <div class="footer-hotline-item mb-2">
+                <span class="footer-hotline-label">Mua hàng:</span>
+                <span class="footer-hotline-number">19006750</span>
+              </div>
+              <div class="footer-hotline-item">
+                <span class="footer-hotline-label">Khiếu nại:</span>
+                <span class="footer-hotline-number">19006750</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bar -->
+      <div class="footer-bar bg-primary text-white text-center py-3">
+        <div class="container">
+          <span
+            >© Bản quyền thuộc về <strong>Lofi Team</strong> | Cung cấp bởi
+            <strong>Sapo</strong></span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Action Icons -->
+    <!-- Icon Chuông - bên trái -->
+    <div class="fixed-icon-left">
+      <button id="notify-icon" class="icon-btn" title="Thông báo">
+        <i class="bi bi-bell-fill"></i>
+      </button>
+    </div>
+    <!-- Notification Panel -->
+    <div id="notify-panel" class="notify-panel">
+      <button id="notify-close" class="notify-close-btn" aria-label="Đóng">
+        <i class="bi bi-x-lg"></i>
+      </button>
+
+      <h3 class="notify-title mb-3 fw-bold">Tích hợp sẵn các ứng dụng</h3>
+
+      <ul class="notify-list list-unstyled mb-3">
+        <li class="d-flex align-items-start mb-2">
+          <i class="bi bi-chevron-double-right me-2"></i
+          ><span>Đánh giá sản phẩm</span>
+        </li>
+        <li class="d-flex align-items-start mb-2">
+          <i class="bi bi-chevron-double-right me-2"></i
+          ><span>Mua X tặng Y</span>
+        </li>
+        <li class="d-flex align-items-start mb-2">
+          <i class="bi bi-chevron-double-right me-2"></i
+          ><span>Ứng dụng Affiliate</span>
+        </li>
+        <li class="d-flex align-items-start mb-2">
+          <i class="bi bi-chevron-double-right me-2"></i
+          ><span>Đa ngôn ngữ</span>
+        </li>
+        <li class="d-flex align-items-start mb-3">
+          <i class="bi bi-chevron-double-right me-2"></i
+          ><span>Livechat Facebook</span>
+        </li>
+      </ul>
+
+      <p class="notify-note fst-italic mb-0">
+        Lưu ý với các ứng dụng trả phí bạn cần cài đặt và mua ứng dụng này trên
+        App&nbsp;store&nbsp;Sapo để sử dụng ngay
+      </p>
+    </div>
+    <!-- Contact Panel -->
+    <div id="contact-panel" class="contact-panel">
+      <button id="contact-close" class="contact-close-btn" aria-label="Đóng">
+        <i class="bi bi-x-lg"></i>
+      </button>
+
+      <ul class="contact-list list-unstyled mb-0">
+        <li class="contact-item d-flex align-items-center">
+          <span
+            class="contact-icon-bg call-bg d-flex align-items-center justify-content-center me-3"
+          >
+            <i class="bi bi-telephone-fill"></i>
+          </span>
+          <a href="tel:19006750" class="flex-grow-1 text-decoration-none"
+            >Gọi ngay cho chúng tôi</a
+          >
+        </li>
+        <li class="contact-item d-flex align-items-center">
+          <span
+            class="contact-icon-bg zalo-bg d-flex align-items-center justify-content-center me-3"
+          >
+            <span
+              class="iconify"
+              data-icon="simple-icons:zalo"
+              data-width="20"
+              data-height="20"
+            ></span>
+          </span>
+          <a
+            href="https://zalo.me/19006750"
+            target="_blank"
+            class="flex-grow-1 text-decoration-none"
+            >Chat với chúng tôi qua Zalo</a
+          >
+        </li>
+        <li class="contact-item d-flex align-items-center">
+          <span
+            class="contact-icon-bg location-bg d-flex align-items-center justify-content-center me-3"
+          >
+            <i class="bi bi-geo-alt-fill"></i>
+          </span>
+          <a href="#store-info" class="flex-grow-1 text-decoration-none"
+            >Thông tin cửa hàng</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- Các icon bên phải -->
+    <div class="fixed-icons-right">
+      <button
+        id="scroll-top"
+        class="icon-btn scroll-top-btn"
+        title="Lên đầu trang"
+      >
+        <i class="bi bi-arrow-up"></i>
+      </button>
+      <button id="contact-icon" class="icon-btn contact-btn" title="Liên hệ">
+        <span class="contact-inner">
+          <i class="bi bi-chat-dots-fill"></i>
+          <span class="contact-label">Liên hệ</span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Bootstrap JS Bundle (with Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Glide.js JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/glide.min.js"></script>
+    <!-- Bootstrap Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- Custom JavaScript for Category Tabs -->
+    <script src="js/category-tabs.js"></script>
+
+    <!-- FAQ Accordion JavaScript -->
+    <script src="js/faq-accordion.js"></script>
+
+    <!-- Product JavaScript -->
+    <script type="module" src="js/product/new-product-init.js"></script>
+    <script type="module" src="js/product/suggest-product-init.js"></script>
+    <script type="module" src="js/product/sale-product-init.js"></script>
+
+    <!-- Floating Icons JavaScript -->
+    <script src="js/floating-icons.js"></script>
+
+    <!-- Hero Carousel Animation JavaScript -->
+    <script src="js/hero-carousel-animation.js"></script>
+
+    <!-- Search Typewriter JavaScript -->
+    <script type="module" src="js/search-typewriter.js"></script>
+
+    <!-- Nav Scroll JavaScript -->
+    <script type="module" src="js/nav-scroll.js"></script>
+    <!-- Iconify for brand icons (Zalo) -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  </body>
+</html>
