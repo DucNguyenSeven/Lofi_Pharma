@@ -1,0 +1,105 @@
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom custom-navbar">
+      <div class="container d-flex align-items-center justify-content-between">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="assets/logo.png" alt="Lofi Pharma Logo" class="me-2" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul
+            id="navScroll"
+            class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center"
+          >
+            <li class="nav-item">
+              <a class="nav-link active nav-home" href="index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Giới thiệu</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="sanphamDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Sản phẩm</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="sanphamDropdown">
+                <li>
+                  <a class="dropdown-item" href="#">Thực phẩm chức năng</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Dược phẩm</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Góc sức khỏe</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Video</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Liên hệ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Đặt lịch tư vấn</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center ms-3 me-3 nav-arrows">
+            <button class="btn btn-arrow me-1" type="button" title="Trước">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="btn btn-arrow" type="button" title="Sau">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+          <!-- Search -->
+          <form class="d-flex align-items-center nav-search me-3" role="search">
+            <input
+              class="form-control search-input"
+              type="search"
+              placeholder="Thực phẩm chức năng..."
+              aria-label="Search"
+            />
+            <button class="btn btn-search" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+          <!-- Icons -->
+          <div class="d-flex align-items-center nav-icons">
+            <a href="#" class="icon-btn me-2" title="Vị trí">
+              <div class="icon-square"><i class="bi bi-geo-alt"></i></div>
+            </a>
+            <a
+              href="#"
+              class="icon-btn me-2 position-relative"
+              title="Yêu thích"
+            >
+              <div class="icon-square">
+                <i class="bi bi-heart"></i>
+                <span class="badge badge-custom">0</span>
+              </div>
+            </a>
+            <a href="#" class="icon-btn position-relative" title="Giỏ hàng">
+              <div class="icon-square">
+                <i class="bi bi-cart"></i>
+                <span class="badge badge-custom">0</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
