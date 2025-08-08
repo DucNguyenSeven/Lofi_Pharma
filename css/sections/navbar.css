@@ -7,10 +7,26 @@
   padding: 0.75rem 0;
 }
 
-/* Container spacing */
+/* Container spacing - tăng padding để tạo khoảng cách với viền */
 .custom-navbar .container {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 1400px;
+}
+
+/* Layout adjustments */
+.custom-navbar .navbar-collapse {
+  justify-content: space-between;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.custom-navbar .navbar-nav {
+  flex: 1;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: none;
+  min-width: 0;
 }
 
 .brand-text {
@@ -30,6 +46,7 @@
   align-items: center;
   gap: 0.5rem;
   margin-right: 2rem;
+  flex-shrink: 0;
 }
 
 .navbar-brand img {
@@ -46,6 +63,8 @@
   color: #222;
   transition: color 0.2s;
   border-radius: 6px;
+  white-space: nowrap;
+  display: block;
 }
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.nav-home {
@@ -72,12 +91,14 @@
   white-space: nowrap;
   scroll-behavior: smooth;
   padding: 0;
-  margin: 0 1rem;
+  margin: 0;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
-  max-width: 100%;
+  width: auto;
   flex: 0 0 auto;
-  /* Ensure container can accommodate all items when scrolling */
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
 }
 
 #navScroll::-webkit-scrollbar {
@@ -88,6 +109,14 @@
   display: flex;
   flex: 0 0 auto;
   white-space: nowrap;
+  margin: 0 0.25rem;
+  min-width: 0;
+}
+
+#navScroll .nav-item .nav-link {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 @media (max-width: 991.98px) {
@@ -95,6 +124,7 @@
     max-width: unset;      
     flex: 1 1 auto;
     margin: 0 0.5rem;
+    justify-content: flex-start;
   }
   
   .nav-arrows {
@@ -104,7 +134,7 @@
 
 .nav-arrows {
   flex-shrink: 0;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
 }
 
 .btn-arrow {
@@ -159,6 +189,7 @@
   align-items: center;
   height: 40px;
   margin: 0 1rem;
+  flex-shrink: 0;
 }
 .search-input {
   border: none !important;
@@ -267,6 +298,7 @@
 
 .nav-icons {
   margin-left: 1rem;
+  flex-shrink: 0;
 }
 
 /* Responsive adjustments */

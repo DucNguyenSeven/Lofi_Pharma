@@ -1,6 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Include HTML files
+  includeHTMLFiles();
+});
+
+async function includeHTMLFiles() {
   const includes = document.querySelectorAll("[data-include]");
   let pending = includes.length;
+
+  if (pending === 0) {
+    // Nếu không có file nào cần include, khởi tạo modules ngay
+    initializeModules();
+    return;
+  }
 
   includes.forEach(async (el) => {
     const file = el.getAttribute("data-include");
@@ -15,30 +26,19 @@ document.addEventListener("DOMContentLoaded", () => {
     } finally {
       pending--;
       if (pending === 0) {
-        // Khi tất cả include đã xong, import nav-scroll
-        import('./nav-scroll.js')
-          .then(mod => {
-            if (typeof mod.initNavScroll === 'function') {
-              // Đợi một chút để đảm bảo navbar được render hoàn toàn
-              setTimeout(() => {
-                mod.initNavScroll();
-              }, 100);
-            } else {
-              console.error("initNavScroll() not found in nav-scroll.js");
-            }
-          })
-          .catch(err => console.error("Failed to load nav-scroll.js", err));
-
-        import('./search-typewriter.js')
-          .then(mod => {
-            if (typeof mod.initSearchTypewriter === 'function') {
-              mod.initSearchTypewriter();
-            } else {
-              console.error("initSearchTypewriter() not found in search-typewriter.js");
-            }
-          })
-          .catch(err => console.error("Failed to load search-typewriter.js", err));
+        // Khi tất cả include đã xong, khởi tạo modules
+        initializeModules();
       }
     }
   });
-});
+}
+
+async function initializeModules() {
+  try {
+    // Sử dụng module manager để khởi tạo các module
+    const { initializeModulesWithDelay } = await import('./module-manager.js');
+    await initializeModulesWithDelay(100);
+  } catch (err) {
+    console.error("Failed to initialize modules:", err);
+  }
+}

@@ -1036,18 +1036,6 @@
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <!-- Include HTML Script -->
     <script src="js/include-html.js"></script>
-
-    <script type="module">
-      // Chờ cho đến khi các phần tử navbar được inject xong
-      const waitForNavbar = setInterval(() => {
-        const navReady = document.querySelector('#navScroll');
-        const searchReady = document.querySelector('.search-input');
-        if (navReady && searchReady) {
-          clearInterval(waitForNavbar);
-          import('./js/nav-scroll.js').catch(err => console.error('Failed to load nav-scroll.js', err));
-          import('./js/search-typewriter.js').catch(err => console.error('Failed to load search-typewriter.js', err));
-        }
-      }, 100);
-    </script>
+    <script src="js/module-manager.js" type="module"></script>
   </body>
 </html>
