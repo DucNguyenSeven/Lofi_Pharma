@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+export function initSearchTypewriter() {
   const phrases = [
     "Thực phẩm chức năng...",
     "Dược mỹ phẩm...",
@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let phraseIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
-  const typeSpeed = 100;    // typing speed (ms per character)
-  const deleteSpeed = 60;   // deleting speed
-  const pause = 1500;       // pause at end of each phrase
+  const typeSpeed = 100;
+  const deleteSpeed = 60;
+  const pause = 1500;
 
   function type() {
     const current = phrases[phraseIndex];
@@ -40,6 +40,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Start effect after short delay
   setTimeout(type, 600);
-}); 
+} 

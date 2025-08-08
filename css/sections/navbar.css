@@ -17,6 +17,18 @@
   color: #003D99;
 }
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-brand img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
 .navbar-nav .nav-link {
   font-weight: 600;
   font-size: 0.95rem;
@@ -40,18 +52,31 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 
+/* Updated navScroll for correct scrolling and overflow behavior */
 #navScroll {
   display: flex;
   flex-wrap: nowrap;
-  white-space: nowrap;      
-  overflow-x: auto;         
+  overflow-x: auto;
+  white-space: nowrap;
   scroll-behavior: smooth;
-  scrollbar-width: none;    
+  padding: 0;
+  margin: 0;
+  scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+  flex: 0 0 auto;
+  /* Ensure container can accommodate all items when scrolling */
+  min-width: fit-content;
 }
 
 #navScroll::-webkit-scrollbar {
   display: none;            
+}
+
+#navScroll .nav-item {
+  display: flex;
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
 
 @media (max-width: 991.98px) {
@@ -98,6 +123,16 @@
 }
 .btn-arrow:hover .bi-chevron-right {
   color: #2ed8df;
+}
+
+.btn-arrow.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-arrow.disabled:hover .bi-chevron-left,
+.btn-arrow.disabled:hover .bi-chevron-right {
+  color: #222;
 }
 
 .nav-search {
@@ -216,7 +251,6 @@
 .nav-icons {
   margin-left: 20px;
 }
-
 @media (max-width: 991.98px) {
   .navbar-brand img { height: 24px; }
   .brand-text { font-size: 0.85rem; }
@@ -228,4 +262,37 @@
   .btn-search { font-size: 0.9rem; }
   .btn-arrow { width: 12px; height: 12px; font-size: 0.8rem; }
   .btn-arrow .bi-chevron-left, .btn-arrow .bi-chevron-right { font-size: 0.8rem; }
+}
+
+
+
+/* Updated nav-scroll-wrapper for correct overflow and sizing */
+.nav-scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+  flex-grow: 1;
+  max-width: 100%; /* Add this line */
+}
+
+.nav-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+#navScroll {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+#navScroll::-webkit-scrollbar {
+  display: none;
+}
+
+#navScroll .nav-item {
+  flex: 0 0 auto;
 }

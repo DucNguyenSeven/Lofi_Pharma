@@ -31,130 +31,8 @@
   </head>
 
   <body>
-    <!-- Topbar -->
-    <div
-      class="bg-primary text-white py-1 px-3 d-flex justify-content-between align-items-center"
-    >
-      <span>
-        <a href="tel:19006750" class="text-white topbar-link"
-          ><i class="bi bi-telephone-fill me-1"></i>1900 6750</a
-        >
-        |
-        <a href="mailto:support@sapo.vn" class="text-white topbar-link"
-          ><i class="bi bi-envelope-fill me-1"></i>support@sapo.vn</a
-        >
-      </span>
-      <div>
-        <a href="#" class="text-white topbar-link">Đăng nhập</a> |
-        <a href="#" class="text-white topbar-link">Đăng ký</a>
-      </div>
-    </div>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-white border-bottom custom-navbar">
-      <div class="container d-flex align-items-center justify-content-between">
-        <!-- Logo -->
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="assets/logo.png" alt="Lofi Pharma Logo" class="me-2" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNavbar"
-          aria-controls="mainNavbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Menu -->
-        <div class="collapse navbar-collapse" id="mainNavbar">
-          <ul
-            id="navScroll"
-            class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center"
-          >
-            <li class="nav-item">
-              <a class="nav-link active nav-home" href="index.html">Trang chủ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">Giới thiệu</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="sanphamDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Sản phẩm</a
-              >
-              <ul class="dropdown-menu" aria-labelledby="sanphamDropdown">
-                <li>
-                  <a class="dropdown-item" href="#">Thực phẩm chức năng</a>
-                </li>
-                <li><a class="dropdown-item" href="#">Dược phẩm</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Góc sức khỏe</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Video</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Liên hệ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Đặt lịch tư vấn</a>
-            </li>
-          </ul>
-          <div class="d-flex align-items-center ms-3 me-3 nav-arrows">
-            <button class="btn btn-arrow me-1" type="button" title="Trước">
-              <i class="bi bi-chevron-left"></i>
-            </button>
-            <button class="btn btn-arrow" type="button" title="Sau">
-              <i class="bi bi-chevron-right"></i>
-            </button>
-          </div>
-          <!-- Search -->
-          <form class="d-flex align-items-center nav-search me-3" role="search">
-            <input
-              class="form-control search-input"
-              type="search"
-              placeholder="Thực phẩm chức năng..."
-              aria-label="Search"
-            />
-            <button class="btn btn-search" type="submit">
-              <i class="bi bi-search"></i>
-            </button>
-          </form>
-          <!-- Icons -->
-          <div class="d-flex align-items-center nav-icons">
-            <a href="#" class="icon-btn me-2" title="Vị trí">
-              <div class="icon-square"><i class="bi bi-geo-alt"></i></div>
-            </a>
-            <a
-              href="#"
-              class="icon-btn me-2 position-relative"
-              title="Yêu thích"
-            >
-              <div class="icon-square">
-                <i class="bi bi-heart"></i>
-                <span class="badge badge-custom">0</span>
-              </div>
-            </a>
-            <a href="#" class="icon-btn position-relative" title="Giỏ hàng">
-              <div class="icon-square">
-                <i class="bi bi-cart"></i>
-                <span class="badge badge-custom">0</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <div data-include="partials/topbar.html"></div>
+    <div data-include="partials/navbar.html"></div>
 
     <!-- Hero Carousel -->
     <section class="bg-light">
@@ -1017,125 +895,10 @@
     </section>
 
     <!-- Newsletter Signup -->
-    <section class="newsletter-section-new py-5">
-      <div class="newsletter-wrapper mx-auto">
-        <h2 class="newsletter-title-new">Đăng ký nhận bản tin</h2>
-        <p class="newsletter-description-new">
-          Tham gia cùng hơn 60.000 người đăng ký và nhận phiếu giảm giá mới vào<br />
-          thứ bảy hàng tuần
-        </p>
-        <form class="newsletter-form-new" role="form">
-          <div class="newsletter-input-group w-100">
-            <input
-              type="email"
-              class="newsletter-input-new form-control"
-              placeholder="Nhập email của bạn"
-              required
-              aria-label="Email"
-            />
-            <button class="newsletter-btn-new btn btn-primary" type="submit">
-              Đăng ký
-            </button>
-          </div>
-        </form>
-      </div>
-    </section>
+    <div data-include="partials/newsletter.html"></div>
 
     <!-- Footer -->
-    <footer class="footer-new bg-white border-top pt-5 pb-0 mt-4">
-      <div class="container">
-        <div class="row">
-          <!-- Column 1: Logo + Giới thiệu -->
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="footer-brand mb-3">
-              <img
-                src="assets/logo.png"
-                alt="Lofi Pharma Logo"
-                class="footer-logo me-2"
-              />
-            </div>
-            <p class="footer-description mb-3">
-              Cửa hàng thực phẩm chức năng Lofi Pharma là địa chỉ tin cậy để bạn
-              tìm kiếm những sản phẩm chất lượng nhất.
-            </p>
-            <p class="footer-legal mb-3">
-              Mã số thuế: 01234567891 do Sở Kế hoạch và Đầu tư Tp Hà Nội cấp
-              ngày 13/02/2024
-            </p>
-            <div class="footer-contact-info">
-              <div class="footer-contact-item mb-2">
-                <i class="bi bi-geo-alt-fill me-2"></i>
-                <span
-                  >Tòa nhà Ladeco, 266 Đội Cấn, P. Liễu Giai, Q. Ba Đình, TP Hà
-                  Nội</span
-                >
-              </div>
-              <div class="footer-contact-item mb-2">
-                <i class="bi bi-telephone-fill me-2"></i>
-                <span>1900 6750</span>
-              </div>
-              <div class="footer-contact-item mb-2">
-                <i class="bi bi-envelope-fill me-2"></i>
-                <span>support@sapo.vn</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Column 2: VỀ CHÚNG TÔI -->
-          <div class="col-lg-3 col-md-6 mb-4">
-            <h5 class="footer-title mb-3">VỀ CHÚNG TÔI</h5>
-            <ul class="footer-links list-unstyled">
-              <li><a href="index.html" class="footer-link">Trang chủ</a></li>
-              <li><a href="about.html" class="footer-link">Giới thiệu</a></li>
-              <li><a href="#" class="footer-link">Sản phẩm</a></li>
-              <li><a href="#" class="footer-link">Góc sức khỏe</a></li>
-              <li><a href="#" class="footer-link">Video</a></li>
-              <li><a href="#" class="footer-link">Liên hệ</a></li>
-              <li><a href="#" class="footer-link">Đặt lịch tư vấn</a></li>
-            </ul>
-          </div>
-
-          <!-- Column 3: CHÍNH SÁCH -->
-          <div class="col-lg-3 col-md-6 mb-4">
-            <h5 class="footer-title mb-3">CHÍNH SÁCH</h5>
-            <ul class="footer-links list-unstyled">
-              <li><a href="#" class="footer-link">Chính sách giao hàng</a></li>
-              <li><a href="#" class="footer-link">Chính sách đổi trả</a></li>
-              <li><a href="#" class="footer-link">Chính sách bán hàng</a></li>
-              <li><a href="#" class="footer-link">Chính sách thành viên</a></li>
-              <li>
-                <a href="#" class="footer-link">Bảo mật thông tin cá nhân</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Column 4: THÔNG TIN LIÊN HỆ -->
-          <div class="col-lg-3 col-md-6 mb-4">
-            <h5 class="footer-title mb-3">THÔNG TIN LIÊN HỆ</h5>
-            <div class="footer-hotline mb-3">
-              <div class="footer-hotline-item mb-2">
-                <span class="footer-hotline-label">Mua hàng:</span>
-                <span class="footer-hotline-number">19006750</span>
-              </div>
-              <div class="footer-hotline-item">
-                <span class="footer-hotline-label">Khiếu nại:</span>
-                <span class="footer-hotline-number">19006750</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Footer Bar -->
-      <div class="footer-bar bg-primary text-white text-center py-3">
-        <div class="container">
-          <span
-            >© Bản quyền thuộc về <strong>Lofi Team</strong> | Cung cấp bởi
-            <strong>Sapo</strong></span
-          >
-        </div>
-      </div>
-    </footer>
+    <div data-include="partials/footer.html"></div>
 
     <!-- Floating Action Icons -->
     <div class="fixed-icon-left">
@@ -1269,12 +1032,22 @@
     <!-- Hero Carousel Animation JavaScript -->
     <script src="js/hero-carousel-animation.js"></script>
 
-    <!-- Search Typewriter JavaScript -->
-    <script type="module" src="js/search-typewriter.js"></script>
-
-    <!-- Nav Scroll JavaScript -->
-    <script type="module" src="js/nav-scroll.js"></script>
     <!-- Iconify for brand icons (Zalo) -->
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- Include HTML Script -->
+    <script src="js/include-html.js"></script>
+
+    <script type="module">
+      // Chờ cho đến khi các phần tử navbar được inject xong
+      const waitForNavbar = setInterval(() => {
+        const navReady = document.querySelector('#navScroll');
+        const searchReady = document.querySelector('.search-input');
+        if (navReady && searchReady) {
+          clearInterval(waitForNavbar);
+          import('./js/nav-scroll.js').catch(err => console.error('Failed to load nav-scroll.js', err));
+          import('./js/search-typewriter.js').catch(err => console.error('Failed to load search-typewriter.js', err));
+        }
+      }, 100);
+    </script>
   </body>
 </html>
