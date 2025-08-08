@@ -5,6 +5,12 @@
 // Danh sách các module cần khởi tạo
 const MODULES = [
   {
+    name: 'nav-active',
+    importPath: './nav-active.js',
+    initFunction: 'initNavActive',
+    required: true
+  },
+  {
     name: 'nav-scroll',
     importPath: './nav-scroll.js',
     initFunction: 'initNavScroll',

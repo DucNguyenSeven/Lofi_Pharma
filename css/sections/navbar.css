@@ -66,8 +66,7 @@
   white-space: nowrap;
   display: block;
 }
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link.nav-home {
+.navbar-nav .nav-link.active {
   color: #2ed8df !important;
 }
 .navbar-nav .nav-link:hover {
