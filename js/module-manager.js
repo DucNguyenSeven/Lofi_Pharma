@@ -34,8 +34,6 @@ const MODULES = [
  * Khởi tạo tất cả các module
  */
 export async function initializeAllModules() {
-  console.log('Initializing modules...');
-  
   for (const module of MODULES) {
     try {
       await initializeModule(module);
@@ -47,8 +45,6 @@ export async function initializeAllModules() {
       }
     }
   }
-  
-  console.log('All modules initialized successfully');
 }
 
 /**
@@ -62,7 +58,6 @@ async function initializeModule(moduleConfig) {
     
     if (typeof module[initFunction] === 'function') {
       module[initFunction]();
-      console.log(`✅ ${name} initialized successfully`);
     } else {
       const error = `${initFunction}() not found in ${name}`;
       console.error(`❌ ${error}`);

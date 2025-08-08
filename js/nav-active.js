@@ -1,11 +1,7 @@
 export function initNavActive() {
-  console.log('initNavActive called');
-  
   // Lấy đường dẫn hiện tại
   const currentPath = window.location.pathname;
   const currentPage = currentPath.split('/').pop() || 'index.html';
-  
-  console.log('Current page:', currentPage);
   
   // Xóa tất cả active classes hiện tại
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
@@ -28,6 +24,4 @@ export function initNavActive() {
     }
   }
   // Có thể thêm các trang khác ở đây
-  
-  console.log('Nav active state updated');
 }
