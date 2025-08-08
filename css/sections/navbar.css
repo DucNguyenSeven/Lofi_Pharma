@@ -387,7 +387,7 @@
   overflow: hidden;
   position: relative;
   flex-grow: 1;
-  max-width: 100%; /* Add this line */
+  max-width: 100%;
 }
 
 .nav-scroll-wrapper::-webkit-scrollbar {

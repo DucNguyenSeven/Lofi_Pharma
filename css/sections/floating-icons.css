@@ -1,0 +1,392 @@
+/* =========================== FLOATING ICONS =========================== */
+
+@keyframes ring {
+  0%   { transform: rotate(0deg); }
+  2%   { transform: rotate(12deg); }
+  4%   { transform: rotate(-12deg); }
+  6%   { transform: rotate(10deg); }
+  8%   { transform: rotate(-10deg); }
+  10%  { transform: rotate(8deg); }
+  12%  { transform: rotate(-8deg); }
+  14%  { transform: rotate(6deg); }
+  16%  { transform: rotate(-6deg); }
+  18%  { transform: rotate(4deg); }
+  20%  { transform: rotate(-4deg); }
+  22%  { transform: rotate(2deg); }
+  24%  { transform: rotate(-2deg); }
+  26%,100% { transform: rotate(0deg); }
+}
+
+.icon-btn.ring-animation i {
+  animation: ring 5s ease-in-out infinite;
+  transform-origin: 50% 0%;
+}
+
+.contact-btn.ring-animation .contact-inner {
+  animation: ring 5s ease-in-out infinite;
+  transform-origin: 50% 15%;
+}
+
+.contact-btn.ring-animation i {
+  animation: none;
+}
+
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  10%,30%,50%,70%,90% { transform: translateX(-2px); }
+  20%,40%,60%,80% { transform: translateX(2px); }
+}
+
+.icon-btn.shake-animation i {
+  animation: shake 5s ease-in-out infinite;
+  transform-origin: 50% 0%;
+}
+
+/* Fixed Icon Left */
+.fixed-icon-left {
+  position: fixed;
+  left: 1.25rem;
+  bottom: 5rem;
+  z-index: 9999;
+}
+
+.fixed-icon-left .icon-btn {
+  width: 48px;
+  height: 48px;
+  background: #003D99;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.3s;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Fixed Icons Right */
+.fixed-icons-right {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 9999;
+}
+
+.fixed-icons-right .icon-btn {
+  width: 48px;
+  height: 48px;
+  background: #003D99;          
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;                  
+  opacity: 1;
+  transition: background 0.2s, transform 0.3s;
+}
+
+/* Contact Button */
+.contact-btn {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #003D99;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.16);
+  overflow: hidden;                       
+  transition: background 0.2s, transform 0.25s;
+}
+
+.contact-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.contact-btn i {
+  font-size: 1.4rem;              
+  line-height: 1;
+}
+
+.contact-label {
+  font-size: 0.5rem;             
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Hover Effects */
+.fixed-icon-left .icon-btn:hover,
+.fixed-icons-right .icon-btn:hover {
+  background: #002d6a;
+  transform: scale(1.05);
+}
+
+#contact-icon {
+  position: relative;
+}
+
+/* Scroll Top Button */
+.fixed-icons-right .scroll-top-btn {
+  background: #003D99 !important;
+  color: #fff !important;
+  border: none !important;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s, background 0.2s, color 0.2s;
+}
+
+.fixed-icons-right .scroll-top-btn i {
+  color: #fff !important;
+  font-size: 1.5rem;
+}
+
+.fixed-icons-right .scroll-top-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  animation: fadeInUp 0.4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contact Button States */
+.contact-btn.open .contact-label{ 
+  display: none; 
+}
+
+.contact-btn.open i{ 
+  font-size: 1.6rem; 
+}
+
+.contact-toggle-arrow{ 
+  display: none !important; 
+}
+
+/* =========================== NOTIFICATION PANEL =========================== */
+
+.notify-panel{
+  position:fixed;
+  left: calc(1.25rem + 24px); 
+  bottom:6.5rem;  
+  width:320px;
+  max-width:90%;
+  background:#003D99;
+  color:#fff;
+  border-radius:12px;
+  padding:1.5rem;
+  box-shadow:0 8px 24px rgba(0,0,0,0.15);
+  z-index:9998;
+  transform:translateY(20px);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .25s ease,transform .25s ease;
+}
+
+.notify-panel.show{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+.notify-close-btn{
+  position:absolute;
+  top:12px;
+  right:12px;
+  background:transparent;
+  border:none;
+  color:#fff;
+  font-size:1.25rem;
+  line-height:1;
+}
+
+.notify-title{
+  font-size:1.25rem;
+}
+
+.notify-list i{
+  font-size:1.25rem;
+  flex-shrink:0;
+}
+
+.notify-note{
+  font-size:.875rem;
+}
+
+/* =========================== CONTACT PANEL =========================== */
+
+.contact-panel{
+  position: fixed;
+  right: 80px;
+  bottom: calc(5rem + 48px - 6px);
+  width: 300px;              
+  max-width: 92%;
+  background: #ffffff;
+  color: #0a2540;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.12);
+  z-index: 9998;
+  transform: translateY(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.contact-panel.show{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.contact-icon-bg{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.contact-icon-bg svg{
+  display: block;
+}
+
+.call-bg{     
+  background:#e31b23; 
+}
+
+.zalo-bg{     
+  background:#0068ff; 
+}
+
+.location-bg{ 
+  background:#2ed8df; 
+}
+
+.contact-icon-bg .iconify{
+  display:block;
+  width:20px;
+  height:20px;
+}
+
+/* Close Button */
+.contact-close-btn{
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0;
+  border: none !important;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+/* List items */
+.contact-item{
+  padding: 0.8rem 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: background .18s;
+}
+
+.contact-item + .contact-item{
+  border-top: 1px solid #ebeff5;
+}
+
+.contact-item a{
+  font-weight: 600;
+  color: #0a2540;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+/* =========================== RESPONSIVE =========================== */
+
+@media (max-width: 991.98px) {
+  .fixed-icon-left, .fixed-icons-right {
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 3.5rem;
+  }
+  
+  .fixed-icon-left .icon-btn, .fixed-icons-right .icon-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .fixed-icon-left, .fixed-icons-right {
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 2.2rem;
+  }
+  
+  .fixed-icon-left .icon-btn, .fixed-icons-right .icon-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  
+  .notify-panel{
+    left:0.5rem;
+    bottom:2.5rem;
+    width:calc(100% - 1rem);
+  }
+  
+  .contact-panel{
+    right: .5rem;
+    bottom: 2.5rem;
+    width: calc(100% - 1rem);
+  }
+  
+  .contact-icon-bg{
+    width: 34px;
+    height: 34px;
+    font-size: 1.1rem;
+  }
+  
+  .zalo-icon-img{
+    width: 20px;
+    height: 20px;
+  }
+  
+  .contact-item{
+    padding: 0.75rem 1rem;
+  }
+  
+  .contact-item a{
+    font-size: 0.9rem;
+  }
+}

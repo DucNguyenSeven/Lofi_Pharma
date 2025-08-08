@@ -1,4 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
+/**
+ * Floating Icons Module
+ */
+
+export function initFloatingIcons() {
   const scrollTopBtn = document.getElementById("scroll-top");
   const notifyBtn = document.getElementById("notify-icon");
   const contactBtn = document.getElementById("contact-icon");
@@ -7,8 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const contactPanel = document.getElementById("contact-panel");
   const contactCloseBtn = document.getElementById("contact-close");
 
+  // Kiểm tra xem các elements có tồn tại không
+  if (!scrollTopBtn || !notifyBtn || !contactBtn || !notifyPanel || !contactPanel) {
+    console.warn('Floating icons elements not found, skipping initialization');
+    return;
+  }
+
   // Add references to icon and label inside Liên hệ button
-  const contactIconEl  = contactBtn.querySelector("i");
+  const contactIconEl = contactBtn.querySelector("i");
   const contactLabelEl = contactBtn.querySelector(".contact-label");
 
   // Toggle contact panel
@@ -50,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
   notifyCloseBtn.addEventListener("click", function () {
     notifyPanel.classList.remove("show");
   });
+  
   // Nút đóng (✖)
   contactCloseBtn.addEventListener("click", function () {
     contactPanel.classList.remove("show");
@@ -57,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     contactIconEl.className = "bi bi-chat-dots-fill";
     contactLabelEl.style.display = "";
   });
+  
   // Click outside to close
   document.addEventListener("click", function (e) {
     if (!notifyPanel.contains(e.target) && !notifyBtn.contains(e.target)) {
@@ -77,10 +89,16 @@ document.addEventListener("DOMContentLoaded", function () {
       scrollTopBtn.classList.remove("show");
     }
   }
+  
   window.addEventListener("scroll", handleScroll);
   handleScroll();
 
   scrollTopBtn.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
-});
+}
+
+// Legacy support for direct script loading
+if (typeof document !== 'undefined') {
+  document.addEventListener("DOMContentLoaded", initFloatingIcons);
+}

@@ -15,6 +15,12 @@ const MODULES = [
     importPath: './search-typewriter.js',
     initFunction: 'initSearchTypewriter',
     required: false
+  },
+  {
+    name: 'floating-icons',
+    importPath: './floating-icons.js',
+    initFunction: 'initFloatingIcons',
+    required: false
   }
 ];
 
