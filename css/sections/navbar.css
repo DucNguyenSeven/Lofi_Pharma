@@ -4,7 +4,15 @@
 .custom-navbar {
   min-height: 64px;
   box-shadow: 0 1px 0 #e5e7eb;
+  padding: 0.75rem 0;
 }
+
+/* Container spacing */
+.custom-navbar .container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .brand-text {
   font-size: 1rem;
   font-weight: 700;
@@ -21,6 +29,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-right: 2rem;
 }
 
 .navbar-brand img {
@@ -32,10 +41,11 @@
 .navbar-nav .nav-link {
   font-weight: 600;
   font-size: 0.95rem;
-  margin: 0 0.25rem;
-  padding: 0 0.2rem;
+  margin: 0 0.5rem;
+  padding: 0.5rem 0.75rem;
   color: #222;
   transition: color 0.2s;
+  border-radius: 6px;
 }
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.nav-home {
@@ -43,6 +53,7 @@
 }
 .navbar-nav .nav-link:hover {
   color: #2ed8df;
+  background-color: rgba(46, 216, 223, 0.05);
 }
 
 .navbar-nav .dropdown-menu {
@@ -50,6 +61,7 @@
   min-width: 140px;
   font-size: 0.95rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  margin-top: 0.5rem;
 }
 
 /* Updated navScroll for correct scrolling and overflow behavior */
@@ -60,13 +72,12 @@
   white-space: nowrap;
   scroll-behavior: smooth;
   padding: 0;
-  margin: 0;
+  margin: 0 1rem;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   max-width: 100%;
   flex: 0 0 auto;
   /* Ensure container can accommodate all items when scrolling */
-  min-width: fit-content;
 }
 
 #navScroll::-webkit-scrollbar {
@@ -83,6 +94,7 @@
   #navScroll {
     max-width: unset;      
     flex: 1 1 auto;
+    margin: 0 0.5rem;
   }
   
   .nav-arrows {
@@ -92,6 +104,7 @@
 
 .nav-arrows {
   flex-shrink: 0;
+  margin: 0 1rem;
 }
 
 .btn-arrow {
@@ -105,7 +118,7 @@
   justify-content: center;
   color: #222;
   font-size: 1rem;
-  margin: 0 1px;
+  margin: 0 2px;
   transition: color 0.2s;
 }
 .btn-arrow:focus {
@@ -140,11 +153,12 @@
   background: #fff;
   border-radius: 8px;
   border: 1.5px solid #003D99;
-  padding: 0 0 0 10px;
-  min-width: 180px;
+  padding: 0 0 0 12px;
+  min-width: 200px;
   display: flex;
   align-items: center;
-  height: 38px;
+  height: 40px;
+  margin: 0 1rem;
 }
 .search-input {
   border: none !important;
@@ -153,11 +167,11 @@
   background: transparent;
   font-size: 1rem;
   color: #888;
-  width: 150px;
+  width: 170px;
   font-weight: 400;
   flex: 1;
-  margin-left: -10px;
-  padding-right: 38px;
+  margin-left: -12px;
+  padding-right: 40px;
 }
 .search-input:focus, .search-input:active, .search-input:visited {
   border: none !important;
@@ -200,13 +214,16 @@
 }
 .nav-icons .icon-btn {
   text-decoration: none;
-  margin-right: 6px !important;
+  margin-right: 0.75rem !important;
+}
+.nav-icons .icon-btn:last-child {
+  margin-right: 0 !important;
 }
 .icon-square {
   background: #003D99;
   border-radius: 7px;
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -249,22 +266,89 @@
 }
 
 .nav-icons {
-  margin-left: 20px;
+  margin-left: 1rem;
 }
+
+/* Responsive adjustments */
 @media (max-width: 991.98px) {
-  .navbar-brand img { height: 24px; }
-  .brand-text { font-size: 0.85rem; }
-  .navbar-nav .nav-link { font-size: 0.85rem; }
-  .icon-square { width: 28px; height: 28px; }
-  .badge-custom { width: 12px; height: 12px; font-size: 0.6rem; }
-  .nav-search { height: 24px; min-width: 60px; padding: 1px 2px 1px 4px; }
-  .search-input, .search-input::placeholder { font-size: 0.8rem; }
-  .btn-search { font-size: 0.9rem; }
-  .btn-arrow { width: 12px; height: 12px; font-size: 0.8rem; }
-  .btn-arrow .bi-chevron-left, .btn-arrow .bi-chevron-right { font-size: 0.8rem; }
+  .custom-navbar {
+    padding: 0.5rem 0;
+  }
+  
+  .custom-navbar .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .navbar-brand {
+    margin-right: 1rem;
+  }
+  
+  .navbar-brand img { 
+    height: 24px; 
+  }
+  
+  .brand-text { 
+    font-size: 0.85rem; 
+  }
+  
+  .navbar-nav .nav-link { 
+    font-size: 0.85rem;
+    margin: 0 0.25rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .icon-square { 
+    width: 28px; 
+    height: 28px; 
+  }
+  
+  .badge-custom { 
+    width: 12px; 
+    height: 12px; 
+    font-size: 0.6rem; 
+  }
+  
+  .nav-search { 
+    height: 32px; 
+    min-width: 120px; 
+    padding: 0 0 0 8px;
+    margin: 0 0.5rem;
+  }
+  
+  .search-input, .search-input::placeholder { 
+    font-size: 0.8rem; 
+  }
+  
+  .search-input {
+    width: 90px;
+    padding-right: 30px;
+  }
+  
+  .btn-search { 
+    font-size: 0.9rem; 
+    right: 8px;
+  }
+  
+  .btn-arrow { 
+    width: 12px; 
+    height: 12px; 
+    font-size: 0.8rem; 
+  }
+  
+  .btn-arrow .bi-chevron-left, 
+  .btn-arrow .bi-chevron-right { 
+    font-size: 0.8rem; 
+  }
+  
+  .nav-icons {
+    margin-left: 0.5rem;
+  }
+  
+  .nav-icons .icon-btn {
+    margin-right: 0.5rem !important;
+  }
 }
-
-
 
 /* Updated nav-scroll-wrapper for correct overflow and sizing */
 .nav-scroll-wrapper {
@@ -276,23 +360,4 @@
 
 .nav-scroll-wrapper::-webkit-scrollbar {
   display: none;
-}
-
-#navScroll {
-  display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-  scroll-behavior: smooth;
-  padding: 0;
-  margin: 0;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-}
-
-#navScroll::-webkit-scrollbar {
-  display: none;
-}
-
-#navScroll .nav-item {
-  flex: 0 0 auto;
 }
