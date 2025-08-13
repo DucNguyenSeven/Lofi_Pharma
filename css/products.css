@@ -91,8 +91,49 @@
 .icon-circle:hover { filter: brightness(1.05); }
 
 /* ========== PRODUCTS PAGE: Pagination ========== */
-.pagination-rounded .page-link { border-radius: 8px; }
-.pagination-rounded .page-item.active .page-link { background-color: #0d47a1; border-color: #0d47a1; }
+.pagination-rounded .page-link { 
+  border-radius: 16px; 
+  border: 1.5px solid #0d0d0d;
+  color: #0d0d0d;
+  font-weight: 700;
+  margin: 0 .4rem;
+  transition: all .15s ease;
+  background-color: #fff;
+  min-width: 48px;
+  height: 48px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1;
+}
+
+.pagination-rounded .page-link:hover {
+  background-color: #fff;
+  border-color: #0d0d0d;
+  color: #0d0d0d;
+  box-shadow: 0 0 0 3px rgba(0,0,0,.06);
+}
+
+.pagination-rounded .page-item.active .page-link { 
+  background-color: #0d0d0d; 
+  border-color: #0d0d0d; 
+  color: #fff;
+}
+
+/* Ensure first/last (prev/next) buttons keep the same rounded shape */
+.pagination-rounded .page-item:first-child .page-link,
+.pagination-rounded .page-item:last-child .page-link { 
+  border-radius: 16px; 
+}
+
+.pagination-rounded .page-item.disabled .page-link {
+  background-color: #f8f9fa;
+  border-color: #e1e6ef;
+  color: #6c757d;
+  cursor: not-allowed;
+}
 
 /* ========== PRODUCTS PAGE: Responsive ========== */
 @media (max-width: 991.98px) {

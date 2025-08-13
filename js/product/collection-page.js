@@ -1,11 +1,64 @@
-(function () {
-  const PAGE_SIZE = 12;
-  const gridEl = document.getElementById('productGrid');
-  const pagEl  = document.getElementById('pagination');
-  let filtersDesktop = document.getElementById('filters-desktop');
-  let filtersOffcanvas = document.getElementById('filters-offcanvas');
+import { productData } from './product-data.js';
 
-  const PRODUCTS = (window.PRODUCTS || window.products || []).map(normalizeProduct);
+const PAGE_SIZE = 12;
+const gridEl = document.getElementById('productGrid');
+const pagEl  = document.getElementById('pagination');
+let filtersDesktop = document.getElementById('filters-desktop');
+let filtersOffcanvas = document.getElementById('filters-offcanvas');
+  
+  // Combine all products from different categories
+  const allProducts = [];
+  
+  // Add new products
+  if (productData.newProducts) {
+    Object.values(productData.newProducts).forEach(category => {
+      category.forEach(product => {
+        allProducts.push({
+          ...product,
+          id: product.id || Math.random().toString(36).substr(2, 9),
+          brand: product.brand || 'Khác',
+          price: toNumber(product.currentPrice),
+          oldPrice: toNumber(product.oldPrice),
+          image: product.image || 'assets/placeholder.png',
+          createdAt: Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000 // Random date within 30 days
+        });
+      });
+    });
+  }
+  
+  // Add sale products
+  if (productData.saleProducts) {
+    productData.saleProducts.forEach(product => {
+      allProducts.push({
+        ...product,
+        id: product.id || Math.random().toString(36).substr(2, 9),
+        brand: product.brand || 'Khác',
+        price: toNumber(product.currentPrice),
+        oldPrice: toNumber(product.oldPrice),
+        image: product.image || 'assets/placeholder.png',
+        createdAt: Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000
+      });
+    });
+  }
+  
+  // Add suggest products
+  if (productData.suggestProducts) {
+    Object.values(productData.suggestProducts).forEach(category => {
+      category.forEach(product => {
+        allProducts.push({
+          ...product,
+          id: product.id || Math.random().toString(36).substr(2, 9),
+          brand: product.brand || 'Khác',
+          price: toNumber(product.currentPrice),
+          oldPrice: toNumber(product.oldPrice),
+          image: product.image || 'assets/placeholder.png',
+          createdAt: Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000
+        });
+      });
+    });
+  }
+  
+  const PRODUCTS = allProducts.map(normalizeProduct);
 
   function normalizeProduct(p, idx) {
     return {
@@ -108,19 +161,26 @@
   function cardTemplate(p) {
     const discount = p.oldPrice > p.price ? Math.round((1 - p.price / p.oldPrice) * 100) : 0;
     return `
-      <div class="col-6 col-md-4 col-lg-4">
-        <div class="product-card position-relative h-100 p-3">
-          ${discount ? `<span class="badge-sale">-${discount}%</span>` : ''}
-          <img class="product-thumb mb-3" src="${escapeHtml(p.image || 'assets/placeholder.png')}" alt="${escapeHtml(p.name)}">
-          <div class="product-title mb-1">${escapeHtml(p.name)}</div>
-          <div class="d-flex align-items-baseline mb-4">
-            <div class="price text-danger me-2">${formatVND(p.price)}</div>
-            ${p.oldPrice > p.price ? `<div class="price-old">${formatVND(p.oldPrice)}</div>` : ''}
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card border-0 shadow-sm suggest-product-card position-relative h-100">
+          ${discount ? `<span class="badge discount-badge position-absolute top-0 start-0 m-2 px-2 py-1">-${discount}%</span>` : ''}
+          <div class="suggest-product-image-container position-relative overflow-hidden">
+            <div class="hover-icons position-absolute top-0 end-0 m-2 d-flex flex-column gap-2">
+              <button class="btn btn-white rounded-circle p-2 shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+              <button class="btn btn-white rounded-circle p-2 shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
+            </div>
+            <img src="${escapeHtml(p.image || 'assets/placeholder.png')}" alt="${escapeHtml(p.name)}" class="suggest-product-image img-fluid">
           </div>
-          <div class="card-actions">
-            <a href="#" class="icon-circle" title="Chi tiết" aria-label="Xem chi tiết"><i class="bi bi-info"></i></a>
-            <a href="#" class="icon-circle" title="Thêm vào giỏ" aria-label="Thêm vào giỏ"><i class="bi bi-bag"></i></a>
+          <div class="suggest-product-info p-3 d-flex flex-column flex-grow-1">
+            <h6 class="suggest-product-title mb-2">${escapeHtml(p.name)}</h6>
+            <div class="suggest-product-prices mt-auto mb-2">
+              <div class="d-flex align-items-center gap-2">
+                <span class="suggest-price-current">${formatVND(p.price)}</span>
+                ${p.oldPrice > p.price ? `<span class="suggest-price-old">${formatVND(p.oldPrice)}</span>` : ''}
+              </div>
+            </div>
           </div>
+          <button class="btn btn-primary rounded-circle suggest-cart-button position-absolute" title="Thêm vào giỏ"><i class="bi bi-cart-plus"></i></button>
         </div>
       </div>
     `;
@@ -134,9 +194,24 @@
          <a class="page-link" href="#" data-page="${page}">${label}</a>
        </li>`;
 
-    items.push(make('&laquo;', Math.max(1, state.page-1), state.page===1, false));
-    for (let i=1;i<=pages;i++) items.push(make(String(i), i, false, i===state.page));
-    items.push(make('&raquo;', Math.min(pages, state.page+1), state.page===pages, false));
+    // Previous button - chỉ hiển thị khi không ở trang 1
+    if (state.page > 1) {
+      items.push(make('<i class="bi bi-chevron-left"></i>', state.page-1, false, false));
+    }
+    
+    // Page numbers - chỉ hiển thị 3 trang
+    const startPage = Math.max(1, Math.min(state.page - 1, pages - 2));
+    const endPage = Math.min(pages, startPage + 2);
+    
+    for (let i = startPage; i <= endPage; i++) {
+      items.push(make(String(i), i, false, i === state.page));
+    }
+    
+    // Next button - chỉ hiển thị khi không ở trang cuối
+    if (state.page < pages) {
+      items.push(make('<i class="bi bi-chevron-right"></i>', state.page+1, false, false));
+    }
+    
     pagEl.innerHTML = items.join('');
   }
 
@@ -214,4 +289,3 @@
     renderGrid();
     updateClearButtonsVisibility();
   });
-})();
