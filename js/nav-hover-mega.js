@@ -53,6 +53,15 @@
       if (DESKTOP_MQ.matches) clearTimers();
     });
 
+    toggle.addEventListener('click', function (e) {
+      if (!DESKTOP_MQ.matches) return;
+      e.preventDefault();
+      var href = toggle.getAttribute('href');
+      if (href && href !== '#') {
+        window.location.href = href;
+      }
+    });
+
     // Keyboard accessibility
     toggle.addEventListener('focus', onEnter);
     toggle.addEventListener('blur', onLeave);
