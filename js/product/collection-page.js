@@ -160,11 +160,13 @@ let filtersOffcanvas = document.getElementById('filters-offcanvas');
 
   function cardTemplate(p) {
     const discount = p.oldPrice > p.price ? Math.round((1 - p.price / p.oldPrice) * 100) : 0;
+    const detailHref = `product-detail.html?name=${encodeURIComponent(p.name)}`;
     return `
       <div class="col-6 col-md-4 col-lg-3">
         <div class="card border-0 shadow-sm suggest-product-card position-relative h-100">
           ${discount ? `<span class="badge discount-badge position-absolute top-0 start-0 m-2 px-2 py-1">-${discount}%</span>` : ''}
           <div class="suggest-product-image-container position-relative overflow-hidden">
+            <a class="stretched-link" href="${detailHref}"></a>
             <div class="hover-icons position-absolute top-0 end-0 m-2 d-flex flex-column gap-2">
               <button class="btn btn-white rounded-circle p-2 shadow-sm" title="Xem nhanh"><i class="bi bi-eye"></i></button>
               <button class="btn btn-white rounded-circle p-2 shadow-sm" title="Yêu thích"><i class="bi bi-heart"></i></button>
@@ -172,7 +174,7 @@ let filtersOffcanvas = document.getElementById('filters-offcanvas');
             <img src="${escapeHtml(p.image || 'assets/placeholder.png')}" alt="${escapeHtml(p.name)}" class="suggest-product-image img-fluid">
           </div>
           <div class="suggest-product-info p-3 d-flex flex-column flex-grow-1">
-            <h6 class="suggest-product-title mb-2">${escapeHtml(p.name)}</h6>
+            <h6 class="suggest-product-title mb-2"><a href="${detailHref}" class="text-decoration-none text-dark">${escapeHtml(p.name)}</a></h6>
             <div class="suggest-product-prices mt-auto mb-2">
               <div class="d-flex align-items-center gap-2">
                 <span class="suggest-price-current">${formatVND(p.price)}</span>
