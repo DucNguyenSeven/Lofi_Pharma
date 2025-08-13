@@ -7,7 +7,6 @@
   padding: 0.75rem 0;
 }
 
-/* Container spacing - tăng padding để tạo khoảng cách với viền */
 .custom-navbar .container {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -390,4 +389,173 @@
 
 .nav-scroll-wrapper::-webkit-scrollbar {
   display: none;
+}
+
+/* === Mega dropdown: Sản phẩm === */
+.navbar .dropdown-mega .dropdown-menu {
+  position: absolute;           
+  z-index: 1040;
+  left: 50%;
+  right: auto;
+  width: min(820px, calc(100vw - 64px));
+  transform: translate(-50%, 8px);
+  border-radius: 8px;
+  display: block;                
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease, visibility 0s linear .18s;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.navbar .dropdown-mega.show .dropdown-menu,
+.navbar .dropdown-mega .dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+  transition-delay: 0s;
+}
+
+.mega-inner {                    
+  background: #fff;
+  border-radius: 8px;
+  padding: .5rem .75rem !important;
+}
+
+/* Title styles */
+.mega-menu .dropdown-header {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.9rem;
+  color: #003D99;
+  line-height: 1.2;
+  margin-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  letter-spacing: 0;
+}
+
+.mega-menu .dropdown-item {
+  padding: 0.1rem 0;
+  padding-left: 0;
+  padding-right: 0;
+  white-space: normal;
+  font-size: 0.8rem;
+  color: #666;
+  transition: color 0.2s;
+  margin-bottom: 0.25rem;
+  line-height: 1.6;
+}
+
+.mega-menu .dropdown-item:hover,
+.mega-menu .dropdown-item:focus {
+  text-decoration: none;
+  color: #2ed8df;
+  background: transparent;
+}
+
+/* Column spacing and line spacing adjustments for mega menu */
+.mega-menu .row {
+  --bs-gutter-x: 2.75rem;
+  --bs-gutter-y: .5rem;
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+}
+
+.mega-menu .col-lg-3,
+.mega-menu .col-md-6,
+.mega-menu .col-12 {
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar .dropdown-mega {
+  position: static;
+}
+
+.navbar .dropdown-mega .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 8px);
+  margin-top: 0.5rem;
+}
+
+.navbar .dropdown-mega.show .dropdown-menu,
+.navbar .dropdown-mega .dropdown-menu.show {
+  transform: translate(-50%, 0);
+}
+
+.mega-menu .dropdown-header {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.mega-menu .col-lg-3,
+.mega-menu .col-md-6,
+.mega-menu .col-12 {
+  display: flex;
+  flex-direction: column;
+}
+
+.mega-menu .dropdown-header {
+  margin-bottom: .75rem;
+  line-height: 1.2;
+}
+
+.mega-menu .dropdown-header + .dropdown-item {
+  margin-top: 0;
+}
+
+.mega-menu .dropdown-header { letter-spacing: 0; }
+
+@media (max-width: 991.98px) {
+  .navbar .dropdown-mega .dropdown-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: auto;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    border-radius: 0;
+    box-shadow: none;
+    max-height: none;
+    overflow-y: visible;
+  }
+  .mega-inner {
+    border-radius: 0;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
+}
+
+/* Nav dropdown toggle: color and caret behavior */
+.navbar .nav-link.dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+}
+
+.navbar .nav-link.dropdown-toggle::after {
+  margin-left: .35rem;           /* khoảng cách giống mẫu */
+  vertical-align: middle;        /* canh giữa theo chữ */
+  position: relative;
+  top: -1px;                     /* nắn lại vị trí cho cân giữa */
+  border-top-color: currentColor;
+  transition: transform .2s ease;
+}
+
+/* Khi dropdown mở (hover ở desktop), đổi màu và xoay caret lên */
+.navbar .dropdown.show > .nav-link.dropdown-toggle,
+.navbar .dropdown-mega.show > .nav-link.dropdown-toggle {
+  color: #2ed8df !important;
+}
+.navbar .dropdown.show > .nav-link.dropdown-toggle::after,
+.navbar .dropdown-mega.show > .nav-link.dropdown-toggle::after {
+  transform: rotate(180deg);
 }
