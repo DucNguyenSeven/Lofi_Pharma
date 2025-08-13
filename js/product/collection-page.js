@@ -2,8 +2,8 @@
   const PAGE_SIZE = 12;
   const gridEl = document.getElementById('productGrid');
   const pagEl  = document.getElementById('pagination');
-  const filtersDesktop = document.getElementById('filters-desktop');
-  const filtersOffcanvas = document.getElementById('filters-offcanvas');
+  let filtersDesktop = document.getElementById('filters-desktop');
+  let filtersOffcanvas = document.getElementById('filters-offcanvas');
 
   const PRODUCTS = (window.PRODUCTS || window.products || []).map(normalizeProduct);
 
@@ -67,7 +67,7 @@
     `;
   }
 
-  function syncFilters() { [filtersDesktop, filtersOffcanvas].forEach(buildFilters); }
+  function syncFilters() { [filtersDesktop, filtersOffcanvas].filter(Boolean).forEach(buildFilters); }
 
   const SORTERS = {
     'default': (a,b)=> a.id - b.id,
@@ -146,6 +146,14 @@
     });
   }
 
+  function updateClearButtonsVisibility(){
+    const shouldShow = state.brands.size > 0;
+    const btnDesktop = document.getElementById('btnClearFilter');
+    const btnMobile  = document.getElementById('btnClearFilterMobile');
+    btnDesktop?.classList.toggle('d-none', !shouldShow);
+    btnMobile?.classList.toggle('d-none', !shouldShow);
+  }
+
   function attachEvents(){
     document.querySelectorAll('.btn-sort').forEach(btn=>{
       btn.addEventListener('click', (e)=>{
@@ -166,12 +174,13 @@
       if (sec) window.scrollTo({ top: sec.offsetTop - 60, behavior: 'smooth' });
     });
 
-    [filtersDesktop, filtersOffcanvas].forEach(root=>{
+    [filtersDesktop, filtersOffcanvas].filter(Boolean).forEach(root=>{
       root.addEventListener('change', (e)=>{
         const t = e.target;
         if (t.classList.contains('brand-check')) {
           const val = t.value;
           if (t.checked) state.brands.add(val); else state.brands.delete(val);
+          updateClearButtonsVisibility();
         }
         if (t.classList.contains('price-check')) {
           state.priceRange = t.checked ? t.value : null;
@@ -187,17 +196,22 @@
       state.priceRange = null;
       document.querySelectorAll('.brand-check, .price-check').forEach(i=>{ i.checked=false; });
       renderGrid();
+      updateClearButtonsVisibility();
     };
-    document.getElementById('btnClearFilter')?.addEventListener('click', clearAll);
-    document.getElementById('btnClearFilterMobile')?.addEventListener('click', clearAll);
+    document.getElementById('btnClearFilter')?.addEventListener('click', (e)=>{ e.preventDefault(); clearAll(); });
+    document.getElementById('btnClearFilterMobile')?.addEventListener('click', (e)=>{ e.preventDefault(); clearAll(); });
   }
 
   function slugify(s){ return (s||'').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''); }
   function escapeHtml(s){ return (s??'').toString().replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m])); }
 
   document.addEventListener('DOMContentLoaded', function(){
+    // Re-query after full DOM is parsed so offcanvas container exists
+    filtersDesktop = document.getElementById('filters-desktop');
+    filtersOffcanvas = document.getElementById('filters-offcanvas');
     syncFilters();
     attachEvents();
     renderGrid();
+    updateClearButtonsVisibility();
   });
 })();
