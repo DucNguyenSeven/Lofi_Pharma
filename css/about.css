@@ -37,6 +37,33 @@
   text-decoration: none;
 }
 
+/* Breadcrumb divider color for about-hero */
+.about-hero .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255,255,255,.95);
+}
+
+/* Breadcrumb styling for about-hero */
+.about-hero .breadcrumb {
+  --bs-breadcrumb-divider: '›';
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.about-hero .breadcrumb .breadcrumb-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.about-hero .breadcrumb .breadcrumb-item a:hover {
+  color: #e6f7ff;
+}
+
+.about-hero .breadcrumb .breadcrumb-item.active {
+  color: #fff;
+  opacity: .95;
+}
+
 .about-hero {
   min-height: 400px;
   color: #fff;

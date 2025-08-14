@@ -19,7 +19,7 @@
 }
 
 .product-hero h1 { text-align: center; font-size: 2.5rem; font-weight: 700; color: #fff; }
-.product-hero .breadcrumb { --bs-breadcrumb-divider: '>'; text-align: center; font-size: 0.95rem; font-weight: 700; }
+.product-hero .breadcrumb { --bs-breadcrumb-divider: '›'; text-align: center; font-size: 0.95rem; font-weight: 700; }
 .product-hero .breadcrumb .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,.95); }
 .product-hero .breadcrumb .breadcrumb-item a { color: #fff; text-decoration: none; }
 .product-hero .breadcrumb .breadcrumb-item a:hover { color: #e6f7ff; }
