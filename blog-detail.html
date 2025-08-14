@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Góc sức khỏe - Lofi Pharma</title>
+    <title>Lợi ích của tập yoga là gì? Tìm hiểu các trường phái yoga hiện nay - Lofi Pharma</title>
     <!-- Bootstrap 5 CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -17,19 +17,10 @@
     <link rel="stylesheet" href="css/sections/newsletter.css" />
     <link rel="stylesheet" href="css/sections/footer.css" />
     <link rel="stylesheet" href="css/sections/floating-icons.css" />
-    <!-- SwiperJS CSS -->
+    <!-- Bootstrap Icons CDN -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <!-- Glide.js CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.core.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.theme.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
   </head>
 
@@ -37,19 +28,22 @@
     <div data-include="partials/topbar.html"></div>
     <div data-include="partials/navbar.html"></div>
 
-    <!-- ========== HEALTH PAGE: Breadcrumb Section ========== -->
+    <!-- ========== BLOG DETAIL: Hero Section ========== -->
     <section class="health-hero bg-chem-about d-flex align-items-center justify-content-center">
       <div class="container text-center text-white">
         <div class="row justify-content-center">
           <div class="col-12">
-            <h1 class="breadcrumb-title mb-2 text-white">Góc sức khỏe</h1>
+            <h1 class="breadcrumb-title mb-2 text-white">Lợi ích của tập yoga là gì? Tìm hiểu các trường phái yoga hiện nay</h1>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb mb-0 justify-content-center">
                 <li class="breadcrumb-item">
                   <a href="index.html">Trang chủ</a>
                 </li>
+                <li class="breadcrumb-item">
+                  <a href="health.html">Góc sức khỏe</a>
+                </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                  Góc sức khỏe
+                  Lợi ích của tập yoga là gì? Tìm hiểu các trường phái yoga hiện nay
                 </li>
               </ol>
             </nav>
@@ -58,123 +52,192 @@
       </div>
     </section>
 
-    <!-- ========== HEALTH PAGE: Main Content Section ========== -->
-    <section class="health-content-section py-5">
+    <!-- ========== BLOG DETAIL: Main Content Section ========== -->
+    <section class="blog-content-section py-5">
       <div class="container">
         <div class="row g-4">
           <!-- Main Content -->
           <div class="col-lg-8">
-            <!-- Blog Articles List -->
-            <div class="health-articles-list">
-              <!-- Article 1 -->
-              <article class="health-article-item">
-                <div class="article-image-wrapper">
+            <article class="blog-article">
+              <!-- Article Header -->
+              <header class="article-header mb-4">
+                <h1 class="article-title">Lợi ích của tập yoga là gì? Tìm hiểu các trường phái yoga hiện nay</h1>
+                <div class="article-meta d-flex align-items-center gap-4 mt-3">
+                  <span class="article-author">
+                    <i class="bi bi-person-fill me-2"></i>Team Lofi
+                  </span>
+                  <span class="article-date">
+                    <i class="bi bi-clock-fill me-2"></i>Ngày 07/09/2023
+                  </span>
+                </div>
+              </header>
+
+              <!-- Article Content -->
+              <div class="article-content">
+                <!-- Introduction -->
+                <div class="content-section mb-4">
+                  <p>Trong cuộc sống hiện đại ngày nay, ngoài các lựa chọn các hoạt động vui chơi giải trí, mọi người cũng có xu hướng lựa chọn các hoạt động vừa có lợi cho sức khỏe vừa giúp thư giãn tinh thần. Yoga là một trong những hoạt động được nhiều người lựa chọn.</p>
+                  <p>Yoga có nguồn gốc từ Ấn Độ và đã được phát triển qua nhiều thế kỷ. Hiện nay, yoga có nhiều trường phái khác nhau, mỗi trường phái có những đặc điểm riêng biệt.</p>
+                </div>
+
+                <!-- Benefits Section -->
+                <div class="content-section mb-4">
+                  <h2 class="section-title">Lợi ích của tập yoga</h2>
+                  <p>Yoga mang lại nhiều lợi ích cho sức khỏe thể chất và tinh thần:</p>
+                  <ul class="benefits-list">
+                    <li>Tăng tính linh hoạt và dẻo dai</li>
+                    <li>Hỗ trợ sức khỏe tim mạch</li>
+                    <li>Tăng cường sức mạnh cơ bắp, giảm đau lưng dưới, đau cổ và viêm xương khớp gối</li>
+                    <li>Giúp kiểm soát và giảm căng thẳng, lo lắng, trầm cảm và đau mãn tính</li>
+                    <li>Cải thiện giấc ngủ</li>
+                  </ul>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="content-section mb-4">
                   <img
                     src="assets/loi-ich-cua-tap-yoga-la-gi-tim-hieu-cac-truong-phai-yoga-hien-nay.webp"
-                    class="article-image"
-                    alt="Lợi ích của tập yoga"
+                    class="article-hero-image"
+                    alt="Người tập yoga ngoài trời"
                   />
                 </div>
-                <div class="article-content-wrapper">
-                  <h3 class="article-title">
-                    <a href="blog-detail.html" class="article-title-link">Lợi ích của tập yoga là gì? Tìm hiểu các trường phái yoga hiện nay</a>
-                  </h3>
-                  <div class="article-meta">
-                    <span class="article-date">
-                      <i class="bi bi-clock-fill me-1"></i>Thứ Năm, 07/09/2023
-                    </span>
-                    <span class="article-author">
-                      <i class="bi bi-person-fill me-1"></i>Team Lofi
-                    </span>
-                  </div>
-                  <p class="article-excerpt">
-                    Trong cuộc sống hiện đại ngày nay, ngoài các lựa chọn các hoạt động vui chơi giải trí, mọi người cũng có xu hướng lựa chọn các hoạt động vừa...
-                  </p>
-                </div>
-              </article>
 
-              <!-- Article 2 -->
-              <article class="health-article-item">
-                <div class="article-image-wrapper">
+                <!-- Yoga Philosophy Section -->
+                <div class="content-section mb-4">
+                  <h2 class="section-title">Yoga là sự kết hợp giữa thể chất và tinh thần mỗi người</h2>
+                  <p>Yoga đối với sức khỏe có nhiều nghiên cứu chỉ bao gồm một số lượng trường hợp, chúng ta chỉ có thể nói rằng, yoga cho thấy nhiều hứa hẹn đối với sức khỏe chứ không phải nó đã được chứng minh là hoàn toàn có ích.</p>
+                  <p>Yoga an toàn cho những người khỏe mạnh khi được hướng dẫn bởi các chuyên gia có kinh nghiệm. Các chấn thương phổ biến khi tập yoga bao gồm bong gân, căng cơ, đặc biệt là ở đầu gối hoặc bắp chân. Tuy nhiên, chấn thương nghiêm trọng rất hiếm gặp.</p>
+                  <p>Đối với người mới bắt đầu, nên tìm kiếm sự hướng dẫn từ các chuyên gia để tránh những sai lầm phổ biến và chấn thương.</p>
+                </div>
+
+                <!-- Group Yoga Image -->
+                <div class="content-section mb-4">
                   <img
-                    src="assets/que-tranh-thai-la-gi-cay-que-tranh-thai-bao-nhieu-tien.png"
+                    src="assets/loi-ich-cua-tap-yoga-la-gi-tim-hieu-cac-truong-phai-yoga-hien-nay.png"
                     class="article-image"
-                    alt="Que tránh thai"
+                    alt="Nhóm người tập yoga ngoài trời"
                   />
                 </div>
-                <div class="article-content-wrapper">
-                  <h3 class="article-title">
-                    <a href="blog-detail.html" class="article-title-link">Que tránh thai là gì? Cấy que tránh thai bao nhiêu tiền?</a>
-                  </h3>
-                  <div class="article-meta">
-                    <span class="article-date">
-                      <i class="bi bi-clock-fill me-1"></i>Thứ Năm, 07/09/2023
-                    </span>
-                    <span class="article-author">
-                      <i class="bi bi-person-fill me-1"></i>Team Lofi
-                    </span>
-                  </div>
-                  <p class="article-excerpt">
-                    Cấy que tránh thai bao nhiêu tiền là câu hỏi được rất nhiều chị em phụ nữ quan tâm vì đây là 1 biện pháp tránh thai an toàn và...
-                  </p>
-                </div>
-              </article>
 
-              <!-- Article 3 -->
-              <article class="health-article-item">
-                <div class="article-image-wrapper">
+                <!-- Yoga Schools Section -->
+                <div class="content-section mb-4">
+                  <h2 class="section-title">Các trường phái yoga hiện nay</h2>
+                  <p>Theo truyền thống, yoga được hiểu là sự kết hợp giữa triết học, tâm trí, cơ thể và linh hồn. Hiện nay, các trường phái yoga được phân loại theo nhiều cách khác nhau. Dưới đây là 6 trường phái phổ biến, chúng ta sẽ tìm hiểu chi tiết về 2 trường phái chính.</p>
+                </div>
+
+                <!-- Hatha Yoga Section -->
+                <div class="content-section mb-4">
+                  <h3 class="subsection-title">Hatha yoga</h3>
+                  <p>Hatha yoga có nghĩa là "Ha" (mặt trời) và "tha" (mặt trăng). Hatha yoga tập trung vào việc cân bằng hai năng lượng này. Đây là trường phái phù hợp cho người mới bắt đầu, tập trung vào việc làm chủ cơ thể thông qua các chuyển động chậm rãi, thư giãn, hơi thở và đạt được sự hoàn hảo tinh thần bằng cách rút tâm trí khỏi các đối tượng bên ngoài.</p>
+                  <p>Hatha yoga bao gồm chế độ ăn uống, thanh lọc, điều hòa hơi thở và asanas (các tư thế cơ thể). Một trong những tư thế phổ biến là padmasana (tư thế hoa sen). Mục tiêu thực sự của Hatha yoga là đánh thức năng lượng tiềm ẩn.</p>
+                </div>
+
+                <!-- Raja Yoga Section -->
+                <div class="content-section mb-4">
+                  <h3 class="subsection-title">Raja yoga</h3>
+                  <p>"Raja" có nghĩa là Vua. Raja yoga thể hiện sự độc lập, tự tin và không sợ hãi, phục vụ như một con đường tự rèn luyện. Nó cũng được gọi là Ashtanga yoga (Tám chi của yoga).</p>
+                  <p>Raja yoga bao gồm tám bước:</p>
+                  <ul class="yoga-steps-list">
+                    <li><strong>Yama</strong> – Tự chủ</li>
+                    <li><strong>Niiyama</strong> - Kỷ luật</li>
+                    <li><strong>Asana</strong> – Bài tập thể chất</li>
+                    <li><strong>Pranayama</strong> - Bài tập thở</li>
+                    <li><strong>Pratyahara</strong> - Rút các giác quan khỏi các vật thể bên ngoài</li>
+                    <li><strong>Dharana</strong> – Tập trung</li>
+                    <li><strong>Dhyana</strong> – Thiền</li>
+                    <li><strong>Samadhi</strong> - Hoàn thành nhận thức</li>
+                  </ul>
+                  <p>Tám bước này cung cấp hướng dẫn có hệ thống để đạt được sự bình yên nội tâm, rõ ràng, tự chủ và nhận thức.</p>
+                </div>
+
+                <!-- Kundalini Yoga Section -->
+                <div class="content-section mb-4">
+                  <h3 class="subsection-title">Kundalini yoga</h3>
+                  <p>Kundalini yoga là một thực hành có nhiều lợi ích nhưng cũng có thể gây ra vấn đề nếu không được thực hiện dưới sự hướng dẫn của chuyên gia. Điều quan trọng là phải kiểm soát đúng cách sức mạnh này để cải thiện thể chất và tinh thần, đồng thời tránh những rắc rối.</p>
+                  <p>Trường phái này cũng có nhiều thực hành, bao gồm nada yoga, sử dụng âm thanh để đánh thức và hài hòa các luân xa.</p>
+                </div>
+
+                <!-- Karma Yoga Section -->
+                <div class="content-section mb-4">
+                  <h3 class="subsection-title">Karma yoga</h3>
+                  <p>Karma yoga là sự kết hợp giữa hành động và yoga, nơi người ta duy trì nhận thức về bản thân trong khi thực hiện các hành động để thống nhất ý thức cá nhân và vũ trụ. Nó được mô tả như việc thanh lọc trái tim bằng cách học các hành động vị tha để phục vụ người khác.</p>
+                  <p>Thông qua trường phái này, người ta học được lòng tốt và lòng trắc ẩn mà không mong đợi lợi ích, giúp thoát khỏi cái tôi và tiến gần hơn đến sự giác ngộ.</p>
+                </div>
+
+                <!-- Karma Yoga Hero Image -->
+                <div class="content-section mb-4">
                   <img
-                    src="assets/can-bo-sung-gi-khi-bi-mat-nuoc-va-chat-dien-giai.png"
+                    src="assets/loi-ich-cua-tap-yoga-la-gi-tim-hieu-cac-truong-phai-yoga-hien-nay-1.png"
                     class="article-image"
-                    alt="Cần bổ sung gì khi bị mất nước"
+                    alt="Người tập yoga trên bãi biển"
                   />
                 </div>
-                <div class="article-content-wrapper">
-                  <h3 class="article-title">
-                    <a href="blog-detail.html" class="article-title-link">Cần bổ sung gì khi bị mất nước và chất điện giải?</a>
-                  </h3>
-                  <div class="article-meta">
-                    <span class="article-date">
-                      <i class="bi bi-clock-fill me-1"></i>Thứ Năm, 07/09/2023
-                    </span>
-                    <span class="article-author">
-                      <i class="bi bi-person-fill me-1"></i>Team Lofi
-                    </span>
-                  </div>
-                  <p class="article-excerpt">
-                    Cơ thể bị mất nước và chất điện giải có khả năng gây ra những vấn đề về sức khỏe rất đáng lo ngại. Vì vậy, bạn cần phải hiểu...
-                  </p>
-                </div>
-              </article>
 
-              <!-- Article 4 -->
-              <article class="health-article-item">
-                <div class="article-image-wrapper">
-                  <img
-                    src="assets/luu-ban-nhap-tu-dong.png"
-                    class="article-image"
-                    alt="Có nên uống mật ong hàng ngày"
-                  />
+                <!-- Jnana Yoga Section -->
+                <div class="content-section mb-4">
+                  <h3 class="subsection-title">Jnana yoga</h3>
+                  <p>Jnana yoga là kiến thức hoặc trí tuệ, nhấn mạnh kiến thức trực quan và thực hành thiền định cường độ cao hoặc suy ngẫm sâu sắc về thực tại và bản chất thực sự của con người. Chất lượng thiết yếu của Jnana là khả năng phân biệt giữa thực và không thực, bản ngã và cái tôi, và cái vĩnh cửu từ cái tạm thời, cùng với trạng thái tâm trí không có lòng tham.</p>
+                </div>
 
+                <!-- Bhakti Yoga Section -->
+                <div class="content-section mb-4">
+                  <h3 class="subsection-title">Bhakti yoga</h3>
+                  <p>Bhakti yoga là sự sùng bái tinh thần thuần túy hoặc tình yêu dành cho Chúa, nói rằng mọi thứ đều là biểu hiện của thần thánh và mọi thứ khác đều vô nghĩa. Nó nhấn mạnh khát khao được gặp gỡ hoặc thậm chí chỉ thoáng thấy người yêu dấu, gọi con đường này là cách trực tiếp và ngắn nhất để trải nghiệm cái thiêng liêng, kết luận rằng không có gì cao hơn tình yêu và Bhakti là "tôn giáo của tình yêu".</p>
                 </div>
-                <div class="article-content-wrapper">
-                  <h3 class="article-title">
-                    <a href="blog-detail.html" class="article-title-link">Có nên uống mật ong hàng ngày không?</a>
-                  </h3>
-                  <div class="article-meta">
-                    <span class="article-date">
-                      <i class="bi bi-clock-fill me-1"></i>Thứ Tư, 06/09/2023
-                    </span>
-                    <span class="article-author">
-                      <i class="bi bi-person-fill me-1"></i>Team Lofi
-                    </span>
+
+                <!-- Comment Section -->
+                <div class="content-section">
+                  <h3 class="subsection-title">Viết bình luận của bạn</h3>
+                  <form class="comment-form">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Họ và tên" required>
+                      </div>
+                      <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Email" required>
+                      </div>
+                      <div class="col-12">
+                        <textarea class="form-control" rows="4" placeholder="Nội dung" required></textarea>
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Gửi thông tin</button>
+                      </div>
+                    </div>
+                  </form>
+
+                  <!-- Existing Comments -->
+                  <div class="comments-section mt-4">
+                    <h4 class="comments-title">Bình luận (2)</h4>
+                    <div class="comment-list">
+                      <div class="comment-item d-flex gap-3 mb-3">
+                        <div class="comment-avatar">
+                          <div class="avatar-placeholder"></div>
+                        </div>
+                        <div class="comment-content">
+                          <div class="comment-header">
+                            <strong class="comment-author">wer23er</strong>
+                            <small class="comment-date">02/01/2025</small>
+                          </div>
+                          <p class="comment-text">qwerqwetqrqetr</p>
+                        </div>
+                      </div>
+                      <div class="comment-item d-flex gap-3">
+                        <div class="comment-avatar">
+                          <div class="avatar-placeholder"></div>
+                        </div>
+                        <div class="comment-content">
+                          <div class="comment-header">
+                            <strong class="comment-author">long</strong>
+                            <small class="comment-date">28/01/2024</small>
+                          </div>
+                          <p class="comment-text">âsda</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <p class="article-excerpt">
-                    Mật ong là món quà thiên nhiên ban tặng với nhiều lợi ích cho sức khỏe như khả năng kháng khuẩn, làm lành vết thương, cung cấp dinh dương, tăng...
-                  </p>
                 </div>
-              </article>
-            </div>
+              </div>
+            </article>
           </div>
 
           <!-- Sidebar -->
@@ -371,7 +434,7 @@
                       </div>
                       <div class="featured-news-content">
                         <h4 class="featured-news-title">
-                          <a href="blog-detail.html" class="article-title-link">Que tránh thai là gì? Cây que tránh thai bao nhiều tiền?</a>
+                          <a href="blog-detail.html" class="article-title-link">Que tránh thai là gì? Cấy que tránh thai bao nhiều tiền?</a>
                         </h4>
                       </div>
                     </div>
@@ -427,37 +490,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Mega Menu Hover Script -->
     <script src="js/nav-hover-mega.js"></script>
-    <!-- Glide.js JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/glide.min.js"></script>
-    <!-- Bootstrap Icons CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-    />
-    <!-- Custom JavaScript for Category Tabs -->
-    <script src="js/category-tabs.js"></script>
-
-    <!-- FAQ Accordion JavaScript -->
-    <script src="js/faq-accordion.js"></script>
-
-    <!-- Product JavaScript -->
-    <script type="module" src="js/product/new-product-init.js"></script>
-    <script type="module" src="js/product/suggest-product-init.js"></script>
-    <script type="module" src="js/product/sale-product-init.js"></script>
-
-    <!-- Hero Carousel Animation JavaScript -->
-    <script src="js/hero-carousel-animation.js"></script>
-
-    <!-- Search Typewriter JavaScript -->
-    <script type="module" src="js/search-typewriter.js"></script>
-
-    <!-- Nav Scroll JavaScript -->
-    <script type="module" src="js/nav-scroll.js"></script>
-    <!-- Iconify for brand icons (Zalo) -->
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <!-- Include HTML Script -->
     <script src="js/include-html.js"></script>
     <script src="js/module-manager.js" type="module"></script>
+    <!-- Category Dropdown Script -->
     <script src="js/category-dropdown.js"></script>
   </body>
 </html>
