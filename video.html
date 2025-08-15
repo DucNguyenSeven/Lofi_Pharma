@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Góc sức khỏe - Lofi Pharma</title>
+    <title>Video - Lofi Pharma</title>
     <!-- Bootstrap 5 CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <!-- CSS -->
-    <link rel="stylesheet" href="css/health.css" />
+    <link rel="stylesheet" href="css/video.css" />
     <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/health.css" />
     <link rel="stylesheet" href="css/sections/topbar.css" />
     <link rel="stylesheet" href="css/sections/navbar.css" />
     <link rel="stylesheet" href="css/sections/newsletter.css" />
@@ -37,19 +38,21 @@
     <div data-include="partials/topbar.html"></div>
     <div data-include="partials/navbar.html"></div>
 
-    <!-- ========== HEALTH PAGE: Breadcrumb Section ========== -->
-    <section class="health-hero bg-chem-about d-flex align-items-center justify-content-center">
+    <!-- ========== VIDEO PAGE: Breadcrumb Section ========== -->
+    <section
+      class="about-hero bg-chem-about d-flex align-items-center justify-content-center"
+    >
       <div class="container text-center text-white">
         <div class="row justify-content-center">
           <div class="col-12">
-            <h1 class="breadcrumb-title mb-2 text-white">Góc sức khỏe</h1>
+            <h1 class="breadcrumb-title mb-2 text-white">Video</h1>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb mb-0 justify-content-center">
                 <li class="breadcrumb-item">
                   <a href="index.html">Trang chủ</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                  Góc sức khỏe
+                  Video
                 </li>
               </ol>
             </nav>
@@ -58,122 +61,122 @@
       </div>
     </section>
 
-    <!-- ========== HEALTH PAGE: Main Content Section ========== -->
-    <section class="health-content-section py-5">
+    <!-- ========== VIDEO PAGE: Main Content Section ========== -->
+    <section class="video-content-section py-5">
       <div class="container">
         <div class="row g-4">
           <!-- Main Content -->
           <div class="col-lg-8">
-            <!-- Blog Articles List -->
-            <div class="health-articles-list">
-              <!-- Article 1 -->
-              <article class="health-article-item">
-                <div class="article-image-wrapper">
+            <!-- Video Grid -->
+            <div class="video-grid">
+              <!-- Video 1 -->
+              <div class="video-item">
+                <div class="video-thumbnail-wrapper">
                   <img
-                    src="assets/loi-ich-cua-tap-yoga-la-gi-tim-hieu-cac-truong-phai-yoga-hien-nay.webp"
-                    class="article-image"
-                    alt="Lợi ích của tập yoga"
+                    src="assets/che-do-tap-luyen-cho-nguoi-benh-gut-1-c46c6a288f-ezgif-com-webp-to-jpg-converter.png"
+                    class="video-thumbnail"
+                    alt="Các bài tập cho bệnh lý cơ xương khớp"
                   />
+                  <button class="video-play-btn">
+                    <i class="bi bi-play-fill"></i>
+                  </button>
                 </div>
-                <div class="article-content-wrapper">
-                  <h3 class="article-title">
-                    <a href="blog-detail.html" class="article-title-link">Lợi ích của tập yoga là gì? Tìm hiểu các trường phái yoga hiện nay</a>
+                <div class="video-content">
+                  <h3 class="video-title">
+                    Các bài tập cho bệnh lý cơ xương khớp
                   </h3>
-                  <div class="article-meta">
-                    <span class="article-date">
-                      <i class="bi bi-clock-fill me-1"></i>Thứ Năm, 07/09/2023
-                    </span>
-                    <span class="article-author">
-                      <i class="bi bi-person-fill me-1"></i>Team Lofi
-                    </span>
-                  </div>
-                  <p class="article-excerpt">
-                    Trong cuộc sống hiện đại ngày nay, ngoài các lựa chọn các hoạt động vui chơi giải trí, mọi người cũng có xu hướng lựa chọn các hoạt động vừa...
-                  </p>
                 </div>
-              </article>
+              </div>
 
-              <!-- Article 2 -->
-              <article class="health-article-item">
-                <div class="article-image-wrapper">
+              <!-- Video 2 -->
+              <div class="video-item">
+                <div class="video-thumbnail-wrapper">
                   <img
-                    src="assets/que-tranh-thai-la-gi-cay-que-tranh-thai-bao-nhieu-tien.png"
-                    class="article-image"
-                    alt="Que tránh thai"
+                    src="assets/cac-bai-tap-giup-ban-giam-dau-than-kinh-toa-nhanh-chong-2-44deecfc8e-ezgif-com-webp-to-jpg-converter.png"
+                    class="video-thumbnail"
+                    alt="Các bài tập cho bệnh Gout"
                   />
+                  <button class="video-play-btn">
+                    <i class="bi bi-play-fill"></i>
+                  </button>
                 </div>
-                <div class="article-content-wrapper">
-                  <h3 class="article-title">
-                    <a href="blog-detail.html" class="article-title-link">Que tránh thai là gì? Cấy que tránh thai bao nhiêu tiền?</a>
-                  </h3>
-                  <div class="article-meta">
-                    <span class="article-date">
-                      <i class="bi bi-clock-fill me-1"></i>Thứ Năm, 07/09/2023
-                    </span>
-                    <span class="article-author">
-                      <i class="bi bi-person-fill me-1"></i>Team Lofi
-                    </span>
-                  </div>
-                  <p class="article-excerpt">
-                    Cấy que tránh thai bao nhiêu tiền là câu hỏi được rất nhiều chị em phụ nữ quan tâm vì đây là 1 biện pháp tránh thai an toàn và...
-                  </p>
+                <div class="video-content">
+                  <h3 class="video-title">Các bài tập cho bệnh Gout</h3>
                 </div>
-              </article>
+              </div>
 
-              <!-- Article 3 -->
-              <article class="health-article-item">
-                <div class="article-image-wrapper">
+              <!-- Video 3 -->
+              <div class="video-item">
+                <div class="video-thumbnail-wrapper">
                   <img
                     src="assets/can-bo-sung-gi-khi-bi-mat-nuoc-va-chat-dien-giai.png"
-                    class="article-image"
-                    alt="Cần bổ sung gì khi bị mất nước"
+                    class="video-thumbnail"
+                    alt="Các bài tập cho sức khỏe tim mạch"
                   />
+                  <button class="video-play-btn">
+                    <i class="bi bi-play-fill"></i>
+                  </button>
                 </div>
-                <div class="article-content-wrapper">
-                  <h3 class="article-title">
-                    <a href="blog-detail.html" class="article-title-link">Cần bổ sung gì khi bị mất nước và chất điện giải?</a>
-                  </h3>
-                  <div class="article-meta">
-                    <span class="article-date">
-                      <i class="bi bi-clock-fill me-1"></i>Thứ Năm, 07/09/2023
-                    </span>
-                    <span class="article-author">
-                      <i class="bi bi-person-fill me-1"></i>Team Lofi
-                    </span>
-                  </div>
-                  <p class="article-excerpt">
-                    Cơ thể bị mất nước và chất điện giải có khả năng gây ra những vấn đề về sức khỏe rất đáng lo ngại. Vì vậy, bạn cần phải hiểu...
-                  </p>
+                <div class="video-content">
+                  <h3 class="video-title">Các bài tập cho sức khỏe tim mạch</h3>
                 </div>
-              </article>
+              </div>
 
-              <!-- Article 4 -->
-              <article class="health-article-item">
-                <div class="article-image-wrapper">
+              <!-- Video 4 -->
+              <div class="video-item">
+                <div class="video-thumbnail-wrapper">
                   <img
-                    src="assets/luu-ban-nhap-tu-dong.png"
-                    class="article-image"
-                    alt="Có nên uống mật ong hàng ngày"
+                    src="assets/cach-cham-soc-va-nhung-bai-tap-the-duc-tot-cho-xuong-khop-2-0466ce72ce-ezgif-com-webp-to-jpg-converter.png"
+                    class="video-thumbnail"
+                    alt="Các bài tập cho bệnh lý thần kinh"
                   />
+                  <button class="video-play-btn">
+                    <i class="bi bi-play-fill"></i>
+                  </button>
+                </div>
+                <div class="video-content">
+                  <h3 class="video-title">Các bài tập cho bệnh lý thần kinh</h3>
+                </div>
+              </div>
 
+              <!-- Video 5 -->
+              <div class="video-item">
+                <div class="video-thumbnail-wrapper">
+                  <img
+                    src="assets/loi-ich-cua-tap-yoga-la-gi-tim-hieu-cac-truong-phai-yoga-hien-nay.png"
+                    class="video-thumbnail"
+                    alt="Thực dưỡng có thật sự tốt cho sức khỏe"
+                  />
+                  <button class="video-play-btn">
+                    <i class="bi bi-play-fill"></i>
+                  </button>
                 </div>
-                <div class="article-content-wrapper">
-                  <h3 class="article-title">
-                    <a href="blog-detail.html" class="article-title-link">Có nên uống mật ong hàng ngày không?</a>
+                <div class="video-content">
+                  <h3 class="video-title">
+                    Thực dưỡng có thật sự tốt cho sức khỏe
                   </h3>
-                  <div class="article-meta">
-                    <span class="article-date">
-                      <i class="bi bi-clock-fill me-1"></i>Thứ Tư, 06/09/2023
-                    </span>
-                    <span class="article-author">
-                      <i class="bi bi-person-fill me-1"></i>Team Lofi
-                    </span>
-                  </div>
-                  <p class="article-excerpt">
-                    Mật ong là món quà thiên nhiên ban tặng với nhiều lợi ích cho sức khỏe như khả năng kháng khuẩn, làm lành vết thương, cung cấp dinh dương, tăng...
-                  </p>
                 </div>
-              </article>
+              </div>
+
+              <!-- Video 6 -->
+              <div class="video-item">
+                <div class="video-thumbnail-wrapper">
+                  <img
+                    src="assets/sau-khi-an-thuc-duong-suc-khoe-va-tinh-than-cua-ban-se-tot-hon.png"
+                    class="video-thumbnail"
+                    alt="Sau khi ăn thực dưỡng sức khỏe và tinh thần của bạn sẽ tốt hơn"
+                  />
+                  <button class="video-play-btn">
+                    <i class="bi bi-play-fill"></i>
+                  </button>
+                </div>
+                <div class="video-content">
+                  <h3 class="video-title">
+                    Sau khi ăn thực dưỡng sức khỏe và tinh thần của bạn sẽ tốt
+                    hơn
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -201,38 +204,76 @@
                       <ul class="subcategory-list">
                         <li class="subcategory-item dropdown-subcategory">
                           <div class="subcategory-header">
-                            <span class="subcategory-text">Thực phẩm chức năng</span>
+                            <span class="subcategory-text"
+                              >Thực phẩm chức năng</span
+                            >
                             <button class="subcategory-toggle" type="button">
                               <i class="bi bi-plus"></i>
                             </button>
                           </div>
                           <ul class="sub-subcategory-list">
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Vitamin & Khoáng chất</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Vitamin & Khoáng chất</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Sinh lý - Nội tiết tố</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Sinh lý - Nội tiết tố</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Tăng cường chức năng</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Tăng cường chức năng</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Hỗ trợ điều trị</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Hỗ trợ điều trị</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Hỗ trợ tiêu hóa</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Hỗ trợ tiêu hóa</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Thần kinh não</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Thần kinh não</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Hỗ trợ làm đẹp</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Hỗ trợ làm đẹp</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Sức khoẻ tim mạch</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Sức khoẻ tim mạch</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Dinh dưỡng</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Dinh dưỡng</a
+                              >
                             </li>
                           </ul>
                         </li>
@@ -245,59 +286,121 @@
                           </div>
                           <ul class="sub-subcategory-list">
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Chăm sóc da mặt</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Chăm sóc da mặt</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Chăm sóc cơ thể</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Chăm sóc cơ thể</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Giải pháp làn da</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Giải pháp làn da</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Chăm sóc tóc - da đầu</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Chăm sóc tóc - da đầu</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Mỹ phẩm trang điểm</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Mỹ phẩm trang điểm</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Chăm sóc da vùng mắt</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Chăm sóc da vùng mắt</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Sản phẩm từ thiên nhiên</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Sản phẩm từ thiên nhiên</a
+                              >
                             </li>
                           </ul>
                         </li>
                         <li class="subcategory-item dropdown-subcategory">
                           <div class="subcategory-header">
-                            <span class="subcategory-text">Chăm sóc cá nhân</span>
+                            <span class="subcategory-text"
+                              >Chăm sóc cá nhân</span
+                            >
                             <button class="subcategory-toggle" type="button">
                               <i class="bi bi-plus"></i>
                             </button>
                           </div>
                           <ul class="sub-subcategory-list">
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Hỗ trợ tình dục</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Hỗ trợ tình dục</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Thực phẩm - Đồ uống</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Thực phẩm - Đồ uống</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Vệ sinh cá nhân</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Vệ sinh cá nhân</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Chăm sóc răng miệng</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Chăm sóc răng miệng</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Đồ dùng gia đình</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Đồ dùng gia đình</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Hàng tổng hợp</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Hàng tổng hợp</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Tinh dầu các loại</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Tinh dầu các loại</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Thiết bị làm đẹp</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Thiết bị làm đẹp</a
+                              >
                             </li>
                           </ul>
                         </li>
@@ -310,25 +413,43 @@
                           </div>
                           <ul class="sub-subcategory-list">
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Dụng cụ y tế</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Dụng cụ y tế</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Dụng cụ theo dõi</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Dụng cụ theo dõi</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Dụng cụ sơ cứu</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Dụng cụ sơ cứu</a
+                              >
                             </li>
                             <li class="sub-subcategory-item">
-                              <a href="products.html" class="sub-subcategory-link">Khẩu trang</a>
+                              <a
+                                href="products.html"
+                                class="sub-subcategory-link"
+                                >Khẩu trang</a
+                              >
                             </li>
                           </ul>
                         </li>
                       </ul>
                     </li>
-                    <li class="category-item active">
-                      <a href="health.html" class="category-link">Góc sức khỏe</a>
-                    </li>
                     <li class="category-item">
+                      <a href="health.html" class="category-link"
+                        >Góc sức khỏe</a
+                      >
+                    </li>
+                    <li class="category-item active">
                       <a href="video.html" class="category-link">Video</a>
                     </li>
                     <li class="category-item">
@@ -356,7 +477,10 @@
                       </div>
                       <div class="featured-news-content">
                         <h4 class="featured-news-title">
-                          <a href="blog-detail.html" class="article-title-link">Lợi ích của tập yoga là gì? Tìm hiểu các trường phái yoga hiện nay</a>
+                          <a href="blog-detail.html" class="article-title-link"
+                            >Lợi ích của tập yoga là gì? Tìm hiểu các trường
+                            phái yoga hiện nay</a
+                          >
                         </h4>
                       </div>
                     </div>
@@ -371,7 +495,10 @@
                       </div>
                       <div class="featured-news-content">
                         <h4 class="featured-news-title">
-                          <a href="blog-detail.html" class="article-title-link">Que tránh thai là gì? Cây que tránh thai bao nhiều tiền?</a>
+                          <a href="blog-detail.html" class="article-title-link"
+                            >Que tránh thai là gì? Cây que tránh thai bao nhiều
+                            tiền?</a
+                          >
                         </h4>
                       </div>
                     </div>
@@ -386,22 +513,10 @@
                       </div>
                       <div class="featured-news-content">
                         <h4 class="featured-news-title">
-                          <a href="blog-detail.html" class="article-title-link">Cần bổ sung gì khi bị mất nước và chất điện giải?</a>
-                        </h4>
-                      </div>
-                    </div>
-
-                    <!-- Featured News 4 -->
-                    <div class="featured-news-item">
-                      <div class="featured-news-image">
-                        <img
-                          src="assets/luu-ban-nhap-tu-dong.png"
-                          alt="Có nên uống mật ong hàng ngày"
-                        />
-                      </div>
-                      <div class="featured-news-content">
-                        <h4 class="featured-news-title">
-                          <a href="blog-detail.html" class="article-title-link">Có nên uống mật ong hàng ngày không?</a>
+                          <a href="blog-detail.html" class="article-title-link"
+                            >Cần bổ sung gì khi bị mất nước và chất điện
+                            giải?</a
+                          >
                         </h4>
                       </div>
                     </div>

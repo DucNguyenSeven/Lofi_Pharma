@@ -206,7 +206,7 @@
 }
 
 .category-item.active .category-link {
-  background: #f8f9ff;
+  background: transparent;
   color: #003D99;
   font-weight: 600;
 }
@@ -218,11 +218,13 @@
   text-decoration: none;
   font-size: 14px;
   transition: all 0.3s ease;
+  padding-left: 0;
 }
 
 .category-link:hover {
   color: #003D99;
   padding-left: 8px;
+  background-color: transparent;
 }
 
 /* Dropdown Category */
@@ -241,6 +243,20 @@
 .category-text {
   color: #333;
   font-size: 14px;
+}
+
+.category-text-link {
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 0;
+}
+
+.category-text-link:hover {
+  color: #003D99;
+  padding-left: 8px;
 }
 
 .category-toggle {

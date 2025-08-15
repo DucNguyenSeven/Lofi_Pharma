@@ -106,7 +106,7 @@
   justify-content: center;
 }
 .newsletter-btn-new:hover {
-  background-color: #153187;
+  background-color: #00CFC5;
 }
 @media (max-width: 991.98px) {
   .newsletter-form-new { max-width: 100%; }

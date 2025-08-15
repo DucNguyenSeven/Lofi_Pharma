@@ -1,0 +1,199 @@
+/* ========== VIDEO PAGE STYLES ========== */
+
+/* ========== VIDEO HERO SECTION ========== */
+/* Sử dụng class about-hero từ about.css để đảm bảo styling giống hệt */
+
+/* ========== VIDEO CONTENT SECTION ========== */
+.video-content-section {
+  background-color: #f8f9fa;
+}
+
+.video-content-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Tạo khoảng cách giữa main content và sidebar */
+.video-content-section .row {
+  gap: 0;
+}
+
+.video-content-section .col-lg-8 {
+  padding-right: 2rem;
+}
+
+.video-content-section .col-lg-4 {
+  padding-left: 0;
+}
+
+/* ========== VIDEO GRID ========== */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 256px);
+  gap: 0.5rem;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Đảm bảo video grid có khoảng cách với viền */
+.video-grid {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.video-grid-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.video-item {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 256px;
+  max-width: 100%;
+}
+
+.video-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.video-thumbnail-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.video-thumbnail-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 12px 12px 0 0;
+  transition: background 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.video-item:hover .video-thumbnail {
+  transform: scale(1.05);
+}
+
+.video-item:hover .video-thumbnail-wrapper::after {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+.video-play-btn:hover {
+  background: #ffffff;
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.video-play-btn i {
+  font-size: 1.5rem;
+  color: #1e3c72;
+  margin-left: 2px;
+}
+
+.video-content {
+  padding: 1.5rem;
+}
+
+.video-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.video-item:hover .video-title {
+  color: #00CFC5;
+}
+
+/* ========== VIDEO SIDEBAR ========== */
+/* Sử dụng class health-sidebar từ health.css để đảm bảo styling giống hệt */
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 991.98px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 256px);
+    gap: 1.5rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .video-grid {
+    grid-template-columns: 256px;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .video-thumbnail-wrapper {
+    height: 180px;
+  }
+  
+  .video-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .video-grid {
+    grid-template-columns: 256px;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .video-play-btn {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .video-play-btn i {
+    font-size: 1.25rem;
+  }
+  
+  .video-title {
+    font-size: 1rem;
+  }
+}
