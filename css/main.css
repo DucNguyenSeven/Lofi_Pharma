@@ -11,7 +11,7 @@
   line-height: 1.15;
 }
 .hero-carousel-btn {
-  background: #003D99;
+  background: #1e40af;
   color: #fff;
   font-size: 1.25rem;
   font-weight: 700;
@@ -24,9 +24,17 @@
   transition: background 0.2s;
 }
 .hero-carousel-btn:hover {
-  background: #2ed8df;
-  color: #003D99;
+  background: #00CFC5;
+  color: #fff;
 }
+
+/* Button primary hover effect for MUA NGAY buttons */
+.btn-primary:hover {
+  background: #00CFC5 !important;
+  color: #fff !important;
+  border-color: #00CFC5 !important;
+}
+
 .hero-carousel-img {
   box-shadow: none !important;
   border-radius: 0 !important;
@@ -872,7 +880,7 @@
 }
 
 .experts-cta-btn {
-  background: #003A8C;
+  background: #1e40af;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -885,7 +893,7 @@
   box-shadow: none;
 }
 .experts-cta-btn:hover {
-  background: #002d6a;
+  background: #00CFC5;
   color: #fff;
 }
 

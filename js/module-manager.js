@@ -5,26 +5,26 @@
 // Danh sách các module cần khởi tạo
 const MODULES = [
   {
-    name: 'nav-active',
-    importPath: './nav-active.js',
+    name: 'navigation-active',
+    importPath: './navigation-active.js',
     initFunction: 'initNavActive',
     required: true
   },
   {
-    name: 'nav-scroll',
-    importPath: './nav-scroll.js',
+    name: 'navigation-scroll',
+    importPath: './navigation-scroll.js',
     initFunction: 'initNavScroll',
     required: true
   },
   {
-    name: 'search-typewriter', 
-    importPath: './search-typewriter.js',
+    name: 'search-typewriter-effect', 
+    importPath: './search-typewriter-effect.js',
     initFunction: 'initSearchTypewriter',
     required: false
   },
   {
-    name: 'floating-icons',
-    importPath: './floating-icons.js',
+    name: 'floating-icons-animation',
+    importPath: './floating-icons-animation.js',
     initFunction: 'initFloatingIcons',
     required: false
   }

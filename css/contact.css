@@ -114,7 +114,7 @@
 }
 
 .contact-detail-icon {
-  color: #6b7280;
+  color: #003D99;
   font-size: 1rem;
   margin-top: 0.125rem;
   flex-shrink: 0;
@@ -182,7 +182,7 @@
 }
 
 .contact-form-submit-btn {
-  background: #3b82f6;
+  background: #1e40af;
   border: none;
   color: #ffffff;
   font-weight: 600;
@@ -196,9 +196,7 @@
 }
 
 .contact-form-submit-btn:hover {
-  background: #2563eb;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+  background: #00CFC5;
   color: #ffffff;
 }
 
