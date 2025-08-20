@@ -28,3 +28,22 @@
   color: #bfc9d1 !important;
   text-decoration: none !important;
 }
+
+/* Responsive Design for Topbar */
+@media (max-width: 1024px) {
+  /* Hide login/register on tablet and mobile */
+  .topbar-auth {
+    display: none !important;
+  }
+  
+  /* Align contact info to the left on tablet/mobile */
+  .bg-primary.d-flex {
+    justify-content: flex-start !important;
+    padding-left: 1rem;
+  }
+  
+  /* Ensure contact info is properly left-aligned */
+  .bg-primary.d-flex > span {
+    margin-left: 0;
+  }
+}

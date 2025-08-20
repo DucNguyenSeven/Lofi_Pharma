@@ -1,21 +1,78 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-white border-bottom custom-navbar">
       <div class="container d-flex align-items-center">
-        <!-- Logo -->
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="assets/logo.png" alt="Lofi Pharma Logo" class="me-2" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNavbar"
-          aria-controls="mainNavbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <!-- First row: Logo + Icons + Menu Toggle (visible on tablet/mobile) -->
+        <div class="navbar-top-row">
+          <!-- Logo -->
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="assets/logo.png" alt="Lofi Pharma Logo" class="me-2" />
+          </a>
+          
+          <!-- Search bar (visible on tablet only) -->
+          <div class="navbar-search-row d-lg-none d-md-flex d-none d-sm-none">
+            <form class="d-flex align-items-center nav-search" role="search">
+              <input
+                class="form-control search-input"
+                type="search"
+                placeholder="Bạn muốn tìm gì?"
+                aria-label="Search"
+              />
+              <button class="btn btn-search" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+          </div>
+          
+          <!-- Right side icons + Menu Toggle (tablet/mobile only) -->
+          <div class="navbar-right-icons">
+            <!-- Icons (visible on tablet/mobile) -->
+            <div class="d-flex align-items-center nav-icons d-lg-none d-md-flex">
+              <a
+                href="#"
+                class="icon-btn me-2 position-relative"
+                title="Yêu thích"
+              >
+                <div class="icon-square">
+                  <i class="bi bi-heart"></i>
+                  <span class="badge badge-custom">0</span>
+                </div>
+              </a>
+              <a href="#" class="icon-btn position-relative" title="Giỏ hàng">
+                <div class="icon-square">
+                  <i class="bi bi-cart"></i>
+                  <span class="badge badge-custom">0</span>
+                </div>
+              </a>
+            </div>
+            
+            <button
+              class="navbar-toggler d-lg-none d-md-block"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Second row: Search bar (visible on mobile only) -->
+        <div class="navbar-search-row d-lg-none d-md-none">
+          <form class="d-flex align-items-center nav-search" role="search">
+            <input
+              class="form-control search-input"
+              type="search"
+              placeholder="Thực phẩm chức năng..."
+              aria-label="Search"
+            />
+            <button class="btn btn-search" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+        </div>
         <!-- Menu -->
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul
@@ -111,8 +168,8 @@
             </li>
           </ul>
           
-          <!-- Right side elements -->
-          <div class="d-flex align-items-center">
+          <!-- Right side elements (desktop only) -->
+          <div class="d-flex align-items-center d-none d-lg-flex">
             <div class="d-flex align-items-center nav-arrows">
               <button class="btn btn-arrow left me-1" type="button" title="Trước">
                 <i class="bi bi-chevron-left"></i>
@@ -121,7 +178,7 @@
                 <i class="bi bi-chevron-right"></i>
               </button>
             </div>
-            <!-- Search -->
+            <!-- Search (desktop only) -->
             <form class="d-flex align-items-center nav-search" role="search">
               <input
                 class="form-control search-input"
@@ -133,7 +190,7 @@
                 <i class="bi bi-search"></i>
               </button>
             </form>
-            <!-- Icons -->
+            <!-- Icons (desktop only) -->
             <div class="d-flex align-items-center nav-icons">
               <a href="#" class="icon-btn me-2" title="Vị trí">
                 <div class="icon-square"><i class="bi bi-geo-alt"></i></div>

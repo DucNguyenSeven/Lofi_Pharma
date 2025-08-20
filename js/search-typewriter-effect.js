@@ -4,10 +4,11 @@ export function initSearchTypewriter() {
     "Dược mỹ phẩm...",
     "Chăm sóc cá nhân...",
     "Thiết bị y tế...",
-    "Vitamin & khoáng chất..."
+    "Vitamin & khoáng chất...",
   ];
-  const input = document.querySelector(".search-input");
-  if (!input) return;
+
+  const inputs = document.querySelectorAll(".search-input");
+  if (inputs.length === 0) return;
 
   let phraseIndex = 0;
   let charIndex = 0;
@@ -20,7 +21,9 @@ export function initSearchTypewriter() {
     const current = phrases[phraseIndex];
     if (isDeleting) {
       charIndex--;
-      input.setAttribute("placeholder", current.substring(0, charIndex));
+      inputs.forEach((input) => {
+        input.setAttribute("placeholder", current.substring(0, charIndex));
+      });
       if (charIndex === 0) {
         isDeleting = false;
         phraseIndex = (phraseIndex + 1) % phrases.length;
@@ -30,7 +33,9 @@ export function initSearchTypewriter() {
       }
     } else {
       charIndex++;
-      input.setAttribute("placeholder", current.substring(0, charIndex));
+      inputs.forEach((input) => {
+        input.setAttribute("placeholder", current.substring(0, charIndex));
+      });
       if (charIndex === current.length) {
         isDeleting = true;
         setTimeout(type, pause);
@@ -41,4 +46,4 @@ export function initSearchTypewriter() {
   }
 
   setTimeout(type, 600);
-} 
+}
