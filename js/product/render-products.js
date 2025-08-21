@@ -145,15 +145,21 @@ export function renderSaleProductsWithGlide(products, containerId, bulletsContai
     return;
   }
 
-  const chunkSize = 4;
+  // Per-slide items by breakpoint: mobile=2, tablet=3, desktop=4
+  const isMobile = window.matchMedia && window.matchMedia('(max-width: 767.98px)').matches;
+  const isTablet = window.matchMedia && window.matchMedia('(min-width: 768px) and (max-width: 1024px)').matches;
+  const itemsPerSlide = isMobile ? 2 : (isTablet ? 3 : 4);
+  const chunkSize = itemsPerSlide;
   const chunks = [];
   for (let i = 0; i < products.length; i += chunkSize) {
     chunks.push(products.slice(i, i + chunkSize));
   }
 
+  const rowColsClass = isMobile ? 'row-cols-2' : (isTablet ? 'row-cols-3' : 'row-cols-4');
+
   slidesUl.innerHTML = chunks.map((group, slideIdx) => `
     <li class="glide__slide" data-slide-idx="${slideIdx}">
-      <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4 g-4 shock-sale-slide-row">
+      <div class="row ${rowColsClass} g-4 shock-sale-slide-row">
         ${group.map((p, i) => saleCardTpl(p, slideIdx, i)).join('')}
       </div>
     </li>

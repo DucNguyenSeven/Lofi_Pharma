@@ -1199,16 +1199,18 @@
 .shock-sale-title {
   font-size: 2.8rem;
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1;
   color: #fff;
+  white-space: nowrap; /* tránh xuống dòng */
 }
 @media (max-width: 767.98px) {
   .shock-sale-box {
-    padding: 1.2rem 0.5rem;
-    min-height: 320px;
+    padding: 1.2rem 0.75rem;
+    min-height: 240px;
   }
   .shock-sale-title {
-    font-size: 2rem;
+    font-size: 2rem; /* giảm kích thước tiêu đề trên mobile */
+    white-space: nowrap;
   }
 }
 .shock-sale-desc {
@@ -1218,6 +1220,15 @@
   text-align: left;
   opacity: 1;
   margin-top: 2rem;
+}
+@media (max-width: 767.98px) {
+  .shock-sale-desc {
+    white-space: nowrap; /* tránh xuống dòng */
+    overflow: hidden;
+    text-overflow: ellipsis; /* cắt bớt nếu quá dài */
+    font-size: 1rem; /* thu nhỏ để vừa một dòng */
+    margin-top: 1rem;
+  }
 }
 .shock-timer-block {
   background: #fff;
@@ -1513,15 +1524,62 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 2rem 1rem;
 }
 .shock-timer-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+/* Tablet layout */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .shock-sale-title { font-size: 2rem; }
+  .shock-sale-box { padding: 1.25rem 1rem; min-height: 240px; align-items: flex-start; overflow: hidden; }
+  .shock-timer-row {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    column-gap: 1.3rem;
+    row-gap: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .shock-timer-row > .col { padding-left: 0; padding-right: 0; min-width: 0; }
+  /* Override base constraints (max-width: 90px, flex) declared later */
+  .shock-timer-row .shock-timer-block {
+    width: 150px;
+    height: 60px;
+    min-width: 150px;
+    max-width: 150px !important;
+    flex: none;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .shock-timer-value { font-size: 1.6rem; }
+  .shock-timer-label { font-size: 1rem; }
+  .shock-sale-desc { margin-top: 1rem; }
+}
+
+/* Desktop and larger: sidebar is narrow, keep 2 columns for balance */
+@media (min-width: 1025px) {
+  .shock-sale-title { font-size: 1.8rem; }
+  /* Even spacing for desktop as well */
+  .shock-timer-row { 
+    display: grid; 
+    grid-template-columns: repeat(4, minmax(0, 1fr)); 
+    gap: 1rem; 
+    align-items: stretch; 
+  }
+  .shock-timer-row > .col { padding-left: 0; padding-right: 0; min-width: 0; }
+  .shock-timer-block { width: 100%; padding: 0.6rem 0.8rem 0.45rem; border-radius: 1rem; }
+  .shock-timer-value { font-size: 1.3rem; }
+  .shock-timer-label { font-size: 0.95rem; }
 }
 .shock-timer-block {
   min-width: 60px;
@@ -1534,6 +1592,8 @@
   flex: 1 1 0;
   max-width: 90px;
 }
+.shock-timer-value { color: #003A8C; font-size: 1.5rem; font-weight: 800; line-height: 1; }
+.shock-timer-label { color: #003A8C; font-size: 1rem; font-weight: 600; margin-top: 0.1rem; }
 @media (max-width: 1024px) and (min-width: 768px) {
   .shock-sale-box {
     padding: 1.5rem 0.5rem;
@@ -1546,16 +1606,17 @@
 }
 @media (max-width: 767.98px) {
   .shock-sale-box {
-    padding: 1rem 0.2rem;
+    padding: 1rem 0.75rem; /* tăng padding trái để canh giống mẫu */
+    align-items: flex-start;
+    text-align: left;
   }
-  .shock-timer-row {
-    gap: 0.5rem;
-  }
+  .shock-timer-row { column-gap: 1rem; }
   .shock-timer-block {
-    min-width: 38px;
-    max-width: 50px;
-    font-size: 0.9rem;
-    padding: 0.2rem 0.2rem;
+    min-width: 80px;
+    max-width: 120px;
+    font-size: 1rem;
+    padding: 0.45rem 0.6rem 0.35rem 0.6rem; /* giống ô bo tròn trong mẫu */
+    border-radius: 0.9rem;
   }
 }
 
