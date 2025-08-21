@@ -48,9 +48,9 @@
             <button
               class="navbar-toggler d-lg-none d-md-block"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#mainNavbar"
-              aria-controls="mainNavbar"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobileOffcanvas"
+              aria-controls="mobileOffcanvas"
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
@@ -218,3 +218,50 @@
         </div>
       </div>
     </nav>
+    
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvas offcanvas-start mobile-offcanvas" tabindex="-1" id="mobileOffcanvas" aria-labelledby="mobileOffcanvasLabel">
+      <div class="offcanvas-header mobile-offcanvas-header">
+        <div class="d-flex align-items-center gap-3">
+          <div class="mobile-user-avatar" aria-hidden="true">
+            <i class="bi bi-person"></i>
+          </div>
+          <div class="mobile-auth-text">
+            <div class="mobile-auth-title" id="mobileOffcanvasLabel">Đăng nhập</div>
+            <div class="mobile-auth-subtitle">Đăng ký</div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="offcanvas-body p-0">
+        <nav class="mobile-menu" aria-label="Mobile Navigation">
+          <ul class="list-unstyled mb-0">
+            <li><a class="mobile-menu-link" href="index.html">Trang chủ</a></li>
+            <li><a class="mobile-menu-link" href="about.html">Giới thiệu</a></li>
+            <li>
+              <div class="mobile-menu-collapsible" data-bs-toggle="collapse" data-bs-target="#mobileProducts" aria-expanded="false" aria-controls="mobileProducts">
+                <span>Sản phẩm</span>
+                <i class="bi bi-plus"></i>
+              </div>
+              <div id="mobileProducts" class="collapse">
+                <ul class="list-unstyled mobile-submenu">
+                  <li><a class="mobile-submenu-link" href="products.html">Thực phẩm chức năng</a></li>
+                  <li><a class="mobile-submenu-link" href="products.html">Dược mỹ phẩm</a></li>
+                  <li><a class="mobile-submenu-link" href="products.html">Chăm sóc cá nhân</a></li>
+                  <li><a class="mobile-submenu-link" href="products.html">Thiết bị y tế</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="mobile-menu-link" href="health.html">Góc sức khỏe</a></li>
+            <li><a class="mobile-menu-link" href="video.html">Video</a></li>
+            <li><a class="mobile-menu-link" href="contact.html">Liên hệ</a></li>
+            <li><a class="mobile-menu-link" href="consultation.html">Đặt lịch tư vấn</a></li>
+          </ul>
+          <hr class="mobile-divider" />
+          <ul class="list-unstyled mb-0">
+            <li><a class="mobile-menu-link" href="#">Hệ thống cửa hàng</a></li>
+            <li><a class="mobile-menu-link" href="#">Sản phẩm yêu thích</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>

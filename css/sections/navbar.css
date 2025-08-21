@@ -635,7 +635,7 @@
   }
   
   .navbar-brand img { 
-    height: 28px; 
+    height: 45px; 
   }
   
   .navbar-right-icons {
@@ -651,14 +651,15 @@
   }
   
   .icon-square { 
-    width: 28px; 
-    height: 28px; 
+    width: 34px; 
+    height: 34px; 
   }
+  .icon-square i { font-size: 1.25rem; }
   
   .badge-custom { 
-    width: 12px; 
-    height: 12px; 
-    font-size: 0.6rem; 
+    width: 14px; 
+    height: 14px; 
+    font-size: 0.65rem; 
   }
   
   .navbar-search-row {
@@ -717,4 +718,69 @@
     padding-top: .5rem;
     padding-bottom: .5rem;
   }
+}
+
+/* =========================== MOBILE OFFCANVAS MENU =========================== */
+.mobile-offcanvas {
+  /* Use Bootstrap offcanvas width variable to ensure correct sizing */
+  --bs-offcanvas-width: min(88vw, 360px);
+  background: #fff;
+}
+.mobile-offcanvas-header {
+  background: #003D99;
+  color: #fff;
+}
+.mobile-user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-user-avatar i { color: #fff; font-size: 1.2rem; }
+.mobile-auth-title { font-weight: 700; }
+.mobile-auth-subtitle { opacity: 0.9; font-size: 0.9rem; }
+
+.mobile-menu { padding: 1rem; }
+.mobile-menu .mobile-menu-link {
+  display: block;
+  padding: 0.85rem 0.25rem;
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.mobile-menu .mobile-menu-link:hover { color: #003D99; }
+
+.mobile-divider {
+  margin: 0.5rem 0 0.25rem 0;
+}
+
+.mobile-menu-collapsible {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 0.25rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.mobile-menu-collapsible i { font-size: 1.25rem; }
+
+.mobile-submenu { padding-left: 0.25rem; padding-bottom: 0.5rem; }
+.mobile-submenu-link {
+  display: block;
+  padding: 0.5rem 0.25rem;
+  color: #222;
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+.mobile-submenu-link:hover { color: #003D99; }
+
+/* Offcanvas width = 2/3 screen on tablet + mobile */
+@media (max-width: 1024px) {
+  .mobile-offcanvas { --bs-offcanvas-width: 66.6667vw; }
 }
