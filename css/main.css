@@ -2435,6 +2435,7 @@
   border: none;
   transition: all 0.3s ease;
   cursor: pointer;
+  margin: 0 auto;
 }
 
 .video-card-custom:hover {
@@ -2504,6 +2505,23 @@
   line-height: 1.2;
   margin-bottom: 0;
 }
+.video-swiper .swiper-button-prev,
+.video-swiper .swiper-button-next {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  top: 45%;
+  color: #003D99;
+}
+.video-swiper .swiper-button-prev:after,
+.video-swiper .swiper-button-next:after {
+  font-size: 18px;
+  font-weight: bold;
+}
+.video-swiper .swiper-button-prev { left: 8px; }
+.video-swiper .swiper-button-next { right: 8px; }
 .video-btn-all-custom {
   border-radius: 16px;
   font-size: 1.25rem;
@@ -2523,4 +2541,47 @@
   margin-left: 2px;
 }
 
-/* Keep desktop behavior unchanged (no special rules) */
+.video-swiper .swiper-button-prev { left: 8px; }
+.video-swiper .swiper-button-next { right: 8px; }
+
+.row.row-cols-1.row-cols-md-4.g-4.justify-content-center .col {
+  display: flex;
+  justify-content: center;
+}
+
+.video-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* Match navbar breakpoints: Mobile <=767.98px, Tablet 768-1024px, Desktop >=1025px */
+@media (min-width: 1025px) {
+  .video-mobile-swiper { display: none !important; }
+  .video-desktop-grid { display: flex !important; }
+}
+
+@media (max-width: 1024px) {
+  .video-mobile-swiper { display: block !important; }
+  .video-desktop-grid { display: none !important; }
+}
+
+/* Handle 1027px-1200px breakpoint: show slider instead of grid */
+@media (min-width: 1027px) and (max-width: 1199px) {
+  .video-mobile-swiper { display: block !important; }
+  .video-desktop-grid { display: none !important; }
+}
+
+/* Full desktop: show grid with all 4 cards at ≥1200px */
+@media (min-width: 1200px) {
+  .video-mobile-swiper { display: none !important; }
+  .video-desktop-grid { display: flex !important; }
+  
+  .video-desktop-grid .row {
+    --bs-gutter-x: 1.5rem;
+  }
+  
+  .video-desktop-grid .col {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
