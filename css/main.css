@@ -1830,10 +1830,19 @@
   
   .faq-image-wrapper {
     margin-bottom: 1.25rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+    display: flex;
   }
   
   .faq-doctor-image {
     max-width: 450px;
+    margin: 0 auto;
+    display: block;
   }
   
   .faq-question {
