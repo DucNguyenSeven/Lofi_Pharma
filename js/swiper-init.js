@@ -66,4 +66,30 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   initServiceSwiper();
   window.addEventListener('resize', initServiceSwiper);
+
+  // Initialize/destroy promo banners swiper based on viewport (mobile only)
+  const promoSwiperEl = document.querySelector('.promo-swiper');
+  let promoSwiper = null;
+  function initPromoSwiper() {
+    if (!promoSwiperEl) return;
+    const isMobile = window.matchMedia('(max-width: 767.98px)').matches;
+    if (isMobile && !promoSwiper) {
+      promoSwiper = new Swiper(promoSwiperEl, {
+        slidesPerView: 1,
+        spaceBetween: 12,
+        pagination: {
+          el: promoSwiperEl.querySelector('.swiper-pagination'),
+          clickable: true,
+        },
+        loop: false,
+        autoplay: false,
+        watchOverflow: true,
+      });
+    } else if (!isMobile && promoSwiper) {
+      promoSwiper.destroy(true, true);
+      promoSwiper = null;
+    }
+  }
+  initPromoSwiper();
+  window.addEventListener('resize', initPromoSwiper);
 }); 
