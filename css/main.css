@@ -2132,7 +2132,7 @@
   .suggest-products-swiper .swiper-slide .row { margin-left: 0; margin-right: 0; }
   .suggest-products-swiper .swiper-slide .row > * { padding-left: 8px; padding-right: 8px; }
   .suggest-products-swiper .suggest-product-card { max-width: 100%; }
-  /* Match mobile dot styles on tablet */
+  
   .suggest-products-swiper .swiper-pagination { position: static; margin-top: 1rem; display: flex; justify-content: center; }
   .suggest-products-swiper .swiper-pagination-bullet { background: #cfd4da; opacity: 1; width: 10px; height: 10px; margin: 0 6px !important; }
   .suggest-products-swiper .swiper-pagination-bullet-active { background: #0a3d91; }
@@ -2205,7 +2205,6 @@
     font-size: 12px !important;
   }
 
-  /* Suggest Products mobile swiper styling (match new products) */
   .suggest-products-swiper { padding: 0 12px; }
   .suggest-products-swiper .swiper-slide { padding: 0; }
   .suggest-products-swiper .swiper-pagination { position: static; margin-top: 1rem; display: flex; justify-content: center; }
@@ -2275,6 +2274,11 @@
 .blog-nav-arrow i {
   font-size: 18px;
   color: #333;
+}
+
+/* Visibility helper for responsive blog carousel */
+.blog-hidden {
+  display: none !important;
 }
 
 /* Blog Card Styles */
@@ -2364,12 +2368,17 @@
   flex: 1;
 }
 
-/* Responsive Design */
+/* Tablet layout */
 @media (max-width: 1024px) and (min-width: 768px) {
-  .blog-nav-arrows {
-    display: none;
-  }
-  
+  /* show arrows on tablet */
+  .blog-nav-arrows { display: block; }
+
+  .blog-nav-prev { left: 12px; }
+  .blog-nav-next { right: 12px; }
+
+  /* Force two columns on tablet to match design */
+  .blog-section .row > div { flex: 0 0 50%; max-width: 50%; }
+
   .blog-title {
     font-size: 15px;
   }
@@ -2379,6 +2388,7 @@
   }
 }
 
+/* Mobile layout */
 @media (max-width: 767.98px) {
   .blog-content {
     padding: 16px;
@@ -2393,9 +2403,12 @@
     font-size: 11px;
     padding: 5px 10px;
   }
-}
 
-@media (max-width: 767.98px) {
+  /* arrows position/size on mobile */
+  .blog-nav-prev { left: 8px; }
+  .blog-nav-next { right: 8px; }
+  .blog-nav-arrow { width: 36px; height: 36px; }
+
   .blog-section .row {
     margin: 0 -8px;
   }
@@ -2403,8 +2416,11 @@
   .blog-section .row > * {
     padding: 0 8px;
   }
-}
 
+  .video-title-custom { font-size: 2rem; }
+  .video-card-title-custom { font-size: 0.85rem; }
+  .video-card-custom { min-width: 200px; }
+}
 
 .video-title-custom {
   font-size: 2.5rem;
@@ -2506,8 +2522,5 @@
   color: #1e3c72;
   margin-left: 2px;
 }
-@media (max-width: 767.98px) {
-  .video-title-custom { font-size: 2rem; }
-  .video-card-title-custom { font-size: 0.85rem; }
-  .video-card-custom { min-width: 200px; }
-}
+
+/* Keep desktop behavior unchanged (no special rules) */
