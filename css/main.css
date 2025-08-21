@@ -555,25 +555,6 @@
   .promo-swiper .promo-overlay-3 .promo-subtitle { color: #ffffff !important; }
 }
 
-/* New Products mobile swiper styling */
-@media (max-width: 767.98px) {
-  /* Add inner container padding so slides don't clip at edges */
-  .new-products-swiper { padding: 0 12px; }
-  /* Slides should not add extra padding that breaks Swiper width math */
-  .new-products-swiper .swiper-slide { padding: 0; }
-  .new-products-swiper .swiper-pagination { position: static; margin-top: 1rem; display: flex; justify-content: center; }
-  .new-products-swiper .swiper-pagination-bullet { background: #cfd4da; opacity: 1; width: 10px; height: 10px; margin: 0 6px !important; }
-  .new-products-swiper .swiper-pagination-bullet-active { background: #0a3d91; }
-  .new-products-swiper .suggest-product-card { min-height: 280px; margin: 0 auto; max-width: 280px; }
-  .new-products-swiper .suggest-product-image { height: 120px; }
-  .new-products-swiper .suggest-product-title { font-size: 0.9rem; }
-  
-  /* Hiển thị 2 sản phẩm trên mỗi slide - neutralize Bootstrap negative gutters */
-  .new-products-swiper .swiper-slide .row { margin-left: 0; margin-right: 0; }
-  .new-products-swiper .swiper-slide .row > * { padding-left: 6px; padding-right: 6px; }
-  .new-products-swiper .swiper-slide .suggest-product-card { max-width: 100%; }
-}
-
 /* =========================== PRODUCT SECTIONS (Category Tabs + New Products) =========================== */
 
 /* Category Tabs */
@@ -962,6 +943,92 @@
   max-width: 320px;
   margin: 0 auto;
 }
+
+/* New Products mobile swiper styling */
+@media (max-width: 767.98px) {
+  /* Add inner container padding so slides don't clip at edges */
+  .new-products-swiper { padding: 0 12px; }
+  /* Slides should not add extra padding that breaks Swiper width math */
+  .new-products-swiper .swiper-slide { padding: 0; }
+  .new-products-swiper .swiper-pagination { position: static; margin-top: 1rem; display: flex; justify-content: center; }
+  .new-products-swiper .swiper-pagination-bullet { background: #cfd4da; opacity: 1; width: 10px; height: 10px; margin: 0 6px !important; }
+  .new-products-swiper .swiper-pagination-bullet-active { background: #0a3d91; }
+  .new-products-swiper .suggest-product-card { min-height: 280px; margin: 0 auto; max-width: 280px; }
+  .new-products-swiper .suggest-product-image { height: 120px; }
+  .new-products-swiper .suggest-product-title { font-size: 0.9rem; }
+  
+  /* Hiển thị 2 sản phẩm trên mỗi slide - neutralize Bootstrap negative gutters */
+  .new-products-swiper .swiper-slide .row { margin-left: 0; margin-right: 0; }
+  .new-products-swiper .swiper-slide .row > * { padding-left: 6px; padding-right: 6px; }
+  .new-products-swiper .swiper-slide .suggest-product-card { max-width: 100%; }
+}
+
+/* =========================== SALES WEEKEND SECTION =========================== */
+  .sales-weekend-banner {
+    position: relative;
+    /* Remove dark overlay, use original banner image */
+    background-image: url('../assets/banner_image_medium.png');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    min-height: 360px;
+    width: 100%;
+  }
+
+  .sales-weekend-row {
+    min-height: 360px;
+  }
+
+  .sales-weekend-content {
+    color: #ffffff;
+    max-width: 760px;
+  }
+
+  .sales-title {
+    font-size: clamp(1.5rem, 1.1rem + 2vw, 2.4rem);
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+
+  .sales-subtitle {
+    font-size: clamp(1rem, 0.9rem + 0.6vw, 1.25rem);
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+  }
+
+  .sales-cta-btn {
+    background: #ffffff;
+    color: #0b2455;
+    border: none;
+    padding: 12px 28px;
+    font-weight: 700;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+  }
+
+  .sales-cta-btn:hover,
+  .sales-cta-btn:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
+    background: #0a3d91; /* Dark blue like screenshot */
+    color: #ffffff;
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 767.98px) {
+    .sales-weekend-banner { 
+      min-height: 320px; 
+      background-position: center; 
+      /* Dark overlay only on mobile for better text contrast */
+      background-image: linear-gradient(rgba(0, 58, 140, 0.45), rgba(0, 58, 140, 0.45)), url('../assets/banner_image_medium.png');
+    }
+    .sales-weekend-row { min-height: 320px; }
+    .sales-weekend-content { text-align: center; }
+    .sales-cta-btn { padding: 12px 24px; }
+  }
 
 /* =========================== MEDICAL EXPERTS SECTION =========================== */
 
