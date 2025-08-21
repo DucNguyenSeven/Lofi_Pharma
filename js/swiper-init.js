@@ -92,4 +92,36 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   initPromoSwiper();
   window.addEventListener('resize', initPromoSwiper);
+
+  // Initialize/destroy new products swiper based on viewport (mobile only)
+  const newProductsSwiperEl = document.querySelector('.new-products-swiper');
+  let newProductsSwiper = null;
+  function initNewProductsSwiper() {
+    if (!newProductsSwiperEl) return;
+    const isMobile = window.matchMedia('(max-width: 767.98px)').matches;
+    if (isMobile && !newProductsSwiper) {
+      newProductsSwiper = new Swiper(newProductsSwiperEl, {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        pagination: {
+          el: newProductsSwiperEl.querySelector('.swiper-pagination'),
+          clickable: true,
+        },
+        loop: false,
+        autoplay: false,
+        watchOverflow: true,
+        breakpoints: {
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+          }
+        }
+      });
+    } else if (!isMobile && newProductsSwiper) {
+      newProductsSwiper.destroy(true, true);
+      newProductsSwiper = null;
+    }
+  }
+  initNewProductsSwiper();
+  window.addEventListener('resize', initNewProductsSwiper);
 }); 

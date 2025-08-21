@@ -347,7 +347,16 @@
           </button>
           <button class="category-tab" data-category="yt">Thiết bị y tế</button>
         </div>
-        <div class="tab-content">
+        <!-- Mobile Swiper (chỉ hiển thị trên mobile) -->
+        <div class="tab-content d-md-none">
+          <div class="new-products-swiper swiper">
+            <div class="swiper-wrapper" id="new-products-mobile"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        
+        <!-- Desktop Grid (chỉ hiển thị trên desktop/tablet) -->
+        <div class="tab-content d-none d-md-block">
           <div
             id="new-products"
             class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4"
