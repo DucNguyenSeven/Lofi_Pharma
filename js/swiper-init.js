@@ -40,4 +40,30 @@ document.addEventListener('DOMContentLoaded', function() {
       watchOverflow: true,
     });
   });
+
+  // Initialize/destroy service highlights swiper based on viewport (mobile only)
+  const serviceSwiperEl = document.querySelector('.service-swiper');
+  let serviceSwiper = null;
+  function initServiceSwiper() {
+    if (!serviceSwiperEl) return;
+    const isMobile = window.matchMedia('(max-width: 767.98px)').matches;
+    if (isMobile && !serviceSwiper) {
+      serviceSwiper = new Swiper(serviceSwiperEl, {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        pagination: {
+          el: serviceSwiperEl.querySelector('.swiper-pagination'),
+          clickable: true,
+        },
+        loop: false,
+        autoplay: false,
+        watchOverflow: true,
+      });
+    } else if (!isMobile && serviceSwiper) {
+      serviceSwiper.destroy(true, true);
+      serviceSwiper = null;
+    }
+  }
+  initServiceSwiper();
+  window.addEventListener('resize', initServiceSwiper);
 }); 

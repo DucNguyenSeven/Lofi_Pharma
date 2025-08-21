@@ -132,12 +132,71 @@
     <!-- ========== HOME PAGE: Service Highlights Section ========== -->
     <section class="service-highlights py-4">
       <div class="container">
-        <div class="row">
+        <div class="service-swiper swiper d-md-none">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="service-item d-flex">
+                <div
+                  class="service-icon bg-light d-flex justify-content-center align-items-center me-3"
+                >
+                  <i class="bi bi-truck"></i>
+                </div>
+                <div>
+                  <div class="service-title">Miễn phí vận chuyển</div>
+                  <div class="service-desc">Miễn phí vận chuyển toàn quốc</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="service-item d-flex">
+                <div
+                  class="service-icon bg-light d-flex justify-content-center align-items-center me-3"
+                >
+                  <i class="bi bi-box"></i>
+                </div>
+                <div>
+                  <div class="service-title">Dễ dàng theo dõi<br />đơn hàng</div>
+                  <div class="service-desc">Dễ dàng theo dõi đơn hàng</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="service-item d-flex">
+                <div
+                  class="service-icon bg-light d-flex justify-content-center align-items-center me-3"
+                >
+                  <i class="bi bi-headset"></i>
+                </div>
+                <div>
+                  <div class="service-title">Hỗ trợ khách hàng<br />24/7</div>
+                  <div class="service-desc">
+                    Hỗ trợ khách hàng các ngày trong tuần
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="service-item d-flex">
+                <div
+                  class="service-icon bg-light d-flex justify-content-center align-items-center me-3"
+                >
+                  <i class="bi bi-clock"></i>
+                </div>
+                <div>
+                  <div class="service-title">Chuyển hàng<br />đúng giờ</div>
+                  <div class="service-desc">Chuyển hàng đúng giờ</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Desktop/Tablet grid (hidden on mobile) -->
+        <div class="row d-none d-md-flex">
           <div class="col-12 col-md-3 mb-4 mb-md-0">
             <div class="service-item d-flex">
-              <div
-                class="service-icon bg-light d-flex justify-content-center align-items-center me-3"
-              >
+              <div class="service-icon bg-light d-flex justify-content-center align-items-center me-3">
                 <i class="bi bi-truck"></i>
               </div>
               <div>
@@ -148,9 +207,7 @@
           </div>
           <div class="col-12 col-md-3 mb-4 mb-md-0">
             <div class="service-item d-flex">
-              <div
-                class="service-icon bg-light d-flex justify-content-center align-items-center me-3"
-              >
+              <div class="service-icon bg-light d-flex justify-content-center align-items-center me-3">
                 <i class="bi bi-box"></i>
               </div>
               <div>
@@ -161,24 +218,18 @@
           </div>
           <div class="col-12 col-md-3 mb-4 mb-md-0">
             <div class="service-item d-flex">
-              <div
-                class="service-icon bg-light d-flex justify-content-center align-items-center me-3"
-              >
+              <div class="service-icon bg-light d-flex justify-content-center align-items-center me-3">
                 <i class="bi bi-headset"></i>
               </div>
               <div>
                 <div class="service-title">Hỗ trợ khách hàng<br />24/7</div>
-                <div class="service-desc">
-                  Hỗ trợ khách hàng các ngày trong tuần
-                </div>
+                <div class="service-desc">Hỗ trợ khách hàng các ngày trong tuần</div>
               </div>
             </div>
           </div>
           <div class="col-12 col-md-3">
             <div class="service-item d-flex">
-              <div
-                class="service-icon bg-light d-flex justify-content-center align-items-center me-3"
-              >
+              <div class="service-icon bg-light d-flex justify-content-center align-items-center me-3">
                 <i class="bi bi-clock"></i>
               </div>
               <div>
@@ -941,6 +992,9 @@
     <script src="js/navigation-mega-menu.js"></script>
     <!-- Glide.js JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/glide.min.js"></script>
+    <!-- SwiperJS JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/swiper-init.js"></script>
     <!-- Bootstrap Icons CDN -->
     <link
       rel="stylesheet"
