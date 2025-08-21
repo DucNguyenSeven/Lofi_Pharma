@@ -1566,20 +1566,27 @@
   .shock-sale-desc { margin-top: 1rem; }
 }
 
-/* Desktop and larger: sidebar is narrow, keep 2 columns for balance */
+/* Desktop layout */
 @media (min-width: 1025px) {
   .shock-sale-title { font-size: 1.8rem; }
-  /* Even spacing for desktop as well */
-  .shock-timer-row { 
-    display: grid; 
-    grid-template-columns: repeat(4, minmax(0, 1fr)); 
-    gap: 1rem; 
-    align-items: stretch; 
+  .shock-timer-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr)); 
+    column-gap: 1rem;
+    row-gap: 0.875rem;
+    align-items: stretch;
   }
   .shock-timer-row > .col { padding-left: 0; padding-right: 0; min-width: 0; }
-  .shock-timer-block { width: 100%; padding: 0.6rem 0.8rem 0.45rem; border-radius: 1rem; }
-  .shock-timer-value { font-size: 1.3rem; }
-  .shock-timer-label { font-size: 0.95rem; }
+  .shock-timer-row .shock-timer-block {
+    width: 100%;
+    max-width: none !important;
+    min-width: 0;
+    flex: none;
+    padding: 0.55rem 0.75rem 0.45rem;
+    border-radius: 0.75rem;
+  }
+  .shock-timer-value { font-size: 1.05rem; }
+  .shock-timer-label { font-size: 0.85rem; }
 }
 .shock-timer-block {
   min-width: 60px;
