@@ -779,9 +779,19 @@
           </button>
         </div>
 
-        <!-- Products Grid -->
-        <div class="suggest-products" id="suggest-products">
-          <!-- Products will be loaded here -->
+        <!-- Swiper for Mobile & Tablet (<=1024px) -->
+        <div class="tab-content suggest-swiper-wrapper">
+          <div class="suggest-products-swiper swiper">
+            <div class="swiper-wrapper" id="suggest-products-mobile"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <!-- Desktop Grid (>1024px) -->
+        <div class="tab-content suggest-grid-wrapper">
+          <div class="suggest-products" id="suggest-products">
+            <!-- Products will be loaded here -->
+          </div>
         </div>
       </div>
     </section>

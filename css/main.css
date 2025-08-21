@@ -1547,7 +1547,6 @@
     justify-content: space-evenly;
   }
   .shock-timer-row > .col { padding-left: 0; padding-right: 0; min-width: 0; }
-  /* Override base constraints (max-width: 90px, flex) declared later */
   .shock-timer-row .shock-timer-block {
     width: 150px;
     height: 60px;
@@ -1568,6 +1567,9 @@
 
 /* Desktop layout */
 @media (min-width: 1025px) {
+  .shock-product-card {
+    max-width: 100%;
+  }
   .shock-sale-title { font-size: 1.8rem; }
   .shock-timer-row {
     display: grid;
@@ -1611,9 +1613,11 @@
     padding: 0.3rem 0.3rem;
   }
 }
+
+/* Mobile layout */
 @media (max-width: 767.98px) {
   .shock-sale-box {
-    padding: 1rem 0.75rem; /* tăng padding trái để canh giống mẫu */
+    padding: 1rem 0.75rem; 
     align-items: flex-start;
     text-align: left;
   }
@@ -1622,7 +1626,7 @@
     min-width: 80px;
     max-width: 120px;
     font-size: 1rem;
-    padding: 0.45rem 0.6rem 0.35rem 0.6rem; /* giống ô bo tròn trong mẫu */
+    padding: 0.45rem 0.6rem 0.35rem 0.6rem; 
     border-radius: 0.9rem;
   }
 }
@@ -1638,12 +1642,6 @@
   bottom: 8px;                       
   transform: translateX(-50%);
   gap: 8px;
-}
-/* Product grid responsive fix */
-@media (min-width: 1025px) {
-  .shock-product-card {
-    max-width: 100%;
-  }
 }
 
 /* =========================== FAQ SECTION =========================== */
@@ -1799,7 +1797,7 @@
   color: #6b7280;
 }
 
-/* FAQ Responsive Design */
+/* Tablet layout */
 @media (max-width: 1024px) and (min-width: 768px) {
   .faq-title {
     font-size: 1.875rem;
@@ -1819,50 +1817,7 @@
   }
 }
 
-@media (max-width: 767.98px) {
-  .section-faq {
-    padding: 3rem 0;
-  }
-  
-  .faq-title {
-    font-size: 1.625rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .faq-image-wrapper {
-    margin-bottom: 1.5rem;
-  }
-  
-  .faq-doctor-image {
-    max-width: 540px;
-  }
-  
-  .faq-question {
-    padding: 1rem 1.25rem;
-  }
-  
-  .faq-question-text {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.4;
-  }
-  
-  .faq-answer-content {
-    padding: 14px 20px;
-    margin: 0 1.25rem 1rem 1.25rem;
-    background: transparent;
-  }
-  
-  .faq-icon-wrapper {
-    width: 28px;
-    height: 28px;
-  }
-  
-  .faq-accordion-wrapper {
-    gap: 0.75rem;
-  }
-}
-
+/* Mobile layout */
 @media (max-width: 767.98px) {
   .section-faq {
     padding: 2.5rem 0;
@@ -1930,7 +1885,6 @@
   text-align: left;
 }
 
-/* Suggest Tabs */
 .suggest-tabs {
   display: flex;
   gap: 0.75rem;
@@ -1962,30 +1916,6 @@
   border: 1px solid #003A8C;
 }
 
-@media (max-width: 1024px) and (min-width: 768px) {
-  .suggest-tabs {
-    justify-content: center;
-    gap: 0.5rem;
-  }
-  
-  .suggest-tab {
-    padding: 8px 20px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .suggest-tabs {
-    gap: 0.4rem;
-  }
-  
-  .suggest-tab {
-    padding: 6px 16px;
-    font-size: 13px;
-  }
-}
-
-/* Products Grid */
 .suggest-products {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -1994,9 +1924,18 @@
   padding: 0 0.5rem;  
 }
 
-/* Product Card Base Styles */
+/* Show/hide suggest containers by breakpoint */
+@media (max-width: 1024px) {
+  .suggest-grid-wrapper { display: none !important; }
+  .suggest-swiper-wrapper { display: block !important; }
+}
+@media (min-width: 1025px) {
+  .suggest-grid-wrapper { display: block !important; }
+  .suggest-swiper-wrapper { display: none !important; }
+}
+
 .suggest-product-card {
-  border: none !important;        /* actual border handled by pseudo-element */
+  border: none !important;        
   border-radius: 12px !important;
   transition: all 0.2s ease-in-out;
   background: #fff;
@@ -2011,7 +1950,6 @@
   transform: translateY(-2px);
 }
 
-/* Discount Badge - Fixed Position */
 .discount-badge {
   background-color: #F44336 !important;
   color: white !important;
@@ -2024,7 +1962,6 @@
   line-height: 1.2;
 }
 
-/* Product Image Container */
 .suggest-product-image-container {
   height: 200px;
   display: flex;
@@ -2046,7 +1983,6 @@
   transform: scale(1.05);
 }
 
-/* Hover Icons */
 .hover-icons {
   opacity: 0;
   visibility: hidden;
@@ -2088,7 +2024,6 @@
   color: white;
 }
 
-/* Product Info Section */
 .suggest-product-info {
   flex-grow: 1;
   display: flex;
@@ -2097,7 +2032,6 @@
   padding-bottom: 60px !important; 
 }
 
-/* Product Title */
 .suggest-product-title {
   font-size: 14px !important;
   font-weight: 600 !important;
@@ -2113,7 +2047,6 @@
   text-decoration: none;
 }
 
-/* Price Section */
 .suggest-product-prices {
   margin-top: auto;
 }
@@ -2170,13 +2103,7 @@
   grid-column: 1 / -1;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) and (min-width: 768px) {
-  .suggest-products {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
+/* Tablet layout */
 @media (max-width: 1024px) and (min-width: 768px) {
   .suggest-products {
     grid-template-columns: repeat(3, 1fr);
@@ -2186,9 +2113,38 @@
   .suggest-title {
     font-size: 2rem;
   }
+
+  .suggest-products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .suggest-tabs {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .suggest-tab {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .suggest-products-swiper { padding: 0 16px; }
+  .suggest-products-swiper .swiper-slide .row { margin-left: 0; margin-right: 0; }
+  .suggest-products-swiper .swiper-slide .row > * { padding-left: 8px; padding-right: 8px; }
+  .suggest-products-swiper .suggest-product-card { max-width: 100%; }
+  /* Match mobile dot styles on tablet */
+  .suggest-products-swiper .swiper-pagination { position: static; margin-top: 1rem; display: flex; justify-content: center; }
+  .suggest-products-swiper .swiper-pagination-bullet { background: #cfd4da; opacity: 1; width: 10px; height: 10px; margin: 0 6px !important; }
+  .suggest-products-swiper .swiper-pagination-bullet-active { background: #0a3d91; }
+
 }
 
+/* Mobile layout */
 @media (max-width: 767.98px) {
+  .hover-icons {
+    display: none !important;
+  }
+
   .suggest-products {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2202,20 +2158,21 @@
     font-size: 0.875rem;
   }
   
+  .suggest-tabs {
+    gap: 0.4rem;
+  }
+  
+  .suggest-tab {
+    padding: 6px 16px;
+    font-size: 13px;
+  }
+
   .suggest-product-image-container {
     height: 160px;
   }
-}
 
-@media (max-width: 767.98px) {
-  .hover-icons {
-    display: none !important;
-  }
-}
-
-@media (max-width: 767.98px) {
   .suggest-products {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .suggest-title {
@@ -2247,6 +2204,18 @@
   .suggest-cart-button i {
     font-size: 12px !important;
   }
+
+  /* Suggest Products mobile swiper styling (match new products) */
+  .suggest-products-swiper { padding: 0 12px; }
+  .suggest-products-swiper .swiper-slide { padding: 0; }
+  .suggest-products-swiper .swiper-pagination { position: static; margin-top: 1rem; display: flex; justify-content: center; }
+  .suggest-products-swiper .swiper-pagination-bullet { background: #cfd4da; opacity: 1; width: 10px; height: 10px; margin: 0 6px !important; }
+  .suggest-products-swiper .swiper-pagination-bullet-active { background: #0a3d91; }
+  .suggest-products-swiper .swiper-slide .row { margin-left: 0; margin-right: 0; }
+  .suggest-products-swiper .swiper-slide .row > * { padding-left: 6px; padding-right: 6px; }
+  .suggest-products-swiper .suggest-product-card { min-height: 280px; margin: 0 auto; max-width: 280px; }
+  .suggest-products-swiper .suggest-product-image { height: 120px; }
+  .suggest-products-swiper .suggest-product-title { font-size: 0.9rem; }
 }
 
 /* =========================== HEALTH SECTION (Blog + Video) =========================== */
@@ -2436,7 +2405,7 @@
   }
 }
 
-/* Video Styles */
+
 .video-title-custom {
   font-size: 2.5rem;
   font-weight: 700;
@@ -2444,7 +2413,6 @@
   margin-left: 1rem;
 }
 
-/* Video Card Link Styles */
 .video-card-custom {
   min-width: 260px;
   max-width: 360px;
@@ -2543,5 +2511,3 @@
   .video-card-title-custom { font-size: 0.85rem; }
   .video-card-custom { min-width: 200px; }
 }
-
-/* =========================== UTILITIES & MEDIA QUERIES =========================== */

@@ -53,10 +53,12 @@ export function renderProducts(category, dataSource, containerId) {
     return;
   }
 
-  // Check if this is for mobile swiper
-  if (containerId === 'new-products-mobile') {
-    // Render for mobile swiper: 2 products per slide
-    const chunkSize = 2;
+  // Check if this is for swiper (mobile/tablet) for new or suggest products
+  if (containerId === 'new-products-mobile' || containerId === 'suggest-products-mobile') {
+    // Items per slide: mobile=2, tablet=3
+    const isMobile = window.matchMedia && window.matchMedia('(max-width: 767.98px)').matches;
+    const isTablet = window.matchMedia && window.matchMedia('(min-width: 768px) and (max-width: 1024px)').matches;
+    const chunkSize = isMobile ? 2 : (isTablet ? 3 : 2);
     const chunks = [];
     for (let i = 0; i < products.length; i += chunkSize) {
       chunks.push(products.slice(i, i + chunkSize));
@@ -64,7 +66,7 @@ export function renderProducts(category, dataSource, containerId) {
 
     container.innerHTML = chunks.map((group, slideIdx) => `
       <div class="swiper-slide" data-slide-idx="${slideIdx}">
-        <div class="row row-cols-2 g-2">
+        <div class="row ${isMobile ? 'row-cols-2' : (isTablet ? 'row-cols-3' : 'row-cols-2')} g-2">
           ${group.map(product => {
             const detailHref = `product-detail.html?name=${encodeURIComponent(product.name)}`;
             return `

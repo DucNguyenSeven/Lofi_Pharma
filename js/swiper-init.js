@@ -124,4 +124,36 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   initNewProductsSwiper();
   window.addEventListener('resize', initNewProductsSwiper);
+
+  // Initialize/destroy suggest products swiper on mobile & tablet (<=1024px)
+  const suggestProductsSwiperEl = document.querySelector('.suggest-products-swiper');
+  let suggestProductsSwiper = null;
+  function initSuggestProductsSwiper() {
+    if (!suggestProductsSwiperEl) return;
+    const isMobileOrTablet = window.matchMedia('(max-width: 1024px)').matches;
+    if (isMobileOrTablet && !suggestProductsSwiper) {
+      suggestProductsSwiper = new Swiper(suggestProductsSwiperEl, {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        pagination: {
+          el: suggestProductsSwiperEl.querySelector('.swiper-pagination'),
+          clickable: true,
+        },
+        loop: false,
+        autoplay: false,
+        watchOverflow: true,
+        breakpoints: {
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+          }
+        }
+      });
+    } else if (!isMobileOrTablet && suggestProductsSwiper) {
+      suggestProductsSwiper.destroy(true, true);
+      suggestProductsSwiper = null;
+    }
+  }
+  initSuggestProductsSwiper();
+  window.addEventListener('resize', initSuggestProductsSwiper);
 }); 
