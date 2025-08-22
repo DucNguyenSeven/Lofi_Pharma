@@ -354,7 +354,9 @@
 }
 
 /* ========== ABOUT PAGE: Responsive Design ========== */
-@media (max-width: 991.98px) {
+
+/* Tablet: 768px - 1024px */
+@media (max-width: 1024px) and (min-width: 768px) {
   .breadcrumb-title {
     font-size: 2rem;
   }
@@ -371,16 +373,7 @@
     font-size: 1rem;
   }
   
-  .about-stat-number {
-    font-size: 2rem;
-  }
-  
-  .about-stat-icon-img {
-    max-width: 50px;
-  }
-  
-  .about-core-values-title,
-  .about-partners-title {
+  .about-core-values-title {
     font-size: 2rem;
   }
   
@@ -391,8 +384,60 @@
   .about-contact-image {
     max-height: 250px;
   }
+  
+  .about-company-title {
+    font-size: 1.5rem;
+  }
+  
+  .about-company-content {
+    padding: 0 1rem;
+  }
+  
+  .about-company-stat-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .about-company-stat-number {
+    font-size: 1.1rem;
+  }
+  
+  .about-company-stat-label {
+    font-size: 0.85rem;
+  }
+  
+  .about-banner-title {
+    font-size: 1.7rem;
+  }
+  
+  .about-banner-subtitle {
+    font-size: 1.15rem;
+  }
+  
+  .about-banner-content {
+    max-width: 95vw;
+  }
+  
+  .about-banner-section.about-banner-bg {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  
+  .about-contact-section .row.align-items-center {
+    min-height: 420px;
+  }
+  
+  .about-contact-image {
+    max-height: 320px;
+    min-height: 120px;
+  }
+  
+  .about-contact-image-wrapper {
+    min-height: 320px;
+  }
 }
 
+/* Mobile: ≤ 767.98px */
 @media (max-width: 767.98px) {
   .breadcrumb-title {
     font-size: 1.75rem;
@@ -411,23 +456,6 @@
     text-align: center;
   }
   
-  .about-stat-block {
-    padding: 1.5rem 1rem;
-  }
-  
-  .about-stat-number {
-    font-size: 1.75rem;
-  }
-  
-  .about-stat-icon-img {
-    max-width: 45px;
-  }
-  
-  .about-partners-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-  }
-  
   .about-core-value-card {
     padding: 1.5rem 1rem;
   }
@@ -441,102 +469,144 @@
     height: 120px;
     font-size: 2.5rem;
   }
-}
-
-@media (max-width: 575.98px) {
-  .breadcrumb-title {
-    font-size: 1.5rem;
+  
+  .about-company-content {
+    max-width: 100%;
+    padding: 0 0.5rem;
   }
   
-  .about-company-title,
-  .about-banner-title,
-  .about-contact-title {
-    font-size: 1.5rem;
+  .about-company-title {
+    font-size: 1.2rem;
   }
   
-  .about-company-body,
-  .about-banner-desc,
-  .about-contact-desc {
-    font-size: 0.95rem;
+  .about-company-stat-icon {
+    width: 28px;
+    height: 28px;
   }
   
-  .about-stat-block {
-    padding: 1rem 0.5rem;
+  .about-company-stat-number {
+    font-size: 1rem;
   }
   
-  .about-stat-number {
-    font-size: 1.5rem;
+  .about-company-stat-label {
+    font-size: 0.8rem;
   }
   
-  .about-stat-icon-img {
-    max-width: 40px;
+  .about-company-image-custom {
+    border-radius: 12px;
   }
   
-  .about-partners-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-  }
-  
-  .about-partner-logo {
-    font-size: 1.25rem;
-    padding: 0.75rem;
-  }
-  
-  .about-core-value-card {
-    padding: 1rem 0.75rem;
-  }
-  
-  .about-core-value-icon-img {
-    max-width: 50px;
-  }
-  
-  .about-core-value-title {
+  .about-banner-title {
     font-size: 1.1rem;
   }
   
-  .about-core-value-desc {
+  .about-banner-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .about-banner-desc {
     font-size: 0.9rem;
   }
   
+  .about-banner-content {
+    padding: 0 0.3rem;
+    max-width: 99vw;
+  }
+  
+  .about-banner-section.about-banner-bg {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  
+  .about-banner-cta-btn {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.9rem;
+  }
+  
+  .about-core-value-icon-circle {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .about-core-value-icon-circle img {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .about-core-value-title-alt {
+    font-size: 1rem;
+  }
+  
+  .about-core-value-desc-alt {
+    font-size: 0.85rem;
+  }
+  
+  .about-contact-section .col-lg-6 {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  .about-contact-content {
+    padding: 0 !important;
+    text-align: center;
+  }
+  
   .about-contact-form {
-    padding: 1rem;
+    padding: 1.2rem 0.5rem;
+  }
+  
+  .about-contact-image-wrapper {
+    margin-top: 1.5rem;
+    padding: 0 !important;
+    min-height: 120px;
   }
   
   .about-contact-image {
+    width: 100%;
     max-height: 150px;
+    min-height: 80px;
+  }
+  
+  .about-contact-section,
+  .about-contact-section .row.align-items-center,
+  .about-contact-image-wrapper {
+    min-height: unset;
+    height: auto;
   }
 }
 
 /* ========== ABOUT PAGE: Core Values Section (Redesign) ========== */
 .about-core-value-icon-circle {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background: #003D99;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   transition: background 0.25s;
 }
 .about-core-value-icon-circle img {
-  width: 56px;
-  height: 56px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
   transition: filter 0.25s;
 }
 .about-core-value-title-alt {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #222;
-  margin-bottom: 1rem;
-  text-align: center;
+  margin-bottom: 0.75rem;
+  text-align: justify;
 }
 .about-core-value-desc-alt {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #333;
-  text-align: center;
-  line-height: 1.6;
+  text-align: justify;
+  line-height: 1.5;
   margin-bottom: 0;
 }
 
@@ -546,22 +616,55 @@
   border: none !important;
   padding: 0 !important;
 }
-@media (max-width: 767.98px) {
+
+/* Responsive adjustments for Core Values */
+@media (max-width: 1024px) and (min-width: 768px) {
   .about-core-value-icon-circle {
     width: 70px;
     height: 70px;
   }
   .about-core-value-icon-circle img {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
   }
   .about-core-value-title-alt {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    text-align: justify;
   }
   .about-core-value-desc-alt {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    text-align: justify;
   }
 }
+
+@media (max-width: 767.98px) {
+  .about-core-value-icon-circle {
+    width: 60px;
+    height: 60px;
+  }
+  .about-core-value-icon-circle img {
+    width: 32px;
+    height: 32px;
+  }
+  .about-core-value-title-alt {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    text-align: justify;
+  }
+  .about-core-value-desc-alt {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    text-align: justify;
+  }
+  /* Ensure proper spacing for 2x2 grid on mobile */
+  .about-core-values-section .col-6 {
+    margin-bottom: 1.5rem;
+  }
+  .about-core-values-section .col-6:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+}
+
 .about-core-value-icon-circle:hover {
   background: #2ed8df;
 }
@@ -634,12 +737,21 @@
   max-width: 100%;
   height: auto;
 }
-@media (max-width: 991.98px) {
+
+/* Responsive adjustments for Company Introduction */
+@media (max-width: 1024px) and (min-width: 768px) {
   .about-company-title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .about-company-content {
     padding: 0 1rem;
+    text-align: left;
+    max-width: 100%;
+  }
+  .about-company-title,
+  .about-company-body {
+    text-align: justify;
+    max-width: 100%;
   }
   .about-company-stat-icon {
     width: 36px;
@@ -651,14 +763,33 @@
   .about-company-stat-label {
     font-size: 0.85rem;
   }
+  /* Image appears first on tablet */
+  .about-company-section .order-1 {
+    margin-bottom: 2rem;
+  }
+  /* Ensure text width matches image width */
+  .about-company-content {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
+
 @media (max-width: 767.98px) {
   .about-company-content {
     max-width: 100%;
     padding: 0 0.5rem;
+    text-align: left;
+    width: 100%;
   }
   .about-company-title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    text-align: justify;
+    max-width: 100%;
+  }
+  .about-company-body {
+    text-align: justify;
+    max-width: 100%;
   }
   .about-company-stat-icon {
     width: 28px;
@@ -672,6 +803,19 @@
   }
   .about-company-image-custom {
     border-radius: 12px;
+  }
+  /* Image appears first on mobile */
+  .about-company-section .order-1 {
+    margin-bottom: 1.5rem;
+  }
+  /* Ensure proper spacing between image and content */
+  .about-company-section .order-2 {
+    margin-top: 0;
+  }
+  /* Make text width match image width on mobile */
+  .about-company-content {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -737,7 +881,7 @@
   padding-top: 2.5rem !important;
   padding-bottom: 2.5rem !important;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   .about-banner-title {
     font-size: 1.7rem;
   }
@@ -787,7 +931,7 @@
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   .about-banner-content {
     max-width: 90vw;
     padding-left: 1rem;
@@ -831,6 +975,8 @@
   border-radius: 0 !important;
   box-shadow: none !important;
 }
+
+/* Desktop styles */
 @media (min-width: 992px) {
   .about-contact-section .col-lg-6 {
     flex: 0 0 50%;
@@ -845,20 +991,57 @@
   .about-contact-image-wrapper {
     padding-left: 2.5rem !important;
     padding-right: 0 !important;
-    height: 100%;
+    min-height: 540px;
   }
   .about-contact-image {
-    max-height: 480px;
-    min-height: 380px;
+    max-height: 540px;
+    min-height: 420px;
   }
 }
-@media (max-width: 991.98px) {
+
+/* Tablet styles - ensure image height matches form height */
+@media (max-width: 1024px) and (min-width: 768px) {
   .about-contact-section .row.align-items-center {
-    min-height: unset;
+    min-height: 480px !important;
+    align-items: stretch !important;
+  }
+  .about-contact-content {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .about-contact-form {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .about-contact-image-wrapper {
+    min-height: 480px !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: stretch !important;
+    padding: 0 !important;
   }
   .about-contact-image {
-    max-height: 250px;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 480px !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    align-self: stretch !important;
+  }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .about-contact-image {
+    max-height: 320px;
     min-height: 120px;
+  }
+  .about-contact-image-wrapper {
+    min-height: 320px;
   }
 }
 @media (max-width: 767.98px) {
@@ -873,33 +1056,39 @@
     text-align: center;
   }
   .about-contact-form {
-    padding: 1.2rem 0.5rem;
+    padding: 1.2rem 1rem;
+    margin: 0 auto;
+    max-width: 90%;
+    text-align: center;
   }
   .about-contact-image-wrapper {
     margin-top: 1.5rem;
     padding: 0 !important;
+    min-height: 120px;
   }
   .about-contact-image {
     width: 100%;
     max-height: 150px;
     min-height: 80px;
   }
+  /* Center form inputs on mobile */
+  .about-contact-form .form-control {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+  .about-contact-form .col-12 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-align: center;
+  }
+  /* Ensure button is centered */
+  .about-contact-form .btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }
-
-.about-contact-textarea {
-  resize: none;
-}
-
-.about-contact-submit-btn-inline {
-  width: auto !important;
-  min-width: 160px;
-  display: inline-block;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
 /* --- Contact Form: Make image taller and align top with title --- */
 .about-contact-section .row.align-items-center {
   align-items: flex-start !important;
@@ -941,7 +1130,7 @@
     min-height: 420px;
   }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   .about-contact-image {
     max-height: 320px;
     min-height: 120px;
@@ -1073,7 +1262,7 @@
   box-shadow: none !important;
   align-self: stretch;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   .about-contact-section,
   .about-contact-section .row.align-items-center,
   .about-contact-image-wrapper {
@@ -1161,4 +1350,51 @@
   transform: none !important;
   box-shadow: none !important;
   filter: none !important;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .about-contact-image {
+    max-height: 420px;
+    min-height: 320px;
+  }
+  .about-contact-image-wrapper {
+    min-height: 420px;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+  }
+  /* Ensure form and image have same height on tablet */
+  .about-contact-section .row.align-items-center {
+    min-height: 480px;
+    align-items: stretch !important;
+  }
+  .about-contact-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about-contact-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about-contact-image-wrapper {
+    min-height: 480px;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    padding: 0 !important;
+  }
+  .about-contact-image {
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    max-height: none;
+    object-fit: cover;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    align-self: stretch;
+  }
 }
