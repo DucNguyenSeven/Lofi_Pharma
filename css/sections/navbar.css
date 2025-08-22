@@ -4,14 +4,14 @@
   min-height: 64px;
   box-shadow: 0 1px 0 #e5e7eb;
   padding: 0.75rem 0;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .custom-navbar .container {
   padding-left: 2rem;
   padding-right: 2rem;
   max-width: 1400px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .custom-navbar .navbar-collapse {
@@ -471,7 +471,7 @@
 @media (max-width: 1024px) and (min-width: 768px) {
   .custom-navbar {
     padding: 0.75rem 0;
-    overflow: hidden;
+    overflow: visible;
   }
   
   .custom-navbar .container {
@@ -479,7 +479,7 @@
     padding-right: 1rem;
     flex-direction: row;
     align-items: center;
-    overflow: hidden;
+    overflow: visible;
   }
   
   .navbar-top-row {
