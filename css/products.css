@@ -136,7 +136,15 @@
 }
 
 /* ========== PRODUCTS PAGE: Responsive ========== */
-@media (max-width: 991.98px) {
-  .product-hero { min-height: 280px; }
+
+/* Tablet Layout */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .product-hero { min-height: 320px; }
   .brands-list { max-height: 380px; }
+}
+
+/* Mobile Layout */
+@media (max-width: 767.98px) {
+  .product-hero { min-height: 280px; }
+  .brands-list { max-height: 360px; }
 }
