@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tất cả sản phẩm - Lofi Pharma</title>
     <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- CSS chung -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/sections/topbar.css" />
@@ -16,10 +19,19 @@
     <!-- Trang Products -->
     <link rel="stylesheet" href="css/products.css" />
     <!-- SwiperJS CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <!-- Glide.js CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.core.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.theme.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.theme.min.css"
+    />
   </head>
   <body>
     <!-- Topbar & Navbar -->
@@ -33,7 +45,9 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb justify-content-center mb-0">
             <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Tất cả sản phẩm</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Tất cả sản phẩm
+            </li>
           </ol>
         </nav>
       </div>
@@ -47,13 +61,20 @@
           <aside class="col-lg-3 d-none d-lg-block">
             <div class="filter-card card border-0 shadow-sm sticky-lg-top">
               <div class="card-body">
-                <div class="d-flex align-items-center justify-content-between mb-3">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-3"
+                >
                   <h5 class="mb-0 fs-6 fw-semibold">
                     <i class="bi bi-funnel me-2"></i> Bộ lọc nâng cao
                   </h5>
-                  <button class="btn btn-sm btn-link p-0 text-decoration-none d-none" id="btnClearFilter">Xoá lọc</button>
+                  <button
+                    class="btn btn-sm btn-link p-0 text-decoration-none d-none"
+                    id="btnClearFilter"
+                  >
+                    Xoá lọc
+                  </button>
                 </div>
-                <hr>
+                <hr />
                 <div id="filters-desktop"><!-- JS render Brand + Price --></div>
               </div>
             </div>
@@ -63,20 +84,32 @@
           <main class="col-lg-9">
             <!-- Nút mở Offcanvas filter (mobile) -->
             <div class="d-lg-none mb-3 d-flex justify-content-between">
-              <button class="btn btn-outline-secondary" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas">
+              <button
+                class="btn btn-outline-secondary"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#filterOffcanvas"
+              >
                 <i class="bi bi-funnel me-2"></i>Bộ lọc nâng cao
               </button>
               <div id="sortBarMobile"><!-- optional current sort --></div>
             </div>
 
             <!-- Thanh sắp xếp -->
-            <div class="sort-bar d-flex flex-wrap align-items-center gap-2 mb-3">
+            <div
+              class="sort-bar d-flex flex-wrap align-items-center gap-2 mb-3"
+            >
               <span class="text-muted me-2">Sắp xếp theo</span>
-              <button class="btn btn-sort active" data-sort="default">Mặc định</button>
+              <button class="btn btn-sort active" data-sort="default">
+                Mặc định
+              </button>
               <button class="btn btn-sort" data-sort="az">A → Z</button>
               <button class="btn btn-sort" data-sort="za">Z → A</button>
-              <button class="btn btn-sort" data-sort="price-asc">Giá tăng dần</button>
-              <button class="btn btn-sort" data-sort="price-desc">Giá giảm dần</button>
+              <button class="btn btn-sort" data-sort="price-asc">
+                Giá tăng dần
+              </button>
+              <button class="btn btn-sort" data-sort="price-desc">
+                Giá giảm dần
+              </button>
               <button class="btn btn-sort" data-sort="newest">Hàng mới</button>
               <button class="btn btn-sort" data-sort="oldest">Hàng cũ</button>
             </div>
@@ -85,8 +118,14 @@
             <div id="productGrid" class="row g-4"></div>
 
             <!-- Pagination -->
-            <nav class="d-flex justify-content-center mt-4" aria-label="Pagination">
-              <ul id="pagination" class="pagination pagination-rounded mb-0"></ul>
+            <nav
+              class="d-flex justify-content-center mt-4"
+              aria-label="Pagination"
+            >
+              <ul
+                id="pagination"
+                class="pagination pagination-rounded mb-0"
+              ></ul>
             </nav>
           </main>
         </div>
@@ -106,7 +145,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/navigation-mega-menu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/glide.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
     <script src="js/category-tabs-switcher.js"></script>
     <script src="js/faq-accordion-toggle.js"></script>
     <!-- Data + collection logic -->
@@ -121,16 +163,35 @@
     <script src="js/module-manager.js" type="module"></script>
 
     <!-- ========== PRODUCTS PAGE: Offcanvas Filter (Mobile) ========== -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="filterOffcanvas" aria-labelledby="filterOffcanvasLabel">
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="filterOffcanvas"
+      aria-labelledby="filterOffcanvasLabel"
+    >
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="filterOffcanvasLabel">Bộ lọc nâng cao</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Đóng"></button>
+        <h5 class="offcanvas-title" id="filterOffcanvasLabel">
+          Bộ lọc nâng cao
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Đóng"
+        ></button>
       </div>
       <div class="offcanvas-body">
         <div id="filters-offcanvas"><!-- JS render Brand + Price --></div>
         <div class="d-grid gap-2 mt-3">
-          <button class="btn btn-primary" data-bs-dismiss="offcanvas">Áp dụng</button>
-          <button class="btn btn-outline-secondary d-none" id="btnClearFilterMobile">Xoá lọc</button>
+          <button class="btn btn-primary" data-bs-dismiss="offcanvas">
+            Áp dụng
+          </button>
+          <button
+            class="btn btn-outline-secondary d-none"
+            id="btnClearFilterMobile"
+          >
+            Xoá lọc
+          </button>
         </div>
       </div>
     </div>
