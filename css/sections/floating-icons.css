@@ -46,7 +46,7 @@
 .fixed-icon-left {
   position: fixed;
   left: 1.25rem;
-  bottom: 5rem;
+  bottom: calc(5rem + 0.75rem + 48px);
   z-index: 9999;
 }
 
@@ -192,7 +192,7 @@
 .notify-panel{
   position:fixed;
   left: calc(1.25rem + 24px); 
-  bottom:6.5rem;  
+  bottom: calc(5rem + 0.75rem + 48px + 0.75rem + 48px);
   width:320px;
   max-width:90%;
   background:#003D99;
@@ -336,7 +336,7 @@
 @media (max-width: 1024px) and (min-width: 768px) {
   .fixed-icon-left {
     left: 0.75rem;
-    bottom: 3.5rem;
+    bottom: calc(3.5rem + 0.75rem + 48px);
   }
   .fixed-icons-right {
     right: 0.75rem;
@@ -348,13 +348,27 @@
     height: 48px;
     font-size: 1.5rem;
   }
+  
+  .notify-panel{
+    left: calc(0.75rem + 24px);
+    bottom: calc(3.5rem + 0.75rem + 48px + 0.75rem + 48px);
+    width: 320px;
+    max-width: 90%;
+  }
+  
+  .contact-panel{
+    right: 80px;
+    bottom: calc(3.5rem + 0.75rem + 48px + 0.5rem);
+    width: 300px;
+    max-width: 92%;
+  }
 }
 
 /* Mobile layout */
 @media (max-width: 767.98px) {
   .fixed-icon-left {
     left: 0.75rem;
-    bottom: 2.2rem;
+    bottom: calc(2.2rem + 0.75rem + 48px);
   }
   .fixed-icons-right {
     right: 0.75rem;
@@ -369,13 +383,13 @@
   
   .notify-panel{
     left:0.75rem; /* align with bell icon */
-    bottom:2.5rem;
+    bottom: calc(2.2rem + 0.75rem + 48px + 0.75rem + 48px);
     width:calc(100% - 1.5rem);
   }
   
   .contact-panel{
     right: .5rem;
-    bottom: 2.5rem;
+    bottom: calc(2.2rem + 0.75rem + 48px + 0.75rem + 48px);
     width: calc(100% - 1rem);
   }
   
