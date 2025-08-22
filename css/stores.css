@@ -1,0 +1,568 @@
+/* ========== STORES PAGE STYLES ========== */
+
+/* Hero Section - Sử dụng cùng style như about, favorites, cart */
+.stores-hero {
+  min-height: 400px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-chem-stores {
+  background-color: #0b3e82;
+  background-image:
+    radial-gradient(ellipse at center, rgba(11,82,165,.88), rgba(1,47,108,.96)),
+    radial-gradient(circle at 25px 25px, rgba(255,255,255,.06) 1.2px, transparent 1.2px),
+    radial-gradient(circle at 0 0, rgba(255,255,255,.04) .9px, transparent .9px);
+  background-size: auto, 60px 60px, 60px 60px;
+  background-position: center, 0 0, 30px 30px;
+}
+
+.breadcrumb-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+/* Breadcrumb styling cho stores-hero - giống hệt about, favorites, cart */
+.stores-hero .breadcrumb {
+  --bs-breadcrumb-divider: '›';
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stores-hero .breadcrumb .breadcrumb-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.stores-hero .breadcrumb .breadcrumb-item a:hover {
+  color: #e6f7ff;
+}
+
+.stores-hero .breadcrumb .breadcrumb-item.active {
+  color: #fff;
+  opacity: .95;
+}
+
+.stores-hero .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255,255,255,.95);
+}
+
+/* Info Cards Section */
+.stores-info-section {
+  background: #ffffff;
+}
+
+.stores-info-container {
+  background: #ffffff;
+  border: 2px solid #0b3e82;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(11, 62, 130, 0.1);
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.stores-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.stores-info-card {
+  flex: 1;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  gap: 0.75rem;
+}
+
+/* Removed divider lines between cards */
+
+.stores-info-card:hover {
+  transform: translateY(-1px);
+}
+
+.stores-info-icon {
+  width: 56px;
+  height: 56px;
+  background: #0b3e82;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-size: 1.75rem;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.stores-info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.stores-info-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.35rem;
+  line-height: 1.2;
+}
+
+.stores-info-text {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Store Locator Section */
+.stores-locator-section {
+  background: #f8f9fa;
+}
+
+/* Make map match store listings height on desktop */
+.stores-locator-section .row.g-4 {
+  align-items: stretch;
+}
+
+@media (min-width: 992px) {
+  .stores-sidebar,
+  .stores-map-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .stores-map-container .stores-map,
+  .stores-map-container iframe {
+    height: 100% !important;
+    min-height: 100%;
+  }
+}
+
+.stores-sidebar {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 0.75rem 0.5rem; /* was 1.5rem */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.stores-filters .form-label {
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+/* Province Filter - Nền xanh đậm, chữ trắng */
+.stores-filters .province-filter {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #0b3e82 !important;
+  color: #fff !important;
+  border: 2px solid #0b3e82 !important;
+  border-radius: 0.6rem;
+  padding: 0.42rem 0.8rem 0.42rem 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' fill='white'%3E%3Cpath d='M4 6l3 3 3-3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.4rem center;
+  font-size: 0.84rem;
+  width: 100%;
+  min-width: 140px;
+  max-width: 160px;
+  white-space: nowrap;
+  margin: 0;
+}
+
+/* District Filter - Nền xám nhạt, viền xanh, chữ đen */
+.stores-filters .district-filter {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #f8f9fa !important;
+  color: #1f2937 !important;
+  border: 2px solid #0b3e82 !important;
+  border-radius: 0.6rem;
+  padding: 0.42rem 0.8rem 0.42rem 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' fill='%230b3e82'%3E%3Cpath d='M4 6l3 3 3-3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.4rem center;
+  font-size: 0.84rem;
+  width: 100%;
+  min-width: 140px;
+  max-width: 160px;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.stores-filters .province-filter:focus,
+.stores-filters .district-filter:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(11, 62, 130, 0.2);
+}
+
+.stores-filters .province-filter option,
+.stores-filters .district-filter option { 
+  color: #111; 
+}
+
+/* Reduce gutters within filter row */
+.stores-filters .row { 
+  row-gap: .2rem; 
+  --bs-gutter-x: .3rem;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.stores-filters .col-auto {
+  flex-shrink: 0;
+}
+
+/* Responsive adjustments for filters */
+@media (max-width: 767.98px) {
+  .stores-filters .row {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  
+  .stores-filters .province-filter,
+  .stores-filters .district-filter {
+    min-width: 145px;
+    max-width: 170px;
+    font-size: 0.82rem;
+    padding: 0.42rem 0.7rem 0.42rem 0.5rem;
+    background-position: right 0.35rem center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .stores-filters .row {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .stores-filters .province-filter,
+  .stores-filters .district-filter {
+    min-width: 150px;
+    max-width: 170px;
+    font-size: 0.82rem;
+    padding: 0.4rem 0.7rem 0.4rem 0.5rem;
+    background-position: right 0.35rem center;
+  }
+}
+
+@media (min-width: 992px) {
+  .stores-filters .row {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+  
+  .stores-filters .province-filter,
+  .stores-filters .district-filter {
+    min-width: 160px;
+    max-width: 180px;
+    font-size: 0.84rem;
+    padding: 0.42rem 0.8rem 0.42rem 0.5rem;
+    background-position: right 0.4rem center;
+  }
+}
+
+
+/* Store List */
+.stores-list {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.store-item {
+  padding: 0.85rem 0.85rem;
+  border: 2px solid #0b3e82;
+  border-radius: 0.8rem;
+  margin-bottom: 0.85rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  background: #fff;
+}
+
+.store-item:hover {
+  border-color: #0b3e82;
+  box-shadow: 0 6px 16px rgba(11, 62, 130, 0.15);
+}
+
+.store-item.active {
+  border-color: #0b3e82;
+  background-color: #eef5ff;
+}
+
+.store-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0b3e82;
+  margin-bottom: 0.5rem;
+}
+
+.store-address,
+.store-hotline {
+  font-size: 0.9rem;
+  color: #1f2937;
+  margin-bottom: 0.2rem;
+}
+
+.store-address strong,
+.store-hotline strong {
+  color: #111827;
+}
+
+/* Map Container */
+.stores-map-container {
+  background: transparent;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.stores-map {
+  height: 500px;
+  position: relative;
+}
+
+/* Map embed should have no visible border/background */
+.stores-map iframe {
+  border: 0 !important;
+  border-radius: 0 !important;
+  display: block;
+}
+
+.map-placeholder {
+  height: 100%;
+  background: #f8f9fa;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-content {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+  z-index: 10;
+}
+
+.map-location-info h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.map-location-info p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.map-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.map-actions .btn {
+  font-size: 0.85rem;
+}
+
+.map-overlay {
+  text-align: center;
+  color: #6b7280;
+}
+
+/* Responsive Design - Đồng bộ với Navbar Breakpoints */
+/* Desktop: 1024px and above (default) */
+@media (min-width: 1024px) {
+  .stores-info-container {
+    height: 90px;
+    padding: 1rem 2rem;
+  }
+  
+  .stores-info-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.75rem;
+  }
+  
+  .stores-info-title {
+    font-size: 1.1rem;
+  }
+  
+  .stores-info-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet: 768px to 1023px */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .stores-map {
+    height: 480px;
+    margin-top: 2rem;
+  }
+  
+  .stores-info-container {
+    height: 90px;
+    padding: 1rem 1.5rem;
+  }
+  
+  .stores-info-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.75rem;
+  }
+  
+  .stores-info-title {
+    font-size: 1.1rem;
+  }
+  
+  .stores-info-text {
+    font-size: 0.9rem;
+  }
+
+  /* Tablet: Limit store listings height to 300px with scroll */
+  .stores-list {
+    max-height: 300px;
+    height: 300px;
+    overflow-y: auto;
+  }
+}
+
+/* Mobile: Below 768px */
+@media (max-width: 767px) {
+  .breadcrumb-title {
+    font-size: 2rem;
+  }
+  
+  .stores-info-container {
+    height: auto;
+    min-height: 90px;
+    padding: 1rem;
+  }
+  
+  .stores-info-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .stores-info-card {
+    padding: 0.75rem 0;
+    width: 100%;
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+  
+  .stores-info-card:not(:last-child)::after {
+    display: none;
+  }
+  
+  .stores-info-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.75rem;
+    margin: 0;
+  }
+  
+  .stores-info-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+  }
+  
+  .stores-info-text {
+    font-size: 0.9rem;
+  }
+  
+  .stores-map {
+    height: 350px;
+    margin-top: 2rem;
+  }
+
+  /* Mobile: Limit store listings height to 300px with scroll */
+  .stores-list {
+    max-height: 300px;
+    height: 300px;
+    overflow-y: auto;
+  }
+}
+
+/* Small Mobile: Below 576px */
+@media (max-width: 575px) {
+  .breadcrumb-title {
+    font-size: 1.75rem;
+  }
+  
+  .stores-info-container {
+    padding: 0.75rem;
+  }
+  
+  .stores-info-card {
+    padding: 0.5rem 0;
+  }
+  
+  .stores-info-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.75rem;
+    margin: 0;
+  }
+  
+  .stores-info-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+  }
+  
+  .stores-info-text {
+    font-size: 0.9rem;
+  }
+  
+  .stores-sidebar {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,253 @@
+/* ========== CART PAGE STYLES ========== */
+
+/* Hero Section - Sử dụng cùng style như about và favorites */
+.cart-hero {
+  min-height: 400px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-chem-cart {
+  background-color: #0b3e82;
+  background-image:
+    radial-gradient(ellipse at center, rgba(11,82,165,.88), rgba(1,47,108,.96)),
+    radial-gradient(circle at 25px 25px, rgba(255,255,255,.06) 1.2px, transparent 1.2px),
+    radial-gradient(circle at 0 0, rgba(255,255,255,.04) .9px, transparent .9px);
+  background-size: auto, 60px 60px, 60px 60px;
+  background-position: center, 0 0, 30px 30px;
+}
+
+.breadcrumb-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+/* Breadcrumb styling cho cart-hero - giống hệt about và favorites */
+.cart-hero .breadcrumb {
+  --bs-breadcrumb-divider: '›';
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-hero .breadcrumb .breadcrumb-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.cart-hero .breadcrumb .breadcrumb-item a:hover {
+  color: #e6f7ff;
+}
+
+.cart-hero .breadcrumb .breadcrumb-item.active {
+  color: #fff;
+  opacity: .95;
+}
+
+.cart-hero .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255,255,255,.95);
+}
+
+/* Content Section */
+.cart-content-section {
+  min-height: 500px;
+}
+
+.cart-main-content {
+  padding: 3rem 0;
+}
+
+.cart-empty-state {
+  text-align: center;
+}
+
+.cart-empty-icon {
+  font-size: 5rem;
+  color: #d1d5db;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.cart-empty-text {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Cart Sidebar */
+.cart-sidebar {
+  position: sticky;
+  top: 2rem;
+}
+
+.cart-delivery-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.cart-delivery-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.cart-delivery-form .form-label {
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.cart-delivery-form .form-control,
+.cart-delivery-form .form-select {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-delivery-form .form-control:focus,
+.cart-delivery-form .form-select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-check {
+  margin-top: 1rem;
+}
+
+.form-check-input:checked {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.form-check-label {
+  color: #374151;
+  font-weight: 500;
+}
+
+/* Company Invoice Fields */
+.company-invoice-fields {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+}
+
+.company-invoice-fields .form-label {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.company-invoice-fields .form-control,
+.company-invoice-fields textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+}
+
+.company-invoice-fields .form-control:focus,
+.company-invoice-fields textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  outline: none;
+}
+
+.company-invoice-fields textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Animation for slide down/up */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Checkbox styling */
+.form-check-input:checked {
+  background-color: #dc2626;
+  border-color: #dc2626;
+}
+
+.form-check-input:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 0.25rem rgba(220, 38, 38, 0.25);
+}
+
+.form-check-label {
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .cart-sidebar {
+    position: static;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-title {
+    font-size: 2rem;
+  }
+  
+  .cart-empty-icon {
+    font-size: 4rem;
+  }
+  
+  .cart-empty-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .breadcrumb-title {
+    font-size: 1.75rem;
+  }
+  
+  .cart-empty-icon {
+    font-size: 3rem;
+  }
+  
+  .cart-empty-text {
+    font-size: 1rem;
+  }
+  
+  .cart-delivery-card {
+    padding: 1rem;
+  }
+}

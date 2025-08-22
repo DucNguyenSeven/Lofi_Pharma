@@ -1,0 +1,417 @@
+/* ========== PRODUCT DETAIL PAGE: Main Layout ========== */
+.product-detail-section .card { 
+  border-radius: 12px; 
+  overflow: hidden;
+}
+
+/* ========== PRODUCT DETAIL PAGE: Quantity Controls ========== */
+.qty-group {
+  max-width: 120px;
+}
+
+.qty-group .btn { 
+  width: 32px; 
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 2px solid #e9ecef;
+  background: #fff;
+  color: #6c757d;
+  /* Bỏ transition và hover effects */
+  line-height: 1;
+  padding: 0;
+}
+
+/* Bỏ hiệu ứng hover cho button + và - */
+.qty-group .btn:hover {
+  background: #fff;
+  border-color: #e9ecef;
+  color: #6c757d;
+}
+
+.qty-group input { 
+  height: 36px; 
+  text-align: center;
+  font-weight: 600;
+  border: 2px solid #e9ecef;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  /* Loại bỏ mũi tên tăng giảm bên trong input */
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  font-size: 0.9rem;
+}
+
+/* Bỏ hiệu ứng hover cho input số lượng */
+.qty-group input:hover,
+.qty-group input:focus {
+  border-color: #e9ecef;
+  box-shadow: none;
+}
+
+/* Ẩn mũi tên cho Firefox */
+.qty-group input::-webkit-outer-spin-button,
+.qty-group input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* ========== PRODUCT DETAIL PAGE: Image Gallery ========== */
+#pdMainImg {
+  border-radius: 8px;
+  background: #f8f9fa;
+  max-height: 400px;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Slide animation for main image */
+#pdMainImg {
+  will-change: transform, opacity;
+}
+
+@keyframes slideInLeftPD {
+  from { transform: translateX(-24px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRightPD {
+  from { transform: translateX(24px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+#pdMainImg.slide-in-left { animation: slideInLeftPD 240ms ease both; }
+#pdMainImg.slide-in-right { animation: slideInRightPD 240ms ease both; }
+
+/* Navigation Buttons */
+.btn-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e9ecef;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.btn-nav:hover {
+  background: #ffffff;
+  border-color: #0d47a1;
+  color: #0d47a1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+/* Responsive Navigation Buttons */
+@media (max-width: 767.98px) {
+  .btn-nav {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  
+  .prev-btn {
+    left: 5px;
+  }
+  
+  .next-btn {
+    right: 5px;
+  }
+}
+
+#pdThumbs {
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#pdThumbs img { 
+  width: 60px; 
+  height: 60px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+  border: 2px solid #eaecef;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#pdThumbs button { 
+  background: transparent; 
+  border: none; 
+  padding: 0; 
+  border-radius: 8px;
+}
+
+#pdThumbs button.active img { 
+  outline: 2px solid #0d47a1; 
+  border-color: #0d47a1;
+}
+
+#pdThumbs button:hover img {
+  transform: scale(1.05);
+  border-color: #0d47a1;
+}
+
+/* ========== PRODUCT DETAIL PAGE: Price & Brand ========== */
+#pdPrice { 
+  color: #dc3545; 
+  font-weight: 800; 
+}
+
+#pdOldPrice { 
+  opacity: 0.6; 
+  font-size: 1.1rem;
+}
+
+#pdDiscount {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+}
+
+#pdBrand {
+  color: #0d47a1;
+  text-decoration: none;
+}
+
+#pdBrand:hover {
+  text-decoration: underline;
+}
+
+/* ========== PRODUCT DETAIL PAGE: Tabs ========== */
+.nav-tabs {
+  border-bottom: 2px solid #eaecef;
+}
+
+.nav-tabs .nav-link { 
+  font-weight: 700; 
+  color: #6c757d;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 1rem 1.5rem;
+  margin-bottom: -2px;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #0d47a1;
+  border-color: transparent;
+}
+
+.nav-tabs .nav-link.active { 
+  color: #0d47a1;
+  background: transparent;
+  border-bottom-color: #0d47a1;
+}
+
+.tab-content { 
+  background: #fff; 
+  border-radius: 0 0 8px 8px;
+}
+
+.tab-pane {
+  min-height: 200px;
+}
+
+/* ========== PRODUCT DETAIL PAGE: Promotions ========== */
+#pdPromos li {
+  margin-bottom: 0.5rem;
+  color: #495057;
+}
+
+#pdPromos li:last-child {
+  margin-bottom: 0;
+}
+
+/* ========== PRODUCT DETAIL PAGE: Action Buttons ========== */
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+.action-buttons .btn {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 1rem;
+  height: 48px;
+  padding: 0.75rem 1.5rem;
+}
+
+#btnBuy {
+  background: #0d47a1;
+  border-color: #0d47a1;
+  min-width: 140px;
+  flex: 1;
+  font-weight: bold;
+  font-size: 1rem;
+  height: 48px;
+  padding: 0.75rem 1.5rem;
+}
+
+#btnBuy:hover {
+  background: #0a3d8a;
+  border-color: #0a3d8a;
+}
+
+.action-buttons .btn-outline-secondary {
+  flex: 1;
+  min-width: 140px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  /* Đảm bảo text không xuống hàng và button có kích thước đồng đều */
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  /* Đảm bảo button có đủ không gian và đồng đều với button Chọn mua */
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* Đảm bảo button có cùng kích thước */
+  flex: 1;
+  min-width: 140px;
+  transition: all 0.2s ease;
+}
+
+.action-buttons .btn-outline-secondary:hover {
+  background: #0d47a1;
+  border-color: #0d47a1;
+  color: #ffffff;
+}
+
+/* ========== PRODUCT DETAIL PAGE: Related Products ========== */
+#relatedProducts .card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#relatedProducts .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* ========== PRODUCT DETAIL PAGE: Commitment Numbers ========== */
+.commit-number-badge {
+  width: 25px;
+  height: 25px;
+  min-width: 25px;
+  border-radius: 50%;
+  background: #0d47a1;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+/* ========== PRODUCT DETAIL PAGE: Commitment Title ========== */
+.card-body h5.fw-bold.text-center.mb-3 {
+  color: #0d47a1 !important;
+  font-size: 1.1rem !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* ========== PRODUCT DETAIL PAGE: Service Icons ========== */
+.service-icons-section .bg-light {
+  background-color: #f8f9fa !important;
+  border: 1px solid #e9ecef;
+}
+
+.service-icons-section .rounded-circle {
+  transition: all 0.2s ease;
+}
+
+.service-icons-section .rounded-circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.service-icon-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* ========== PRODUCT DETAIL PAGE: Responsive ========== */
+@media (max-width: 991.98px) {
+  .product-detail-section .row {
+    flex-direction: column;
+  }
+  
+  #pdMainImg {
+    min-height: 250px;
+  }
+  
+  .nav-tabs .nav-link {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Điều chỉnh layout cho tablet */
+  .col-lg-3 .card {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #pdThumbs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+  
+  #pdThumbs img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .qty-group {
+    max-width: 140px !important;
+  }
+  
+  .qty-group .btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  
+  .qty-group input {
+    height: 36px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .action-buttons .btn {
+    width: 100%;
+  }
+}

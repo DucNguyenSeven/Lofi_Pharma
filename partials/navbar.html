@@ -1,0 +1,383 @@
+
+<nav class="navbar navbar-expand-lg bg-white border-bottom custom-navbar">
+  <div class="container d-flex align-items-center">
+    
+    <div class="navbar-top-row">
+      
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/logo.png" alt="Lofi Pharma Logo" class="me-2" />
+      </a>
+
+      
+      <div class="navbar-search-row d-lg-none d-md-flex d-none d-sm-none">
+        <form class="d-flex align-items-center nav-search" role="search">
+          <input
+            class="form-control search-input"
+            type="search"
+            placeholder="Bạn muốn tìm gì?"
+            aria-label="Search"
+          />
+          <button class="btn btn-search" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+      </div>
+
+      
+      <div class="navbar-right-icons">
+        
+        <div class="d-flex align-items-center nav-icons d-lg-none d-md-flex">
+          <a
+            href="favorites.html"
+            class="icon-btn me-2 position-relative"
+            title="Yêu thích"
+          >
+            <div class="icon-square">
+              <i class="bi bi-heart"></i>
+              <span class="badge badge-custom">0</span>
+            </div>
+          </a>
+          <a
+            href="cart.html"
+            class="icon-btn position-relative"
+            title="Giỏ hàng"
+          >
+            <div class="icon-square">
+              <i class="bi bi-cart"></i>
+              <span class="badge badge-custom">0</span>
+            </div>
+          </a>
+        </div>
+
+        <button
+          class="navbar-toggler d-lg-none d-md-block"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileOffcanvas"
+          aria-controls="mobileOffcanvas"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <div class="icon-square">
+            <i class="bi bi-list"></i>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    
+    <div class="navbar-search-row d-lg-none d-md-none">
+      <form class="d-flex align-items-center nav-search" role="search">
+        <input
+          class="form-control search-input"
+          type="search"
+          placeholder="Thực phẩm chức năng..."
+          aria-label="Search"
+        />
+        <button class="btn btn-search" type="submit">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
+    </div>
+    
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul id="navScroll" class="navbar-nav mb-2 mb-lg-0 align-items-center">
+        <li class="nav-item">
+          <a class="nav-link active nav-home" href="index.html">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">Giới thiệu</a>
+        </li>
+        <li
+          class="nav-item dropdown dropdown-mega position-static"
+          id="menu-san-pham"
+        >
+          <a
+            class="nav-link dropdown-toggle"
+            href="products.html"
+            id="sanphamDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            data-bs-auto-close="outside"
+            aria-expanded="false"
+            aria-haspopup="true"
+            >Sản phẩm</a
+          >
+
+          
+          <div
+            class="dropdown-menu mega-menu border-0 shadow"
+            aria-labelledby="sanphamDropdown"
+          >
+            <div class="mega-inner py-2">
+              <div class="container">
+                <div class="row g-3">
+                  
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <h6 class="dropdown-header text-uppercase">
+                      Thực phẩm chức năng
+                    </h6>
+                    <a class="dropdown-item" href="products.html"
+                      >Vitamin & Khoáng chất</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Sinh lý - Nội tiết tố</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Tăng cường chức năng</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Hỗ trợ điều trị</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Hỗ trợ tiêu hóa</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Thần kinh não</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Hỗ trợ làm đẹp</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Sức khoẻ tim mạch</a
+                    >
+                    <a class="dropdown-item" href="products.html">Dinh dưỡng</a>
+                  </div>
+
+                  
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <h6 class="dropdown-header text-uppercase">Dược mỹ phẩm</h6>
+                    <a class="dropdown-item" href="products.html"
+                      >Chăm sóc da mặt</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Chăm sóc cơ thể</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Giải pháp làn da</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Chăm sóc tóc - da đầu</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Mỹ phẩm trang điểm</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Chăm sóc da vùng mắt</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Sản phẩm từ thiên nhiên</a
+                    >
+                  </div>
+
+                  
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <h6 class="dropdown-header text-uppercase">
+                      Chăm sóc cá nhân
+                    </h6>
+                    <a class="dropdown-item" href="products.html"
+                      >Hỗ trợ tình dục</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Thực phẩm - Đồ uống</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Vệ sinh cá nhân</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Chăm sóc răng miệng</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Đồ dùng gia đình</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Hàng tổng hợp</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Tinh dầu các loại</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Thiết bị làm đẹp</a
+                    >
+                  </div>
+
+                  
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <h6 class="dropdown-header text-uppercase">
+                      Thiết bị y tế
+                    </h6>
+                    <a class="dropdown-item" href="products.html"
+                      >Dụng cụ y tế</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Dụng cụ theo dõi</a
+                    >
+                    <a class="dropdown-item" href="products.html"
+                      >Dụng cụ sơ cứu</a
+                    >
+                    <a class="dropdown-item" href="products.html">Khẩu trang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="health.html">Góc sức khỏe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="video.html">Video</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Liên hệ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="consultation.html">Đặt lịch tư vấn</a>
+        </li>
+      </ul>
+
+      
+      <div class="d-flex align-items-center d-none d-lg-flex">
+        <div class="d-flex align-items-center nav-arrows">
+          <button class="btn btn-arrow left me-1" type="button" title="Trước">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <button class="btn btn-arrow right" type="button" title="Sau">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+        
+        <form class="d-flex align-items-center nav-search" role="search">
+          <input
+            class="form-control search-input"
+            type="search"
+            placeholder="Thực phẩm chức năng..."
+            aria-label="Search"
+          />
+          <button class="btn btn-search" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+        
+        <div class="d-flex align-items-center nav-icons">
+          <a href="stores.html" class="icon-btn me-2" title="Hệ thống cửa hàng">
+            <div class="icon-square"><i class="bi bi-geo-alt"></i></div>
+          </a>
+          <a
+            href="favorites.html"
+            class="icon-btn me-2 position-relative"
+            title="Yêu thích"
+          >
+            <div class="icon-square">
+              <i class="bi bi-heart"></i>
+              <span class="badge badge-custom">0</span>
+            </div>
+          </a>
+          <a
+            href="cart.html"
+            class="icon-btn position-relative"
+            title="Giỏ hàng"
+          >
+            <div class="icon-square">
+              <i class="bi bi-cart"></i>
+              <span class="badge badge-custom">0</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<div
+  class="offcanvas offcanvas-start mobile-offcanvas"
+  tabindex="-1"
+  id="mobileOffcanvas"
+  aria-labelledby="mobileOffcanvasLabel"
+>
+  <div class="offcanvas-header mobile-offcanvas-header">
+    <div class="d-flex align-items-center gap-3">
+      <div class="mobile-user-avatar" aria-hidden="true">
+        <i class="bi bi-person"></i>
+      </div>
+      <div class="mobile-auth-text">
+        <a
+          class="mobile-auth-title text-white text-decoration-none"
+          id="mobileOffcanvasLabel"
+          href="login.html"
+          >Đăng nhập</a
+        >
+        <a
+          class="mobile-auth-subtitle text-white text-decoration-none"
+          href="register.html"
+          >Đăng ký</a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="offcanvas-body p-0">
+    <nav class="mobile-menu" aria-label="Mobile Navigation">
+      <ul class="list-unstyled mb-0">
+        <li><a class="mobile-menu-link" href="index.html">Trang chủ</a></li>
+        <li><a class="mobile-menu-link" href="about.html">Giới thiệu</a></li>
+        <li>
+          <div
+            class="mobile-menu-collapsible"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobileProducts"
+            aria-expanded="false"
+            aria-controls="mobileProducts"
+          >
+            <span>Sản phẩm</span>
+            <i class="bi bi-plus"></i>
+          </div>
+          <div id="mobileProducts" class="collapse">
+            <ul class="list-unstyled mobile-submenu">
+              <li>
+                <a class="mobile-submenu-link" href="products.html"
+                  >Thực phẩm chức năng</a
+                >
+              </li>
+              <li>
+                <a class="mobile-submenu-link" href="products.html"
+                  >Dược mỹ phẩm</a
+                >
+              </li>
+              <li>
+                <a class="mobile-submenu-link" href="products.html"
+                  >Chăm sóc cá nhân</a
+                >
+              </li>
+              <li>
+                <a class="mobile-submenu-link" href="products.html"
+                  >Thiết bị y tế</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="mobile-menu-link" href="health.html">Góc sức khỏe</a></li>
+        <li><a class="mobile-menu-link" href="video.html">Video</a></li>
+        <li><a class="mobile-menu-link" href="contact.html">Liên hệ</a></li>
+        <li>
+          <a class="mobile-menu-link" href="consultation.html"
+            >Đặt lịch tư vấn</a
+          >
+        </li>
+      </ul>
+      <hr class="mobile-divider" />
+      <ul class="list-unstyled mb-0">
+        <li>
+          <a class="mobile-menu-link" href="stores.html">Hệ thống cửa hàng</a>
+        </li>
+        <li>
+          <a class="mobile-menu-link" href="favorites.html"
+            >Sản phẩm yêu thích</a
+          >
+        </li>
+        <li><a class="mobile-menu-link" href="cart.html">Giỏ hàng</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>

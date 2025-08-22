@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hệ thống cửa hàng - Lofi Pharma</title>
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="css/stores.css" />
+    <link rel="stylesheet" href="css/sections/topbar.css" />
+    <link rel="stylesheet" href="css/sections/navbar.css" />
+    <link rel="stylesheet" href="css/sections/newsletter.css" />
+    <link rel="stylesheet" href="css/sections/footer.css" />
+    <link rel="stylesheet" href="css/sections/floating-icons.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+
+  <body>
+    <div data-include="partials/topbar.html"></div>
+    <div data-include="partials/navbar.html"></div>
+
+    
+    <section
+      class="stores-hero bg-chem-stores d-flex align-items-center justify-content-center"
+    >
+      <div class="container text-center text-white">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <h1 class="breadcrumb-title mb-2 text-white">Hệ thống cửa hàng</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0 justify-content-center">
+                <li class="breadcrumb-item">
+                  <a href="index.html">Trang chủ</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Hệ thống cửa hàng
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="stores-info-section py-5 bg-white">
+      <div class="container">
+        <div class="stores-info-container">
+          <div class="stores-info-row">
+            <div class="stores-info-card">
+              <div class="stores-info-icon">
+                <i class="bi bi-building"></i>
+              </div>
+              <div class="stores-info-content">
+                <h3 class="stores-info-title">Hệ thống 8 cửa hàng</h3>
+                <p class="stores-info-text">Trên toàn quốc</p>
+              </div>
+            </div>
+            <div class="stores-info-card">
+              <div class="stores-info-icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <div class="stores-info-content">
+                <h3 class="stores-info-title">Hơn 100 nhân viên</h3>
+                <p class="stores-info-text">Để phục vụ quý khách</p>
+              </div>
+            </div>
+            <div class="stores-info-card">
+              <div class="stores-info-icon">
+                <i class="bi bi-clock"></i>
+              </div>
+              <div class="stores-info-content">
+                <h3 class="stores-info-title">Mở cửa 8-22h</h3>
+                <p class="stores-info-text">Cả CN & Lễ tết</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="stores-locator-section py-5 bg-light">
+      <div class="container">
+        <div class="row g-4">
+          
+          <div class="col-12 col-lg-4">
+            <div class="stores-sidebar">
+              
+              <div class="stores-filters mb-4">
+                <div class="row g-3 justify-content-start">
+                  <div class="col-auto">
+                    <select
+                      class="form-select province-filter"
+                      id="province-select"
+                      aria-label="Chọn tỉnh thành"
+                    >
+                      <option value="">Chọn tỉnh thành</option>
+                      <option value="hanoi">Hà Nội</option>
+                      <option value="hcm">TP. Hồ Chí Minh</option>
+                      <option value="danang">Đà Nẵng</option>
+                      <option value="thanhhoa">Thanh Hóa</option>
+                      <option value="bacgiang">Bắc Giang</option>
+                    </select>
+                  </div>
+                  <div class="col-auto">
+                    <select
+                      class="form-select district-filter"
+                      id="district-select"
+                      aria-label="Chọn quận/huyện"
+                    >
+                      <option value="">Chọn quận/huyện</option>
+                      <option value="badinh">Ba Đình</option>
+                      <option value="hoankiem">Hoàn Kiếm</option>
+                      <option value="tayho">Tây Hồ</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="stores-list">
+                <div class="store-item active">
+                  <h4 class="store-name">Lofi Theme Hà Nội</h4>
+                  <p class="store-address">
+                    <strong>Địa chỉ:</strong> Tầng 6 - 266 Đội Cấn, Phường Liễu
+                    Giai, Quận Ba Đình, Hà Nội
+                  </p>
+                  <p class="store-hotline">
+                    <strong>Hotline:</strong> (+84)398 454 346
+                  </p>
+                </div>
+
+                <div class="store-item">
+                  <h4 class="store-name">Lofi Theme Thanh Hóa</h4>
+                  <p class="store-address">
+                    <strong>Địa chỉ:</strong> 123 Đường ABC, Phường XYZ, TP.
+                    Thanh Hóa
+                  </p>
+                  <p class="store-hotline">
+                    <strong>Hotline:</strong> 1900 6750
+                  </p>
+                </div>
+
+                <div class="store-item">
+                  <h4 class="store-name">Lofi Theme Bắc Giang</h4>
+                  <p class="store-address">
+                    <strong>Địa chỉ:</strong> 456 Đường DEF, Phường GHI, TP. Bắc
+                    Giang
+                  </p>
+                  <p class="store-hotline">
+                    <strong>Hotline:</strong> 1900 6750
+                  </p>
+                </div>
+
+                <div class="store-item">
+                  <h4 class="store-name">Lofi Theme Đà Nẵng</h4>
+                  <p class="store-address">
+                    <strong>Địa chỉ:</strong> 789 Đường MNO, Quận Hải Châu, TP.
+                    Đà Nẵng
+                  </p>
+                  <p class="store-hotline">
+                    <strong>Hotline:</strong> 1900 6750
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-12 col-lg-8">
+            <div class="stores-map-container">
+              <div class="stores-map">
+                
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0964843001347!2d105.8123!3d21.0285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab145bf89bd7%3A0xd94a86902c16d164!2zVHLhuqduIDYsIFRvw6AgTMOkZGVjbywgMjY2IFAuIMSQ4bqhaSBD4bqndSwgQmEgxJDhuqdpLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style="border: 0; border-radius: 1rem"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Bản đồ cửa hàng Lofi Pharma"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <div data-include="partials/newsletter.html"></div>
+
+    
+    <div data-include="partials/footer.html"></div>
+
+    
+    <div data-include="partials/floating-icons.html"></div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/include-html.js"></script>
+    <script src="js/module-manager.js" type="module"></script>
+  </body>
+</html>

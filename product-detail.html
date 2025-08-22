@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết sản phẩm - Lofi Pharma</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/sections/topbar.css" />
+    <link rel="stylesheet" href="css/sections/navbar.css" />
+    <link rel="stylesheet" href="css/sections/newsletter.css" />
+    <link rel="stylesheet" href="css/sections/footer.css" />
+    <link rel="stylesheet" href="css/sections/floating-icons.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/product-detail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div data-include="partials/topbar.html"></div>
+    <div data-include="partials/navbar.html"></div>
+
+    <section class="product-hero bg-chem d-flex align-items-center">
+      <div class="container text-center py-5">
+        <h1 id="pdPageTitle" class="display-6 fw-bold mb-2">
+          Chi tiết sản phẩm
+        </h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+            <li class="breadcrumb-item">
+              <a href="products.html">Tất cả sản phẩm</a>
+            </li>
+            <li
+              id="pdBreadcrumb"
+              class="breadcrumb-item active"
+              aria-current="page"
+            >
+              Sản phẩm
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <main class="product-detail-section py-4">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body text-center position-relative">
+                <img id="pdMainImg" src="" alt="" class="img-fluid rounded" />
+
+                
+                <button
+                  class="btn btn-nav prev-btn"
+                  type="button"
+                  title="Ảnh trước"
+                >
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <button
+                  class="btn btn-nav next-btn"
+                  type="button"
+                  title="Ảnh sau"
+                >
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+
+                <div
+                  id="pdThumbs"
+                  class="d-flex gap-2 mt-3 justify-content-center"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="mb-2 text-muted">
+              Thương hiệu: <a id="pdBrand" href="#" class="fw-semibold"></a>
+            </div>
+            <h2 id="pdTitle" class="fw-bold h4 mb-3">Tên sản phẩm</h2>
+            <div class="d-flex align-items-baseline gap-3 mb-3">
+              <div id="pdPrice" class="h3 text-danger fw-bold mb-0"></div>
+              <div
+                id="pdOldPrice"
+                class="text-muted text-decoration-line-through"
+              ></div>
+              <span
+                id="pdDiscount"
+                class="badge bg-danger-subtle text-danger fw-semibold d-none"
+              ></span>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-3">
+              <div class="card-body">
+                <div class="fw-semibold mb-2">
+                  <i class="bi bi-gift me-2 text-warning"></i>Khuyến mãi được áp
+                  dụng
+                </div>
+                <ul class="mb-0 small" id="pdPromos">
+                  <li>
+                    Miễn phí giao hàng cho đơn hàng từ 1.000.000 VNĐ tới mọi
+                    tỉnh thành
+                  </li>
+                  <li>
+                    Miễn phí ship nội thành trong bán kính 5km với đơn hàng từ
+                    250.000 VNĐ
+                  </li>
+                  <li>Quà tặng hấp dẫn lên tới 1.000.000 VNĐ</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <span class="fw-semibold">Số lượng:</span>
+              <div class="input-group qty-group">
+                <button id="qtyMinus" class="btn" type="button">-</button>
+                <input
+                  id="qtyInput"
+                  type="number"
+                  class="form-control text-center"
+                  value="1"
+                  min="1"
+                />
+                <button id="qtyPlus" class="btn" type="button">+</button>
+              </div>
+            </div>
+
+            <div class="d-flex action-buttons gap-3">
+              <button id="btnBuy" class="btn btn-primary btn-lg px-5 fw-bold">
+                Chọn mua
+              </button>
+              <a href="#" class="btn btn-outline-secondary btn-lg px-4"
+                >Tìm nhà thuốc</a
+              >
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="fw-bold text-center mb-3">CAM KẾT CỦA CHÚNG TÔI</h5>
+                <div class="d-flex align-items-start gap-3 mb-3">
+                  <div class="commit-number-badge">1</div>
+                  <div>
+                    <div class="fw-semibold small">Cam kết chính hãng</div>
+                    <div class="text-muted small">
+                      Hoàn tiền 120% nếu phát hiện hàng giả, hàng nhái
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-start gap-3 mb-3">
+                  <div class="commit-number-badge">2</div>
+                  <div>
+                    <div class="fw-semibold small">Cam kết tư vấn đúng</div>
+                    <div class="text-muted small">
+                      Chuyên gia tư vấn trực tiếp qua hotline/zalo: 1900561242
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-start gap-3">
+                  <div class="commit-number-badge">3</div>
+                  <div>
+                    <div class="fw-semibold small">Cam kết bảo mật</div>
+                    <div class="text-muted small">
+                      Tuyệt đối không chia sẻ thông tin khách hàng cho bên thứ 3
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <section class="py-4 service-icons-section">
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3">
+            <div class="col text-center">
+              <div class="d-flex flex-column align-items-center">
+                <img
+                  class="service-icon-img mb-2"
+                  src="assets/image_product_service_1.png"
+                  alt="Yên tâm mua sắm"
+                />
+                <div class="small text-center">
+                  Yên tâm mua sắm, giải toả lo âu
+                </div>
+              </div>
+            </div>
+            <div class="col text-center">
+              <div class="d-flex flex-column align-items-center">
+                <img
+                  class="service-icon-img mb-2"
+                  src="assets/image_product_service_2.png"
+                  alt="Nhập khẩu chính ngạch"
+                />
+                <div class="small text-center">
+                  Nhập khẩu chính ngạch, nguồn gốc rõ ràng
+                </div>
+              </div>
+            </div>
+            <div class="col text-center">
+              <div class="d-flex flex-column align-items-center">
+                <img
+                  class="service-icon-img mb-2"
+                  src="assets/image_product_service_3.png"
+                  alt="Tư vấn chuyên gia"
+                />
+                <div class="small text-center">
+                  Được tư vấn và khuyên dùng từ chuyên gia
+                </div>
+              </div>
+            </div>
+            <div class="col text-center">
+              <div class="d-flex flex-column align-items-center">
+                <img
+                  class="service-icon-img mb-2"
+                  src="assets/image_product_service_4.png"
+                  alt="Giao hàng nhanh"
+                />
+                <div class="small text-center">Giao hàng nhanh chóng</div>
+              </div>
+            </div>
+            <div class="col text-center">
+              <div class="d-flex flex-column align-items-center">
+                <img
+                  class="service-icon-img mb-2"
+                  src="assets/image_product_service_5.png"
+                  alt="Theo sát liệu trình"
+                />
+                <div class="small text-center">Theo sát liệu trình sử dụng</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="mt-5">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                data-bs-toggle="tab"
+                data-bs-target="#tab-detail"
+                type="button"
+                role="tab"
+              >
+                Chi tiết sản phẩm
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                data-bs-toggle="tab"
+                data-bs-target="#tab-guide"
+                type="button"
+                role="tab"
+              >
+                Hướng dẫn mua hàng
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                data-bs-toggle="tab"
+                data-bs-target="#tab-review"
+                type="button"
+                role="tab"
+              >
+                Đánh giá
+              </button>
+            </li>
+          </ul>
+          <div
+            class="tab-content p-3 bg-white border border-top-0 rounded-bottom shadow-sm"
+          >
+            <div
+              id="tab-detail"
+              class="tab-pane fade show active"
+              role="tabpanel"
+            >
+              <div id="pdDesc" class="lh-lg">Nội dung đang được cập nhật.</div>
+            </div>
+            <div id="tab-guide" class="tab-pane fade" role="tabpanel">
+              <p class="mb-0">
+                Bạn có thể đặt mua trực tiếp trên website hoặc liên hệ cửa hàng
+                để được tư vấn nhanh.
+              </p>
+            </div>
+            <div id="tab-review" class="tab-pane fade" role="tabpanel">
+              <p class="mb-0">Chưa có đánh giá.</p>
+            </div>
+          </div>
+        </div>
+
+        <section class="py-5">
+          <h3 class="fw-bold mb-4">Sản phẩm cùng loại</h3>
+          <div
+            id="relatedProducts"
+            class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4"
+          ></div>
+        </section>
+      </div>
+    </main>
+
+    <div data-include="partials/newsletter.html"></div>
+    <div data-include="partials/footer.html"></div>
+    <div data-include="partials/floating-icons.html"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/navigation-mega-menu.js"></script>
+    <script type="module" src="js/product/product-data.js"></script>
+    <script type="module" src="js/product/product-detail.js"></script>
+    <script src="js/include-html.js"></script>
+    <script type="module" src="js/module-manager.js"></script>
+  </body>
+</html>

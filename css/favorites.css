@@ -1,0 +1,120 @@
+/* ========== FAVORITES PAGE STYLES ========== */
+
+/* Hero Section - Sử dụng cùng style như about */
+.favorites-hero {
+  min-height: 400px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-chem-favorites {
+  background-color: #0b3e82;
+  background-image:
+    radial-gradient(ellipse at center, rgba(11,82,165,.88), rgba(1,47,108,.96)),
+    radial-gradient(circle at 25px 25px, rgba(255,255,255,.06) 1.2px, transparent 1.2px),
+    radial-gradient(circle at 0 0, rgba(255,255,255,.04) .9px, transparent .9px);
+  background-size: auto, 60px 60px, 60px 60px;
+  background-position: center, 0 0, 30px 30px;
+}
+
+.breadcrumb-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+/* Breadcrumb styling cho favorites-hero - giống hệt about */
+.favorites-hero .breadcrumb {
+  --bs-breadcrumb-divider: '›';
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+.favorites-hero .breadcrumb .breadcrumb-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.favorites-hero .breadcrumb .breadcrumb-item a:hover {
+  color: #e6f7ff;
+}
+
+.favorites-hero .breadcrumb .breadcrumb-item.active {
+  color: #fff;
+  opacity: .95;
+}
+
+.favorites-hero .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255,255,255,.95);
+}
+
+/* Content Section */
+.favorites-content-section {
+  min-height: 400px;
+}
+
+.favorites-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.favorites-empty-state {
+  padding: 3rem 0;
+}
+
+.favorites-empty-text {
+  font-size: 1.25rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.favorites-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.favorites-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .breadcrumb-title {
+    font-size: 2rem;
+  }
+  
+  .favorites-title {
+    font-size: 2rem;
+  }
+  
+  .favorites-empty-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .breadcrumb-title {
+    font-size: 1.75rem;
+  }
+  
+  .favorites-title {
+    font-size: 1.75rem;
+  }
+  
+  .favorites-empty-text {
+    font-size: 1rem;
+  }
+}

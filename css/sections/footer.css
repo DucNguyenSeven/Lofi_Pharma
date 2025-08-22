@@ -1,0 +1,219 @@
+/* =========================== FOOTER SECTION =========================== */
+.footer-bar {
+  background-color: #003D99 !important;
+  color: #ffffff;
+  padding: 1rem 0;
+  margin-top: 0 !important;
+  font-size: 0.95rem;
+}
+.footer-bar strong {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Tablet layout */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .footer-new .col-md-6 {
+    margin-bottom: 2rem;
+  }
+  .footer-new .col-md-6:last-child {
+    margin-bottom: 1rem;
+  }
+  /* Ensure three columns align horizontally under the intro block */
+  .footer-new .row > .col-md-4 { 
+    display: block; 
+  }
+}
+.footer-new {
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 2rem !important;
+  margin-top: 0 !important;
+}
+.footer-brand {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.footer-logo {
+  height: 45px;
+  width: auto;
+}
+.footer-brand-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #003D99;
+  margin-left: 0.5rem;
+}
+.footer-description {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.footer-legal {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.footer-contact-info {
+  margin-top: 1rem;
+}
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+.footer-contact-item i {
+  color: #003D99;
+  margin-right: 0.5rem;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+.footer-contact-item span {
+  line-height: 1.5;
+}
+.footer-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+.footer-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.footer-toggle-icon {
+  display: none; /* only show on mobile */
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+.footer-toggle-icon::before,
+.footer-toggle-icon::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 16px;
+  height: 2px;
+  background: #003D99;
+  transform: translate(-50%, -50%);
+  transition: transform .2s ease;
+}
+/* vertical bar for plus sign */
+.footer-toggle-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+/* when section is open, hide vertical bar to show minus */
+.footer-heading[aria-expanded="true"] .footer-toggle-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg) scaleX(0);
+}
+.footer-collapse.collapse:not(.show) {
+  display: block; /* default open on desktop/tablet */
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+.footer-link {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+}
+.footer-link:hover {
+  color: #003D99;
+  text-decoration: none;
+}
+.footer-hotline {
+  margin-top: 1rem;
+}
+.footer-hotline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.footer-hotline-label {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-right: 0.5rem;
+}
+.footer-hotline-number {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #003D99;
+}
+
+/* Mobile layout */
+@media (max-width: 767.98px) {
+  .footer-new {
+    padding-top: 2rem;
+  }
+  .footer-toggle-icon { display: inline-block; }
+  .footer-collapse.collapse:not(.show) { display: none; }
+  .footer-title { margin-bottom: 0; }
+  .footer-brand {
+    justify-content: flex-start;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  .footer-brand-text {
+    font-size: 1.25rem;
+  }
+  .footer-logo {
+    height: 45px;
+  }
+  .footer-description,
+  .footer-legal {
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  .footer-contact-info {
+    text-align: left;
+  }
+  .footer-contact-item {
+    justify-content: flex-start;
+    font-size: 0.9rem;
+  }
+  .footer-title {
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .footer-links {
+    text-align: left;
+  }
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+  .footer-link {
+    font-size: 0.9rem;
+  }
+  .footer-hotline {
+    text-align: left;
+  }
+  .footer-hotline-item {
+    justify-content: flex-start;
+    margin-bottom: 0.75rem;
+  }
+  .footer-hotline-number {
+    font-size: 1.1rem;
+  }
+  .footer-bar {
+    font-size: 0.9rem;
+    padding: 0.75rem 0;
+  }
+}
